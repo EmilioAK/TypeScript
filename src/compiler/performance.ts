@@ -63,6 +63,8 @@ let timeorigin = timestamp();
 const marks = new Map<string, number>();
 const counts = new Map<string, number>();
 const durations = new Map<string, number>();
+export const branch_coverage = new Map<string, boolean>();
+
 
 /**
  * Marks a performance event.
@@ -72,7 +74,9 @@ const durations = new Map<string, number>();
  * @internal
  */
 export function mark(markName: string) {
+    branch_coverage.set('mark_0', true);
     if (enabled) {
+        branch_coverage.set('mark_1', true);
         const count = counts.get(markName) ?? 0;
         counts.set(markName, count + 1);
         marks.set(markName, timestamp());
@@ -151,11 +155,14 @@ export function clearMeasures(name?: string) {
 
 /** @internal */
 export function clearMarks(name?: string) {
+    branch_coverage.set('clearMarks_0', true);
     if (name !== undefined) {
+        branch_coverage.set('clearMarks_1', true);
         counts.delete(name);
         marks.delete(name);
     }
     else {
+        branch_coverage.set('clearMarks_2', true);
         counts.clear();
         marks.clear();
     }

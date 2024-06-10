@@ -3608,6 +3608,9 @@ declare namespace ts {
             responseRequired?: boolean;
         }
     }
+    namespace performance {
+        const branch_coverage: Map<string, boolean>;
+    }
     namespace JsTyping {
         interface TypingResolutionHost {
             directoryExists(path: string): boolean;
