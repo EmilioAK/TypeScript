@@ -1,75 +1,60 @@
 import * as performance from '../../compiler/performance.js';
 
 
-describe('Branch 0 and 2 in clearMarks', () => {
+describe('Branch 1 in enable', () => { //It starts out disabled
   before(() => {
     performance.enable();
-    performance.mark('testMark');
-    performance.clearMarks();
-  });
-
-  it('should reach branch 0', () => {
-    expect(performance.branch_coverage.get('clearMarks_0')).to.equal(true);
-  });
-
-  it('should reach branch 2', () => {
-    expect(performance.branch_coverage.get('clearMarks_2')).to.equal(true);
-  });
-
-
-  after(() => {
-    performance.disable();
-  });
-});
-
-describe('Branch 0 and 1 in clearMarks', () => {
-  before(() => {
-    const markName = 'testMark';
-    performance.enable();
-    performance.mark(markName);
-    performance.clearMarks(markName);
-  });
-
-  it('should reach branch 0', () => {
-    expect(performance.branch_coverage.get('clearMarks_0')).to.equal(true);
-  });
-
+  })
   it('should reach branch 1', () => {
-    expect(performance.branch_coverage.get('clearMarks_1')).to.equal(true);
+    expect(performance.branch_coverage.get('enable_1')).to.equal(true);
   });
-
   after(() => {
     performance.disable();
-  });
+  })
 });
 
-describe('Branch 0 and not 1 in mark', () => {
+describe('Branch 2 in enable', () => {
   before(() => {
-    performance.mark('marknName');
-  });
-
-  it('should reach branch 0', () => {
-    expect(performance.branch_coverage.get('mark_0')).to.equal(true);
+    performance.enable();
+    performance.enable();
   });
 
   it('should not reach branch 1', () => {
-    expect(performance.branch_coverage.get('mark_1')).not.to.equal(true);
+    expect(performance.branch_coverage.get('enable_1')).to.equal(false);
+  });
+  it('should reach branch 2', () => {
+    expect(performance.branch_coverage.get('enable_2')).to.equal(true);
+  });
+
+  after(() => {
+    performance.disable();
   });
 });
 
-describe('Reaches both branches in mark', () => {
+
+describe('When disabled', () => {
   before(() => {
-    performance.enable();
-    performance.mark('markName');
-    performance.clearMarks();
     performance.disable();
   });
 
-  it('should reach branch 0', () => {
-    expect(performance.branch_coverage.get('mark_0')).to.equal(true);
+  it('should not reach branch 1', () => {
+    expect(performance.branch_coverage.get('disable_1')).to.equal(false);
+  });
+  it('should reach branch 2', () => {
+    expect(performance.branch_coverage.get('disable_2')).to.equal(true);
+  });
+});
+
+describe('When enabled', () => {
+  before(() => {
+    performance.enable();
+    performance.disable();
   });
 
   it('should reach branch 1', () => {
-    expect(performance.branch_coverage.get('mark_1')).to.equal(true);
+    expect(performance.branch_coverage.get('disable_1')).to.equal(true);
+  });
+  it('should reach branch 2', () => {
+    expect(performance.branch_coverage.get('disable_2')).to.equal(true);
   });
 });

@@ -74,9 +74,7 @@ export const branch_coverage = new Map<string, boolean>();
  * @internal
  */
 export function mark(markName: string) {
-    branch_coverage.set('mark_0', true);
     if (enabled) {
-        branch_coverage.set('mark_1', true);
         const count = counts.get(markName) ?? 0;
         counts.set(markName, count + 1);
         marks.set(markName, timestamp());
@@ -155,14 +153,11 @@ export function clearMeasures(name?: string) {
 
 /** @internal */
 export function clearMarks(name?: string) {
-    branch_coverage.set('clearMarks_0', true);
     if (name !== undefined) {
-        branch_coverage.set('clearMarks_1', true);
         counts.delete(name);
         marks.delete(name);
     }
     else {
-        branch_coverage.set('clearMarks_2', true);
         counts.clear();
         marks.clear();
     }
@@ -184,7 +179,9 @@ export function isEnabled() {
  * @internal
  */
 export function enable(system: System = sys) {
+    branch_coverage.set('enable_1', false);
     if (!enabled) {
+        branch_coverage.set('enable_1', true);
         enabled = true;
         perfHooks ||= tryGetNativePerformanceHooks();
         if (perfHooks?.performance) {
@@ -198,6 +195,7 @@ export function enable(system: System = sys) {
             }
         }
     }
+    branch_coverage.set('enable_2', true);
     return true;
 }
 
@@ -207,11 +205,14 @@ export function enable(system: System = sys) {
  * @internal
  */
 export function disable() {
+    branch_coverage.set('disable_1', false);
     if (enabled) {
+        branch_coverage.set('disable_1', true);
         marks.clear();
         counts.clear();
         durations.clear();
         performanceImpl = undefined;
         enabled = false;
     }
+    branch_coverage.set('disable_2', true);
 }
