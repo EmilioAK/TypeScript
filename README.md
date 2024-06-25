@@ -45,22 +45,20 @@ commit url: https://github.com/microsoft/TypeScript/commit/f91ae9729538be45120c4
 Max Raulea
 
 GetDuration()
-
-commit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e20843ba2b33e93196406
-
-<State the coverage improvement with a number and elaborate on why the coverage is improved>
-The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests.
-
+&
 ClearMeasures()
 commmit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e20843ba2b33e93196406
 <Provide the same kind of information provided for Test 1>
 
-The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests.
+The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests. Before my tests it had a coverage of 68.2% and after my tests this was raised to 70%
 ![image](max_coverage_before)
+
+and after adding the new tests
+![image](max_coverage_after)
 
 ### Overall
 
-<Provide a screenshot of the old coverage results by running an existing tool (the same as you already showed above)>
+![image](max_coverage_before)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
