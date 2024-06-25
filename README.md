@@ -51,14 +51,14 @@ commmit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e
 <Provide the same kind of information provided for Test 1>
 
 The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests. Before my tests it had a coverage of 68.2% and after my tests this was raised to 70%
-![image](max_coverage_before)
+![image](max_coverage_before.png)
 
 and after adding the new tests
-![image](max_coverage_after)
+![image](max_coverage_after.png)
 
 ### Overall
 
-![image](max_coverage_before)
+![image](max_coverage_before.png)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
 
