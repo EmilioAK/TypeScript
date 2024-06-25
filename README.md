@@ -52,7 +52,7 @@ ClearMeasures()
 commmit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e20843ba2b33e93196406
 <Provide the same kind of information provided for Test 1>
 
-The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests. Before my tests it had a coverage of 68.2% and after my tests this was raised to 70%
+The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests. Before my tests of performance.ts it had a coverage of 68.2% and after my tests this was raised to 70%.
 ![image](max_coverage_before.png)
 
 and after adding the new tests
