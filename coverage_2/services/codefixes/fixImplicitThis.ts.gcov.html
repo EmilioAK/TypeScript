@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - services/codefixes/fixImplicitThis.ts</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory services/codefixes">services/codefixes</a> - fixImplicitThis.ts<span style="font-size: 80%;"> (source / <a href="fixImplicitThis.ts.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">80</td>
+            <td class="headerCovTableEntry">80</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">4</td>
+            <td class="headerCovTableEntry">4</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span> <span class="tlaGNC tlaBgGNC">           8 : import {</span></span>
+<span id="L2"><span class="lineNum">       2</span> <span class="tlaGNC">           8 :     codeFixAll,</span></span>
+<span id="L3"><span class="lineNum">       3</span> <span class="tlaGNC">           8 :     createCodeFixAction,</span></span>
+<span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC">           8 :     registerCodeFix,</span></span>
+<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC">           8 : } from &quot;../_namespaces/ts.codefix.js&quot;;</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           8 : import {</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">           8 :     ANONYMOUS,</span></span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">           8 :     Debug,</span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">           8 :     DiagnosticOrDiagnosticAndArguments,</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           8 :     Diagnostics,</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">           8 :     emptyArray,</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           8 :     factory,</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           8 :     FindAllReferences,</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           8 :     findChildOfKind,</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">           8 :     getThisContainer,</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           8 :     getTokenAtPosition,</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           8 :     isFunctionDeclaration,</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           8 :     isFunctionExpression,</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           8 :     isSourceFile,</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           8 :     isThis,</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           8 :     SourceFile,</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           8 :     SyntaxKind,</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           8 :     textChanges,</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           8 :     TypeChecker,</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">           8 : } from &quot;../_namespaces/ts.js&quot;;</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           8 : const fixId = &quot;fixImplicitThis&quot;;</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           8 : const errorCodes = [Diagnostics.this_implicitly_has_type_any_because_it_does_not_have_a_type_annotation.code];</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           8 : registerCodeFix({</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           8 :     errorCodes,</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">           8 :     getCodeActions: function getCodeActionsToFixImplicitThis(context) {</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">          22 :         const { sourceFile, program, span } = context;</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">          22 :         let diagnostic: DiagnosticOrDiagnosticAndArguments | undefined;</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">          22 :         const changes = textChanges.ChangeTracker.with(context, t =&gt; {</span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">          22 :             diagnostic = doChange(t, sourceFile, span.start, program.getTypeChecker());</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">          22 :         });</span></span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">          22 :         return diagnostic ? [createCodeFixAction(fixId, changes, diagnostic, fixId, Diagnostics.Fix_all_implicit_this_errors)] : emptyArray;</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">          22 :     },</span></span>
+<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">           8 :     fixIds: [fixId],</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">           8 :     getAllCodeActions: context =&gt;</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">           2 :         codeFixAll(context, errorCodes, (changes, diag) =&gt; {</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">           4 :             doChange(changes, diag.file, diag.start, context.program.getTypeChecker());</span></span>
+<span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">           2 :         }),</span></span>
+<span id="L44"><span class="lineNum">      44</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC">          26 : function doChange(changes: textChanges.ChangeTracker, sourceFile: SourceFile, pos: number, checker: TypeChecker): DiagnosticOrDiagnosticAndArguments | undefined {</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">          26 :     const token = getTokenAtPosition(sourceFile, pos);</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC">          26 :     if (!isThis(token)) return undefined;</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">          25 : </span></span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">          25 :     const fn = getThisContainer(token, /*includeArrowFunctions*/ false, /*includeClassComputedPropertyName*/ false);</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">          26 :     if (!isFunctionDeclaration(fn) &amp;&amp; !isFunctionExpression(fn)) return undefined;</span></span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaGNC">          25 : </span></span>
+<span id="L53"><span class="lineNum">      53</span> <span class="tlaGNC">          25 :     if (!isSourceFile(getThisContainer(fn, /*includeArrowFunctions*/ false, /*includeClassComputedPropertyName*/ false))) { // 'this' is defined outside, convert to arrow function</span></span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaGNC">          12 :         const fnKeyword = Debug.checkDefined(findChildOfKind(fn, SyntaxKind.FunctionKeyword, sourceFile));</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">          12 :         const { name } = fn;</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">          12 :         const body = Debug.checkDefined(fn.body); // Should be defined because the function contained a 'this' expression</span></span>
+<span id="L57"><span class="lineNum">      57</span> <span class="tlaGNC">          12 :         if (isFunctionExpression(fn)) {</span></span>
+<span id="L58"><span class="lineNum">      58</span> <span class="tlaGNC">           5 :             if (name &amp;&amp; FindAllReferences.Core.isSymbolReferencedInFile(name, checker, sourceFile, body)) {</span></span>
+<span id="L59"><span class="lineNum">      59</span> <span class="tlaGNC">           1 :                 // Function expression references itself. To fix we would have to extract it to a const.</span></span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">           1 :                 return undefined;</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">           1 :             }</span></span>
+<span id="L62"><span class="lineNum">      62</span> <span class="tlaGNC">           4 : </span></span>
+<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">           4 :             // `function() {}` --&gt; `() =&gt; {}`</span></span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">           4 :             changes.delete(sourceFile, fnKeyword);</span></span>
+<span id="L65"><span class="lineNum">      65</span> <span class="tlaGNC">           4 :             if (name) {</span></span>
+<span id="L66"><span class="lineNum">      66</span> <span class="tlaGNC">           1 :                 changes.delete(sourceFile, name);</span></span>
+<span id="L67"><span class="lineNum">      67</span> <span class="tlaGNC">           1 :             }</span></span>
+<span id="L68"><span class="lineNum">      68</span> <span class="tlaGNC">           4 :             changes.insertText(sourceFile, body.pos, &quot; =&gt;&quot;);</span></span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">           5 :             return [Diagnostics.Convert_function_expression_0_to_arrow_function, name ? name.text : ANONYMOUS];</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">           5 :         }</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaGNC">           7 :         else {</span></span>
+<span id="L72"><span class="lineNum">      72</span> <span class="tlaGNC">           7 :             // `function f() {}` =&gt; `const f = () =&gt; {}`</span></span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaGNC">           7 :             // `name` should be defined because we only do this in inner contexts, and name is only undefined for `export default function() {}`.</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">           7 :             changes.replaceNode(sourceFile, fnKeyword, factory.createToken(SyntaxKind.ConstKeyword));</span></span>
+<span id="L75"><span class="lineNum">      75</span> <span class="tlaGNC">           7 :             changes.insertText(sourceFile, name!.end, &quot; = &quot;);</span></span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaGNC">           7 :             changes.insertText(sourceFile, body.pos, &quot; =&gt;&quot;);</span></span>
+<span id="L77"><span class="lineNum">      77</span> <span class="tlaGNC">           7 :             return [Diagnostics.Convert_function_declaration_0_to_arrow_function, name!.text];</span></span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaGNC">           7 :         }</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">          12 :     }</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">          26 : }</span></span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

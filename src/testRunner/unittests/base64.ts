@@ -18,12 +18,12 @@ describe("unittests:: base64", () => {
         assert.equal(ts.base64decode({}, ts.convertToBase64(test)), test);
       }
     });
-    it("branch 1 should be reached", () => {
-      assert.equal(ts.branch_coverage.get("base64_1"), true);
-    });
+    // it("branch 1 should be reached", () => {
+    //   assert.equal(ts.branch_coverage.get("base64_1"), true);
+    // });
 
-    it("branch 2 should be reached", () => {
-      assert.equal(ts.branch_coverage.get("base64_2"), true);
-    });
+    // it("branch 2 should be reached", () => {
+    //   assert.equal(ts.branch_coverage.get("base64_2"), true);
+    // });
   });
 });

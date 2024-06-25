@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - testRunner/tests.ts</title>
+  <link rel="stylesheet" type="text/css" href="../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory testRunner">testRunner</a> - tests.ts<span style="font-size: 80%;"> (source / <a href="tests.ts.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">231</td>
+            <td class="headerCovTableEntry">231</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+          </tr>
+                  <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span> <span class="tlaGNC tlaBgGNC">           8 : export * from &quot;./unittests/asserts.js&quot;;</span></span>
+<span id="L2"><span class="lineNum">       2</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/base64.js&quot;;</span></span>
+<span id="L3"><span class="lineNum">       3</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/builder.js&quot;;</span></span>
+<span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/canWatch.js&quot;;</span></span>
+<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/comments.js&quot;;</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/compilerCore.js&quot;;</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/commandLineParsing.js&quot;;</span></span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/configurationExtension.js&quot;;</span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/convertCompilerOptionsFromJson.js&quot;;</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/convertTypeAcquisitionFromJson.js&quot;;</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/initializeTSConfig.js&quot;;</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/matchFiles.js&quot;;</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/showConfig.js&quot;;</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/tsconfigParsing.js&quot;;</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/config/tsconfigParsingWatchOptions.js&quot;;</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/convertToBase64.js&quot;;</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/customTransforms.js&quot;;</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/debugDeprecation.js&quot;;</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/diagnosticCollection.js&quot;;</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/arraySpread.js&quot;;</span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/asyncArrow.js&quot;;</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/asyncGenerator.js&quot;;</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/autoAccessors.js&quot;;</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/awaiter.js&quot;;</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/awaitUsingDeclarations.js&quot;;</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/constEnum.js&quot;;</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/destructuring.js&quot;;</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/esDecorators.js&quot;;</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/esDecoratorsMetadata.js&quot;;</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/externalModules.js&quot;;</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/forAwaitOf.js&quot;;</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/forOf.js&quot;;</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/generator.js&quot;;</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/objectRest.js&quot;;</span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/optionalCall.js&quot;;</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/superInStaticInitializer.js&quot;;</span></span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/templateLiteral.js&quot;;</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/updateExpressionInModule.js&quot;;</span></span>
+<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/evaluation/usingDeclarations.js&quot;;</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/factory.js&quot;;</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/incrementalParser.js&quot;;</span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/jsDocParsing.js&quot;;</span></span>
+<span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/jsonParserRecovery.js&quot;;</span></span>
+<span id="L44"><span class="lineNum">      44</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/moduleResolution.js&quot;;</span></span>
+<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/parsePseudoBigInt.js&quot;;</span></span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/paths.js&quot;;</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/printer.js&quot;;</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/programApi.js&quot;;</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/publicApi.js&quot;;</span></span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/regExpScannerRecovery.js&quot;;</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/reuseProgramStructure.js&quot;;</span></span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/semver.js&quot;;</span></span>
+<span id="L53"><span class="lineNum">      53</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/cancellableLanguageServiceOperations.js&quot;;</span></span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/colorization.js&quot;;</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/convertToAsyncFunction.js&quot;;</span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/documentRegistry.js&quot;;</span></span>
+<span id="L57"><span class="lineNum">      57</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/extract/constants.js&quot;;</span></span>
+<span id="L58"><span class="lineNum">      58</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/extract/functions.js&quot;;</span></span>
+<span id="L59"><span class="lineNum">      59</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/extract/ranges.js&quot;;</span></span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/extract/symbolWalker.js&quot;;</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/hostNewLineSupport.js&quot;;</span></span>
+<span id="L62"><span class="lineNum">      62</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/languageService.js&quot;;</span></span>
+<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/organizeImports.js&quot;;</span></span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/patternMatcher.js&quot;;</span></span>
+<span id="L65"><span class="lineNum">      65</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/preProcessFile.js&quot;;</span></span>
+<span id="L66"><span class="lineNum">      66</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/textChanges.js&quot;;</span></span>
+<span id="L67"><span class="lineNum">      67</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/transpile.js&quot;;</span></span>
+<span id="L68"><span class="lineNum">      68</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/services/utilities.js&quot;;</span></span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/skipJSDocParsing.js&quot;;</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/sys/symlinkWatching.js&quot;;</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/transform.js&quot;;</span></span>
+<span id="L72"><span class="lineNum">      72</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/amdModulesWithOut.js&quot;;</span></span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/clean.js&quot;;</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/commandLine.js&quot;;</span></span>
+<span id="L75"><span class="lineNum">      75</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/configFileErrors.js&quot;;</span></span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/configFileExtends.js&quot;;</span></span>
+<span id="L77"><span class="lineNum">      77</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/containerOnlyReferenced.js&quot;;</span></span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/declarationEmit.js&quot;;</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/demo.js&quot;;</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/emitDeclarationOnly.js&quot;;</span></span>
+<span id="L81"><span class="lineNum">      81</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/emptyFiles.js&quot;;</span></span>
+<span id="L82"><span class="lineNum">      82</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/exitCodeOnBogusFile.js&quot;;</span></span>
+<span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/extends.js&quot;;</span></span>
+<span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/fileDelete.js&quot;;</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/graphOrdering.js&quot;;</span></span>
+<span id="L86"><span class="lineNum">      86</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/inferredTypeFromTransitiveModule.js&quot;;</span></span>
+<span id="L87"><span class="lineNum">      87</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/javascriptProjectEmit.js&quot;;</span></span>
+<span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/lateBoundSymbol.js&quot;;</span></span>
+<span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/libraryResolution.js&quot;;</span></span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/moduleResolution.js&quot;;</span></span>
+<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/moduleSpecifiers.js&quot;;</span></span>
+<span id="L92"><span class="lineNum">      92</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/noCheck.js&quot;;</span></span>
+<span id="L93"><span class="lineNum">      93</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/noEmit.js&quot;;</span></span>
+<span id="L94"><span class="lineNum">      94</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/noEmitOnError.js&quot;;</span></span>
+<span id="L95"><span class="lineNum">      95</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/outFile.js&quot;;</span></span>
+<span id="L96"><span class="lineNum">      96</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/outputPaths.js&quot;;</span></span>
+<span id="L97"><span class="lineNum">      97</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/publicApi.js&quot;;</span></span>
+<span id="L98"><span class="lineNum">      98</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/referencesWithRootDirInParent.js&quot;;</span></span>
+<span id="L99"><span class="lineNum">      99</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/resolveJsonModule.js&quot;;</span></span>
+<span id="L100"><span class="lineNum">     100</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/roots.js&quot;;</span></span>
+<span id="L101"><span class="lineNum">     101</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/sample.js&quot;;</span></span>
+<span id="L102"><span class="lineNum">     102</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuild/transitiveReferences.js&quot;;</span></span>
+<span id="L103"><span class="lineNum">     103</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/configFileErrors.js&quot;;</span></span>
+<span id="L104"><span class="lineNum">     104</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/demo.js&quot;;</span></span>
+<span id="L105"><span class="lineNum">     105</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/extends.js&quot;;</span></span>
+<span id="L106"><span class="lineNum">     106</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/libraryResolution.js&quot;;</span></span>
+<span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/moduleResolution.js&quot;;</span></span>
+<span id="L108"><span class="lineNum">     108</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/noEmit.js&quot;;</span></span>
+<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/noEmitOnError.js&quot;;</span></span>
+<span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/programUpdates.js&quot;;</span></span>
+<span id="L111"><span class="lineNum">     111</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/projectsBuilding.js&quot;;</span></span>
+<span id="L112"><span class="lineNum">     112</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/publicApi.js&quot;;</span></span>
+<span id="L113"><span class="lineNum">     113</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/reexport.js&quot;;</span></span>
+<span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/roots.js&quot;;</span></span>
+<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsbuildWatch/watchEnvironment.js&quot;;</span></span>
+<span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/cancellationToken.js&quot;;</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/composite.js&quot;;</span></span>
+<span id="L118"><span class="lineNum">     118</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/declarationEmit.js&quot;;</span></span>
+<span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/extends.js&quot;;</span></span>
+<span id="L120"><span class="lineNum">     120</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/forceConsistentCasingInFileNames.js&quot;;</span></span>
+<span id="L121"><span class="lineNum">     121</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/incremental.js&quot;;</span></span>
+<span id="L122"><span class="lineNum">     122</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/libraryResolution.js&quot;;</span></span>
+<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/listFilesOnly.js&quot;;</span></span>
+<span id="L124"><span class="lineNum">     124</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/moduleResolution.js&quot;;</span></span>
+<span id="L125"><span class="lineNum">     125</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/noEmit.js&quot;;</span></span>
+<span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/noEmitOnError.js&quot;;</span></span>
+<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/projectReferences.js&quot;;</span></span>
+<span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/projectReferencesConfig.js&quot;;</span></span>
+<span id="L129"><span class="lineNum">     129</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/redirect.js&quot;;</span></span>
+<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsc/runWithoutArgs.js&quot;;</span></span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/consoleClearing.js&quot;;</span></span>
+<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/emit.js&quot;;</span></span>
+<span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/emitAndErrorUpdates.js&quot;;</span></span>
+<span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/extends.js&quot;;</span></span>
+<span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/forceConsistentCasingInFileNames.js&quot;;</span></span>
+<span id="L136"><span class="lineNum">     136</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/incremental.js&quot;;</span></span>
+<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/libraryResolution.js&quot;;</span></span>
+<span id="L138"><span class="lineNum">     138</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/moduleResolution.js&quot;;</span></span>
+<span id="L139"><span class="lineNum">     139</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/nodeNextWatch.js&quot;;</span></span>
+<span id="L140"><span class="lineNum">     140</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/noEmitOnError.js&quot;;</span></span>
+<span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/programUpdates.js&quot;;</span></span>
+<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/projectsWithReferences.js&quot;;</span></span>
+<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/resolutionCache.js&quot;;</span></span>
+<span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/resolveJsonModuleWithIncremental.js&quot;;</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/sourceOfProjectReferenceRedirect.js&quot;;</span></span>
+<span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/symlinks.js&quot;;</span></span>
+<span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/watchApi.js&quot;;</span></span>
+<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tscWatch/watchEnvironment.js&quot;;</span></span>
+<span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/applyChangesToOpenFiles.js&quot;;</span></span>
+<span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/autoImportProvider.js&quot;;</span></span>
+<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/auxiliaryProject.js&quot;;</span></span>
+<span id="L152"><span class="lineNum">     152</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/cachingFileSystemInformation.js&quot;;</span></span>
+<span id="L153"><span class="lineNum">     153</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/cancellationToken.js&quot;;</span></span>
+<span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/codeFix.js&quot;;</span></span>
+<span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/compileOnSave.js&quot;;</span></span>
+<span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/completions.js&quot;;</span></span>
+<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/completionsIncomplete.js&quot;;</span></span>
+<span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/configFileSearch.js&quot;;</span></span>
+<span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/configuredProjects.js&quot;;</span></span>
+<span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/declarationFileMaps.js&quot;;</span></span>
+<span id="L161"><span class="lineNum">     161</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/documentRegistry.js&quot;;</span></span>
+<span id="L162"><span class="lineNum">     162</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/duplicatePackages.js&quot;;</span></span>
+<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/dynamicFiles.js&quot;;</span></span>
+<span id="L164"><span class="lineNum">     164</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/events/largeFileReferenced.js&quot;;</span></span>
+<span id="L165"><span class="lineNum">     165</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/events/projectLanguageServiceState.js&quot;;</span></span>
+<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/events/projectLoading.js&quot;;</span></span>
+<span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/events/projectUpdatedInBackground.js&quot;;</span></span>
+<span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/events/watchEvents.js&quot;;</span></span>
+<span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/exportMapCache.js&quot;;</span></span>
+<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/extends.js&quot;;</span></span>
+<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/externalProjects.js&quot;;</span></span>
+<span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/findAllReferences.js&quot;;</span></span>
+<span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/forceConsistentCasingInFileNames.js&quot;;</span></span>
+<span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/formatSettings.js&quot;;</span></span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/getApplicableRefactors.js&quot;;</span></span>
+<span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/getEditsForFileRename.js&quot;;</span></span>
+<span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/getExportReferences.js&quot;;</span></span>
+<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/getFileReferences.js&quot;;</span></span>
+<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/getMoveToRefactoringFileSuggestions.js&quot;;</span></span>
+<span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/goToDefinition.js&quot;;</span></span>
+<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/importHelpers.js&quot;;</span></span>
+<span id="L182"><span class="lineNum">     182</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/inconsistentErrorInEditor.js&quot;;</span></span>
+<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/inferredProjects.js&quot;;</span></span>
+<span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/inlayHints.js&quot;;</span></span>
+<span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/jsdocTag.js&quot;;</span></span>
+<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/languageService.js&quot;;</span></span>
+<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/libraryResolution.js&quot;;</span></span>
+<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/maxNodeModuleJsDepth.js&quot;;</span></span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/metadataInResponse.js&quot;;</span></span>
+<span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/moduleResolution.js&quot;;</span></span>
+<span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/moduleSpecifierCache.js&quot;;</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/navTo.js&quot;;</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/occurences.js&quot;;</span></span>
+<span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/openFile.js&quot;;</span></span>
+<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/packageJsonInfo.js&quot;;</span></span>
+<span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/partialSemanticServer.js&quot;;</span></span>
+<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/pasteEdits.js&quot;;</span></span>
+<span id="L198"><span class="lineNum">     198</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/plugins.js&quot;;</span></span>
+<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/pluginsAsync.js&quot;;</span></span>
+<span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectErrors.js&quot;;</span></span>
+<span id="L201"><span class="lineNum">     201</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectReferenceCompileOnSave.js&quot;;</span></span>
+<span id="L202"><span class="lineNum">     202</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectReferenceErrors.js&quot;;</span></span>
+<span id="L203"><span class="lineNum">     203</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectReferences.js&quot;;</span></span>
+<span id="L204"><span class="lineNum">     204</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectReferencesSourcemap.js&quot;;</span></span>
+<span id="L205"><span class="lineNum">     205</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectRootFiles.js&quot;;</span></span>
+<span id="L206"><span class="lineNum">     206</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projects.js&quot;;</span></span>
+<span id="L207"><span class="lineNum">     207</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/projectsWithReferences.js&quot;;</span></span>
+<span id="L208"><span class="lineNum">     208</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/refactors.js&quot;;</span></span>
+<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/reload.js&quot;;</span></span>
+<span id="L210"><span class="lineNum">     210</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/reloadProjects.js&quot;;</span></span>
+<span id="L211"><span class="lineNum">     211</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/rename.js&quot;;</span></span>
+<span id="L212"><span class="lineNum">     212</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/resolutionCache.js&quot;;</span></span>
+<span id="L213"><span class="lineNum">     213</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/session.js&quot;;</span></span>
+<span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/skipLibCheck.js&quot;;</span></span>
+<span id="L215"><span class="lineNum">     215</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/smartSelection.js&quot;;</span></span>
+<span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/symlinkCache.js&quot;;</span></span>
+<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/symLinks.js&quot;;</span></span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/syntacticServer.js&quot;;</span></span>
+<span id="L219"><span class="lineNum">     219</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/syntaxOperations.js&quot;;</span></span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/telemetry.js&quot;;</span></span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/textStorage.js&quot;;</span></span>
+<span id="L222"><span class="lineNum">     222</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/typeAquisition.js&quot;;</span></span>
+<span id="L223"><span class="lineNum">     223</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/typeOnlyImportChains.js&quot;;</span></span>
+<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/typeReferenceDirectives.js&quot;;</span></span>
+<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/typingsInstaller.js&quot;;</span></span>
+<span id="L226"><span class="lineNum">     226</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/versionCache.js&quot;;</span></span>
+<span id="L227"><span class="lineNum">     227</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tsserver/watchEnvironment.js&quot;;</span></span>
+<span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/typeParameterIsPossiblyReferenced.js&quot;;</span></span>
+<span id="L229"><span class="lineNum">     229</span> <span class="tlaGNC">           8 : // export * from &quot;./unittests/performanceTests.js&quot;;</span></span>
+<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC">           8 : export * from &quot;./unittests/tests_max_diagnostics.js&quot;;</span></span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">           1 : // export * from &quot;./unittests/tests_saar.js&quot;;</span></span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

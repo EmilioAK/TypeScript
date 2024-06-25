@@ -227,5 +227,5 @@ export * from "./unittests/tsserver/versionCache.js";
 export * from "./unittests/tsserver/watchEnvironment.js";
 export * from "./unittests/typeParameterIsPossiblyReferenced.js";
 // export * from "./unittests/performanceTests.js";
-// export * from "./unittests/tests_max_diagnostics.js";
+export * from "./unittests/tests_max_diagnostics.js";
 // export * from "./unittests/tests_saar.js";

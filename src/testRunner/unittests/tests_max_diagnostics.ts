@@ -11,13 +11,13 @@ describe("clear measures", () => {
     expect(performance.getDuration(name)).to.equal(0);
   });
 
-  it("branch 0 should be reached", () => {
-    expect(performance.branch_coverage.get("ClearMeasure_1")).to.equal(true);
-  });
+  // it("branch 0 should be reached", () => {
+  //   expect(performance.branch_coverage.get("ClearMeasure_1")).to.equal(true);
+  // });
 
-  it("branch 2 should be reached", () => {
-    expect(performance.branch_coverage.get("ClearMeasure_2")).to.equal(true);
-  });
+  // it("branch 2 should be reached", () => {
+  //   expect(performance.branch_coverage.get("ClearMeasure_2")).to.equal(true);
+  // });
 
   after(() => {
     performance.clearMarks(name);

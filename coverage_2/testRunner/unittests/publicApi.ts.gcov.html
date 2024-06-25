@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - testRunner/unittests/publicApi.ts</title>
+  <link rel="stylesheet" type="text/css" href="../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory testRunner/unittests">testRunner/unittests</a> - publicApi.ts<span style="font-size: 80%;"> (source / <a href="publicApi.ts.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">334</td>
+            <td class="headerCovTableEntry">334</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
+            <td class="headerCovTableEntry">9</td>
+            <td class="headerCovTableEntry">8</td>
+          </tr>
+                  <tr><td><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span> <span class="tlaGNC tlaBgGNC">           8 : import * as documents from &quot;../_namespaces/documents.js&quot;;</span></span>
+<span id="L2"><span class="lineNum">       2</span> <span class="tlaGNC">           8 : import * as fakes from &quot;../_namespaces/fakes.js&quot;;</span></span>
+<span id="L3"><span class="lineNum">       3</span> <span class="tlaGNC">           8 : import * as Harness from &quot;../_namespaces/Harness.js&quot;;</span></span>
+<span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC">           8 : import * as ts from &quot;../_namespaces/ts.js&quot;;</span></span>
+<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC">           8 : import * as vfs from &quot;../_namespaces/vfs.js&quot;;</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           8 : import { jsonToReadableText } from &quot;./helpers.js&quot;;</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">           8 : import { libContent } from &quot;./helpers/contents.js&quot;;</span></span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">           8 : import { loadProjectFromFiles } from &quot;./helpers/vfs.js&quot;;</span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs&quot;, () =&gt; {</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">           7 :     function verifyApi(fileName: string) {</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          14 :         const builtFile = `built/local/${fileName}`;</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          14 :         const api = `api/${fileName}`;</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          14 :         let fileContent: string;</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">          14 :         before(() =&gt; {</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           2 :             fileContent = Harness.IO.readFile(builtFile)!;</span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           2 :             if (!fileContent) throw new Error(`File ${fileName} was not present in built/local`);</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           2 :             fileContent = fileContent.replace(/\r\n/g, &quot;\n&quot;);</span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">          14 :         });</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">          14 : </span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">          14 :         it(&quot;should be acknowledged when they change&quot;, () =&gt; {</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           2 :             Harness.Baseline.runBaseline(api, fileContent, { PrintDiff: true });</span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">          14 :         });</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">          14 :     }</span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           7 :     describe(&quot;for the language service and compiler&quot;, () =&gt; {</span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           7 :         verifyApi(&quot;typescript.d.ts&quot;);</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           7 :     describe(&quot;for the language server&quot;, () =&gt; {</span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">           7 :         verifyApi(&quot;tsserverlibrary.d.ts&quot;);</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: token to string&quot;, () =&gt; {</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           7 :     function assertDefinedTokenToString(initial: ts.SyntaxKind, last: ts.SyntaxKind) {</span></span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">           2 :         for (let t = initial; t &lt;= last; t++) {</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">         144 :             assert.isDefined(ts.tokenToString(t), `Expected tokenToString defined for ${ts.Debug.formatSyntaxKind(t)}`);</span></span>
+<span id="L39"><span class="lineNum">      39</span> <span class="tlaGNC">         144 :         }</span></span>
+<span id="L40"><span class="lineNum">      40</span> <span class="tlaGNC">           2 :     }</span></span>
+<span id="L41"><span class="lineNum">      41</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L42"><span class="lineNum">      42</span> <span class="tlaGNC">           7 :     it(&quot;for punctuations&quot;, () =&gt; {</span></span>
+<span id="L43"><span class="lineNum">      43</span> <span class="tlaGNC">           1 :         assertDefinedTokenToString(ts.SyntaxKind.FirstPunctuation, ts.SyntaxKind.LastPunctuation);</span></span>
+<span id="L44"><span class="lineNum">      44</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L45"><span class="lineNum">      45</span> <span class="tlaGNC">           7 :     it(&quot;for keywords&quot;, () =&gt; {</span></span>
+<span id="L46"><span class="lineNum">      46</span> <span class="tlaGNC">           1 :         assertDefinedTokenToString(ts.SyntaxKind.FirstKeyword, ts.SyntaxKind.LastKeyword);</span></span>
+<span id="L47"><span class="lineNum">      47</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L48"><span class="lineNum">      48</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L49"><span class="lineNum">      49</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L50"><span class="lineNum">      50</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: createPrivateIdentifier&quot;, () =&gt; {</span></span>
+<span id="L51"><span class="lineNum">      51</span> <span class="tlaGNC">           7 :     it(&quot;throws when name doesn't start with #&quot;, () =&gt; {</span></span>
+<span id="L52"><span class="lineNum">      52</span> <span class="tlaGNC">           1 :         assert.throw(() =&gt; ts.factory.createPrivateIdentifier(&quot;not&quot;), &quot;Debug Failure. First character of private identifier must be #: not&quot;);</span></span>
+<span id="L53"><span class="lineNum">      53</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L54"><span class="lineNum">      54</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L55"><span class="lineNum">      55</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L56"><span class="lineNum">      56</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: JSDoc newlines&quot;, () =&gt; {</span></span>
+<span id="L57"><span class="lineNum">      57</span> <span class="tlaGNC">           7 :     it(&quot;are preserved verbatim&quot;, () =&gt; {</span></span>
+<span id="L58"><span class="lineNum">      58</span> <span class="tlaGNC">           1 :         const testFilePath = &quot;/file.ts&quot;;</span></span>
+<span id="L59"><span class="lineNum">      59</span> <span class="tlaGNC">           1 :         const testFileText = `</span></span>
+<span id="L60"><span class="lineNum">      60</span> <span class="tlaGNC">           1 : /**</span></span>
+<span id="L61"><span class="lineNum">      61</span> <span class="tlaGNC">           1 : * @example</span></span>
+<span id="L62"><span class="lineNum">      62</span> <span class="tlaGNC">           1 : * Some\n * text\r\n * with newlines.</span></span>
+<span id="L63"><span class="lineNum">      63</span> <span class="tlaGNC">           1 : */</span></span>
+<span id="L64"><span class="lineNum">      64</span> <span class="tlaGNC">           1 : function test() {}`;</span></span>
+<span id="L65"><span class="lineNum">      65</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L66"><span class="lineNum">      66</span> <span class="tlaGNC">           1 :         const testSourceFile = ts.createSourceFile(testFilePath, testFileText, ts.ScriptTarget.Latest, /*setParentNodes*/ true);</span></span>
+<span id="L67"><span class="lineNum">      67</span> <span class="tlaGNC">           1 :         const funcDec = testSourceFile.statements.find(ts.isFunctionDeclaration)!;</span></span>
+<span id="L68"><span class="lineNum">      68</span> <span class="tlaGNC">           1 :         const tags = ts.getJSDocTags(funcDec);</span></span>
+<span id="L69"><span class="lineNum">      69</span> <span class="tlaGNC">           1 :         assert.isDefined(tags[0].comment);</span></span>
+<span id="L70"><span class="lineNum">      70</span> <span class="tlaGNC">           1 :         assert.isDefined(tags[0].comment[0]);</span></span>
+<span id="L71"><span class="lineNum">      71</span> <span class="tlaGNC">           1 :         assert.isString(tags[0].comment);</span></span>
+<span id="L72"><span class="lineNum">      72</span> <span class="tlaGNC">           1 :         assert.equal(tags[0].comment as string, &quot;Some\n text\r\n with newlines.&quot;);</span></span>
+<span id="L73"><span class="lineNum">      73</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L74"><span class="lineNum">      74</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L75"><span class="lineNum">      75</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L76"><span class="lineNum">      76</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: isPropertyName&quot;, () =&gt; {</span></span>
+<span id="L77"><span class="lineNum">      77</span> <span class="tlaGNC">           7 :     it(&quot;checks if a PrivateIdentifier is a valid property name&quot;, () =&gt; {</span></span>
+<span id="L78"><span class="lineNum">      78</span> <span class="tlaGNC">           1 :         const prop = ts.factory.createPrivateIdentifier(&quot;#foo&quot;);</span></span>
+<span id="L79"><span class="lineNum">      79</span> <span class="tlaGNC">           1 :         assert.isTrue(ts.isPropertyName(prop), &quot;PrivateIdentifier must be a valid property name.&quot;);</span></span>
+<span id="L80"><span class="lineNum">      80</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L81"><span class="lineNum">      81</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L82"><span class="lineNum">      82</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: getTypeAtLocation&quot;, () =&gt; {</span></span>
+<span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">           7 :     it(&quot;works on PropertyAccessExpression in implements clause&quot;, () =&gt; {</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">           1 :         const content = `namespace Test {</span></span>
+<span id="L86"><span class="lineNum">      86</span> <span class="tlaGNC">           1 :             export interface Test {}</span></span>
+<span id="L87"><span class="lineNum">      87</span> <span class="tlaGNC">           1 :         }</span></span>
+<span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">           1 :         class Foo implements Test.Test {}`;</span></span>
+<span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">           1 :         const host = new fakes.CompilerHost(vfs.createFromFileSystem(</span></span>
+<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">           1 :             Harness.IO,</span></span>
+<span id="L92"><span class="lineNum">      92</span> <span class="tlaGNC">           1 :             /*ignoreCase*/ true,</span></span>
+<span id="L93"><span class="lineNum">      93</span> <span class="tlaGNC">           1 :             { documents: [new documents.TextDocument(&quot;/file.ts&quot;, content)], cwd: &quot;/&quot; },</span></span>
+<span id="L94"><span class="lineNum">      94</span> <span class="tlaGNC">           1 :         ));</span></span>
+<span id="L95"><span class="lineNum">      95</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L96"><span class="lineNum">      96</span> <span class="tlaGNC">           1 :         const program = ts.createProgram({</span></span>
+<span id="L97"><span class="lineNum">      97</span> <span class="tlaGNC">           1 :             host,</span></span>
+<span id="L98"><span class="lineNum">      98</span> <span class="tlaGNC">           1 :             rootNames: [&quot;/file.ts&quot;],</span></span>
+<span id="L99"><span class="lineNum">      99</span> <span class="tlaGNC">           1 :             options: { noLib: true },</span></span>
+<span id="L100"><span class="lineNum">     100</span> <span class="tlaGNC">           1 :         });</span></span>
+<span id="L101"><span class="lineNum">     101</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L102"><span class="lineNum">     102</span> <span class="tlaGNC">           1 :         const checker = program.getTypeChecker();</span></span>
+<span id="L103"><span class="lineNum">     103</span> <span class="tlaGNC">           1 :         const file = program.getSourceFile(&quot;/file.ts&quot;)!;</span></span>
+<span id="L104"><span class="lineNum">     104</span> <span class="tlaGNC">           1 :         const classDeclaration = file.statements.find(ts.isClassDeclaration)!;</span></span>
+<span id="L105"><span class="lineNum">     105</span> <span class="tlaGNC">           1 :         const propertyAccess = classDeclaration.heritageClauses![0].types[0].expression as ts.PropertyAccessExpression;</span></span>
+<span id="L106"><span class="lineNum">     106</span> <span class="tlaGNC">           1 :         const type = checker.getTypeAtLocation(propertyAccess);</span></span>
+<span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">           1 :         assert.ok(!(type.flags &amp; ts.TypeFlags.Any));</span></span>
+<span id="L108"><span class="lineNum">     108</span> <span class="tlaGNC">           1 :         assert.equal(type, checker.getTypeAtLocation(propertyAccess.name));</span></span>
+<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L111"><span class="lineNum">     111</span> <span class="tlaGNC">           7 :     it(&quot;works on SourceFile&quot;, () =&gt; {</span></span>
+<span id="L112"><span class="lineNum">     112</span> <span class="tlaGNC">           1 :         const content = `const foo = 1;`;</span></span>
+<span id="L113"><span class="lineNum">     113</span> <span class="tlaGNC">           1 :         const host = new fakes.CompilerHost(vfs.createFromFileSystem(</span></span>
+<span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">           1 :             Harness.IO,</span></span>
+<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">           1 :             /*ignoreCase*/ true,</span></span>
+<span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">           1 :             { documents: [new documents.TextDocument(&quot;/file.ts&quot;, content)], cwd: &quot;/&quot; },</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">           1 :         ));</span></span>
+<span id="L118"><span class="lineNum">     118</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">           1 :         const program = ts.createProgram({</span></span>
+<span id="L120"><span class="lineNum">     120</span> <span class="tlaGNC">           1 :             host,</span></span>
+<span id="L121"><span class="lineNum">     121</span> <span class="tlaGNC">           1 :             rootNames: [&quot;/file.ts&quot;],</span></span>
+<span id="L122"><span class="lineNum">     122</span> <span class="tlaGNC">           1 :             options: { noLib: true },</span></span>
+<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">           1 :         });</span></span>
+<span id="L124"><span class="lineNum">     124</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L125"><span class="lineNum">     125</span> <span class="tlaGNC">           1 :         const checker = program.getTypeChecker();</span></span>
+<span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC">           1 :         const file = program.getSourceFile(&quot;/file.ts&quot;)!;</span></span>
+<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">           1 :         const type = checker.getTypeAtLocation(file);</span></span>
+<span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">           1 :         assert.equal(type.flags, ts.TypeFlags.Any);</span></span>
+<span id="L129"><span class="lineNum">     129</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">           7 :     it(&quot;works on ExpressionWithTypeArguments&quot;, () =&gt; {</span></span>
+<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">           1 :         const content = `</span></span>
+<span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">           1 :             function fn&lt;T&gt;(value: T) {</span></span>
+<span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">           1 :                 return { value };</span></span>
+<span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">           1 :             }</span></span>
+<span id="L136"><span class="lineNum">     136</span> <span class="tlaGNC">           1 :             const foo = fn&lt;string&gt;;</span></span>
+<span id="L137"><span class="lineNum">     137</span> <span class="tlaGNC">           1 :         `;</span></span>
+<span id="L138"><span class="lineNum">     138</span> <span class="tlaGNC">           1 :         const host = new fakes.CompilerHost(vfs.createFromFileSystem(</span></span>
+<span id="L139"><span class="lineNum">     139</span> <span class="tlaGNC">           1 :             Harness.IO,</span></span>
+<span id="L140"><span class="lineNum">     140</span> <span class="tlaGNC">           1 :             /*ignoreCase*/ true,</span></span>
+<span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">           1 :             { documents: [new documents.TextDocument(&quot;/file.ts&quot;, content)], cwd: &quot;/&quot; },</span></span>
+<span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">           1 :         ));</span></span>
+<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">           1 :         const program = ts.createProgram({</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">           1 :             host,</span></span>
+<span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">           1 :             rootNames: [&quot;/file.ts&quot;],</span></span>
+<span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">           1 :             options: { noLib: true },</span></span>
+<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">           1 :         });</span></span>
+<span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">           1 :         const checker = program.getTypeChecker();</span></span>
+<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">           1 :         const file = program.getSourceFile(&quot;/file.ts&quot;)!;</span></span>
+<span id="L152"><span class="lineNum">     152</span> <span class="tlaGNC">           1 :         const [declaration] = (ts.findLast(file.statements, ts.isVariableStatement) as ts.VariableStatement).declarationList.declarations;</span></span>
+<span id="L153"><span class="lineNum">     153</span> <span class="tlaGNC">           1 :         assert.equal(checker.getTypeAtLocation(declaration.initializer!).flags, ts.TypeFlags.Object);</span></span>
+<span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">           7 :     it(&quot;returns an errorType for VariableDeclaration with BindingPattern name&quot;, () =&gt; {</span></span>
+<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">           1 :         const content = &quot;const foo = [1];\n&quot; + &quot;const [a] = foo;&quot;;</span></span>
+<span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">           1 :         const host = new fakes.CompilerHost(vfs.createFromFileSystem(</span></span>
+<span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">           1 :             Harness.IO,</span></span>
+<span id="L161"><span class="lineNum">     161</span> <span class="tlaGNC">           1 :             /*ignoreCase*/ true,</span></span>
+<span id="L162"><span class="lineNum">     162</span> <span class="tlaGNC">           1 :             { documents: [new documents.TextDocument(&quot;/file.ts&quot;, content)], cwd: &quot;/&quot; },</span></span>
+<span id="L163"><span class="lineNum">     163</span> <span class="tlaGNC">           1 :         ));</span></span>
+<span id="L164"><span class="lineNum">     164</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L165"><span class="lineNum">     165</span> <span class="tlaGNC">           1 :         const program = ts.createProgram({</span></span>
+<span id="L166"><span class="lineNum">     166</span> <span class="tlaGNC">           1 :             host,</span></span>
+<span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">           1 :             rootNames: [&quot;/file.ts&quot;],</span></span>
+<span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">           1 :             options: { noLib: true },</span></span>
+<span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">           1 :         });</span></span>
+<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">           1 : </span></span>
+<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">           1 :         const checker = program.getTypeChecker();</span></span>
+<span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">           1 :         const file = program.getSourceFile(&quot;/file.ts&quot;)!;</span></span>
+<span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">           1 :         const [declaration] = (ts.findLast(file.statements, ts.isVariableStatement) as ts.VariableStatement).declarationList.declarations;</span></span>
+<span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC">           1 :         assert.equal(checker.getTypeAtLocation(declaration).flags, ts.TypeFlags.Any);</span></span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: validateLocaleAndSetLanguage&quot;, () =&gt; {</span></span>
+<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">           7 :     let savedUILocale: string | undefined;</span></span>
+<span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">           7 :     beforeEach(() =&gt; savedUILocale = ts.getUILocale());</span></span>
+<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">           7 :     afterEach(() =&gt; ts.setUILocale(savedUILocale));</span></span>
+<span id="L182"><span class="lineNum">     182</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">           7 :     function verifyValidateLocale(locale: string, expectedToReadFile: boolean) {</span></span>
+<span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">         105 :         it(`Verifying ${locale} ${expectedToReadFile ? &quot;reads&quot; : &quot;does not read&quot;} file`, () =&gt; {</span></span>
+<span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC">          15 :             const errors: ts.Diagnostic[] = [];</span></span>
+<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">          15 :             ts.validateLocaleAndSetLanguage(locale, {</span></span>
+<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">          15 :                 getExecutingFilePath: () =&gt; &quot;/tsc.js&quot;,</span></span>
+<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">          15 :                 resolvePath: ts.identity,</span></span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">          15 :                 fileExists: fileName =&gt; {</span></span>
+<span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">          26 :                     assert.isTrue(expectedToReadFile, `Locale : ${locale} ${expectedToReadFile ? &quot;should&quot; : &quot;should not&quot;} check if ${fileName} exists.`);</span></span>
+<span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">          26 :                     return expectedToReadFile;</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">          26 :                 },</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">          15 :                 readFile: fileName =&gt; {</span></span>
+<span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">          26 :                     assert.isTrue(expectedToReadFile, `Locale : ${locale} ${expectedToReadFile ? &quot;should&quot; : &quot;should not&quot;} read ${fileName}.`);</span></span>
+<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">          26 :                     // Throw error here so that actual change to localized diagnostics messages doesnt take place</span></span>
+<span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">          26 :                     throw new Error(&quot;cannot read file&quot;);</span></span>
+<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">          26 :                 },</span></span>
+<span id="L198"><span class="lineNum">     198</span> <span class="tlaGNC">          15 :             }, errors);</span></span>
+<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">         105 :         });</span></span>
+<span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">         105 :     }</span></span>
+<span id="L201"><span class="lineNum">     201</span> <span class="tlaGNC">           7 :     ts.supportedLocaleDirectories.forEach(locale =&gt; verifyValidateLocale(locale, /*expectedToReadFile*/ true));</span></span>
+<span id="L202"><span class="lineNum">     202</span> <span class="tlaGNC">           7 :     [&quot;en&quot;, &quot;en-us&quot;].forEach(locale =&gt; verifyValidateLocale(locale, /*expectedToReadFile*/ false));</span></span>
+<span id="L203"><span class="lineNum">     203</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L204"><span class="lineNum">     204</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L205"><span class="lineNum">     205</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs :: forEachChild of @param comments in JSDoc&quot;, () =&gt; {</span></span>
+<span id="L206"><span class="lineNum">     206</span> <span class="tlaGNC">           7 :     it(&quot;finds correct children&quot;, () =&gt; {</span></span>
+<span id="L207"><span class="lineNum">     207</span> <span class="tlaGNC">           1 :         const content = `</span></span>
+<span id="L208"><span class="lineNum">     208</span> <span class="tlaGNC">           1 : /**</span></span>
+<span id="L209"><span class="lineNum">     209</span> <span class="tlaGNC">           1 :  * @param The {@link TypeReferencesInAedoc}.</span></span>
+<span id="L210"><span class="lineNum">     210</span> <span class="tlaGNC">           1 :  */</span></span>
+<span id="L211"><span class="lineNum">     211</span> <span class="tlaGNC">           1 : var x</span></span>
+<span id="L212"><span class="lineNum">     212</span> <span class="tlaGNC">           1 : `;</span></span>
+<span id="L213"><span class="lineNum">     213</span> <span class="tlaGNC">           1 :         const sourceFile = ts.createSourceFile(&quot;/file.ts&quot;, content, ts.ScriptTarget.ESNext, /*setParentNodes*/ true);</span></span>
+<span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">           1 :         const paramTag = sourceFile.getChildren()[0].getChildren()[0].getChildren()[0].getChildren()[0];</span></span>
+<span id="L215"><span class="lineNum">     215</span> <span class="tlaGNC">           1 :         const kids = paramTag.getChildren();</span></span>
+<span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">           1 :         const seen = new Set&lt;ts.Node&gt;();</span></span>
+<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">           1 :         ts.forEachChild(paramTag, n =&gt; {</span></span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">           5 :             assert.strictEqual(/*actual*/ false, seen.has(n), &quot;Found a duplicate-added child&quot;);</span></span>
+<span id="L219"><span class="lineNum">     219</span> <span class="tlaGNC">           5 :             seen.add(n);</span></span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">           1 :         });</span></span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">           1 :         assert.equal(5, kids.length);</span></span>
+<span id="L222"><span class="lineNum">     222</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L223"><span class="lineNum">     223</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: getChild* methods on EndOfFileToken with JSDoc&quot;, () =&gt; {</span></span>
+<span id="L226"><span class="lineNum">     226</span> <span class="tlaGNC">           7 :     it(&quot;finds correct children&quot;, () =&gt; {</span></span>
+<span id="L227"><span class="lineNum">     227</span> <span class="tlaGNC">           1 :         const content = `</span></span>
+<span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC">           1 : /** jsdoc comment attached to EndOfFileToken */</span></span>
+<span id="L229"><span class="lineNum">     229</span> <span class="tlaGNC">           1 : `;</span></span>
+<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC">           1 :         const sourceFile = ts.createSourceFile(&quot;/file.ts&quot;, content, ts.ScriptTarget.ESNext, /*setParentNodes*/ true);</span></span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">           1 :         const endOfFileToken = sourceFile.getChildren()[1];</span></span>
+<span id="L232"><span class="lineNum">     232</span> <span class="tlaGNC">           1 :         assert.equal(endOfFileToken.getChildren().length, 1);</span></span>
+<span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">           1 :         assert.equal(endOfFileToken.getChildCount(), 1);</span></span>
+<span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">           1 :         assert.notEqual(endOfFileToken.getChildAt(0), /*expected*/ undefined);</span></span>
+<span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L237"><span class="lineNum">     237</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: get syntactic and effective modifiers&quot;, () =&gt; {</span></span>
+<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">           7 :     it(&quot;caches and reports correct flags in TS file&quot;, () =&gt; {</span></span>
+<span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">           1 :         // https://github.com/microsoft/TypeScript/issues/42189</span></span>
+<span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">           1 :         const content = `</span></span>
+<span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">           1 : class C {</span></span>
+<span id="L243"><span class="lineNum">     243</span> <span class="tlaGNC">           1 :     /** @private */</span></span>
+<span id="L244"><span class="lineNum">     244</span> <span class="tlaGNC">           1 :     prop = 1;</span></span>
+<span id="L245"><span class="lineNum">     245</span> <span class="tlaGNC">           1 : }`;</span></span>
+<span id="L246"><span class="lineNum">     246</span> <span class="tlaGNC">           1 :         const sourceFile = ts.createSourceFile(&quot;/file.ts&quot;, content, ts.ScriptTarget.ESNext, /*setParentNodes*/ true);</span></span>
+<span id="L247"><span class="lineNum">     247</span> <span class="tlaGNC">           1 :         const classNode = sourceFile.statements[0] as ts.ClassDeclaration;</span></span>
+<span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">           1 :         const propNode = classNode.members[0] as ts.PropertyDeclaration;</span></span>
+<span id="L249"><span class="lineNum">     249</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.None, ts.getSyntacticModifierFlags(propNode));</span></span>
+<span id="L250"><span class="lineNum">     250</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.None, ts.getEffectiveModifierFlags(propNode));</span></span>
+<span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.None, ts.getSyntacticModifierFlags(propNode));</span></span>
+<span id="L252"><span class="lineNum">     252</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L253"><span class="lineNum">     253</span> <span class="tlaGNC">           7 :     it(&quot;caches and reports correct flags in JS file&quot;, () =&gt; {</span></span>
+<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">           1 :         // https://github.com/microsoft/TypeScript/issues/42189</span></span>
+<span id="L255"><span class="lineNum">     255</span> <span class="tlaGNC">           1 :         const content = `</span></span>
+<span id="L256"><span class="lineNum">     256</span> <span class="tlaGNC">           1 : class C {</span></span>
+<span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">           1 :     /** @private */</span></span>
+<span id="L258"><span class="lineNum">     258</span> <span class="tlaGNC">           1 :     prop = 1;</span></span>
+<span id="L259"><span class="lineNum">     259</span> <span class="tlaGNC">           1 : }`;</span></span>
+<span id="L260"><span class="lineNum">     260</span> <span class="tlaGNC">           1 :         const sourceFile = ts.createSourceFile(&quot;/file.js&quot;, content, ts.ScriptTarget.ESNext, /*setParentNodes*/ true);</span></span>
+<span id="L261"><span class="lineNum">     261</span> <span class="tlaGNC">           1 :         const classNode = sourceFile.statements[0] as ts.ClassDeclaration;</span></span>
+<span id="L262"><span class="lineNum">     262</span> <span class="tlaGNC">           1 :         const propNode = classNode.members[0] as ts.PropertyDeclaration;</span></span>
+<span id="L263"><span class="lineNum">     263</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.None, ts.getSyntacticModifierFlags(propNode));</span></span>
+<span id="L264"><span class="lineNum">     264</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.Private, ts.getEffectiveModifierFlags(propNode));</span></span>
+<span id="L265"><span class="lineNum">     265</span> <span class="tlaGNC">           1 :         assert.equal(ts.ModifierFlags.None, ts.getSyntacticModifierFlags(propNode));</span></span>
+<span id="L266"><span class="lineNum">     266</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L267"><span class="lineNum">     267</span> <span class="tlaGNC">           8 : });</span></span>
+<span id="L268"><span class="lineNum">     268</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L269"><span class="lineNum">     269</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: Public APIs:: createProgram&quot;, () =&gt; {</span></span>
+<span id="L270"><span class="lineNum">     270</span> <span class="tlaGNC">           7 :     function verifyAPI(useJsonParsingApi: boolean) {</span></span>
+<span id="L271"><span class="lineNum">     271</span> <span class="tlaGNC">           2 :         const fs = loadProjectFromFiles({</span></span>
+<span id="L272"><span class="lineNum">     272</span> <span class="tlaGNC">           2 :             &quot;/src/projects/project/packages/a/index.js&quot;: `export const a = 'a';`,</span></span>
+<span id="L273"><span class="lineNum">     273</span> <span class="tlaGNC">           2 :             &quot;/src/projects/project/packages/a/test/index.js&quot;: `import 'a';`,</span></span>
+<span id="L274"><span class="lineNum">     274</span> <span class="tlaGNC">           2 :             &quot;/src/projects/project/packages/a/tsconfig.json&quot;: jsonToReadableText({</span></span>
+<span id="L275"><span class="lineNum">     275</span> <span class="tlaGNC">           2 :                 compilerOptions: {</span></span>
+<span id="L276"><span class="lineNum">     276</span> <span class="tlaGNC">           2 :                     checkJs: true,</span></span>
+<span id="L277"><span class="lineNum">     277</span> <span class="tlaGNC">           2 :                     composite: true,</span></span>
+<span id="L278"><span class="lineNum">     278</span> <span class="tlaGNC">           2 :                     declaration: true,</span></span>
+<span id="L279"><span class="lineNum">     279</span> <span class="tlaGNC">           2 :                     emitDeclarationOnly: true,</span></span>
+<span id="L280"><span class="lineNum">     280</span> <span class="tlaGNC">           2 :                     module: &quot;nodenext&quot;,</span></span>
+<span id="L281"><span class="lineNum">     281</span> <span class="tlaGNC">           2 :                     outDir: &quot;types&quot;,</span></span>
+<span id="L282"><span class="lineNum">     282</span> <span class="tlaGNC">           2 :                 },</span></span>
+<span id="L283"><span class="lineNum">     283</span> <span class="tlaGNC">           2 :             }),</span></span>
+<span id="L284"><span class="lineNum">     284</span> <span class="tlaGNC">           2 :             &quot;/src/projects/project/packages/a/package.json&quot;: jsonToReadableText({</span></span>
+<span id="L285"><span class="lineNum">     285</span> <span class="tlaGNC">           2 :                 name: &quot;a&quot;,</span></span>
+<span id="L286"><span class="lineNum">     286</span> <span class="tlaGNC">           2 :                 version: &quot;0.0.0&quot;,</span></span>
+<span id="L287"><span class="lineNum">     287</span> <span class="tlaGNC">           2 :                 type: &quot;module&quot;,</span></span>
+<span id="L288"><span class="lineNum">     288</span> <span class="tlaGNC">           2 :                 exports: {</span></span>
+<span id="L289"><span class="lineNum">     289</span> <span class="tlaGNC">           2 :                     &quot;.&quot;: {</span></span>
+<span id="L290"><span class="lineNum">     290</span> <span class="tlaGNC">           2 :                         types: &quot;./types/index.d.ts&quot;,</span></span>
+<span id="L291"><span class="lineNum">     291</span> <span class="tlaGNC">           2 :                         default: &quot;./index.js&quot;,</span></span>
+<span id="L292"><span class="lineNum">     292</span> <span class="tlaGNC">           2 :                     },</span></span>
+<span id="L293"><span class="lineNum">     293</span> <span class="tlaGNC">           2 :                 },</span></span>
+<span id="L294"><span class="lineNum">     294</span> <span class="tlaGNC">           2 :             }),</span></span>
+<span id="L295"><span class="lineNum">     295</span> <span class="tlaGNC">           2 :             &quot;/lib/lib.esnext.full.d.ts&quot;: libContent,</span></span>
+<span id="L296"><span class="lineNum">     296</span> <span class="tlaGNC">           2 :         }, { cwd: &quot;/src/projects/project&quot;, executingFilePath: &quot;/lib/tsc.js&quot; });</span></span>
+<span id="L297"><span class="lineNum">     297</span> <span class="tlaGNC">           2 :         const sys = new fakes.System(fs, { executingFilePath: &quot;/lib/tsc.js&quot; });</span></span>
+<span id="L298"><span class="lineNum">     298</span> <span class="tlaGNC">           2 :         const commandLine = ts.getParsedCommandLineOfConfigFile(</span></span>
+<span id="L299"><span class="lineNum">     299</span> <span class="tlaGNC">           2 :             &quot;/src/projects/project/packages/a/tsconfig.json&quot;,</span></span>
+<span id="L300"><span class="lineNum">     300</span> <span class="tlaGNC">           2 :             /*optionsToExtend*/ undefined,</span></span>
+<span id="L301"><span class="lineNum">     301</span> <span class="tlaGNC">           2 :             {</span></span>
+<span id="L302"><span class="lineNum">     302</span> <span class="tlaGNC">           2 :                 fileExists: sys.fileExists.bind(sys),</span></span>
+<span id="L303"><span class="lineNum">     303</span> <span class="tlaGNC">           2 :                 getCurrentDirectory: sys.getCurrentDirectory.bind(sys),</span></span>
+<span id="L304"><span class="lineNum">     304</span> <span class="tlaGNC">           2 :                 onUnRecoverableConfigFileDiagnostic: () =&gt; {},</span></span>
+<span id="L305"><span class="lineNum">     305</span> <span class="tlaGNC">           2 :                 readDirectory: sys.readDirectory.bind(sys),</span></span>
+<span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC">           2 :                 readFile: sys.readFile.bind(sys),</span></span>
+<span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">           2 :                 useCaseSensitiveFileNames: sys.useCaseSensitiveFileNames,</span></span>
+<span id="L308"><span class="lineNum">     308</span> <span class="tlaGNC">           2 :                 directoryExists: sys.directoryExists.bind(sys),</span></span>
+<span id="L309"><span class="lineNum">     309</span> <span class="tlaGNC">           2 :                 getDirectories: sys.getDirectories.bind(sys),</span></span>
+<span id="L310"><span class="lineNum">     310</span> <span class="tlaGNC">           2 :                 realpath: sys.realpath.bind(sys),</span></span>
+<span id="L311"><span class="lineNum">     311</span> <span class="tlaGNC">           2 :             },</span></span>
+<span id="L312"><span class="lineNum">     312</span> <span class="tlaGNC">           2 :         )!;</span></span>
+<span id="L313"><span class="lineNum">     313</span> <span class="tlaGNC">           2 :         const config = !useJsonParsingApi ? JSON.parse(fs.readFileSync(&quot;/src/projects/project/packages/a/tsconfig.json&quot;, &quot;utf-8&quot;)) : undefined;</span></span>
+<span id="L314"><span class="lineNum">     314</span> <span class="tlaGNC">           2 :         // This is really createCompilerHost but we want to use our own sys so simple usage</span></span>
+<span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">           2 :         const host = ts.createCompilerHostWorker(</span></span>
+<span id="L316"><span class="lineNum">     316</span> <span class="tlaGNC">           2 :             useJsonParsingApi ? commandLine.options : config.compilerOptions,</span></span>
+<span id="L317"><span class="lineNum">     317</span> <span class="tlaGNC">           2 :             /*setParentNodes*/ undefined,</span></span>
+<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">           2 :             sys,</span></span>
+<span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">           2 :         );</span></span>
+<span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">           2 :         (useJsonParsingApi ? assert.doesNotThrow : assert.throws)(() =&gt;</span></span>
+<span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">           2 :             ts.createProgram({</span></span>
+<span id="L322"><span class="lineNum">     322</span> <span class="tlaGNC">           2 :                 rootNames: commandLine.fileNames,</span></span>
+<span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">           2 :                 options: useJsonParsingApi ? commandLine.options : config.compilerOptions,</span></span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">           2 :                 host,</span></span>
+<span id="L325"><span class="lineNum">     325</span> <span class="tlaGNC">           2 :             })</span></span>
+<span id="L326"><span class="lineNum">     326</span> <span class="tlaGNC">           2 :         );</span></span>
+<span id="L327"><span class="lineNum">     327</span> <span class="tlaGNC">           2 :     }</span></span>
+<span id="L328"><span class="lineNum">     328</span> <span class="tlaGNC">           7 :     it(&quot;when using correct config file API&quot;, () =&gt; {</span></span>
+<span id="L329"><span class="lineNum">     329</span> <span class="tlaGNC">           1 :         verifyAPI(/*useJsonParsingApi*/ true);</span></span>
+<span id="L330"><span class="lineNum">     330</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L331"><span class="lineNum">     331</span> <span class="tlaGNC">           7 :     it(&quot;when using direct json read&quot;, () =&gt; {</span></span>
+<span id="L332"><span class="lineNum">     332</span> <span class="tlaGNC">           1 :         verifyAPI(/*useJsonParsingApi*/ false);</span></span>
+<span id="L333"><span class="lineNum">     333</span> <span class="tlaGNC">           7 :     });</span></span>
+<span id="L334"><span class="lineNum">     334</span> <span class="tlaGNC">           8 : });</span></span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

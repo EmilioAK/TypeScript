@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - lcov.info - testRunner/unittests/config/initializeTSConfig.ts</title>
+  <link rel="stylesheet" type="text/css" href="../../../gcov.css">
+</head>
+
+<body>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="title">LCOV - code coverage report</td></tr>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+            <tr>
+              <td width="100%">
+                <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="10%" class="headerValue"><a href="../../../index.html" title="Click to go to top-level">top level</a> - <a href="index.html" title="Click to go to directory testRunner/unittests/config">testRunner/unittests/config</a> - initializeTSConfig.ts<span style="font-size: 80%;"> (source / <a href="initializeTSConfig.ts.func-c.html" title="Click to go to function table">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="5%"></td>
+            <td width="5%" class="headerCovTableHead">Coverage</td>
+            <td width="5%" class="headerCovTableHead" title="Covered + Uncovered code">Total</td>
+            <td width="5%" class="headerCovTableHead" title="Exercised code only">Hit</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">lcov.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">38</td>
+            <td class="headerCovTableEntry">38</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test Date:</td>
+            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">2</td>
+          </tr>
+                  <tr><td><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+                </table>
+              </td>
+            </tr>
+
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+          </table>
+
+          <table cellpadding=0 cellspacing=0 border=0>
+            <tr>
+              <td><br></td>
+            </tr>
+            <tr>
+              <td>
+<pre class="sourceHeading">            Line data    Source code</pre>
+<pre class="source">
+<span id="L1"><span class="lineNum">       1</span> <span class="tlaGNC tlaBgGNC">           8 : import * as Harness from &quot;../../_namespaces/Harness.js&quot;;</span></span>
+<span id="L2"><span class="lineNum">       2</span> <span class="tlaGNC">           8 : import * as ts from &quot;../../_namespaces/ts.js&quot;;</span></span>
+<span id="L3"><span class="lineNum">       3</span> <span class="tlaGNC">           8 : </span></span>
+<span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC">           8 : describe(&quot;unittests:: config:: initTSConfig&quot;, () =&gt; {</span></span>
+<span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC">           7 :     function initTSConfigCorrectly(name: string, commandLinesArgs: string[]) {</span></span>
+<span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">          77 :         describe(name, () =&gt; {</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">          77 :             const commandLine = ts.parseCommandLine(commandLinesArgs);</span></span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">          77 :             const initResult = ts.generateTSConfig(commandLine.options, commandLine.fileNames, &quot;\n&quot;);</span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">          77 :             const outputFileName = `config/initTSConfig/${name.replace(/[^a-z0-9\-. ]/ig, &quot;&quot;)}/tsconfig.json`;</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">          77 : </span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">          77 :             it(`Correct output for ${outputFileName}`, () =&gt; {</span></span>
+<span id="L12"><span class="lineNum">      12</span> <span class="tlaGNC">          11 :                 Harness.Baseline.runBaseline(outputFileName, initResult, { PrintDiff: true });</span></span>
+<span id="L13"><span class="lineNum">      13</span> <span class="tlaGNC">          77 :             });</span></span>
+<span id="L14"><span class="lineNum">      14</span> <span class="tlaGNC">          77 :         });</span></span>
+<span id="L15"><span class="lineNum">      15</span> <span class="tlaGNC">          77 :     }</span></span>
+<span id="L16"><span class="lineNum">      16</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L17"><span class="lineNum">      17</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Default initialized TSConfig&quot;, [&quot;--init&quot;]);</span></span>
+<span id="L18"><span class="lineNum">      18</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L19"><span class="lineNum">      19</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with files options&quot;, [&quot;--init&quot;, &quot;file0.st&quot;, &quot;file1.ts&quot;, &quot;file2.ts&quot;]);</span></span>
+<span id="L20"><span class="lineNum">      20</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L21"><span class="lineNum">      21</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with boolean value compiler options&quot;, [&quot;--init&quot;, &quot;--noUnusedLocals&quot;]);</span></span>
+<span id="L22"><span class="lineNum">      22</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L23"><span class="lineNum">      23</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with enum value compiler options&quot;, [&quot;--init&quot;, &quot;--target&quot;, &quot;es5&quot;, &quot;--jsx&quot;, &quot;react&quot;]);</span></span>
+<span id="L24"><span class="lineNum">      24</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L25"><span class="lineNum">      25</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with list compiler options&quot;, [&quot;--init&quot;, &quot;--types&quot;, &quot;jquery,mocha&quot;]);</span></span>
+<span id="L26"><span class="lineNum">      26</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L27"><span class="lineNum">      27</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with list compiler options with enum value&quot;, [&quot;--init&quot;, &quot;--lib&quot;, &quot;es5,es2015.core&quot;]);</span></span>
+<span id="L28"><span class="lineNum">      28</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L29"><span class="lineNum">      29</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with incorrect compiler option&quot;, [&quot;--init&quot;, &quot;--someNonExistOption&quot;]);</span></span>
+<span id="L30"><span class="lineNum">      30</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L31"><span class="lineNum">      31</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with incorrect compiler option value&quot;, [&quot;--init&quot;, &quot;--lib&quot;, &quot;nonExistLib,es5,es2015.promise&quot;]);</span></span>
+<span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with advanced options&quot;, [&quot;--init&quot;, &quot;--declaration&quot;, &quot;--declarationDir&quot;, &quot;lib&quot;, &quot;--skipLibCheck&quot;, &quot;--noErrorTruncation&quot;]);</span></span>
+<span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with --help&quot;, [&quot;--init&quot;, &quot;--help&quot;]);</span></span>
+<span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">           7 : </span></span>
+<span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">           7 :     initTSConfigCorrectly(&quot;Initialized TSConfig with --watch&quot;, [&quot;--init&quot;, &quot;--watch&quot;]);</span></span>
+<span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">           8 : });</span></span>
+        </pre>
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          <table width="100%" border=0 cellspacing=0 cellpadding=0>
+            <tr><td class="ruler"><img src="../../../glass.png" width=3 height=3 alt=""></td></tr>
+            <tr><td class="versionInfo">Generated by: <a href="https://github.com//linux-test-project/lcov" target="_parent">LCOV version 2.1-1</a></td></tr>
+          </table>
+          <br>
+
+</body>
+</html>

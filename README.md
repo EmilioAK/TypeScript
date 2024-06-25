@@ -48,10 +48,6 @@ GetDuration()
 
 commit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e20843ba2b33e93196406
 
-<Provide a screenshot of the old coverage results (the same as you already showed above)>
-
-<Provide a screenshot of the new coverage results>
-
 <State the coverage improvement with a number and elaborate on why the coverage is improved>
 The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests.
 
@@ -60,6 +56,7 @@ commmit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e
 <Provide the same kind of information provided for Test 1>
 
 The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests.
+![image](max_coverage_before)
 
 ### Overall
 
