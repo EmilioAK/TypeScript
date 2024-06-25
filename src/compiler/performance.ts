@@ -73,7 +73,6 @@ let timeorigin = timestamp();
 const marks = new Map<string, number>();
 const counts = new Map<string, number>();
 const durations = new Map<string, number>();
-export const branch_coverage = new Map<string, boolean>();
 
 /**
  * Marks a performance event.
@@ -167,10 +166,8 @@ export function forEachMark(cb: (markName: string) => void) {
 export function clearMeasures(name?: string) {
   if (name !== undefined) {
     durations.delete(name);
-    branch_coverage.set("ClearMeasure_1", true);
   } else {
     durations.clear();
-    branch_coverage.set("ClearMeasure_2", true);
   }
   performanceImpl?.clearMeasures(name);
 }

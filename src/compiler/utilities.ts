@@ -7547,14 +7547,11 @@ export function base64encode(host: { base64encode?(input: string): string; } | u
     return convertToBase64(input);
 }
 
-export const branch_coverage = new Map<string, boolean>();
 /** @internal */
 export function base64decode(host: { base64decode?(input: string): string; } | undefined, input: string): string {
     if (host && host.base64decode) {
-        branch_coverage.set('base64_1', true);
         return host.base64decode(input);
     }
-    branch_coverage.set('base64_2', true);
     const length = input.length;
     const expandedCharCodes: number[] = [];
     let i = 0;
