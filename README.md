@@ -16,7 +16,9 @@ Programming language: TypeScript and JavaScript
 
 <Inform the name of the existing tool that was executed and how it was executed>
 
-<Show the coverage results provided by the existing tool with a screenshot>
+for the existing tool we used a tool called lcov, this made html which we could open in our browser to read the coverage of all lines and files.
+
+![image](max_coverage_before.png)
 
 ### Your own coverage tool
 
