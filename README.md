@@ -192,3 +192,5 @@ Max Raulea: "I wrote some new tests for the 2 functions, clearmeasures() and get
 Emilio Alvarez: "I wrote new tests for `mark()` and `enable()` and I tested the coverage of `mark()` and `clearMarks()` using my custom tool. I wrote my sections of this report.
 
 Saar Molenaar: "i wrote new tests for assertOptionalToken() and assertMissingNode(), and i also tested the coverage of these functions. I wrote my sections of this report
+
+Erona Gashi: "I wrote new tests for `clearMarks()` and `forEachMark()`. I tested the coverage of `enable()` and `disable()` using the custom tool. I wrote my sections of this report
