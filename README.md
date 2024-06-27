@@ -56,6 +56,21 @@ Commit url: https://github.com/EmilioAK/TypeScript/commit/43aa6178b8c50de22557d2
 
 <img width="2050" alt="Screenshot 2024-06-27 at 11 38 36" src="https://github.com/EmilioAK/TypeScript/assets/57467368/58398490-1358-490a-956c-9f96f5ab4357">
 
+#### Erona Gashi
+The tests executing successfully for me indicates that the coverage was properly checked and ran as expected.
+
+`enable()`
+
+Commit url: https://github.com/EmilioAK/TypeScript/commit/b73270f4a8b7918952105ad4558bb1ddb7f29390
+
+![E412B200-0830-4CAC-B586-58F8B72397D8](https://github.com/EmilioAK/TypeScript/assets/103590526/f3c48847-88f0-4e26-b266-52571a5d3989)
+
+`disable()`
+
+Commit url: https://github.com/EmilioAK/TypeScript/commit/b73270f4a8b7918952105ad4558bb1ddb7f29390
+
+![E412B200-0830-4CAC-B586-58F8B72397D8](https://github.com/EmilioAK/TypeScript/assets/103590526/f3c48847-88f0-4e26-b266-52571a5d3989)
+
 ## Coverage improvement
 
 ### Individual tests
