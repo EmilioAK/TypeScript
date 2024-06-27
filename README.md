@@ -16,7 +16,7 @@ Programming language: TypeScript and JavaScript
 
 <Inform the name of the existing tool that was executed and how it was executed>
 
-for the existing tool we used a tool called lcov, this made html which we could open in our browser to read the coverage of all lines and files.
+Typescript already included an existing coverage checker called `c8`. It then uses `lcov` to generate a readable report that is also converted into an HTML file that can be viewed in the browser.
 
 ![image](max_coverage_before.png)
 
