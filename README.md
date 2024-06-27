@@ -95,11 +95,17 @@ and after adding the new tests
 
 `enable()` inside `src/compiler/performance.ts` & `mark()` inside `src/compiler/performance.ts`. These functions were basically not covered at all, and my tests cover at least 80% of the branches.
 
+##### Test 1 `enable()`
+https://github.com/EmilioAK/TypeScript/commit/7a0594b8080ac8e2dbda754c231d2c0c9fef2a9a
+
 `enable()` before my tests
 <img width="2056" alt="Enable before my tests" src="https://github.com/EmilioAK/TypeScript/assets/57467368/8595b33e-998a-4e8b-9b6f-6fabd1f19a94">
 
 `enable()` after my tests
 <img width="2056" alt="Screenshot 2024-06-26 at 18 53 00" src="https://github.com/EmilioAK/TypeScript/assets/57467368/f4579426-4ace-415c-82c8-dcd7c2411257">
+
+##### Test 2 `mark()`
+https://github.com/EmilioAK/TypeScript/commit/38d44a27579283c738adc50e4d6e17e477d090b1
 
 `mark()` before my tests
 <img width="2056" alt="Screenshot 2024-06-26 at 18 47 58" src="https://github.com/EmilioAK/TypeScript/assets/57467368/96054b09-c5f2-42a0-878c-5c27e8578f40">
