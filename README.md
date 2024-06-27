@@ -71,6 +71,17 @@ Commit url: https://github.com/EmilioAK/TypeScript/commit/b73270f4a8b7918952105a
 
 ![E412B200-0830-4CAC-B586-58F8B72397D8](https://github.com/EmilioAK/TypeScript/assets/103590526/f3c48847-88f0-4e26-b266-52571a5d3989)
 
+#### Saar Molenaar
+The tests executing successfully for me indicates that the coverage was properly checked and ran as expected.
+
+'assertOptionalToken()'
+
+Commit url: https://github.com/microsoft/TypeScript/commit/b39347ddf8de96af5af49f3e6dcfcbeffd92a18f
+
+'assertMissingNode()'
+
+Commit url: https://github.com/microsoft/TypeScript/commit/b39347ddf8de96af5af49f3e6dcfcbeffd92a18f
+
 ## Coverage improvement
 
 ### Individual tests
@@ -145,6 +156,28 @@ Coverage numbers before my tests
 
 Coverage numbers after my tests
 <img width="2056" alt="Screenshot 2024-06-27 at 15 35 58" src="https://github.com/EmilioAK/TypeScript/assets/57467368/bebacf47-8c8c-4d8c-88a6-b04418a748cb">
+
+#### Saar Molenaar
+assertOptionalToken() inside src/compiler/debug.ts & assertMissingNode() inside src/compiler/debug.ts. My tests cover at least 80% of the branches.
+
+#### Test 1 'assertOptionalToken()'
+https://github.com/microsoft/TypeScript/commit/d6047fb35137b5c6172085a8eacb9b9d65752aea
+
+assertoptionalToken before my tests
+
+assertoptionalToken after my tests
+
+#### Test 2 'assertMissingNode()'
+https://github.com/microsoft/TypeScript/commit/d6047fb35137b5c6172085a8eacb9b9d65752aea
+
+assertMissingNode before my tests
+
+assertMissingNode after my tests
+
+Coverage numbers before my tests
+
+Coverage numbers after my tests
+
 
 ### Overall
 
