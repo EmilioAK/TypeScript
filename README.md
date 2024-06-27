@@ -76,6 +76,8 @@ The tests executing successfully for me indicates that the coverage was properly
 
 'assertOptionalToken()'
 
+![image]()
+
 Commit url: https://github.com/microsoft/TypeScript/commit/b39347ddf8de96af5af49f3e6dcfcbeffd92a18f
 
 'assertMissingNode()'
@@ -174,18 +176,30 @@ https://github.com/microsoft/TypeScript/commit/d6047fb35137b5c6172085a8eacb9b9d6
 
 assertoptionalToken before my tests
 
+![image](saar7.jpeg)
+
 assertoptionalToken after my tests
+
+![image](saar1.jpeg)
 
 #### Test 2 'assertMissingNode()'
 https://github.com/microsoft/TypeScript/commit/d6047fb35137b5c6172085a8eacb9b9d65752aea
 
 assertMissingNode before my tests
 
+![image](saar5.jpeg)
+
 assertMissingNode after my tests
 
-Coverage numbers before my tests
+![image](saar4.jpeg)
 
-Coverage numbers after my tests
+Coverage numbers before my tests '(debug.ts)'
+
+![image](saar2.jpeg)
+
+Coverage numbers after my tests '(debug.ts)'
+
+![image](saar8.jpeg)
 
 
 ### Overall
