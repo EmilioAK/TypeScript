@@ -113,6 +113,13 @@ https://github.com/EmilioAK/TypeScript/commit/38d44a27579283c738adc50e4d6e17e477
 `mark()` after my tests
 <img width="2056" alt="Screenshot 2024-06-26 at 18 52 55" src="https://github.com/EmilioAK/TypeScript/assets/57467368/64d539d7-46fe-4deb-b1fc-79ea178324e3">
 
+Coverage numbers before my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 14 56 05" src="https://github.com/EmilioAK/TypeScript/assets/57467368/e33a7b7d-fea2-4937-a7dc-c271950496d4">
+
+Coverage numbers after my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 14 51 31" src="https://github.com/EmilioAK/TypeScript/assets/57467368/08c3c050-3f98-481a-ad2d-ba1ac488154b">
+
+
 ### Overall
 
 ![image](max_coverage_before.png)
