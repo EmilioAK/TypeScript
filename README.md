@@ -62,6 +62,18 @@ and after adding the new tests
 
 `enable()` inside `src/compiler/performance.ts` & `mark()` inside `src/compiler/performance.ts`. These functions were basically not covered at all, and my tests cover at least 80% of the branches.
 
+`enable()` before my tests
+<img width="2056" alt="Enable before my tests" src="https://github.com/EmilioAK/TypeScript/assets/57467368/8595b33e-998a-4e8b-9b6f-6fabd1f19a94">
+
+`enable()` after my tests
+<img width="2056" alt="Screenshot 2024-06-26 at 18 53 00" src="https://github.com/EmilioAK/TypeScript/assets/57467368/f4579426-4ace-415c-82c8-dcd7c2411257">
+
+`mark()` before my tests
+<img width="2056" alt="Screenshot 2024-06-26 at 18 47 58" src="https://github.com/EmilioAK/TypeScript/assets/57467368/96054b09-c5f2-42a0-878c-5c27e8578f40">
+
+`mark()` after my tests
+<img width="2056" alt="Screenshot 2024-06-26 at 18 52 55" src="https://github.com/EmilioAK/TypeScript/assets/57467368/64d539d7-46fe-4deb-b1fc-79ea178324e3">
+
 ### Overall
 
 ![image](max_coverage_before.png)
