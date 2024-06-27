@@ -119,6 +119,32 @@ Coverage numbers before my tests
 Coverage numbers after my tests
 <img width="2056" alt="Screenshot 2024-06-27 at 14 51 31" src="https://github.com/EmilioAK/TypeScript/assets/57467368/08c3c050-3f98-481a-ad2d-ba1ac488154b">
 
+#### Erona Gashi
+These functions were not covered before I wrote my tests
+
+##### Test 1 `clearMarks()`
+https://github.com/EmilioAK/TypeScript/commit/76f34d28f3a8c73a36ee35f2123db09297f591cf
+
+`clearMarks()` before my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 15 54 49" src="https://github.com/EmilioAK/TypeScript/assets/57467368/3ba43f88-c378-44b2-a7f4-f2f0587faace">
+
+`clearMarks()` after my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 15 35 45" src="https://github.com/EmilioAK/TypeScript/assets/57467368/f960653d-4fac-4b28-84b0-605f28428d22">
+
+##### Test 2 `forEachMark()`
+https://github.com/EmilioAK/TypeScript/commit/f95771b016f8202544f9e44da9520a232a34c6f2
+
+`forEachMark()` before my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 15 54 49" src="https://github.com/EmilioAK/TypeScript/assets/57467368/3ba43f88-c378-44b2-a7f4-f2f0587faace">
+
+`forEachMark()` after my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 15 35 55" src="https://github.com/EmilioAK/TypeScript/assets/57467368/32d7ee37-2963-48a2-a44f-294fefdfc874">
+
+Coverage numbers before my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 14 51 31" src="https://github.com/EmilioAK/TypeScript/assets/57467368/08c3c050-3f98-481a-ad2d-ba1ac488154b">
+
+Coverage numbers after my tests
+<img width="2056" alt="Screenshot 2024-06-27 at 15 35 58" src="https://github.com/EmilioAK/TypeScript/assets/57467368/bebacf47-8c8c-4d8c-88a6-b04418a748cb">
 
 ### Overall
 
