@@ -46,6 +46,9 @@ I checked the coverage of `mark()` inside `src/compiler/performance.ts` and `cle
 
 Commit url: https://github.com/EmilioAK/TypeScript/commit/43aa6178b8c50de22557d291ceb2ca523749039a
 
+<img width="2050" alt="Screenshot 2024-06-27 at 11 38 36" src="https://github.com/EmilioAK/TypeScript/assets/57467368/58398490-1358-490a-956c-9f96f5ab4357">
+
+
 ## Coverage improvement
 
 ### Individual tests
