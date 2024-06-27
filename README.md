@@ -190,3 +190,5 @@ Coverage numbers after my tests
 Max Raulea: "I wrote some new tests for the 2 functions, clearmeasures() and getduration(), then I tested the coverage of the base64decode() and clearmeasures() function. I also wrote the shared part of the report in the md file as well as my own part"
 
 Emilio Alvarez: "I wrote new tests for `mark()` and `enable()` and I tested the coverage of `mark()` and `clearMarks()` using my custom tool. I wrote my sections of this report.
+
+Saar Molenaar: "i wrote new tests for assertOptionalToken() and assertMissingNode(), and i also tested the coverage of these functions. I wrote my sections of this report
