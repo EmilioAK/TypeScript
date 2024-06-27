@@ -76,11 +76,13 @@ The tests executing successfully for me indicates that the coverage was properly
 
 'assertOptionalToken()'
 
-![image]()
+![image](saar_laatste.jpeg)
 
 Commit url: https://github.com/microsoft/TypeScript/commit/b39347ddf8de96af5af49f3e6dcfcbeffd92a18f
 
 'assertMissingNode()'
+
+![image](saar_laatste.jpeg)
 
 Commit url: https://github.com/microsoft/TypeScript/commit/b39347ddf8de96af5af49f3e6dcfcbeffd92a18f
 
