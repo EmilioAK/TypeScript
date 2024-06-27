@@ -3608,9 +3608,6 @@ declare namespace ts {
             responseRequired?: boolean;
         }
     }
-    namespace performance {
-        const branch_coverage: Map<string, boolean>;
-    }
     namespace JsTyping {
         interface TypingResolutionHost {
             directoryExists(path: string): boolean;
@@ -8775,7 +8772,6 @@ declare namespace ts {
      * ```
      */
     function getJSDocCommentsAndTags(hostNode: Node): readonly (JSDoc | JSDocTag)[];
-    const branch_coverage: Map<string, boolean>;
     /**
      * Create an external source map source file reference
      */
