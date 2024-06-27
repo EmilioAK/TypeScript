@@ -24,7 +24,7 @@ for the existing tool we used a tool called lcov, this made html which we could 
 
 <The following is supposed to be repeated for each group member>
 
-Max Raulea
+#### Max Raulea
 
 base64decode()
 
@@ -44,7 +44,7 @@ commit url: https://github.com/microsoft/TypeScript/commit/f91ae9729538be45120c4
 
 <The following is supposed to be repeated for each group member>
 
-Max Raulea
+#### Max Raulea
 
 GetDuration()
 &
@@ -57,6 +57,10 @@ The coverage improved since at first the function was not tested, my test added 
 
 and after adding the new tests
 ![image](max_coverage_after.png)
+
+#### Emilio Alvarez
+
+`enable()` inside `src/compiler/performance.ts` & `mark()` inside `src/compiler/performance.ts`. These functions were basically not covered at all, and my tests cover at least 80% of the branches.
 
 ### Overall
 
