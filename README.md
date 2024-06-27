@@ -22,6 +22,8 @@ for the existing tool we used a tool called lcov, this made html which we could 
 
 ### Your own coverage tool
 
+We finished our assignment before the project description was rewritten and got permission from Phillip to keep our code that tests different functions. Typescript does not allow us to print inside the files we are testing. The workaround we went with is to create our own custom branch coverage code that we added to the files, as intended, and then we create tests that execute successfully if the branches are reached as expected. This has the same effect and provides the same information as printing inside the branch coverage code would. 
+
 <The following is supposed to be repeated for each group member>
 
 #### Max Raulea
@@ -37,6 +39,12 @@ clearMeasures()
 commit url: https://github.com/microsoft/TypeScript/commit/f91ae9729538be45120c40d16c18aa85d48763f9
 
 ![image](coverage_info_max.png)
+
+#### Emilio Alvarez
+
+I checked the coverage of `mark()` inside `src/compiler/performance.ts` and `clearMarks()` inside `src/compiler/performance.ts`. The tests executing successfully for me indicates that the coverage was properly checked and ran as expected.
+
+Commit url: https://github.com/EmilioAK/TypeScript/commit/43aa6178b8c50de22557d291ceb2ca523749039a
 
 ## Coverage improvement
 
