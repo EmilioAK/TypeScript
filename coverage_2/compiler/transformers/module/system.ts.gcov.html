@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">87.5&nbsp;%</td>
@@ -534,7 +534,7 @@
 <span id="L472"><span class="lineNum">     472</span> <span class="tlaGNC">          28 :             }</span></span>
 <span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">          14 :         }</span></span>
 <span id="L474"><span class="lineNum">     474</span> <span class="tlaGNC">          14 : </span></span>
-<span id="L475"><span class="lineNum">     475</span> <span class="tlaGNC">         205 :         for (const f of moduleInfo.exportedFunctions) {</span></span>
+<span id="L475"><span class="lineNum">     475</span> <span class="tlaGNC">         335 :         for (const f of moduleInfo.exportedFunctions) {</span></span>
 <span id="L476"><span class="lineNum">     476</span> <span class="tlaGNC">           4 :             if (hasSyntacticModifier(f, ModifierFlags.Default)) {</span></span>
 <span id="L477"><span class="lineNum">     477</span> <span class="tlaGNC">           2 :                 continue;</span></span>
 <span id="L478"><span class="lineNum">     478</span> <span class="tlaGNC">           2 :             }</span></span>
@@ -1622,7 +1622,7 @@
 <span id="L1560"><span class="lineNum">    1560</span> <span class="tlaGNC">        2568 :             return node;</span></span>
 <span id="L1561"><span class="lineNum">    1561</span> <span class="tlaGNC">        2568 :         }</span></span>
 <span id="L1562"><span class="lineNum">    1562</span> <span class="tlaGNC">         666 :         switch (node.kind) {</span></span>
-<span id="L1563"><span class="lineNum">    1563</span> <span class="tlaGNC">        3234 :             case SyntaxKind.ForStatement:</span></span>
+<span id="L1563"><span class="lineNum">    1563</span> <span class="tlaGNC">        3032 :             case SyntaxKind.ForStatement:</span></span>
 <span id="L1564"><span class="lineNum">    1564</span> <span class="tlaUNC tlaBgUNC">           0 :                 return visitForStatement(node as ForStatement, /*isTopLevel*/ false);</span></span>
 <span id="L1565"><span class="lineNum">    1565</span> <span class="tlaGNC tlaBgGNC">        3234 :             case SyntaxKind.ExpressionStatement:</span></span>
 <span id="L1566"><span class="lineNum">    1566</span> <span class="tlaGNC">          38 :                 return visitExpressionStatement(node as ExpressionStatement);</span></span>
@@ -2080,7 +2080,7 @@
 <span id="L2018"><span class="lineNum">    2018</span> <span class="tlaGNC">         313 :             // An exported namespace or enum may merge with an ambient declaration, which won't show up in</span></span>
 <span id="L2019"><span class="lineNum">    2019</span> <span class="tlaGNC">         313 :             // .js emit. When that happens, try to find bindings associated with a non-ambient declaration.</span></span>
 <span id="L2020"><span class="lineNum">    2020</span> <span class="tlaGNC">         313 :             const declarations = resolver.getReferencedValueDeclarations(name);</span></span>
-<span id="L2021"><span class="lineNum">    2021</span> <span class="tlaGNC">         365 :             if (declarations) {</span></span>
+<span id="L2021"><span class="lineNum">    2021</span> <span class="tlaGNC">         397 :             if (declarations) {</span></span>
 <span id="L2022"><span class="lineNum">    2022</span> <span class="tlaGNC">         278 :                 for (const declaration of declarations) {</span></span>
 <span id="L2023"><span class="lineNum">    2023</span> <span class="tlaGNC">         278 :                     if (declaration !== valueDeclaration &amp;&amp; moduleInfo?.exportedBindings[getOriginalNodeId(declaration)]) return declaration;</span></span>
 <span id="L2024"><span class="lineNum">    2024</span> <span class="tlaGNC">         278 :                 }</span></span>

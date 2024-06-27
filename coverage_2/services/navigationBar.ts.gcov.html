@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -802,7 +802,7 @@
 <span id="L740"><span class="lineNum">     740</span> <span class="tlaGNC">          30 :         return false;</span></span>
 <span id="L741"><span class="lineNum">     741</span> <span class="tlaGNC">          30 :     }</span></span>
 <span id="L742"><span class="lineNum">     742</span> <span class="tlaGNC">          31 :     switch (a.kind) {</span></span>
-<span id="L743"><span class="lineNum">     743</span> <span class="tlaGNC">          55 :         case SyntaxKind.PropertyDeclaration:</span></span>
+<span id="L743"><span class="lineNum">     743</span> <span class="tlaGNC">          61 :         case SyntaxKind.PropertyDeclaration:</span></span>
 <span id="L744"><span class="lineNum">     744</span> <span class="tlaGNC">          61 :         case SyntaxKind.MethodDeclaration:</span></span>
 <span id="L745"><span class="lineNum">     745</span> <span class="tlaGNC">          61 :         case SyntaxKind.GetAccessor:</span></span>
 <span id="L746"><span class="lineNum">     746</span> <span class="tlaGNC">          61 :         case SyntaxKind.SetAccessor:</span></span>
@@ -832,7 +832,7 @@
 <span id="L770"><span class="lineNum">     770</span> <span class="tlaGNC">          31 :     if (!a.body || !b.body) {</span></span>
 <span id="L771"><span class="lineNum">     771</span> <span class="tlaGNC">           1 :         return a.body === b.body;</span></span>
 <span id="L772"><span class="lineNum">     772</span> <span class="tlaGNC">           1 :     }</span></span>
-<span id="L773"><span class="lineNum">     773</span> <span class="tlaGNC">          30 :     return a.body.kind === b.body.kind &amp;&amp; (a.body.kind !== SyntaxKind.ModuleDeclaration || areSameModule(a.body as ModuleDeclaration, b.body as ModuleDeclaration));</span></span>
+<span id="L773"><span class="lineNum">     773</span> <span class="tlaGNC">          31 :     return a.body.kind === b.body.kind &amp;&amp; (a.body.kind !== SyntaxKind.ModuleDeclaration || areSameModule(a.body as ModuleDeclaration, b.body as ModuleDeclaration));</span></span>
 <span id="L774"><span class="lineNum">     774</span> <span class="tlaGNC">          31 : }</span></span>
 <span id="L775"><span class="lineNum">     775</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L776"><span class="lineNum">     776</span> <span class="tlaGNC">           1 : /** Merge source into target. Source should be thrown away after this is called. */</span></span>
@@ -876,7 +876,7 @@
 <span id="L814"><span class="lineNum">     814</span> <span class="tlaGNC">        1058 :         return propertyName &amp;&amp; unescapeLeadingUnderscores(propertyName);</span></span>
 <span id="L815"><span class="lineNum">     815</span> <span class="tlaGNC">        1058 :     }</span></span>
 <span id="L816"><span class="lineNum">     816</span> <span class="tlaGNC">         166 :     switch (node.kind) {</span></span>
-<span id="L817"><span class="lineNum">     817</span> <span class="tlaGNC">        1184 :         case SyntaxKind.FunctionExpression:</span></span>
+<span id="L817"><span class="lineNum">     817</span> <span class="tlaGNC">        1336 :         case SyntaxKind.FunctionExpression:</span></span>
 <span id="L818"><span class="lineNum">     818</span> <span class="tlaGNC">        1336 :         case SyntaxKind.ArrowFunction:</span></span>
 <span id="L819"><span class="lineNum">     819</span> <span class="tlaGNC">        1336 :         case SyntaxKind.ClassExpression:</span></span>
 <span id="L820"><span class="lineNum">     820</span> <span class="tlaGNC">          63 :             return getFunctionOrClassName(node as FunctionExpression | ArrowFunction | ClassExpression);</span></span>

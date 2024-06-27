@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -1021,7 +1021,7 @@
 <span id="L959"><span class="lineNum">     959</span> <span class="tlaGNC">          15 : </span></span>
 <span id="L960"><span class="lineNum">     960</span> <span class="tlaGNC">          15 :         const attrText = match[4];</span></span>
 <span id="L961"><span class="lineNum">     961</span> <span class="tlaGNC">          15 :         let attrPos = pos;</span></span>
-<span id="L962"><span class="lineNum">     962</span> <span class="tlaGNC">          19 :         while (true) {</span></span>
+<span id="L962"><span class="lineNum">     962</span> <span class="tlaGNC">          21 :         while (true) {</span></span>
 <span id="L963"><span class="lineNum">     963</span> <span class="tlaGNC">          27 :             const attrMatch = attributeRegex.exec(attrText);</span></span>
 <span id="L964"><span class="lineNum">     964</span> <span class="tlaGNC">          27 :             if (!attrMatch) {</span></span>
 <span id="L965"><span class="lineNum">     965</span> <span class="tlaGNC">          15 :                 break;</span></span>
@@ -1036,7 +1036,7 @@
 <span id="L974"><span class="lineNum">     974</span> <span class="tlaGNC">          12 :             pushClassification(attrPos, attrMatch[2].length, ClassificationType.jsxAttribute); // attribute name</span></span>
 <span id="L975"><span class="lineNum">     975</span> <span class="tlaGNC">          12 :             attrPos += attrMatch[2].length;</span></span>
 <span id="L976"><span class="lineNum">     976</span> <span class="tlaGNC">          12 : </span></span>
-<span id="L977"><span class="lineNum">     977</span> <span class="tlaGNC">          25 :             if (attrMatch[3].length) {</span></span>
+<span id="L977"><span class="lineNum">     977</span> <span class="tlaGNC">          27 :             if (attrMatch[3].length) {</span></span>
 <span id="L978"><span class="lineNum">     978</span> <span class="tlaGNC">           1 :                 pushCommentRange(attrPos, attrMatch[3].length); // whitespace</span></span>
 <span id="L979"><span class="lineNum">     979</span> <span class="tlaGNC">           1 :                 attrPos += attrMatch[3].length;</span></span>
 <span id="L980"><span class="lineNum">     980</span> <span class="tlaGNC">           1 :             }</span></span>
@@ -1044,7 +1044,7 @@
 <span id="L982"><span class="lineNum">     982</span> <span class="tlaGNC">          12 :             pushClassification(attrPos, attrMatch[4].length, ClassificationType.operator); // =</span></span>
 <span id="L983"><span class="lineNum">     983</span> <span class="tlaGNC">          12 :             attrPos += attrMatch[4].length;</span></span>
 <span id="L984"><span class="lineNum">     984</span> <span class="tlaGNC">          12 : </span></span>
-<span id="L985"><span class="lineNum">     985</span> <span class="tlaGNC">          25 :             if (attrMatch[5].length) {</span></span>
+<span id="L985"><span class="lineNum">     985</span> <span class="tlaGNC">          27 :             if (attrMatch[5].length) {</span></span>
 <span id="L986"><span class="lineNum">     986</span> <span class="tlaGNC">           1 :                 pushCommentRange(attrPos, attrMatch[5].length); // whitespace</span></span>
 <span id="L987"><span class="lineNum">     987</span> <span class="tlaGNC">           1 :                 attrPos += attrMatch[5].length;</span></span>
 <span id="L988"><span class="lineNum">     988</span> <span class="tlaGNC">           1 :             }</span></span>
@@ -1055,11 +1055,11 @@
 <span id="L993"><span class="lineNum">     993</span> <span class="tlaGNC">          15 : </span></span>
 <span id="L994"><span class="lineNum">     994</span> <span class="tlaGNC">          15 :         pos += match[4].length;</span></span>
 <span id="L995"><span class="lineNum">     995</span> <span class="tlaGNC">          15 : </span></span>
-<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">          19 :         if (pos &gt; attrPos) {</span></span>
+<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">          16 :         if (pos &gt; attrPos) {</span></span>
 <span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">          12 :             pushCommentRange(attrPos, pos - attrPos);</span></span>
 <span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">          12 :         }</span></span>
 <span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">          15 : </span></span>
-<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">          20 :         if (match[5]) {</span></span>
+<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">          21 :         if (match[5]) {</span></span>
 <span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">           8 :             pushClassification(pos, match[5].length, ClassificationType.punctuation); // /&gt;</span></span>
 <span id="L1002"><span class="lineNum">    1002</span> <span class="tlaGNC">           8 :             pos += match[5].length;</span></span>
 <span id="L1003"><span class="lineNum">    1003</span> <span class="tlaGNC">           8 :         }</span></span>

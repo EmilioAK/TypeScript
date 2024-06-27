@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -207,7 +207,7 @@
 <span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">          43 :                 const { expression } = statement as ExpressionStatement;</span></span>
 <span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">          43 :                 if (!isBinaryExpression(expression)) return isRequireCall(expression, /*requireStringLiteralLikeArgument*/ true);</span></span>
 <span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">          36 :                 const kind = getAssignmentDeclarationKind(expression);</span></span>
-<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">          38 :                 return kind === AssignmentDeclarationKind.ExportsProperty || kind === AssignmentDeclarationKind.ModuleExports;</span></span>
+<span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">          41 :                 return kind === AssignmentDeclarationKind.ExportsProperty || kind === AssignmentDeclarationKind.ModuleExports;</span></span>
 <span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">          43 :             }</span></span>
 <span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">          89 :             default:</span></span>
 <span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">           2 :                 return false;</span></span>
@@ -308,7 +308,7 @@
 <span id="L246"><span class="lineNum">     246</span> <span class="tlaGNC">         863 :     const maxArguments = name === &quot;then&quot; ? 2 : name === &quot;catch&quot; ? 1 : name === &quot;finally&quot; ? 1 : 0;</span></span>
 <span id="L247"><span class="lineNum">     247</span> <span class="tlaGNC">         863 :     if (node.arguments.length &gt; maxArguments) return false;</span></span>
 <span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">         863 :     if (node.arguments.length &lt; maxArguments) return true;</span></span>
-<span id="L249"><span class="lineNum">     249</span> <span class="tlaGNC">         863 :     return maxArguments === 1 || some(node.arguments, arg =&gt; {</span></span>
+<span id="L249"><span class="lineNum">     249</span> <span class="tlaGNC">         861 :     return maxArguments === 1 || some(node.arguments, arg =&gt; {</span></span>
 <span id="L250"><span class="lineNum">     250</span> <span class="tlaGNC">          45 :         return arg.kind === SyntaxKind.NullKeyword || isIdentifier(arg) &amp;&amp; arg.text === &quot;undefined&quot;;</span></span>
 <span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">          27 :     });</span></span>
 <span id="L252"><span class="lineNum">     252</span> <span class="tlaGNC">         863 : }</span></span>

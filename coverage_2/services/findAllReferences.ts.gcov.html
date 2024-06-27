@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.3&nbsp;%</td>
@@ -1056,16 +1056,16 @@
 <span id="L994"><span class="lineNum">     994</span> <span class="tlaGNC">           6 :                 return undefined;</span></span>
 <span id="L995"><span class="lineNum">     995</span> <span class="tlaGNC">           6 :             }</span></span>
 <span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">           5 :             const moduleSymbol = program.getTypeChecker().getMergedSymbol(resolvedRef.file.symbol);</span></span>
-<span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">           6 :             if (moduleSymbol) {</span></span>
+<span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">           5 :             if (moduleSymbol) {</span></span>
 <span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">           2 :                 return getReferencedSymbolsForModule(program, moduleSymbol, /*excludeImportTypeOfExportEquals*/ false, sourceFiles, sourceFilesSet);</span></span>
 <span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">           2 :             }</span></span>
 <span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">           3 :             const fileIncludeReasons = program.getFileIncludeReasons();</span></span>
-<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">           4 :             if (!fileIncludeReasons) {</span></span>
+<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">           3 :             if (!fileIncludeReasons) {</span></span>
 <span id="L1002"><span class="lineNum">    1002</span> <span class="tlaUNC tlaBgUNC">           0 :                 return undefined;</span></span>
 <span id="L1003"><span class="lineNum">    1003</span> <span class="tlaUNC">           0 :             }</span></span>
 <span id="L1004"><span class="lineNum">    1004</span> <span class="tlaGNC tlaBgGNC">           3 :             return [{</span></span>
 <span id="L1005"><span class="lineNum">    1005</span> <span class="tlaGNC">           3 :                 definition: { type: DefinitionKind.TripleSlashReference, reference: resolvedRef.reference, file: node },</span></span>
-<span id="L1006"><span class="lineNum">    1006</span> <span class="tlaGNC">           4 :                 references: getReferencesForNonModule(resolvedRef.file, fileIncludeReasons, program) || emptyArray,</span></span>
+<span id="L1006"><span class="lineNum">    1006</span> <span class="tlaGNC">           3 :                 references: getReferencesForNonModule(resolvedRef.file, fileIncludeReasons, program) || emptyArray,</span></span>
 <span id="L1007"><span class="lineNum">    1007</span> <span class="tlaGNC">          11 :             }];</span></span>
 <span id="L1008"><span class="lineNum">    1008</span> <span class="tlaGNC">          11 :         }</span></span>
 <span id="L1009"><span class="lineNum">    1009</span> <span class="tlaGNC">        5310 : </span></span>
@@ -1187,11 +1187,11 @@
 <span id="L1125"><span class="lineNum">    1125</span> <span class="tlaGNC">        4548 :         let result: SymbolAndEntries[] | undefined;</span></span>
 <span id="L1126"><span class="lineNum">    1126</span> <span class="tlaGNC">        4548 :         for (const references of referencesToMerge) {</span></span>
 <span id="L1127"><span class="lineNum">    1127</span> <span class="tlaGNC">       13637 :             if (!references || !references.length) continue;</span></span>
-<span id="L1128"><span class="lineNum">    1128</span> <span class="tlaGNC">        6805 :             if (!result) {</span></span>
+<span id="L1128"><span class="lineNum">    1128</span> <span class="tlaGNC">        6471 :             if (!result) {</span></span>
 <span id="L1129"><span class="lineNum">    1129</span> <span class="tlaGNC">        4542 :                 result = references;</span></span>
 <span id="L1130"><span class="lineNum">    1130</span> <span class="tlaGNC">        4542 :                 continue;</span></span>
 <span id="L1131"><span class="lineNum">    1131</span> <span class="tlaGNC">        4542 :             }</span></span>
-<span id="L1132"><span class="lineNum">    1132</span> <span class="tlaGNC">        1635 :             for (const entry of references) {</span></span>
+<span id="L1132"><span class="lineNum">    1132</span> <span class="tlaGNC">        1232 :             for (const entry of references) {</span></span>
 <span id="L1133"><span class="lineNum">    1133</span> <span class="tlaGNC">           5 :                 if (!entry.definition || entry.definition.type !== DefinitionKind.Symbol) {</span></span>
 <span id="L1134"><span class="lineNum">    1134</span> <span class="tlaUNC tlaBgUNC">           0 :                     result.push(entry);</span></span>
 <span id="L1135"><span class="lineNum">    1135</span> <span class="tlaUNC">           0 :                     continue;</span></span>
@@ -1471,7 +1471,7 @@
 <span id="L1409"><span class="lineNum">    1409</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1410"><span class="lineNum">    1410</span> <span class="tlaGNC">           8 :     function getNonModuleSymbolOfMergedModuleSymbol(symbol: Symbol) {</span></span>
 <span id="L1411"><span class="lineNum">    1411</span> <span class="tlaGNC">        5530 :         if (!(symbol.flags &amp; (SymbolFlags.Module | SymbolFlags.Transient))) return undefined;</span></span>
-<span id="L1412"><span class="lineNum">    1412</span> <span class="tlaGNC">        2444 :         const decl = symbol.declarations &amp;&amp; find(symbol.declarations, d =&gt; !isSourceFile(d) &amp;&amp; !isModuleDeclaration(d));</span></span>
+<span id="L1412"><span class="lineNum">    1412</span> <span class="tlaGNC">        3596 :         const decl = symbol.declarations &amp;&amp; find(symbol.declarations, d =&gt; !isSourceFile(d) &amp;&amp; !isModuleDeclaration(d));</span></span>
 <span id="L1413"><span class="lineNum">    1413</span> <span class="tlaGNC">        5530 :         return decl &amp;&amp; decl.symbol;</span></span>
 <span id="L1414"><span class="lineNum">    1414</span> <span class="tlaGNC">        5530 :     }</span></span>
 <span id="L1415"><span class="lineNum">    1415</span> <span class="tlaGNC">           8 : </span></span>
@@ -1657,7 +1657,7 @@
 <span id="L1595"><span class="lineNum">    1595</span> <span class="tlaGNC">          64 :         // Don't rename an import type `import(&quot;./module-name&quot;)` when renaming `name` in `export = name;`</span></span>
 <span id="L1596"><span class="lineNum">    1596</span> <span class="tlaGNC">         174 :         if (!isIdentifier(singleRef) &amp;&amp; !isImportOrExportSpecifier(singleRef.parent)) return false;</span></span>
 <span id="L1597"><span class="lineNum">    1597</span> <span class="tlaGNC">          62 :         // At `default` in `import { default as x }` or `export { default as x }`, do add a reference, but do not rename.</span></span>
-<span id="L1598"><span class="lineNum">    1598</span> <span class="tlaGNC">         110 :         return !(isImportOrExportSpecifier(singleRef.parent) &amp;&amp; moduleExportNameIsDefault(singleRef));</span></span>
+<span id="L1598"><span class="lineNum">    1598</span> <span class="tlaGNC">          68 :         return !(isImportOrExportSpecifier(singleRef.parent) &amp;&amp; moduleExportNameIsDefault(singleRef));</span></span>
 <span id="L1599"><span class="lineNum">    1599</span> <span class="tlaGNC">         174 :     }</span></span>
 <span id="L1600"><span class="lineNum">    1600</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1601"><span class="lineNum">    1601</span> <span class="tlaGNC">           8 :     // Go to the symbol we imported from and find references for it.</span></span>
@@ -1733,7 +1733,7 @@
 <span id="L1671"><span class="lineNum">    1671</span> <span class="tlaGNC">         141 :         }</span></span>
 <span id="L1672"><span class="lineNum">    1672</span> <span class="tlaGNC">        3417 : </span></span>
 <span id="L1673"><span class="lineNum">    1673</span> <span class="tlaGNC">        3417 :         let scope: Node | undefined;</span></span>
-<span id="L1674"><span class="lineNum">    1674</span> <span class="tlaGNC">        4187 :         for (const declaration of declarations) {</span></span>
+<span id="L1674"><span class="lineNum">    1674</span> <span class="tlaGNC">        4342 :         for (const declaration of declarations) {</span></span>
 <span id="L1675"><span class="lineNum">    1675</span> <span class="tlaGNC">        3484 :             const container = getContainerNode(declaration);</span></span>
 <span id="L1676"><span class="lineNum">    1676</span> <span class="tlaGNC">        3484 :             if (scope &amp;&amp; scope !== container) {</span></span>
 <span id="L1677"><span class="lineNum">    1677</span> <span class="tlaGNC">          10 :                 // Different declarations have different containers, bail out</span></span>
@@ -2083,7 +2083,7 @@
 <span id="L2021"><span class="lineNum">    2021</span> <span class="tlaGNC">          48 :             return;</span></span>
 <span id="L2022"><span class="lineNum">    2022</span> <span class="tlaGNC">          48 :         }</span></span>
 <span id="L2023"><span class="lineNum">    2023</span> <span class="tlaGNC">         232 : </span></span>
-<span id="L2024"><span class="lineNum">    2024</span> <span class="tlaGNC">         274 :         if (!propertyName) {</span></span>
+<span id="L2024"><span class="lineNum">    2024</span> <span class="tlaGNC">         280 :         if (!propertyName) {</span></span>
 <span id="L2025"><span class="lineNum">    2025</span> <span class="tlaGNC">         126 :             // Don't rename at `export { default } from &quot;m&quot;;`. (but do continue to search for imports of the re-export)</span></span>
 <span id="L2026"><span class="lineNum">    2026</span> <span class="tlaGNC">         126 :             if (!(state.options.use === FindReferencesUse.Rename &amp;&amp; moduleExportNameIsDefault(name))) {</span></span>
 <span id="L2027"><span class="lineNum">    2027</span> <span class="tlaGNC">         124 :                 addRef();</span></span>
@@ -2224,11 +2224,11 @@
 <span id="L2162"><span class="lineNum">    2162</span> <span class="tlaGNC">         314 :         if (state.options.use === FindReferencesUse.Rename || !isClassLike(classLike)) return;</span></span>
 <span id="L2163"><span class="lineNum">    2163</span> <span class="tlaGNC">          91 :         Debug.assert(classLike.name === referenceLocation);</span></span>
 <span id="L2164"><span class="lineNum">    2164</span> <span class="tlaGNC">          91 :         const addRef = state.referenceAdder(search.symbol);</span></span>
-<span id="L2165"><span class="lineNum">    2165</span> <span class="tlaGNC">         293 :         for (const member of classLike.members) {</span></span>
+<span id="L2165"><span class="lineNum">    2165</span> <span class="tlaGNC">         314 :         for (const member of classLike.members) {</span></span>
 <span id="L2166"><span class="lineNum">    2166</span> <span class="tlaGNC">          96 :             if (!(isMethodOrAccessor(member) &amp;&amp; isStatic(member))) {</span></span>
 <span id="L2167"><span class="lineNum">    2167</span> <span class="tlaGNC">          88 :                 continue;</span></span>
 <span id="L2168"><span class="lineNum">    2168</span> <span class="tlaGNC">          88 :             }</span></span>
-<span id="L2169"><span class="lineNum">    2169</span> <span class="tlaGNC">          15 :             if (member.body) {</span></span>
+<span id="L2169"><span class="lineNum">    2169</span> <span class="tlaGNC">          25 :             if (member.body) {</span></span>
 <span id="L2170"><span class="lineNum">    2170</span> <span class="tlaGNC">           6 :                 member.body.forEachChild(function cb(node) {</span></span>
 <span id="L2171"><span class="lineNum">    2171</span> <span class="tlaGNC">           6 :                     if (node.kind === SyntaxKind.ThisKeyword) {</span></span>
 <span id="L2172"><span class="lineNum">    2172</span> <span class="tlaGNC">           2 :                         addRef(node);</span></span>
@@ -2434,7 +2434,7 @@
 <span id="L2372"><span class="lineNum">    2372</span> <span class="tlaGNC">          12 :         let staticFlag = ModifierFlags.Static;</span></span>
 <span id="L2373"><span class="lineNum">    2373</span> <span class="tlaGNC">          12 : </span></span>
 <span id="L2374"><span class="lineNum">    2374</span> <span class="tlaGNC">          12 :         switch (searchSpaceNode.kind) {</span></span>
-<span id="L2375"><span class="lineNum">    2375</span> <span class="tlaGNC">          19 :             case SyntaxKind.PropertyDeclaration:</span></span>
+<span id="L2375"><span class="lineNum">    2375</span> <span class="tlaGNC">          14 :             case SyntaxKind.PropertyDeclaration:</span></span>
 <span id="L2376"><span class="lineNum">    2376</span> <span class="tlaGNC">          19 :             case SyntaxKind.PropertySignature:</span></span>
 <span id="L2377"><span class="lineNum">    2377</span> <span class="tlaGNC">          19 :             case SyntaxKind.MethodDeclaration:</span></span>
 <span id="L2378"><span class="lineNum">    2378</span> <span class="tlaGNC">          19 :             case SyntaxKind.MethodSignature:</span></span>

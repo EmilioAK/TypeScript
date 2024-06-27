@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.2&nbsp;%</td>
@@ -1551,9 +1551,9 @@
 <span id="L1489"><span class="lineNum">    1489</span> <span class="tlaGNC">       15346 :     const resetInternedStrings = !internedSizes || (internedSizes.tabSize !== options.tabSize || internedSizes.indentSize !== options.indentSize);</span></span>
 <span id="L1490"><span class="lineNum">    1490</span> <span class="tlaGNC">       15346 : </span></span>
 <span id="L1491"><span class="lineNum">    1491</span> <span class="tlaGNC">       15346 :     if (resetInternedStrings) {</span></span>
-<span id="L1492"><span class="lineNum">    1492</span> <span class="tlaGNC">          17 :         internedSizes = { tabSize: options.tabSize!, indentSize: options.indentSize! };</span></span>
-<span id="L1493"><span class="lineNum">    1493</span> <span class="tlaGNC">          17 :         internedTabsIndentation = internedSpacesIndentation = undefined;</span></span>
-<span id="L1494"><span class="lineNum">    1494</span> <span class="tlaGNC">          17 :     }</span></span>
+<span id="L1492"><span class="lineNum">    1492</span> <span class="tlaGNC">          19 :         internedSizes = { tabSize: options.tabSize!, indentSize: options.indentSize! };</span></span>
+<span id="L1493"><span class="lineNum">    1493</span> <span class="tlaGNC">          19 :         internedTabsIndentation = internedSpacesIndentation = undefined;</span></span>
+<span id="L1494"><span class="lineNum">    1494</span> <span class="tlaGNC">          19 :     }</span></span>
 <span id="L1495"><span class="lineNum">    1495</span> <span class="tlaGNC">       15346 : </span></span>
 <span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">       15346 :     if (!options.convertTabsToSpaces) {</span></span>
 <span id="L1497"><span class="lineNum">    1497</span> <span class="tlaGNC">          50 :         const tabs = Math.floor(indentation / options.tabSize!);</span></span>
@@ -1561,15 +1561,15 @@
 <span id="L1499"><span class="lineNum">    1499</span> <span class="tlaGNC">          50 : </span></span>
 <span id="L1500"><span class="lineNum">    1500</span> <span class="tlaGNC">          50 :         let tabString: string;</span></span>
 <span id="L1501"><span class="lineNum">    1501</span> <span class="tlaGNC">          50 :         if (!internedTabsIndentation) {</span></span>
-<span id="L1502"><span class="lineNum">    1502</span> <span class="tlaGNC">           7 :             internedTabsIndentation = [];</span></span>
-<span id="L1503"><span class="lineNum">    1503</span> <span class="tlaGNC">           7 :         }</span></span>
+<span id="L1502"><span class="lineNum">    1502</span> <span class="tlaGNC">           6 :             internedTabsIndentation = [];</span></span>
+<span id="L1503"><span class="lineNum">    1503</span> <span class="tlaGNC">           6 :         }</span></span>
 <span id="L1504"><span class="lineNum">    1504</span> <span class="tlaGNC">          50 : </span></span>
 <span id="L1505"><span class="lineNum">    1505</span> <span class="tlaGNC">          50 :         if (internedTabsIndentation[tabs] === undefined) {</span></span>
-<span id="L1506"><span class="lineNum">    1506</span> <span class="tlaGNC">          15 :             internedTabsIndentation[tabs] = tabString = repeatString(&quot;\t&quot;, tabs);</span></span>
-<span id="L1507"><span class="lineNum">    1507</span> <span class="tlaGNC">          15 :         }</span></span>
-<span id="L1508"><span class="lineNum">    1508</span> <span class="tlaGNC">          35 :         else {</span></span>
-<span id="L1509"><span class="lineNum">    1509</span> <span class="tlaGNC">          35 :             tabString = internedTabsIndentation[tabs];</span></span>
-<span id="L1510"><span class="lineNum">    1510</span> <span class="tlaGNC">          35 :         }</span></span>
+<span id="L1506"><span class="lineNum">    1506</span> <span class="tlaGNC">          13 :             internedTabsIndentation[tabs] = tabString = repeatString(&quot;\t&quot;, tabs);</span></span>
+<span id="L1507"><span class="lineNum">    1507</span> <span class="tlaGNC">          13 :         }</span></span>
+<span id="L1508"><span class="lineNum">    1508</span> <span class="tlaGNC">          37 :         else {</span></span>
+<span id="L1509"><span class="lineNum">    1509</span> <span class="tlaGNC">          37 :             tabString = internedTabsIndentation[tabs];</span></span>
+<span id="L1510"><span class="lineNum">    1510</span> <span class="tlaGNC">          37 :         }</span></span>
 <span id="L1511"><span class="lineNum">    1511</span> <span class="tlaGNC">          50 : </span></span>
 <span id="L1512"><span class="lineNum">    1512</span> <span class="tlaGNC">          50 :         return spaces ? tabString + repeatString(&quot; &quot;, spaces) : tabString;</span></span>
 <span id="L1513"><span class="lineNum">    1513</span> <span class="tlaGNC">          50 :     }</span></span>
@@ -1578,16 +1578,16 @@
 <span id="L1516"><span class="lineNum">    1516</span> <span class="tlaGNC">       15296 :         const quotient = Math.floor(indentation / options.indentSize!);</span></span>
 <span id="L1517"><span class="lineNum">    1517</span> <span class="tlaGNC">       15296 :         const remainder = indentation % options.indentSize!;</span></span>
 <span id="L1518"><span class="lineNum">    1518</span> <span class="tlaGNC">       15296 :         if (!internedSpacesIndentation) {</span></span>
-<span id="L1519"><span class="lineNum">    1519</span> <span class="tlaGNC">          14 :             internedSpacesIndentation = [];</span></span>
-<span id="L1520"><span class="lineNum">    1520</span> <span class="tlaGNC">          14 :         }</span></span>
+<span id="L1519"><span class="lineNum">    1519</span> <span class="tlaGNC">          15 :             internedSpacesIndentation = [];</span></span>
+<span id="L1520"><span class="lineNum">    1520</span> <span class="tlaGNC">          15 :         }</span></span>
 <span id="L1521"><span class="lineNum">    1521</span> <span class="tlaGNC">       15296 : </span></span>
 <span id="L1522"><span class="lineNum">    1522</span> <span class="tlaGNC">       15296 :         if (internedSpacesIndentation[quotient] === undefined) {</span></span>
-<span id="L1523"><span class="lineNum">    1523</span> <span class="tlaGNC">          80 :             spacesString = repeatString(&quot; &quot;, options.indentSize! * quotient);</span></span>
-<span id="L1524"><span class="lineNum">    1524</span> <span class="tlaGNC">          80 :             internedSpacesIndentation[quotient] = spacesString;</span></span>
-<span id="L1525"><span class="lineNum">    1525</span> <span class="tlaGNC">          80 :         }</span></span>
-<span id="L1526"><span class="lineNum">    1526</span> <span class="tlaGNC">       15216 :         else {</span></span>
-<span id="L1527"><span class="lineNum">    1527</span> <span class="tlaGNC">       15216 :             spacesString = internedSpacesIndentation[quotient];</span></span>
-<span id="L1528"><span class="lineNum">    1528</span> <span class="tlaGNC">       15216 :         }</span></span>
+<span id="L1523"><span class="lineNum">    1523</span> <span class="tlaGNC">          78 :             spacesString = repeatString(&quot; &quot;, options.indentSize! * quotient);</span></span>
+<span id="L1524"><span class="lineNum">    1524</span> <span class="tlaGNC">          78 :             internedSpacesIndentation[quotient] = spacesString;</span></span>
+<span id="L1525"><span class="lineNum">    1525</span> <span class="tlaGNC">          78 :         }</span></span>
+<span id="L1526"><span class="lineNum">    1526</span> <span class="tlaGNC">       15218 :         else {</span></span>
+<span id="L1527"><span class="lineNum">    1527</span> <span class="tlaGNC">       15218 :             spacesString = internedSpacesIndentation[quotient];</span></span>
+<span id="L1528"><span class="lineNum">    1528</span> <span class="tlaGNC">       15218 :         }</span></span>
 <span id="L1529"><span class="lineNum">    1529</span> <span class="tlaGNC">       15296 : </span></span>
 <span id="L1530"><span class="lineNum">    1530</span> <span class="tlaGNC">       15296 :         return remainder ? spacesString + repeatString(&quot; &quot;, remainder) : spacesString;</span></span>
 <span id="L1531"><span class="lineNum">    1531</span> <span class="tlaGNC">       15296 :     }</span></span>

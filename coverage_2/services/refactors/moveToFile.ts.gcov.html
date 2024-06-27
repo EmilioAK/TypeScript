@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -423,10 +423,10 @@
 <span id="L361"><span class="lineNum">     361</span> <span class="tlaGNC">          16 : </span></span>
 <span id="L362"><span class="lineNum">     362</span> <span class="tlaGNC">          16 :                 const newModuleSpecifier = getModuleSpecifier(program.getCompilerOptions(), sourceFile, sourceFile.fileName, pathToTargetFileWithExtension, createModuleSpecifierResolutionHost(program, host));</span></span>
 <span id="L363"><span class="lineNum">     363</span> <span class="tlaGNC">          16 :                 const newImportDeclaration = filterImport(importNode, makeStringLiteral(newModuleSpecifier, quotePreference), shouldMove);</span></span>
-<span id="L364"><span class="lineNum">     364</span> <span class="tlaGNC">          27 :                 if (newImportDeclaration) changes.insertNodeAfter(sourceFile, statement, newImportDeclaration);</span></span>
+<span id="L364"><span class="lineNum">     364</span> <span class="tlaGNC">          39 :                 if (newImportDeclaration) changes.insertNodeAfter(sourceFile, statement, newImportDeclaration);</span></span>
 <span id="L365"><span class="lineNum">     365</span> <span class="tlaGNC">          16 : </span></span>
 <span id="L366"><span class="lineNum">     366</span> <span class="tlaGNC">          16 :                 const ns = getNamespaceLikeImport(importNode);</span></span>
-<span id="L367"><span class="lineNum">     367</span> <span class="tlaGNC">          31 :                 if (ns) updateNamespaceLikeImport(changes, sourceFile, checker, movedSymbols, newModuleSpecifier, ns, importNode, quotePreference);</span></span>
+<span id="L367"><span class="lineNum">     367</span> <span class="tlaGNC">          36 :                 if (ns) updateNamespaceLikeImport(changes, sourceFile, checker, movedSymbols, newModuleSpecifier, ns, importNode, quotePreference);</span></span>
 <span id="L368"><span class="lineNum">     368</span> <span class="tlaGNC">       16754 :             });</span></span>
 <span id="L369"><span class="lineNum">     369</span> <span class="tlaGNC">       16754 :         }</span></span>
 <span id="L370"><span class="lineNum">     370</span> <span class="tlaGNC">         405 :     }</span></span>
@@ -769,7 +769,7 @@
 <span id="L707"><span class="lineNum">     707</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L708"><span class="lineNum">     708</span> <span class="tlaGNC">           1 : export function addExportToChanges(sourceFile: SourceFile, decl: TopLevelDeclarationStatement, name: Identifier, changes: textChanges.ChangeTracker, useEs6Exports: boolean): void {</span></span>
 <span id="L709"><span class="lineNum">     709</span> <span class="tlaGNC">          37 :     if (isExported(sourceFile, decl, useEs6Exports, name)) return;</span></span>
-<span id="L710"><span class="lineNum">     710</span> <span class="tlaGNC">          29 :     if (useEs6Exports) {</span></span>
+<span id="L710"><span class="lineNum">     710</span> <span class="tlaGNC">          30 :     if (useEs6Exports) {</span></span>
 <span id="L711"><span class="lineNum">     711</span> <span class="tlaGNC">          25 :         if (!isExpressionStatement(decl)) changes.insertExportModifier(sourceFile, decl);</span></span>
 <span id="L712"><span class="lineNum">     712</span> <span class="tlaGNC">          25 :     }</span></span>
 <span id="L713"><span class="lineNum">     713</span> <span class="tlaGNC">           3 :     else {</span></span>
@@ -960,7 +960,7 @@
 <span id="L898"><span class="lineNum">     898</span> <span class="tlaGNC">          12 :                 unusedImportsFromOldFile.add(symbol);</span></span>
 <span id="L899"><span class="lineNum">     899</span> <span class="tlaGNC">          12 :                 return;</span></span>
 <span id="L900"><span class="lineNum">     900</span> <span class="tlaGNC">          12 :             }</span></span>
-<span id="L901"><span class="lineNum">     901</span> <span class="tlaGNC">         188 :             for (const decl of symbol.declarations) {</span></span>
+<span id="L901"><span class="lineNum">     901</span> <span class="tlaGNC">         189 :             for (const decl of symbol.declarations) {</span></span>
 <span id="L902"><span class="lineNum">     902</span> <span class="tlaGNC">         193 :                 if (isInImport(decl)) {</span></span>
 <span id="L903"><span class="lineNum">     903</span> <span class="tlaGNC">          43 :                     const prevIsTypeOnly = oldImportsNeededByTargetFile.get(symbol);</span></span>
 <span id="L904"><span class="lineNum">     904</span> <span class="tlaGNC">          43 :                     oldImportsNeededByTargetFile.set(symbol, [</span></span>
@@ -1008,7 +1008,7 @@
 <span id="L946"><span class="lineNum">     946</span> <span class="tlaGNC">          10 :         // is expected to be very rare and easily reversible.</span></span>
 <span id="L947"><span class="lineNum">     947</span> <span class="tlaGNC">          10 :         const jsxNamespaceSymbol = checker.resolveName(jsxNamespace, containsJsx, SymbolFlags.Namespace, /*excludeGlobals*/ true);</span></span>
 <span id="L948"><span class="lineNum">     948</span> <span class="tlaGNC">          10 : </span></span>
-<span id="L949"><span class="lineNum">     949</span> <span class="tlaGNC">          59 :         return !!jsxNamespaceSymbol &amp;&amp; some(jsxNamespaceSymbol.declarations, isInImport)</span></span>
+<span id="L949"><span class="lineNum">     949</span> <span class="tlaGNC">          32 :         return !!jsxNamespaceSymbol &amp;&amp; some(jsxNamespaceSymbol.declarations, isInImport)</span></span>
 <span id="L950"><span class="lineNum">     950</span> <span class="tlaGNC">           6 :             ? jsxNamespaceSymbol</span></span>
 <span id="L951"><span class="lineNum">     951</span> <span class="tlaGNC">           4 :             : undefined;</span></span>
 <span id="L952"><span class="lineNum">     952</span> <span class="tlaGNC">         179 :     }</span></span>

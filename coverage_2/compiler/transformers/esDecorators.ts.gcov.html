@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">94.1&nbsp;%</td>
@@ -832,7 +832,7 @@
 <span id="L770"><span class="lineNum">     770</span> <span class="tlaGNC">         627 :                     }</span></span>
 <span id="L771"><span class="lineNum">     771</span> <span class="tlaGNC">          80 : </span></span>
 <span id="L772"><span class="lineNum">     772</span> <span class="tlaGNC">          80 :                     switch (node.kind) {</span></span>
-<span id="L773"><span class="lineNum">     773</span> <span class="tlaGNC">         292 :                         case SyntaxKind.ThisKeyword:</span></span>
+<span id="L773"><span class="lineNum">     773</span> <span class="tlaGNC">         379 :                         case SyntaxKind.ThisKeyword:</span></span>
 <span id="L774"><span class="lineNum">     774</span> <span class="tlaGNC">          18 :                             if (!outerThis) {</span></span>
 <span id="L775"><span class="lineNum">     775</span> <span class="tlaGNC">          14 :                                 outerThis = factory.createUniqueName(&quot;_outerThis&quot;, GeneratedIdentifierFlags.Optimistic);</span></span>
 <span id="L776"><span class="lineNum">     776</span> <span class="tlaGNC">          14 :                                 classDefinitionStatements.unshift(createLet(outerThis, factory.createThis()));</span></span>
@@ -1322,7 +1322,7 @@
 <span id="L1260"><span class="lineNum">    1260</span> <span class="tlaGNC">        1110 :         const memberDecorators = transformAllDecoratorsOfDeclaration(getAllDecoratorsOfClassElement(member, classInfo.class, /*useLegacyDecorators*/ false));</span></span>
 <span id="L1261"><span class="lineNum">    1261</span> <span class="tlaGNC">        1110 :         const modifiers = visitNodes(member.modifiers, modifierVisitor, isModifier);</span></span>
 <span id="L1262"><span class="lineNum">    1262</span> <span class="tlaGNC">        1110 : </span></span>
-<span id="L1263"><span class="lineNum">    1263</span> <span class="tlaGNC">        1116 :         if (memberDecorators) {</span></span>
+<span id="L1263"><span class="lineNum">    1263</span> <span class="tlaGNC">        1164 :         if (memberDecorators) {</span></span>
 <span id="L1264"><span class="lineNum">    1264</span> <span class="tlaGNC">         846 :             const memberDecoratorsName = createHelperVariable(member, &quot;decorators&quot;);</span></span>
 <span id="L1265"><span class="lineNum">    1265</span> <span class="tlaGNC">         846 :             const memberDecoratorsArray = factory.createArrayLiteralExpression(memberDecorators);</span></span>
 <span id="L1266"><span class="lineNum">    1266</span> <span class="tlaGNC">         846 :             const memberDecoratorsAssignment = factory.createAssignment(memberDecoratorsName, memberDecoratorsArray);</span></span>
@@ -1910,7 +1910,7 @@
 <span id="L1848"><span class="lineNum">    1848</span> <span class="tlaGNC">          48 :             }</span></span>
 <span id="L1849"><span class="lineNum">    1849</span> <span class="tlaGNC">         170 :         }</span></span>
 <span id="L1850"><span class="lineNum">    1850</span> <span class="tlaGNC">          98 : </span></span>
-<span id="L1851"><span class="lineNum">    1851</span> <span class="tlaGNC">         238 :         if (node.operatorToken.kind === SyntaxKind.CommaToken) {</span></span>
+<span id="L1851"><span class="lineNum">    1851</span> <span class="tlaGNC">         208 :         if (node.operatorToken.kind === SyntaxKind.CommaToken) {</span></span>
 <span id="L1852"><span class="lineNum">    1852</span> <span class="tlaUNC tlaBgUNC">           0 :             const left = visitNode(node.left, discardedValueVisitor, isExpression);</span></span>
 <span id="L1853"><span class="lineNum">    1853</span> <span class="tlaUNC">           0 :             const right = visitNode(node.right, discarded ? discardedValueVisitor : visitor, isExpression);</span></span>
 <span id="L1854"><span class="lineNum">    1854</span> <span class="tlaUNC">           0 :             return factory.updateBinaryExpression(node, left, node.operatorToken, right);</span></span>

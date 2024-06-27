@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">93.1&nbsp;%</td>
@@ -342,7 +342,7 @@
 <span id="L280"><span class="lineNum">     280</span> <span class="tlaGNC">         505 :     function rehydrateCachedInfo(info: CachedSymbolExportInfo): SymbolExportInfo {</span></span>
 <span id="L281"><span class="lineNum">     281</span> <span class="tlaGNC">        5052 :         if (info.symbol &amp;&amp; info.moduleSymbol) return info as SymbolExportInfo;</span></span>
 <span id="L282"><span class="lineNum">     282</span> <span class="tlaGNC">          41 :         const { id, exportKind, targetFlags, isFromPackageJson, moduleFileName } = info;</span></span>
-<span id="L283"><span class="lineNum">     283</span> <span class="tlaGNC">        5052 :         const [cachedSymbol, cachedModuleSymbol] = symbols.get(id) || emptyArray;</span></span>
+<span id="L283"><span class="lineNum">     283</span> <span class="tlaGNC">        4969 :         const [cachedSymbol, cachedModuleSymbol] = symbols.get(id) || emptyArray;</span></span>
 <span id="L284"><span class="lineNum">     284</span> <span class="tlaGNC">        5052 :         if (cachedSymbol &amp;&amp; cachedModuleSymbol) {</span></span>
 <span id="L285"><span class="lineNum">     285</span> <span class="tlaGNC">          35 :             return {</span></span>
 <span id="L286"><span class="lineNum">     286</span> <span class="tlaGNC">          35 :                 symbol: cachedSymbol,</span></span>
@@ -405,7 +405,7 @@
 <span id="L343"><span class="lineNum">     343</span> <span class="tlaGNC">           1 :         }</span></span>
 <span id="L344"><span class="lineNum">     344</span> <span class="tlaGNC">          14 :         let oldFileStatementIndex = -1;</span></span>
 <span id="L345"><span class="lineNum">     345</span> <span class="tlaGNC">          14 :         let newFileStatementIndex = -1;</span></span>
-<span id="L346"><span class="lineNum">     346</span> <span class="tlaGNC">          15 :         for (const ambientModuleName of newSourceFile.ambientModuleNames) {</span></span>
+<span id="L346"><span class="lineNum">     346</span> <span class="tlaGNC">          14 :         for (const ambientModuleName of newSourceFile.ambientModuleNames) {</span></span>
 <span id="L347"><span class="lineNum">     347</span> <span class="tlaGNC">           1 :             const isMatchingModuleDeclaration = (node: Statement) =&gt; isNonGlobalAmbientModule(node) &amp;&amp; node.name.text === ambientModuleName;</span></span>
 <span id="L348"><span class="lineNum">     348</span> <span class="tlaGNC">           1 :             oldFileStatementIndex = findIndex(oldSourceFile.statements, isMatchingModuleDeclaration, oldFileStatementIndex + 1);</span></span>
 <span id="L349"><span class="lineNum">     349</span> <span class="tlaGNC">           1 :             newFileStatementIndex = findIndex(newSourceFile.statements, isMatchingModuleDeclaration, newFileStatementIndex + 1);</span></span>
@@ -421,7 +421,7 @@
 <span id="L359"><span class="lineNum">     359</span> <span class="tlaGNC">         252 :         const typingsCacheLocation = host.getGlobalTypingsCacheLocation();</span></span>
 <span id="L360"><span class="lineNum">     360</span> <span class="tlaGNC">        4650 :         if (typingsCacheLocation &amp;&amp; startsWith(info.moduleFileName, typingsCacheLocation)) return true;</span></span>
 <span id="L361"><span class="lineNum">     361</span> <span class="tlaGNC">         250 :         const packageDeepestNodeModulesPath = packages.get(packageName);</span></span>
-<span id="L362"><span class="lineNum">     362</span> <span class="tlaGNC">         305 :         return !packageDeepestNodeModulesPath || startsWith(info.moduleFileName, packageDeepestNodeModulesPath);</span></span>
+<span id="L362"><span class="lineNum">     362</span> <span class="tlaGNC">         314 :         return !packageDeepestNodeModulesPath || startsWith(info.moduleFileName, packageDeepestNodeModulesPath);</span></span>
 <span id="L363"><span class="lineNum">     363</span> <span class="tlaGNC">        4650 :     }</span></span>
 <span id="L364"><span class="lineNum">     364</span> <span class="tlaGNC">         505 : }</span></span>
 <span id="L365"><span class="lineNum">     365</span> <span class="tlaGNC">           1 : </span></span>

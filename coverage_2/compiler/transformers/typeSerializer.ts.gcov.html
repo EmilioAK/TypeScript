@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -492,7 +492,7 @@
 <span id="L430"><span class="lineNum">     430</span> <span class="tlaGNC">          60 : </span></span>
 <span id="L431"><span class="lineNum">     431</span> <span class="tlaGNC">          60 :             // If there exists union that is not `void 0` expression, check if the the common type is identifier.</span></span>
 <span id="L432"><span class="lineNum">     432</span> <span class="tlaGNC">          60 :             // anything more complex and we will just default to Object</span></span>
-<span id="L433"><span class="lineNum">     433</span> <span class="tlaGNC">          88 :             if (serializedType) {</span></span>
+<span id="L433"><span class="lineNum">     433</span> <span class="tlaGNC">          84 :             if (serializedType) {</span></span>
 <span id="L434"><span class="lineNum">     434</span> <span class="tlaGNC">          20 :                 // Different types</span></span>
 <span id="L435"><span class="lineNum">     435</span> <span class="tlaGNC">          20 :                 if (!equateSerializedTypeNodes(serializedType, serializedConstituent)) {</span></span>
 <span id="L436"><span class="lineNum">     436</span> <span class="tlaGNC">           8 :                     return factory.createIdentifier(&quot;Object&quot;);</span></span>
@@ -505,7 +505,7 @@
 <span id="L443"><span class="lineNum">     443</span> <span class="tlaGNC">          88 :         }</span></span>
 <span id="L444"><span class="lineNum">     444</span> <span class="tlaGNC">          34 : </span></span>
 <span id="L445"><span class="lineNum">     445</span> <span class="tlaGNC">          34 :         // If we were able to find common type, use it</span></span>
-<span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">          42 :         return serializedType ?? (factory.createVoidZero()); // Fallback is only hit if all union constituents are null/undefined/never</span></span>
+<span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">          44 :         return serializedType ?? (factory.createVoidZero()); // Fallback is only hit if all union constituents are null/undefined/never</span></span>
 <span id="L447"><span class="lineNum">     447</span> <span class="tlaGNC">          44 :     }</span></span>
 <span id="L448"><span class="lineNum">     448</span> <span class="tlaGNC">         250 : </span></span>
 <span id="L449"><span class="lineNum">     449</span> <span class="tlaGNC">         250 :     function equateSerializedTypeNodes(left: Expression, right: Expression): boolean {</span></span>
@@ -634,7 +634,7 @@
 <span id="L572"><span class="lineNum">     572</span> <span class="tlaGNC">           6 :             const copied = serializeEntityNameAsExpression(node);</span></span>
 <span id="L573"><span class="lineNum">     573</span> <span class="tlaGNC">           6 :             return createCheckedValue(copied, copied);</span></span>
 <span id="L574"><span class="lineNum">     574</span> <span class="tlaGNC">           6 :         }</span></span>
-<span id="L575"><span class="lineNum">     575</span> <span class="tlaGNC">          32 :         if (node.left.kind === SyntaxKind.Identifier) {</span></span>
+<span id="L575"><span class="lineNum">     575</span> <span class="tlaGNC">          30 :         if (node.left.kind === SyntaxKind.Identifier) {</span></span>
 <span id="L576"><span class="lineNum">     576</span> <span class="tlaGNC">          22 :             // A.B -&gt; typeof A !== &quot;undefined&quot; &amp;&amp; A.B</span></span>
 <span id="L577"><span class="lineNum">     577</span> <span class="tlaGNC">          22 :             return createCheckedValue(serializeEntityNameAsExpression(node.left), serializeEntityNameAsExpression(node));</span></span>
 <span id="L578"><span class="lineNum">     578</span> <span class="tlaGNC">          22 :         }</span></span>

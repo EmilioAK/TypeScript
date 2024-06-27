@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.9&nbsp;%</td>
@@ -1278,7 +1278,7 @@
 <span id="L1216"><span class="lineNum">    1216</span> <span class="tlaGNC">        6648 :         if (isSuperCall(node)) {</span></span>
 <span id="L1217"><span class="lineNum">    1217</span> <span class="tlaGNC">         774 :             return true;</span></span>
 <span id="L1218"><span class="lineNum">    1218</span> <span class="tlaGNC">         774 :         }</span></span>
-<span id="L1219"><span class="lineNum">    1219</span> <span class="tlaGNC">        6648 :         if (!(node.transformFlags &amp; TransformFlags.ContainsLexicalSuper)) {</span></span>
+<span id="L1219"><span class="lineNum">    1219</span> <span class="tlaGNC">        5918 :         if (!(node.transformFlags &amp; TransformFlags.ContainsLexicalSuper)) {</span></span>
 <span id="L1220"><span class="lineNum">    1220</span> <span class="tlaGNC">        4088 :             return false;</span></span>
 <span id="L1221"><span class="lineNum">    1221</span> <span class="tlaGNC">        4088 :         }</span></span>
 <span id="L1222"><span class="lineNum">    1222</span> <span class="tlaGNC">        1786 :         switch (node.kind) {</span></span>
@@ -1533,7 +1533,7 @@
 <span id="L1471"><span class="lineNum">    1471</span> <span class="tlaGNC">        1026 :             // so we'll track any intervening statements to stitch them back in to the result.</span></span>
 <span id="L1472"><span class="lineNum">    1472</span> <span class="tlaGNC">        1026 :             const thisCaptureStatementIndex = i;</span></span>
 <span id="L1473"><span class="lineNum">    1473</span> <span class="tlaGNC">        1026 :             let superCallIndex = i + 1;</span></span>
-<span id="L1474"><span class="lineNum">    1474</span> <span class="tlaGNC">        1528 :             while (superCallIndex &lt; body.statements.length) {</span></span>
+<span id="L1474"><span class="lineNum">    1474</span> <span class="tlaGNC">        1398 :             while (superCallIndex &lt; body.statements.length) {</span></span>
 <span id="L1475"><span class="lineNum">    1475</span> <span class="tlaGNC">        1028 :                 const statement = body.statements[superCallIndex];</span></span>
 <span id="L1476"><span class="lineNum">    1476</span> <span class="tlaGNC">        1028 :                 // stop on the next `_this = _super.call(...) || this` statement</span></span>
 <span id="L1477"><span class="lineNum">    1477</span> <span class="tlaGNC">        1028 :                 if (isExpressionStatement(statement)) {</span></span>
@@ -1557,7 +1557,7 @@
 <span id="L1495"><span class="lineNum">    1495</span> <span class="tlaGNC">         732 :             // If the expression that follows is `_this = ...`, strip off the assignment to `_this` since that will</span></span>
 <span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">         732 :             // be handled by the variable initializer.</span></span>
 <span id="L1497"><span class="lineNum">    1497</span> <span class="tlaGNC">         732 :             let expression = following.expression;</span></span>
-<span id="L1498"><span class="lineNum">    1498</span> <span class="tlaGNC">        1262 :             if (isThisCapturingAssignment(expression)) {</span></span>
+<span id="L1498"><span class="lineNum">    1498</span> <span class="tlaGNC">        1089 :             if (isThisCapturingAssignment(expression)) {</span></span>
 <span id="L1499"><span class="lineNum">    1499</span> <span class="tlaGNC">         728 :                 expression = expression.right;</span></span>
 <span id="L1500"><span class="lineNum">    1500</span> <span class="tlaGNC">         728 :             }</span></span>
 <span id="L1501"><span class="lineNum">    1501</span> <span class="tlaGNC">         732 : </span></span>
@@ -3518,7 +3518,7 @@
 <span id="L3456"><span class="lineNum">    3456</span> <span class="tlaGNC">        2082 :         convertedLoopState = outerConvertedLoopState;</span></span>
 <span id="L3457"><span class="lineNum">    3457</span> <span class="tlaGNC">        2082 : </span></span>
 <span id="L3458"><span class="lineNum">    3458</span> <span class="tlaGNC">        2082 :         if (initializerFunction) statements.push(initializerFunction.functionDeclaration);</span></span>
-<span id="L3459"><span class="lineNum">    3459</span> <span class="tlaGNC">         806 :         if (bodyFunction) statements.push(bodyFunction.functionDeclaration);</span></span>
+<span id="L3459"><span class="lineNum">    3459</span> <span class="tlaGNC">         650 :         if (bodyFunction) statements.push(bodyFunction.functionDeclaration);</span></span>
 <span id="L3460"><span class="lineNum">    3460</span> <span class="tlaGNC">         496 : </span></span>
 <span id="L3461"><span class="lineNum">    3461</span> <span class="tlaGNC">         496 :         addExtraDeclarationsForConvertedLoop(statements, currentState, outerConvertedLoopState);</span></span>
 <span id="L3462"><span class="lineNum">    3462</span> <span class="tlaGNC">         496 : </span></span>
@@ -3527,7 +3527,7 @@
 <span id="L3465"><span class="lineNum">    3465</span> <span class="tlaGNC">           4 :         }</span></span>
 <span id="L3466"><span class="lineNum">    3466</span> <span class="tlaGNC">         496 : </span></span>
 <span id="L3467"><span class="lineNum">    3467</span> <span class="tlaGNC">         496 :         let loop: Statement;</span></span>
-<span id="L3468"><span class="lineNum">    3468</span> <span class="tlaGNC">         806 :         if (bodyFunction) {</span></span>
+<span id="L3468"><span class="lineNum">    3468</span> <span class="tlaGNC">         650 :         if (bodyFunction) {</span></span>
 <span id="L3469"><span class="lineNum">    3469</span> <span class="tlaGNC">         494 :             if (convert) {</span></span>
 <span id="L3470"><span class="lineNum">    3470</span> <span class="tlaGNC">          76 :                 loop = convert(node, outermostLabeledStatement, bodyFunction.part, ancestorFacts);</span></span>
 <span id="L3471"><span class="lineNum">    3471</span> <span class="tlaGNC">          76 :             }</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">84.0&nbsp;%</td>
@@ -174,8 +174,8 @@
 <span id="L112"><span class="lineNum">     112</span> <span class="tlaGNC">           8 :      * Gets a value indicating whether the file system is read-only.</span></span>
 <span id="L113"><span class="lineNum">     113</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">           8 :     public get isReadonly() {</span></span>
-<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">      438769 :         return Object.isFrozen(this);</span></span>
-<span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">      438769 :     }</span></span>
+<span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">      438765 :         return Object.isFrozen(this);</span></span>
+<span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">      438765 :     }</span></span>
 <span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L118"><span class="lineNum">     118</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">           8 :      * Makes the file system read-only.</span></span>
@@ -189,8 +189,8 @@
 <span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">           8 :      * Gets the file system shadowed by this file system.</span></span>
 <span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L129"><span class="lineNum">     129</span> <span class="tlaGNC">           8 :     public get shadowRoot() {</span></span>
-<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">      556389 :         return this._shadowRoot;</span></span>
-<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">      556389 :     }</span></span>
+<span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">      556362 :         return this._shadowRoot;</span></span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">      556362 :     }</span></span>
 <span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">           8 :      * Snapshots the current file system, effectively shadowing itself. This is useful for</span></span>
@@ -230,33 +230,33 @@
 <span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">           8 :      * @link http://pubs.opengroup.org/onlinepubs/9699919799/functions/time.html</span></span>
 <span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">           8 :     public time(value?: number): number {</span></span>
-<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">      213947 :         if (value !== undefined) {</span></span>
+<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">      213943 :         if (value !== undefined) {</span></span>
 <span id="L172"><span class="lineNum">     172</span> <span class="tlaUNC tlaBgUNC">           0 :             if (this.isReadonly) throw createIOError(&quot;EPERM&quot;);</span></span>
 <span id="L173"><span class="lineNum">     173</span> <span class="tlaUNC">           0 :             this._time = value;</span></span>
 <span id="L174"><span class="lineNum">     174</span> <span class="tlaUNC">           0 :         }</span></span>
-<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC tlaBgGNC">      213947 :         else if (!this.isReadonly) {</span></span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC tlaBgGNC">      213943 :         else if (!this.isReadonly) {</span></span>
 <span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">      210103 :             this._time += timeIncrements;</span></span>
 <span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">      210103 :         }</span></span>
-<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">      213947 :         return this._time;</span></span>
-<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">      213947 :     }</span></span>
+<span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">      213943 :         return this._time;</span></span>
+<span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">      213943 :     }</span></span>
 <span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L182"><span class="lineNum">     182</span> <span class="tlaGNC">           8 :      * Gets the metadata object for a path.</span></span>
 <span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">           8 :      * @param path</span></span>
 <span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC">           8 :     public filemeta(path: string): collections.Metadata {</span></span>
-<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">      550773 :         const { node } = this._walk(this._resolve(path));</span></span>
-<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">      550773 :         if (!node) throw createIOError(&quot;ENOENT&quot;);</span></span>
-<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">      550773 :         return this._filemeta(node);</span></span>
-<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">      550773 :     }</span></span>
+<span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">      550770 :         const { node } = this._walk(this._resolve(path));</span></span>
+<span id="L187"><span class="lineNum">     187</span> <span class="tlaGNC">      550770 :         if (!node) throw createIOError(&quot;ENOENT&quot;);</span></span>
+<span id="L188"><span class="lineNum">     188</span> <span class="tlaGNC">      550770 :         return this._filemeta(node);</span></span>
+<span id="L189"><span class="lineNum">     189</span> <span class="tlaGNC">      550770 :     }</span></span>
 <span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">           8 :     private _filemeta(node: Inode): collections.Metadata {</span></span>
-<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">      989336 :         if (!node.meta) {</span></span>
-<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">      516218 :             const parentMeta = node.shadowRoot &amp;&amp; this._shadowRoot &amp;&amp; this._shadowRoot._filemeta(node.shadowRoot);</span></span>
-<span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">      516218 :             node.meta = new collections.Metadata(parentMeta);</span></span>
-<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">      516218 :         }</span></span>
-<span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">      989336 :         return node.meta;</span></span>
-<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">      989336 :     }</span></span>
+<span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">      989330 :         if (!node.meta) {</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">      516212 :             const parentMeta = node.shadowRoot &amp;&amp; this._shadowRoot &amp;&amp; this._shadowRoot._filemeta(node.shadowRoot);</span></span>
+<span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">      516212 :             node.meta = new collections.Metadata(parentMeta);</span></span>
+<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">      516212 :         }</span></span>
+<span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">      989330 :         return node.meta;</span></span>
+<span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">      989330 :     }</span></span>
 <span id="L198"><span class="lineNum">     198</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">           8 :      * Get the pathname of the current working directory.</span></span>
@@ -473,9 +473,9 @@
 <span id="L411"><span class="lineNum">     411</span> <span class="tlaGNC">           8 :      * Determines whether a path exists.</span></span>
 <span id="L412"><span class="lineNum">     412</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L413"><span class="lineNum">     413</span> <span class="tlaGNC">           8 :     public existsSync(path: string) {</span></span>
-<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">     4346111 :         const result = this._walk(this._resolve(path), /*noFollow*/ true, () =&gt; &quot;stop&quot;);</span></span>
-<span id="L415"><span class="lineNum">     415</span> <span class="tlaGNC">     4346111 :         return result !== undefined &amp;&amp; result.node !== undefined;</span></span>
-<span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">     4346111 :     }</span></span>
+<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">     4346105 :         const result = this._walk(this._resolve(path), /*noFollow*/ true, () =&gt; &quot;stop&quot;);</span></span>
+<span id="L415"><span class="lineNum">     415</span> <span class="tlaGNC">     4346105 :         return result !== undefined &amp;&amp; result.node !== undefined;</span></span>
+<span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">     4346105 :     }</span></span>
 <span id="L417"><span class="lineNum">     417</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L418"><span class="lineNum">     418</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L419"><span class="lineNum">     419</span> <span class="tlaGNC">           8 :      * Get file status. If `path` is a symbolic link, it is dereferenced.</span></span>
@@ -485,8 +485,8 @@
 <span id="L423"><span class="lineNum">     423</span> <span class="tlaGNC">           8 :      * NOTE: do not rename this method as it is intended to align with the same named export of the &quot;fs&quot; module.</span></span>
 <span id="L424"><span class="lineNum">     424</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L425"><span class="lineNum">     425</span> <span class="tlaGNC">           8 :     public statSync(path: string) {</span></span>
-<span id="L426"><span class="lineNum">     426</span> <span class="tlaGNC">      441513 :         return this._stat(this._walk(this._resolve(path)));</span></span>
-<span id="L427"><span class="lineNum">     427</span> <span class="tlaGNC">      441513 :     }</span></span>
+<span id="L426"><span class="lineNum">     426</span> <span class="tlaGNC">      441504 :         return this._stat(this._walk(this._resolve(path)));</span></span>
+<span id="L427"><span class="lineNum">     427</span> <span class="tlaGNC">      441504 :     }</span></span>
 <span id="L428"><span class="lineNum">     428</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L429"><span class="lineNum">     429</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L430"><span class="lineNum">     430</span> <span class="tlaGNC">           8 :      * Change file access times</span></span>
@@ -518,23 +518,23 @@
 <span id="L456"><span class="lineNum">     456</span> <span class="tlaGNC">          41 :     }</span></span>
 <span id="L457"><span class="lineNum">     457</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L458"><span class="lineNum">     458</span> <span class="tlaGNC">           8 :     private _stat(entry: WalkResult) {</span></span>
-<span id="L459"><span class="lineNum">     459</span> <span class="tlaGNC">      441560 :         const node = entry.node;</span></span>
-<span id="L460"><span class="lineNum">     460</span> <span class="tlaGNC">      441560 :         if (!node) throw createIOError(`ENOENT`, entry.realpath);</span></span>
-<span id="L461"><span class="lineNum">     461</span> <span class="tlaGNC">      441543 :         return new Stats(</span></span>
-<span id="L462"><span class="lineNum">     462</span> <span class="tlaGNC">      441543 :             node.dev,</span></span>
-<span id="L463"><span class="lineNum">     463</span> <span class="tlaGNC">      441543 :             node.ino,</span></span>
-<span id="L464"><span class="lineNum">     464</span> <span class="tlaGNC">      441543 :             node.mode,</span></span>
-<span id="L465"><span class="lineNum">     465</span> <span class="tlaGNC">      441543 :             node.nlink,</span></span>
-<span id="L466"><span class="lineNum">     466</span> <span class="tlaGNC">      441543 :             /*rdev*/ 0,</span></span>
-<span id="L467"><span class="lineNum">     467</span> <span class="tlaGNC">      441560 :             /*size*/ isFile(node) ? this._getSize(node) : isSymlink(node) ? node.symlink.length : 0,</span></span>
-<span id="L468"><span class="lineNum">     468</span> <span class="tlaGNC">      441560 :             /*blksize*/ 4096,</span></span>
-<span id="L469"><span class="lineNum">     469</span> <span class="tlaGNC">      441560 :             /*blocks*/ 0,</span></span>
-<span id="L470"><span class="lineNum">     470</span> <span class="tlaGNC">      441560 :             node.atimeMs,</span></span>
-<span id="L471"><span class="lineNum">     471</span> <span class="tlaGNC">      441560 :             node.mtimeMs,</span></span>
-<span id="L472"><span class="lineNum">     472</span> <span class="tlaGNC">      441560 :             node.ctimeMs,</span></span>
-<span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">      441560 :             node.birthtimeMs,</span></span>
-<span id="L474"><span class="lineNum">     474</span> <span class="tlaGNC">      441560 :         );</span></span>
-<span id="L475"><span class="lineNum">     475</span> <span class="tlaGNC">      441560 :     }</span></span>
+<span id="L459"><span class="lineNum">     459</span> <span class="tlaGNC">      441551 :         const node = entry.node;</span></span>
+<span id="L460"><span class="lineNum">     460</span> <span class="tlaGNC">      441551 :         if (!node) throw createIOError(`ENOENT`, entry.realpath);</span></span>
+<span id="L461"><span class="lineNum">     461</span> <span class="tlaGNC">      441534 :         return new Stats(</span></span>
+<span id="L462"><span class="lineNum">     462</span> <span class="tlaGNC">      441534 :             node.dev,</span></span>
+<span id="L463"><span class="lineNum">     463</span> <span class="tlaGNC">      441534 :             node.ino,</span></span>
+<span id="L464"><span class="lineNum">     464</span> <span class="tlaGNC">      441534 :             node.mode,</span></span>
+<span id="L465"><span class="lineNum">     465</span> <span class="tlaGNC">      441534 :             node.nlink,</span></span>
+<span id="L466"><span class="lineNum">     466</span> <span class="tlaGNC">      441534 :             /*rdev*/ 0,</span></span>
+<span id="L467"><span class="lineNum">     467</span> <span class="tlaGNC">      441551 :             /*size*/ isFile(node) ? this._getSize(node) : isSymlink(node) ? node.symlink.length : 0,</span></span>
+<span id="L468"><span class="lineNum">     468</span> <span class="tlaGNC">      441551 :             /*blksize*/ 4096,</span></span>
+<span id="L469"><span class="lineNum">     469</span> <span class="tlaGNC">      441551 :             /*blocks*/ 0,</span></span>
+<span id="L470"><span class="lineNum">     470</span> <span class="tlaGNC">      441551 :             node.atimeMs,</span></span>
+<span id="L471"><span class="lineNum">     471</span> <span class="tlaGNC">      441551 :             node.mtimeMs,</span></span>
+<span id="L472"><span class="lineNum">     472</span> <span class="tlaGNC">      441551 :             node.ctimeMs,</span></span>
+<span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">      441551 :             node.birthtimeMs,</span></span>
+<span id="L474"><span class="lineNum">     474</span> <span class="tlaGNC">      441551 :         );</span></span>
+<span id="L475"><span class="lineNum">     475</span> <span class="tlaGNC">      441551 :     }</span></span>
 <span id="L476"><span class="lineNum">     476</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L477"><span class="lineNum">     477</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L478"><span class="lineNum">     478</span> <span class="tlaGNC">           8 :      * Read a directory. If `path` is a symbolic link, it is dereferenced.</span></span>
@@ -946,25 +946,25 @@
 <span id="L884"><span class="lineNum">     884</span> <span class="tlaGNC">           8 :     private _mknod(dev: number, type: typeof S_IFDIR, mode: number, time?: number): DirectoryInode;</span></span>
 <span id="L885"><span class="lineNum">     885</span> <span class="tlaGNC">           8 :     private _mknod(dev: number, type: typeof S_IFLNK, mode: number, time?: number): SymlinkInode;</span></span>
 <span id="L886"><span class="lineNum">     886</span> <span class="tlaGNC">           8 :     private _mknod(dev: number, type: number, mode: number, time = this.time()): Inode {</span></span>
-<span id="L887"><span class="lineNum">     887</span> <span class="tlaGNC">      172375 :         return {</span></span>
-<span id="L888"><span class="lineNum">     888</span> <span class="tlaGNC">      172375 :             dev,</span></span>
-<span id="L889"><span class="lineNum">     889</span> <span class="tlaGNC">      172375 :             ino: ++inoCount,</span></span>
-<span id="L890"><span class="lineNum">     890</span> <span class="tlaGNC">      172375 :             mode: (mode &amp; ~S_IFMT &amp; ~0o022 &amp; 0o7777) | (type &amp; S_IFMT),</span></span>
-<span id="L891"><span class="lineNum">     891</span> <span class="tlaGNC">      172375 :             atimeMs: time,</span></span>
-<span id="L892"><span class="lineNum">     892</span> <span class="tlaGNC">      172375 :             mtimeMs: time,</span></span>
-<span id="L893"><span class="lineNum">     893</span> <span class="tlaGNC">      172375 :             ctimeMs: time,</span></span>
-<span id="L894"><span class="lineNum">     894</span> <span class="tlaGNC">      172375 :             birthtimeMs: time,</span></span>
-<span id="L895"><span class="lineNum">     895</span> <span class="tlaGNC">      172375 :             nlink: 0,</span></span>
-<span id="L896"><span class="lineNum">     896</span> <span class="tlaGNC">      172375 :         };</span></span>
-<span id="L897"><span class="lineNum">     897</span> <span class="tlaGNC">      172375 :     }</span></span>
+<span id="L887"><span class="lineNum">     887</span> <span class="tlaGNC">      172373 :         return {</span></span>
+<span id="L888"><span class="lineNum">     888</span> <span class="tlaGNC">      172373 :             dev,</span></span>
+<span id="L889"><span class="lineNum">     889</span> <span class="tlaGNC">      172373 :             ino: ++inoCount,</span></span>
+<span id="L890"><span class="lineNum">     890</span> <span class="tlaGNC">      172373 :             mode: (mode &amp; ~S_IFMT &amp; ~0o022 &amp; 0o7777) | (type &amp; S_IFMT),</span></span>
+<span id="L891"><span class="lineNum">     891</span> <span class="tlaGNC">      172373 :             atimeMs: time,</span></span>
+<span id="L892"><span class="lineNum">     892</span> <span class="tlaGNC">      172373 :             mtimeMs: time,</span></span>
+<span id="L893"><span class="lineNum">     893</span> <span class="tlaGNC">      172373 :             ctimeMs: time,</span></span>
+<span id="L894"><span class="lineNum">     894</span> <span class="tlaGNC">      172373 :             birthtimeMs: time,</span></span>
+<span id="L895"><span class="lineNum">     895</span> <span class="tlaGNC">      172373 :             nlink: 0,</span></span>
+<span id="L896"><span class="lineNum">     896</span> <span class="tlaGNC">      172373 :         };</span></span>
+<span id="L897"><span class="lineNum">     897</span> <span class="tlaGNC">      172373 :     }</span></span>
 <span id="L898"><span class="lineNum">     898</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L899"><span class="lineNum">     899</span> <span class="tlaGNC">           8 :     private _addLink(parent: DirectoryInode | undefined, links: collections.SortedMap&lt;string, Inode&gt;, name: string, node: Inode, time = this.time()) {</span></span>
-<span id="L900"><span class="lineNum">     900</span> <span class="tlaGNC">      172388 :         links.set(name, node);</span></span>
-<span id="L901"><span class="lineNum">     901</span> <span class="tlaGNC">      172388 :         node.nlink++;</span></span>
-<span id="L902"><span class="lineNum">     902</span> <span class="tlaGNC">      172388 :         node.ctimeMs = time;</span></span>
-<span id="L903"><span class="lineNum">     903</span> <span class="tlaGNC">      172388 :         if (parent) parent.mtimeMs = time;</span></span>
-<span id="L904"><span class="lineNum">     904</span> <span class="tlaGNC">      172388 :         if (!parent &amp;&amp; !this._cwd) this._cwd = name;</span></span>
-<span id="L905"><span class="lineNum">     905</span> <span class="tlaGNC">      172388 :     }</span></span>
+<span id="L900"><span class="lineNum">     900</span> <span class="tlaGNC">      172386 :         links.set(name, node);</span></span>
+<span id="L901"><span class="lineNum">     901</span> <span class="tlaGNC">      172386 :         node.nlink++;</span></span>
+<span id="L902"><span class="lineNum">     902</span> <span class="tlaGNC">      172386 :         node.ctimeMs = time;</span></span>
+<span id="L903"><span class="lineNum">     903</span> <span class="tlaGNC">      172386 :         if (parent) parent.mtimeMs = time;</span></span>
+<span id="L904"><span class="lineNum">     904</span> <span class="tlaGNC">      172386 :         if (!parent &amp;&amp; !this._cwd) this._cwd = name;</span></span>
+<span id="L905"><span class="lineNum">     905</span> <span class="tlaGNC">      172386 :     }</span></span>
 <span id="L906"><span class="lineNum">     906</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L907"><span class="lineNum">     907</span> <span class="tlaGNC">           8 :     private _removeLink(parent: DirectoryInode | undefined, links: collections.SortedMap&lt;string, Inode&gt;, name: string, node: Inode, time = this.time()) {</span></span>
 <span id="L908"><span class="lineNum">     908</span> <span class="tlaGNC">         161 :         links.delete(name);</span></span>
@@ -987,109 +987,109 @@
 <span id="L925"><span class="lineNum">     925</span> <span class="tlaGNC">          40 :     }</span></span>
 <span id="L926"><span class="lineNum">     926</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L927"><span class="lineNum">     927</span> <span class="tlaGNC">           8 :     private _getRootLinks() {</span></span>
-<span id="L928"><span class="lineNum">     928</span> <span class="tlaGNC">     8128958 :         if (!this._lazy.links) {</span></span>
+<span id="L928"><span class="lineNum">     928</span> <span class="tlaGNC">     8128940 :         if (!this._lazy.links) {</span></span>
 <span id="L929"><span class="lineNum">     929</span> <span class="tlaGNC">       38472 :             this._lazy.links = new collections.SortedMap&lt;string, Inode&gt;(this.stringComparer);</span></span>
 <span id="L930"><span class="lineNum">     930</span> <span class="tlaGNC">       38472 :             if (this._shadowRoot) {</span></span>
 <span id="L931"><span class="lineNum">     931</span> <span class="tlaGNC">       31531 :                 this._copyShadowLinks(this._shadowRoot._getRootLinks(), this._lazy.links);</span></span>
 <span id="L932"><span class="lineNum">     932</span> <span class="tlaGNC">       31531 :             }</span></span>
 <span id="L933"><span class="lineNum">     933</span> <span class="tlaGNC">       38472 :         }</span></span>
-<span id="L934"><span class="lineNum">     934</span> <span class="tlaGNC">     8128958 :         return this._lazy.links;</span></span>
-<span id="L935"><span class="lineNum">     935</span> <span class="tlaGNC">     8128958 :     }</span></span>
+<span id="L934"><span class="lineNum">     934</span> <span class="tlaGNC">     8128940 :         return this._lazy.links;</span></span>
+<span id="L935"><span class="lineNum">     935</span> <span class="tlaGNC">     8128940 :     }</span></span>
 <span id="L936"><span class="lineNum">     936</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L937"><span class="lineNum">     937</span> <span class="tlaGNC">           8 :     private _getLinks(node: DirectoryInode) {</span></span>
-<span id="L938"><span class="lineNum">     938</span> <span class="tlaGNC">    12081671 :         if (!node.links) {</span></span>
-<span id="L939"><span class="lineNum">     939</span> <span class="tlaGNC">      144224 :             const links = new collections.SortedMap&lt;string, Inode&gt;(this.stringComparer);</span></span>
-<span id="L940"><span class="lineNum">     940</span> <span class="tlaGNC">      144224 :             const { source, resolver } = node;</span></span>
-<span id="L941"><span class="lineNum">     941</span> <span class="tlaGNC">      144224 :             if (source &amp;&amp; resolver) {</span></span>
-<span id="L942"><span class="lineNum">     942</span> <span class="tlaGNC">        1591 :                 node.source = undefined;</span></span>
-<span id="L943"><span class="lineNum">     943</span> <span class="tlaGNC">        1591 :                 node.resolver = undefined;</span></span>
-<span id="L944"><span class="lineNum">     944</span> <span class="tlaGNC">        1591 :                 for (const name of resolver.readdirSync(source)) {</span></span>
-<span id="L945"><span class="lineNum">     945</span> <span class="tlaGNC">       22984 :                     const path = vpath.combine(source, name);</span></span>
-<span id="L946"><span class="lineNum">     946</span> <span class="tlaGNC">       22984 :                     const stats = resolver.statSync(path);</span></span>
-<span id="L947"><span class="lineNum">     947</span> <span class="tlaGNC">       22984 :                     switch (stats.mode &amp; S_IFMT) {</span></span>
-<span id="L948"><span class="lineNum">     948</span> <span class="tlaGNC">       22984 :                         case S_IFDIR:</span></span>
+<span id="L938"><span class="lineNum">     938</span> <span class="tlaGNC">    12081622 :         if (!node.links) {</span></span>
+<span id="L939"><span class="lineNum">     939</span> <span class="tlaGNC">      144222 :             const links = new collections.SortedMap&lt;string, Inode&gt;(this.stringComparer);</span></span>
+<span id="L940"><span class="lineNum">     940</span> <span class="tlaGNC">      144222 :             const { source, resolver } = node;</span></span>
+<span id="L941"><span class="lineNum">     941</span> <span class="tlaGNC">      144222 :             if (source &amp;&amp; resolver) {</span></span>
+<span id="L942"><span class="lineNum">     942</span> <span class="tlaGNC">        1590 :                 node.source = undefined;</span></span>
+<span id="L943"><span class="lineNum">     943</span> <span class="tlaGNC">        1590 :                 node.resolver = undefined;</span></span>
+<span id="L944"><span class="lineNum">     944</span> <span class="tlaGNC">        1590 :                 for (const name of resolver.readdirSync(source)) {</span></span>
+<span id="L945"><span class="lineNum">     945</span> <span class="tlaGNC">       22982 :                     const path = vpath.combine(source, name);</span></span>
+<span id="L946"><span class="lineNum">     946</span> <span class="tlaGNC">       22982 :                     const stats = resolver.statSync(path);</span></span>
+<span id="L947"><span class="lineNum">     947</span> <span class="tlaGNC">       22982 :                     switch (stats.mode &amp; S_IFMT) {</span></span>
+<span id="L948"><span class="lineNum">     948</span> <span class="tlaGNC">       22982 :                         case S_IFDIR:</span></span>
 <span id="L949"><span class="lineNum">     949</span> <span class="tlaGNC">       21515 :                             const dir = this._mknod(node.dev, S_IFDIR, 0o777);</span></span>
 <span id="L950"><span class="lineNum">     950</span> <span class="tlaGNC">       21515 :                             dir.source = vpath.combine(source, name);</span></span>
 <span id="L951"><span class="lineNum">     951</span> <span class="tlaGNC">       21515 :                             dir.resolver = resolver;</span></span>
 <span id="L952"><span class="lineNum">     952</span> <span class="tlaGNC">       21515 :                             this._addLink(node, links, name, dir);</span></span>
 <span id="L953"><span class="lineNum">     953</span> <span class="tlaGNC">       21515 :                             break;</span></span>
-<span id="L954"><span class="lineNum">     954</span> <span class="tlaGNC">       22984 :                         case S_IFREG:</span></span>
-<span id="L955"><span class="lineNum">     955</span> <span class="tlaGNC">        1469 :                             const file = this._mknod(node.dev, S_IFREG, 0o666);</span></span>
-<span id="L956"><span class="lineNum">     956</span> <span class="tlaGNC">        1469 :                             file.source = vpath.combine(source, name);</span></span>
-<span id="L957"><span class="lineNum">     957</span> <span class="tlaGNC">        1469 :                             file.resolver = resolver;</span></span>
-<span id="L958"><span class="lineNum">     958</span> <span class="tlaGNC">        1469 :                             file.size = stats.size;</span></span>
-<span id="L959"><span class="lineNum">     959</span> <span class="tlaGNC">        1469 :                             this._addLink(node, links, name, file);</span></span>
-<span id="L960"><span class="lineNum">     960</span> <span class="tlaGNC">        1469 :                             break;</span></span>
-<span id="L961"><span class="lineNum">     961</span> <span class="tlaGNC">       22984 :                     }</span></span>
-<span id="L962"><span class="lineNum">     962</span> <span class="tlaGNC">       22984 :                 }</span></span>
-<span id="L963"><span class="lineNum">     963</span> <span class="tlaGNC">        1591 :             }</span></span>
-<span id="L964"><span class="lineNum">     964</span> <span class="tlaGNC">      142633 :             else if (this._shadowRoot &amp;&amp; node.shadowRoot) {</span></span>
-<span id="L965"><span class="lineNum">     965</span> <span class="tlaGNC">      107853 :                 this._copyShadowLinks(this._shadowRoot._getLinks(node.shadowRoot), links);</span></span>
-<span id="L966"><span class="lineNum">     966</span> <span class="tlaGNC">      107853 :             }</span></span>
-<span id="L967"><span class="lineNum">     967</span> <span class="tlaGNC">      144224 :             node.links = links;</span></span>
-<span id="L968"><span class="lineNum">     968</span> <span class="tlaGNC">      144224 :         }</span></span>
-<span id="L969"><span class="lineNum">     969</span> <span class="tlaGNC">    12081671 :         return node.links;</span></span>
-<span id="L970"><span class="lineNum">     970</span> <span class="tlaGNC">    12081671 :     }</span></span>
+<span id="L954"><span class="lineNum">     954</span> <span class="tlaGNC">       22982 :                         case S_IFREG:</span></span>
+<span id="L955"><span class="lineNum">     955</span> <span class="tlaGNC">        1467 :                             const file = this._mknod(node.dev, S_IFREG, 0o666);</span></span>
+<span id="L956"><span class="lineNum">     956</span> <span class="tlaGNC">        1467 :                             file.source = vpath.combine(source, name);</span></span>
+<span id="L957"><span class="lineNum">     957</span> <span class="tlaGNC">        1467 :                             file.resolver = resolver;</span></span>
+<span id="L958"><span class="lineNum">     958</span> <span class="tlaGNC">        1467 :                             file.size = stats.size;</span></span>
+<span id="L959"><span class="lineNum">     959</span> <span class="tlaGNC">        1467 :                             this._addLink(node, links, name, file);</span></span>
+<span id="L960"><span class="lineNum">     960</span> <span class="tlaGNC">        1467 :                             break;</span></span>
+<span id="L961"><span class="lineNum">     961</span> <span class="tlaGNC">       22982 :                     }</span></span>
+<span id="L962"><span class="lineNum">     962</span> <span class="tlaGNC">       22982 :                 }</span></span>
+<span id="L963"><span class="lineNum">     963</span> <span class="tlaGNC">        1590 :             }</span></span>
+<span id="L964"><span class="lineNum">     964</span> <span class="tlaGNC">      142632 :             else if (this._shadowRoot &amp;&amp; node.shadowRoot) {</span></span>
+<span id="L965"><span class="lineNum">     965</span> <span class="tlaGNC">      107852 :                 this._copyShadowLinks(this._shadowRoot._getLinks(node.shadowRoot), links);</span></span>
+<span id="L966"><span class="lineNum">     966</span> <span class="tlaGNC">      107852 :             }</span></span>
+<span id="L967"><span class="lineNum">     967</span> <span class="tlaGNC">      144222 :             node.links = links;</span></span>
+<span id="L968"><span class="lineNum">     968</span> <span class="tlaGNC">      144222 :         }</span></span>
+<span id="L969"><span class="lineNum">     969</span> <span class="tlaGNC">    12081622 :         return node.links;</span></span>
+<span id="L970"><span class="lineNum">     970</span> <span class="tlaGNC">    12081622 :     }</span></span>
 <span id="L971"><span class="lineNum">     971</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L972"><span class="lineNum">     972</span> <span class="tlaGNC">           8 :     private _getShadow(root: DirectoryInode): DirectoryInode;</span></span>
 <span id="L973"><span class="lineNum">     973</span> <span class="tlaGNC">           8 :     private _getShadow(root: Inode): Inode;</span></span>
 <span id="L974"><span class="lineNum">     974</span> <span class="tlaGNC">           8 :     private _getShadow(root: Inode) {</span></span>
-<span id="L975"><span class="lineNum">     975</span> <span class="tlaGNC">     3180152 :         const shadows = this._lazy.shadows || (this._lazy.shadows = new Map&lt;number, Inode&gt;());</span></span>
-<span id="L976"><span class="lineNum">     976</span> <span class="tlaGNC">     3180152 : </span></span>
-<span id="L977"><span class="lineNum">     977</span> <span class="tlaGNC">     3180152 :         let shadow = shadows.get(root.ino);</span></span>
-<span id="L978"><span class="lineNum">     978</span> <span class="tlaGNC">     3180152 :         if (!shadow) {</span></span>
-<span id="L979"><span class="lineNum">     979</span> <span class="tlaGNC">     3180152 :             shadow = {</span></span>
-<span id="L980"><span class="lineNum">     980</span> <span class="tlaGNC">     3180152 :                 dev: root.dev,</span></span>
-<span id="L981"><span class="lineNum">     981</span> <span class="tlaGNC">     3180152 :                 ino: root.ino,</span></span>
-<span id="L982"><span class="lineNum">     982</span> <span class="tlaGNC">     3180152 :                 mode: root.mode,</span></span>
-<span id="L983"><span class="lineNum">     983</span> <span class="tlaGNC">     3180152 :                 atimeMs: root.atimeMs,</span></span>
-<span id="L984"><span class="lineNum">     984</span> <span class="tlaGNC">     3180152 :                 mtimeMs: root.mtimeMs,</span></span>
-<span id="L985"><span class="lineNum">     985</span> <span class="tlaGNC">     3180152 :                 ctimeMs: root.ctimeMs,</span></span>
-<span id="L986"><span class="lineNum">     986</span> <span class="tlaGNC">     3180152 :                 birthtimeMs: root.birthtimeMs,</span></span>
-<span id="L987"><span class="lineNum">     987</span> <span class="tlaGNC">     3180152 :                 nlink: root.nlink,</span></span>
-<span id="L988"><span class="lineNum">     988</span> <span class="tlaGNC">     3180152 :                 shadowRoot: root,</span></span>
-<span id="L989"><span class="lineNum">     989</span> <span class="tlaGNC">     3180152 :             };</span></span>
-<span id="L990"><span class="lineNum">     990</span> <span class="tlaGNC">     3180152 : </span></span>
-<span id="L991"><span class="lineNum">     991</span> <span class="tlaGNC">     3180152 :             if (isSymlink(root)) (shadow as SymlinkInode).symlink = root.symlink;</span></span>
-<span id="L992"><span class="lineNum">     992</span> <span class="tlaGNC">     3180152 :             shadows.set(shadow.ino, shadow);</span></span>
-<span id="L993"><span class="lineNum">     993</span> <span class="tlaGNC">     3180152 :         }</span></span>
-<span id="L994"><span class="lineNum">     994</span> <span class="tlaGNC">     3180152 : </span></span>
-<span id="L995"><span class="lineNum">     995</span> <span class="tlaGNC">     3180152 :         return shadow;</span></span>
-<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">     3180152 :     }</span></span>
+<span id="L975"><span class="lineNum">     975</span> <span class="tlaGNC">     3180150 :         const shadows = this._lazy.shadows || (this._lazy.shadows = new Map&lt;number, Inode&gt;());</span></span>
+<span id="L976"><span class="lineNum">     976</span> <span class="tlaGNC">     3180150 : </span></span>
+<span id="L977"><span class="lineNum">     977</span> <span class="tlaGNC">     3180150 :         let shadow = shadows.get(root.ino);</span></span>
+<span id="L978"><span class="lineNum">     978</span> <span class="tlaGNC">     3180150 :         if (!shadow) {</span></span>
+<span id="L979"><span class="lineNum">     979</span> <span class="tlaGNC">     3180150 :             shadow = {</span></span>
+<span id="L980"><span class="lineNum">     980</span> <span class="tlaGNC">     3180150 :                 dev: root.dev,</span></span>
+<span id="L981"><span class="lineNum">     981</span> <span class="tlaGNC">     3180150 :                 ino: root.ino,</span></span>
+<span id="L982"><span class="lineNum">     982</span> <span class="tlaGNC">     3180150 :                 mode: root.mode,</span></span>
+<span id="L983"><span class="lineNum">     983</span> <span class="tlaGNC">     3180150 :                 atimeMs: root.atimeMs,</span></span>
+<span id="L984"><span class="lineNum">     984</span> <span class="tlaGNC">     3180150 :                 mtimeMs: root.mtimeMs,</span></span>
+<span id="L985"><span class="lineNum">     985</span> <span class="tlaGNC">     3180150 :                 ctimeMs: root.ctimeMs,</span></span>
+<span id="L986"><span class="lineNum">     986</span> <span class="tlaGNC">     3180150 :                 birthtimeMs: root.birthtimeMs,</span></span>
+<span id="L987"><span class="lineNum">     987</span> <span class="tlaGNC">     3180150 :                 nlink: root.nlink,</span></span>
+<span id="L988"><span class="lineNum">     988</span> <span class="tlaGNC">     3180150 :                 shadowRoot: root,</span></span>
+<span id="L989"><span class="lineNum">     989</span> <span class="tlaGNC">     3180150 :             };</span></span>
+<span id="L990"><span class="lineNum">     990</span> <span class="tlaGNC">     3180150 : </span></span>
+<span id="L991"><span class="lineNum">     991</span> <span class="tlaGNC">     3180150 :             if (isSymlink(root)) (shadow as SymlinkInode).symlink = root.symlink;</span></span>
+<span id="L992"><span class="lineNum">     992</span> <span class="tlaGNC">     3180150 :             shadows.set(shadow.ino, shadow);</span></span>
+<span id="L993"><span class="lineNum">     993</span> <span class="tlaGNC">     3180150 :         }</span></span>
+<span id="L994"><span class="lineNum">     994</span> <span class="tlaGNC">     3180150 : </span></span>
+<span id="L995"><span class="lineNum">     995</span> <span class="tlaGNC">     3180150 :         return shadow;</span></span>
+<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">     3180150 :     }</span></span>
 <span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">           8 :     private _copyShadowLinks(source: ReadonlyMap&lt;string, Inode&gt;, target: collections.SortedMap&lt;string, Inode&gt;) {</span></span>
-<span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">      139384 :         for (const [name, root] of source) {</span></span>
-<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">     3180152 :             target.set(name, this._getShadow(root));</span></span>
-<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">     3180152 :         }</span></span>
-<span id="L1002"><span class="lineNum">    1002</span> <span class="tlaGNC">      139384 :     }</span></span>
+<span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">      139383 :         for (const [name, root] of source) {</span></span>
+<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">     3180150 :             target.set(name, this._getShadow(root));</span></span>
+<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">     3180150 :         }</span></span>
+<span id="L1002"><span class="lineNum">    1002</span> <span class="tlaGNC">      139383 :     }</span></span>
 <span id="L1003"><span class="lineNum">    1003</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1004"><span class="lineNum">    1004</span> <span class="tlaGNC">           8 :     private _getSize(node: FileInode): number {</span></span>
-<span id="L1005"><span class="lineNum">    1005</span> <span class="tlaGNC">      112706 :         if (node.buffer) return Buffer.byteLength(node.buffer.data);</span></span>
-<span id="L1006"><span class="lineNum">    1006</span> <span class="tlaGNC">      112706 :         if (node.size !== undefined) return node.size;</span></span>
-<span id="L1007"><span class="lineNum">    1007</span> <span class="tlaGNC">      112706 :         if (node.source &amp;&amp; node.resolver) return node.size = node.resolver.statSync(node.source).size;</span></span>
-<span id="L1008"><span class="lineNum">    1008</span> <span class="tlaGNC">      112706 :         if (this._shadowRoot &amp;&amp; node.shadowRoot) return node.size = this._shadowRoot._getSize(node.shadowRoot);</span></span>
+<span id="L1005"><span class="lineNum">    1005</span> <span class="tlaGNC">      112696 :         if (node.buffer) return Buffer.byteLength(node.buffer.data);</span></span>
+<span id="L1006"><span class="lineNum">    1006</span> <span class="tlaGNC">      112696 :         if (node.size !== undefined) return node.size;</span></span>
+<span id="L1007"><span class="lineNum">    1007</span> <span class="tlaGNC">      112696 :         if (node.source &amp;&amp; node.resolver) return node.size = node.resolver.statSync(node.source).size;</span></span>
+<span id="L1008"><span class="lineNum">    1008</span> <span class="tlaGNC">      112696 :         if (this._shadowRoot &amp;&amp; node.shadowRoot) return node.size = this._shadowRoot._getSize(node.shadowRoot);</span></span>
 <span id="L1009"><span class="lineNum">    1009</span> <span class="tlaUNC tlaBgUNC">           0 :         return 0;</span></span>
-<span id="L1010"><span class="lineNum">    1010</span> <span class="tlaGNC tlaBgGNC">      112706 :     }</span></span>
+<span id="L1010"><span class="lineNum">    1010</span> <span class="tlaGNC tlaBgGNC">      112696 :     }</span></span>
 <span id="L1011"><span class="lineNum">    1011</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1012"><span class="lineNum">    1012</span> <span class="tlaGNC">           8 :     private _getBuffer(node: FileInode, encoding: BufferEncoding | undefined): FileDataBuffer {</span></span>
-<span id="L1013"><span class="lineNum">    1013</span> <span class="tlaGNC">      996704 :         if (!node.buffer) {</span></span>
-<span id="L1014"><span class="lineNum">    1014</span> <span class="tlaGNC">      465999 :             const { source, resolver } = node;</span></span>
-<span id="L1015"><span class="lineNum">    1015</span> <span class="tlaGNC">      465999 :             if (source &amp;&amp; resolver) {</span></span>
-<span id="L1016"><span class="lineNum">    1016</span> <span class="tlaGNC">        1360 :                 node.source = undefined;</span></span>
-<span id="L1017"><span class="lineNum">    1017</span> <span class="tlaGNC">        1360 :                 node.resolver = undefined;</span></span>
-<span id="L1018"><span class="lineNum">    1018</span> <span class="tlaGNC">        1360 :                 node.size = undefined;</span></span>
-<span id="L1019"><span class="lineNum">    1019</span> <span class="tlaGNC">        1360 :                 node.buffer = resolver.readFileSync(source);</span></span>
-<span id="L1020"><span class="lineNum">    1020</span> <span class="tlaGNC">        1360 :             }</span></span>
-<span id="L1021"><span class="lineNum">    1021</span> <span class="tlaGNC">      464639 :             else if (this._shadowRoot &amp;&amp; node.shadowRoot) {</span></span>
-<span id="L1022"><span class="lineNum">    1022</span> <span class="tlaGNC">      464639 :                 node.buffer = this._shadowRoot._getBuffer(node.shadowRoot, encoding);</span></span>
-<span id="L1023"><span class="lineNum">    1023</span> <span class="tlaGNC">      464639 :             }</span></span>
+<span id="L1013"><span class="lineNum">    1013</span> <span class="tlaGNC">      996701 :         if (!node.buffer) {</span></span>
+<span id="L1014"><span class="lineNum">    1014</span> <span class="tlaGNC">      465993 :             const { source, resolver } = node;</span></span>
+<span id="L1015"><span class="lineNum">    1015</span> <span class="tlaGNC">      465993 :             if (source &amp;&amp; resolver) {</span></span>
+<span id="L1016"><span class="lineNum">    1016</span> <span class="tlaGNC">        1357 :                 node.source = undefined;</span></span>
+<span id="L1017"><span class="lineNum">    1017</span> <span class="tlaGNC">        1357 :                 node.resolver = undefined;</span></span>
+<span id="L1018"><span class="lineNum">    1018</span> <span class="tlaGNC">        1357 :                 node.size = undefined;</span></span>
+<span id="L1019"><span class="lineNum">    1019</span> <span class="tlaGNC">        1357 :                 node.buffer = resolver.readFileSync(source);</span></span>
+<span id="L1020"><span class="lineNum">    1020</span> <span class="tlaGNC">        1357 :             }</span></span>
+<span id="L1021"><span class="lineNum">    1021</span> <span class="tlaGNC">      464636 :             else if (this._shadowRoot &amp;&amp; node.shadowRoot) {</span></span>
+<span id="L1022"><span class="lineNum">    1022</span> <span class="tlaGNC">      464636 :                 node.buffer = this._shadowRoot._getBuffer(node.shadowRoot, encoding);</span></span>
+<span id="L1023"><span class="lineNum">    1023</span> <span class="tlaGNC">      464636 :             }</span></span>
 <span id="L1024"><span class="lineNum">    1024</span> <span class="tlaUNC tlaBgUNC">           0 :             else {</span></span>
 <span id="L1025"><span class="lineNum">    1025</span> <span class="tlaUNC">           0 :                 node.buffer = { encoding: undefined, data: Buffer.allocUnsafe(0) };</span></span>
 <span id="L1026"><span class="lineNum">    1026</span> <span class="tlaUNC">           0 :             }</span></span>
-<span id="L1027"><span class="lineNum">    1027</span> <span class="tlaGNC tlaBgGNC">      465999 :         }</span></span>
-<span id="L1028"><span class="lineNum">    1028</span> <span class="tlaGNC">      996704 :         ensureBufferEncoding(node.buffer, encoding);</span></span>
-<span id="L1029"><span class="lineNum">    1029</span> <span class="tlaGNC">      996704 :         return node.buffer;</span></span>
-<span id="L1030"><span class="lineNum">    1030</span> <span class="tlaGNC">      996704 :     }</span></span>
+<span id="L1027"><span class="lineNum">    1027</span> <span class="tlaGNC tlaBgGNC">      465993 :         }</span></span>
+<span id="L1028"><span class="lineNum">    1028</span> <span class="tlaGNC">      996701 :         ensureBufferEncoding(node.buffer, encoding);</span></span>
+<span id="L1029"><span class="lineNum">    1029</span> <span class="tlaGNC">      996701 :         return node.buffer;</span></span>
+<span id="L1030"><span class="lineNum">    1030</span> <span class="tlaGNC">      996701 :     }</span></span>
 <span id="L1031"><span class="lineNum">    1031</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1032"><span class="lineNum">    1032</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L1033"><span class="lineNum">    1033</span> <span class="tlaGNC">           8 :      * Walk a path to its end.</span></span>
@@ -1103,29 +1103,29 @@
 <span id="L1041"><span class="lineNum">    1041</span> <span class="tlaGNC">           8 :     private _walk(path: string, noFollow?: boolean, onError?: (error: NodeJS.ErrnoException, fragment: WalkResult) =&gt; &quot;retry&quot; | &quot;throw&quot;): WalkResult;</span></span>
 <span id="L1042"><span class="lineNum">    1042</span> <span class="tlaGNC">           8 :     private _walk(path: string, noFollow?: boolean, onError?: (error: NodeJS.ErrnoException, fragment: WalkResult) =&gt; &quot;stop&quot; | &quot;retry&quot; | &quot;throw&quot;): WalkResult | undefined;</span></span>
 <span id="L1043"><span class="lineNum">    1043</span> <span class="tlaGNC">           8 :     private _walk(path: string, noFollow?: boolean, onError?: (error: NodeJS.ErrnoException, fragment: WalkResult) =&gt; &quot;stop&quot; | &quot;retry&quot; | &quot;throw&quot;): WalkResult | undefined {</span></span>
-<span id="L1044"><span class="lineNum">    1044</span> <span class="tlaGNC">     8090918 :         let links = this._getRootLinks();</span></span>
-<span id="L1045"><span class="lineNum">    1045</span> <span class="tlaGNC">     8090918 :         let parent: DirectoryInode | undefined;</span></span>
-<span id="L1046"><span class="lineNum">    1046</span> <span class="tlaGNC">     8090918 :         let components = vpath.parse(path);</span></span>
-<span id="L1047"><span class="lineNum">    1047</span> <span class="tlaGNC">     8090918 :         let step = 0;</span></span>
-<span id="L1048"><span class="lineNum">    1048</span> <span class="tlaGNC">     8090918 :         let depth = 0;</span></span>
-<span id="L1049"><span class="lineNum">    1049</span> <span class="tlaGNC">     8090918 :         let retry = false;</span></span>
-<span id="L1050"><span class="lineNum">    1050</span> <span class="tlaGNC">     8090918 :         while (true) {</span></span>
-<span id="L1051"><span class="lineNum">    1051</span> <span class="tlaGNC">    20052590 :             if (depth &gt;= 40) throw createIOError(&quot;ELOOP&quot;);</span></span>
-<span id="L1052"><span class="lineNum">    1052</span> <span class="tlaGNC">    20052590 :             const lastStep = step === components.length - 1;</span></span>
-<span id="L1053"><span class="lineNum">    1053</span> <span class="tlaGNC">    20052590 :             let basename = components[step];</span></span>
-<span id="L1054"><span class="lineNum">    1054</span> <span class="tlaGNC">    20052590 :             const linkEntry = links.getEntry(basename);</span></span>
-<span id="L1055"><span class="lineNum">    1055</span> <span class="tlaGNC">    20052590 :             if (linkEntry) {</span></span>
-<span id="L1056"><span class="lineNum">    1056</span> <span class="tlaGNC">    15931435 :                 components[step] = basename = linkEntry[0];</span></span>
-<span id="L1057"><span class="lineNum">    1057</span> <span class="tlaGNC">    15931435 :             }</span></span>
-<span id="L1058"><span class="lineNum">    1058</span> <span class="tlaGNC">    20052590 :             const node = linkEntry?.[1];</span></span>
-<span id="L1059"><span class="lineNum">    1059</span> <span class="tlaGNC">    20052590 :             if (lastStep &amp;&amp; (noFollow || !isSymlink(node))) {</span></span>
-<span id="L1060"><span class="lineNum">    1060</span> <span class="tlaGNC">     7703953 :                 return { realpath: vpath.format(components), basename, parent, links, node };</span></span>
-<span id="L1061"><span class="lineNum">    1061</span> <span class="tlaGNC">     7703953 :             }</span></span>
-<span id="L1062"><span class="lineNum">    1062</span> <span class="tlaGNC">    20052590 :             if (node === undefined) {</span></span>
+<span id="L1044"><span class="lineNum">    1044</span> <span class="tlaGNC">     8090900 :         let links = this._getRootLinks();</span></span>
+<span id="L1045"><span class="lineNum">    1045</span> <span class="tlaGNC">     8090900 :         let parent: DirectoryInode | undefined;</span></span>
+<span id="L1046"><span class="lineNum">    1046</span> <span class="tlaGNC">     8090900 :         let components = vpath.parse(path);</span></span>
+<span id="L1047"><span class="lineNum">    1047</span> <span class="tlaGNC">     8090900 :         let step = 0;</span></span>
+<span id="L1048"><span class="lineNum">    1048</span> <span class="tlaGNC">     8090900 :         let depth = 0;</span></span>
+<span id="L1049"><span class="lineNum">    1049</span> <span class="tlaGNC">     8090900 :         let retry = false;</span></span>
+<span id="L1050"><span class="lineNum">    1050</span> <span class="tlaGNC">     8090900 :         while (true) {</span></span>
+<span id="L1051"><span class="lineNum">    1051</span> <span class="tlaGNC">    20052524 :             if (depth &gt;= 40) throw createIOError(&quot;ELOOP&quot;);</span></span>
+<span id="L1052"><span class="lineNum">    1052</span> <span class="tlaGNC">    20052524 :             const lastStep = step === components.length - 1;</span></span>
+<span id="L1053"><span class="lineNum">    1053</span> <span class="tlaGNC">    20052524 :             let basename = components[step];</span></span>
+<span id="L1054"><span class="lineNum">    1054</span> <span class="tlaGNC">    20052524 :             const linkEntry = links.getEntry(basename);</span></span>
+<span id="L1055"><span class="lineNum">    1055</span> <span class="tlaGNC">    20052524 :             if (linkEntry) {</span></span>
+<span id="L1056"><span class="lineNum">    1056</span> <span class="tlaGNC">    15931369 :                 components[step] = basename = linkEntry[0];</span></span>
+<span id="L1057"><span class="lineNum">    1057</span> <span class="tlaGNC">    15931369 :             }</span></span>
+<span id="L1058"><span class="lineNum">    1058</span> <span class="tlaGNC">    20052524 :             const node = linkEntry?.[1];</span></span>
+<span id="L1059"><span class="lineNum">    1059</span> <span class="tlaGNC">    20052524 :             if (lastStep &amp;&amp; (noFollow || !isSymlink(node))) {</span></span>
+<span id="L1060"><span class="lineNum">    1060</span> <span class="tlaGNC">     7703935 :                 return { realpath: vpath.format(components), basename, parent, links, node };</span></span>
+<span id="L1061"><span class="lineNum">    1061</span> <span class="tlaGNC">     7703935 :             }</span></span>
+<span id="L1062"><span class="lineNum">    1062</span> <span class="tlaGNC">    20052524 :             if (node === undefined) {</span></span>
 <span id="L1063"><span class="lineNum">    1063</span> <span class="tlaGNC">      402802 :                 if (trapError(createIOError(&quot;ENOENT&quot;), node)) continue;</span></span>
 <span id="L1064"><span class="lineNum">    1064</span> <span class="tlaGNC">      382820 :                 return undefined;</span></span>
 <span id="L1065"><span class="lineNum">    1065</span> <span class="tlaGNC">      382820 :             }</span></span>
-<span id="L1066"><span class="lineNum">    1066</span> <span class="tlaGNC">    20052590 :             if (isSymlink(node)) {</span></span>
+<span id="L1066"><span class="lineNum">    1066</span> <span class="tlaGNC">    20052524 :             if (isSymlink(node)) {</span></span>
 <span id="L1067"><span class="lineNum">    1067</span> <span class="tlaGNC">        2459 :                 const dirname = vpath.format(components.slice(0, step));</span></span>
 <span id="L1068"><span class="lineNum">    1068</span> <span class="tlaGNC">        2459 :                 const symlink = vpath.resolve(dirname, node.symlink);</span></span>
 <span id="L1069"><span class="lineNum">    1069</span> <span class="tlaGNC">        2459 :                 links = this._getRootLinks();</span></span>
@@ -1136,18 +1136,18 @@
 <span id="L1074"><span class="lineNum">    1074</span> <span class="tlaGNC">        2459 :                 retry = false;</span></span>
 <span id="L1075"><span class="lineNum">    1075</span> <span class="tlaGNC">        2459 :                 continue;</span></span>
 <span id="L1076"><span class="lineNum">    1076</span> <span class="tlaGNC">        2459 :             }</span></span>
-<span id="L1077"><span class="lineNum">    1077</span> <span class="tlaGNC">    20052168 :             if (isDirectory(node)) {</span></span>
-<span id="L1078"><span class="lineNum">    1078</span> <span class="tlaGNC">    11943178 :                 links = this._getLinks(node);</span></span>
-<span id="L1079"><span class="lineNum">    1079</span> <span class="tlaGNC">    11943178 :                 parent = node;</span></span>
-<span id="L1080"><span class="lineNum">    1080</span> <span class="tlaGNC">    11943178 :                 step++;</span></span>
-<span id="L1081"><span class="lineNum">    1081</span> <span class="tlaGNC">    11943178 :                 retry = false;</span></span>
-<span id="L1082"><span class="lineNum">    1082</span> <span class="tlaGNC">    11943178 :                 continue;</span></span>
-<span id="L1083"><span class="lineNum">    1083</span> <span class="tlaGNC">    11943178 :             }</span></span>
+<span id="L1077"><span class="lineNum">    1077</span> <span class="tlaGNC">    20052102 :             if (isDirectory(node)) {</span></span>
+<span id="L1078"><span class="lineNum">    1078</span> <span class="tlaGNC">    11943130 :                 links = this._getLinks(node);</span></span>
+<span id="L1079"><span class="lineNum">    1079</span> <span class="tlaGNC">    11943130 :                 parent = node;</span></span>
+<span id="L1080"><span class="lineNum">    1080</span> <span class="tlaGNC">    11943130 :                 step++;</span></span>
+<span id="L1081"><span class="lineNum">    1081</span> <span class="tlaGNC">    11943130 :                 retry = false;</span></span>
+<span id="L1082"><span class="lineNum">    1082</span> <span class="tlaGNC">    11943130 :                 continue;</span></span>
+<span id="L1083"><span class="lineNum">    1083</span> <span class="tlaGNC">    11943130 :             }</span></span>
 <span id="L1084"><span class="lineNum">    1084</span> <span class="tlaGNC">         198 :             if (trapError(createIOError(&quot;ENOTDIR&quot;), node)) continue;</span></span>
 <span id="L1085"><span class="lineNum">    1085</span> <span class="tlaGNC">         198 :             return undefined;</span></span>
 <span id="L1086"><span class="lineNum">    1086</span> <span class="tlaGNC">         198 :         }</span></span>
-<span id="L1087"><span class="lineNum">    1087</span> <span class="tlaGNC">     8090918 : </span></span>
-<span id="L1088"><span class="lineNum">    1088</span> <span class="tlaGNC">     8090918 :         function trapError(error: NodeJS.ErrnoException, node?: Inode) {</span></span>
+<span id="L1087"><span class="lineNum">    1087</span> <span class="tlaGNC">     8090900 : </span></span>
+<span id="L1088"><span class="lineNum">    1088</span> <span class="tlaGNC">     8090900 :         function trapError(error: NodeJS.ErrnoException, node?: Inode) {</span></span>
 <span id="L1089"><span class="lineNum">    1089</span> <span class="tlaGNC">      403000 :             const realpath = vpath.format(components.slice(0, step + 1));</span></span>
 <span id="L1090"><span class="lineNum">    1090</span> <span class="tlaGNC">      403000 :             const basename = components[step];</span></span>
 <span id="L1091"><span class="lineNum">    1091</span> <span class="tlaGNC">      403000 :             const result = !retry &amp;&amp; onError ? onError(error, { realpath, basename, parent, links, node }) : &quot;throw&quot;;</span></span>
@@ -1158,16 +1158,16 @@
 <span id="L1096"><span class="lineNum">    1096</span> <span class="tlaGNC">       16035 :             }</span></span>
 <span id="L1097"><span class="lineNum">    1097</span> <span class="tlaGNC">        3947 :             throw error;</span></span>
 <span id="L1098"><span class="lineNum">    1098</span> <span class="tlaGNC">      403000 :         }</span></span>
-<span id="L1099"><span class="lineNum">    1099</span> <span class="tlaGNC">     8090918 :     }</span></span>
+<span id="L1099"><span class="lineNum">    1099</span> <span class="tlaGNC">     8090900 :     }</span></span>
 <span id="L1100"><span class="lineNum">    1100</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1101"><span class="lineNum">    1101</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L1102"><span class="lineNum">    1102</span> <span class="tlaGNC">           8 :      * Resolve a path relative to the current working directory.</span></span>
 <span id="L1103"><span class="lineNum">    1103</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L1104"><span class="lineNum">    1104</span> <span class="tlaGNC">           8 :     private _resolve(path: string) {</span></span>
-<span id="L1105"><span class="lineNum">    1105</span> <span class="tlaGNC">     6180901 :         return this._cwd</span></span>
-<span id="L1106"><span class="lineNum">    1106</span> <span class="tlaGNC">     6173960 :             ? vpath.resolve(this._cwd, vpath.validate(path, vpath.ValidationFlags.RelativeOrAbsolute | vpath.ValidationFlags.AllowWildcard))</span></span>
+<span id="L1105"><span class="lineNum">    1105</span> <span class="tlaGNC">     6180883 :         return this._cwd</span></span>
+<span id="L1106"><span class="lineNum">    1106</span> <span class="tlaGNC">     6173942 :             ? vpath.resolve(this._cwd, vpath.validate(path, vpath.ValidationFlags.RelativeOrAbsolute | vpath.ValidationFlags.AllowWildcard))</span></span>
 <span id="L1107"><span class="lineNum">    1107</span> <span class="tlaGNC">        6941 :             : vpath.validate(path, vpath.ValidationFlags.Absolute | vpath.ValidationFlags.AllowWildcard);</span></span>
-<span id="L1108"><span class="lineNum">    1108</span> <span class="tlaGNC">     6180901 :     }</span></span>
+<span id="L1108"><span class="lineNum">    1108</span> <span class="tlaGNC">     6180883 :     }</span></span>
 <span id="L1109"><span class="lineNum">    1109</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1110"><span class="lineNum">    1110</span> <span class="tlaGNC">           8 :     private _applyFiles(files: FileSet, dirname: string) {</span></span>
 <span id="L1111"><span class="lineNum">    1111</span> <span class="tlaGNC">        1108 :         const deferred: [Symlink | Link | Mount, string][] = [];</span></span>
@@ -1373,25 +1373,25 @@
 <span id="L1311"><span class="lineNum">    1311</span> <span class="tlaGNC">           8 :     constructor();</span></span>
 <span id="L1312"><span class="lineNum">    1312</span> <span class="tlaGNC">           8 :     constructor(dev: number, ino: number, mode: number, nlink: number, rdev: number, size: number, blksize: number, blocks: number, atimeMs: number, mtimeMs: number, ctimeMs: number, birthtimeMs: number);</span></span>
 <span id="L1313"><span class="lineNum">    1313</span> <span class="tlaGNC">           8 :     constructor(dev = 0, ino = 0, mode = 0, nlink = 0, rdev = 0, size = 0, blksize = 0, blocks = 0, atimeMs = 0, mtimeMs = 0, ctimeMs = 0, birthtimeMs = 0) {</span></span>
-<span id="L1314"><span class="lineNum">    1314</span> <span class="tlaGNC">      441543 :         this.dev = dev;</span></span>
-<span id="L1315"><span class="lineNum">    1315</span> <span class="tlaGNC">      441543 :         this.ino = ino;</span></span>
-<span id="L1316"><span class="lineNum">    1316</span> <span class="tlaGNC">      441543 :         this.mode = mode;</span></span>
-<span id="L1317"><span class="lineNum">    1317</span> <span class="tlaGNC">      441543 :         this.nlink = nlink;</span></span>
-<span id="L1318"><span class="lineNum">    1318</span> <span class="tlaGNC">      441543 :         this.uid = 0;</span></span>
-<span id="L1319"><span class="lineNum">    1319</span> <span class="tlaGNC">      441543 :         this.gid = 0;</span></span>
-<span id="L1320"><span class="lineNum">    1320</span> <span class="tlaGNC">      441543 :         this.rdev = rdev;</span></span>
-<span id="L1321"><span class="lineNum">    1321</span> <span class="tlaGNC">      441543 :         this.size = size;</span></span>
-<span id="L1322"><span class="lineNum">    1322</span> <span class="tlaGNC">      441543 :         this.blksize = blksize;</span></span>
-<span id="L1323"><span class="lineNum">    1323</span> <span class="tlaGNC">      441543 :         this.blocks = blocks;</span></span>
-<span id="L1324"><span class="lineNum">    1324</span> <span class="tlaGNC">      441543 :         this.atimeMs = atimeMs;</span></span>
-<span id="L1325"><span class="lineNum">    1325</span> <span class="tlaGNC">      441543 :         this.mtimeMs = mtimeMs;</span></span>
-<span id="L1326"><span class="lineNum">    1326</span> <span class="tlaGNC">      441543 :         this.ctimeMs = ctimeMs;</span></span>
-<span id="L1327"><span class="lineNum">    1327</span> <span class="tlaGNC">      441543 :         this.birthtimeMs = birthtimeMs;</span></span>
-<span id="L1328"><span class="lineNum">    1328</span> <span class="tlaGNC">      441543 :         this.atime = new Date(this.atimeMs);</span></span>
-<span id="L1329"><span class="lineNum">    1329</span> <span class="tlaGNC">      441543 :         this.mtime = new Date(this.mtimeMs);</span></span>
-<span id="L1330"><span class="lineNum">    1330</span> <span class="tlaGNC">      441543 :         this.ctime = new Date(this.ctimeMs);</span></span>
-<span id="L1331"><span class="lineNum">    1331</span> <span class="tlaGNC">      441543 :         this.birthtime = new Date(this.birthtimeMs);</span></span>
-<span id="L1332"><span class="lineNum">    1332</span> <span class="tlaGNC">      441543 :     }</span></span>
+<span id="L1314"><span class="lineNum">    1314</span> <span class="tlaGNC">      441534 :         this.dev = dev;</span></span>
+<span id="L1315"><span class="lineNum">    1315</span> <span class="tlaGNC">      441534 :         this.ino = ino;</span></span>
+<span id="L1316"><span class="lineNum">    1316</span> <span class="tlaGNC">      441534 :         this.mode = mode;</span></span>
+<span id="L1317"><span class="lineNum">    1317</span> <span class="tlaGNC">      441534 :         this.nlink = nlink;</span></span>
+<span id="L1318"><span class="lineNum">    1318</span> <span class="tlaGNC">      441534 :         this.uid = 0;</span></span>
+<span id="L1319"><span class="lineNum">    1319</span> <span class="tlaGNC">      441534 :         this.gid = 0;</span></span>
+<span id="L1320"><span class="lineNum">    1320</span> <span class="tlaGNC">      441534 :         this.rdev = rdev;</span></span>
+<span id="L1321"><span class="lineNum">    1321</span> <span class="tlaGNC">      441534 :         this.size = size;</span></span>
+<span id="L1322"><span class="lineNum">    1322</span> <span class="tlaGNC">      441534 :         this.blksize = blksize;</span></span>
+<span id="L1323"><span class="lineNum">    1323</span> <span class="tlaGNC">      441534 :         this.blocks = blocks;</span></span>
+<span id="L1324"><span class="lineNum">    1324</span> <span class="tlaGNC">      441534 :         this.atimeMs = atimeMs;</span></span>
+<span id="L1325"><span class="lineNum">    1325</span> <span class="tlaGNC">      441534 :         this.mtimeMs = mtimeMs;</span></span>
+<span id="L1326"><span class="lineNum">    1326</span> <span class="tlaGNC">      441534 :         this.ctimeMs = ctimeMs;</span></span>
+<span id="L1327"><span class="lineNum">    1327</span> <span class="tlaGNC">      441534 :         this.birthtimeMs = birthtimeMs;</span></span>
+<span id="L1328"><span class="lineNum">    1328</span> <span class="tlaGNC">      441534 :         this.atime = new Date(this.atimeMs);</span></span>
+<span id="L1329"><span class="lineNum">    1329</span> <span class="tlaGNC">      441534 :         this.mtime = new Date(this.mtimeMs);</span></span>
+<span id="L1330"><span class="lineNum">    1330</span> <span class="tlaGNC">      441534 :         this.ctime = new Date(this.ctimeMs);</span></span>
+<span id="L1331"><span class="lineNum">    1331</span> <span class="tlaGNC">      441534 :         this.birthtime = new Date(this.birthtimeMs);</span></span>
+<span id="L1332"><span class="lineNum">    1332</span> <span class="tlaGNC">      441534 :     }</span></span>
 <span id="L1333"><span class="lineNum">    1333</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L1334"><span class="lineNum">    1334</span> <span class="tlaGNC">           8 :     public isFile() {</span></span>
 <span id="L1335"><span class="lineNum">    1335</span> <span class="tlaGNC">       50315 :         return (this.mode &amp; S_IFMT) === S_IFREG;</span></span>
@@ -1527,14 +1527,14 @@
 <span id="L1465"><span class="lineNum">    1465</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1466"><span class="lineNum">    1466</span> <span class="tlaGNC">           1 : type FileDataBuffer = { encoding?: undefined; data: Buffer; } | { encoding: BufferEncoding; data: string; };</span></span>
 <span id="L1467"><span class="lineNum">    1467</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L1468"><span class="lineNum">    1468</span> <span class="tlaGNC">      996704 : function ensureBufferEncoding(fileBuffer: FileDataBuffer, encoding: BufferEncoding | undefined) {</span></span>
-<span id="L1469"><span class="lineNum">    1469</span> <span class="tlaGNC">      996704 :     if (fileBuffer.encoding === encoding) return;</span></span>
+<span id="L1468"><span class="lineNum">    1468</span> <span class="tlaGNC">      996701 : function ensureBufferEncoding(fileBuffer: FileDataBuffer, encoding: BufferEncoding | undefined) {</span></span>
+<span id="L1469"><span class="lineNum">    1469</span> <span class="tlaGNC">      996701 :     if (fileBuffer.encoding === encoding) return;</span></span>
 <span id="L1470"><span class="lineNum">    1470</span> <span class="tlaGNC">        1126 : </span></span>
-<span id="L1471"><span class="lineNum">    1471</span> <span class="tlaGNC">      996704 :     const buffer = !fileBuffer.encoding ? fileBuffer.data : Buffer.from(fileBuffer.data, fileBuffer.encoding);</span></span>
-<span id="L1472"><span class="lineNum">    1472</span> <span class="tlaGNC">      996704 : </span></span>
-<span id="L1473"><span class="lineNum">    1473</span> <span class="tlaGNC">      996704 :     fileBuffer.encoding = encoding;</span></span>
-<span id="L1474"><span class="lineNum">    1474</span> <span class="tlaGNC">      996704 :     fileBuffer.data = !encoding ? buffer : buffer.toString(encoding);</span></span>
-<span id="L1475"><span class="lineNum">    1475</span> <span class="tlaGNC">      996704 : }</span></span>
+<span id="L1471"><span class="lineNum">    1471</span> <span class="tlaGNC">      996701 :     const buffer = !fileBuffer.encoding ? fileBuffer.data : Buffer.from(fileBuffer.data, fileBuffer.encoding);</span></span>
+<span id="L1472"><span class="lineNum">    1472</span> <span class="tlaGNC">      996701 : </span></span>
+<span id="L1473"><span class="lineNum">    1473</span> <span class="tlaGNC">      996701 :     fileBuffer.encoding = encoding;</span></span>
+<span id="L1474"><span class="lineNum">    1474</span> <span class="tlaGNC">      996701 :     fileBuffer.data = !encoding ? buffer : buffer.toString(encoding);</span></span>
+<span id="L1475"><span class="lineNum">    1475</span> <span class="tlaGNC">      996701 : }</span></span>
 <span id="L1476"><span class="lineNum">    1476</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1477"><span class="lineNum">    1477</span> <span class="tlaGNC">           1 : interface FileInode {</span></span>
 <span id="L1478"><span class="lineNum">    1478</span> <span class="tlaGNC">           1 :     dev: number; // device id</span></span>
@@ -1591,17 +1591,17 @@
 <span id="L1529"><span class="lineNum">    1529</span> <span class="tlaGNC">       12629 :     return !node.buffer &amp;&amp; !node.shadowRoot &amp;&amp; !node.resolver &amp;&amp; !node.source;</span></span>
 <span id="L1530"><span class="lineNum">    1530</span> <span class="tlaGNC">       12629 : }</span></span>
 <span id="L1531"><span class="lineNum">    1531</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L1532"><span class="lineNum">    1532</span> <span class="tlaGNC">     1107467 : function isFile(node: Inode | undefined): node is FileInode {</span></span>
-<span id="L1533"><span class="lineNum">    1533</span> <span class="tlaGNC">     1107467 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFREG;</span></span>
-<span id="L1534"><span class="lineNum">    1534</span> <span class="tlaGNC">     1107467 : }</span></span>
+<span id="L1532"><span class="lineNum">    1532</span> <span class="tlaGNC">     1107458 : function isFile(node: Inode | undefined): node is FileInode {</span></span>
+<span id="L1533"><span class="lineNum">    1533</span> <span class="tlaGNC">     1107458 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFREG;</span></span>
+<span id="L1534"><span class="lineNum">    1534</span> <span class="tlaGNC">     1107458 : }</span></span>
 <span id="L1535"><span class="lineNum">    1535</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L1536"><span class="lineNum">    1536</span> <span class="tlaGNC">    14567288 : function isDirectory(node: Inode | undefined): node is DirectoryInode {</span></span>
-<span id="L1537"><span class="lineNum">    1537</span> <span class="tlaGNC">    14567288 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFDIR;</span></span>
-<span id="L1538"><span class="lineNum">    1538</span> <span class="tlaGNC">    14567288 : }</span></span>
+<span id="L1536"><span class="lineNum">    1536</span> <span class="tlaGNC">    14567240 : function isDirectory(node: Inode | undefined): node is DirectoryInode {</span></span>
+<span id="L1537"><span class="lineNum">    1537</span> <span class="tlaGNC">    14567240 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFDIR;</span></span>
+<span id="L1538"><span class="lineNum">    1538</span> <span class="tlaGNC">    14567240 : }</span></span>
 <span id="L1539"><span class="lineNum">    1539</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L1540"><span class="lineNum">    1540</span> <span class="tlaGNC">    19064162 : function isSymlink(node: Inode | undefined): node is SymlinkInode {</span></span>
-<span id="L1541"><span class="lineNum">    1541</span> <span class="tlaGNC">    19064162 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFLNK;</span></span>
-<span id="L1542"><span class="lineNum">    1542</span> <span class="tlaGNC">    19064162 : }</span></span>
+<span id="L1540"><span class="lineNum">    1540</span> <span class="tlaGNC">    19064100 : function isSymlink(node: Inode | undefined): node is SymlinkInode {</span></span>
+<span id="L1541"><span class="lineNum">    1541</span> <span class="tlaGNC">    19064100 :     return node !== undefined &amp;&amp; (node.mode &amp; S_IFMT) === S_IFLNK;</span></span>
+<span id="L1542"><span class="lineNum">    1542</span> <span class="tlaGNC">    19064100 : }</span></span>
 <span id="L1543"><span class="lineNum">    1543</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1544"><span class="lineNum">    1544</span> <span class="tlaGNC">           1 : interface WalkResult {</span></span>
 <span id="L1545"><span class="lineNum">    1545</span> <span class="tlaGNC">           1 :     realpath: string;</span></span>

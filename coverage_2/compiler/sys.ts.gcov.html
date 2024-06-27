@@ -31,18 +31,18 @@
             <td class="headerValue">lcov.info</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntryHi">92.2&nbsp;%</td>
+            <td class="headerCovTableEntryHi">92.3&nbsp;%</td>
             <td class="headerCovTableEntry">2578</td>
-            <td class="headerCovTableEntry">2377</td>
+            <td class="headerCovTableEntry">2380</td>
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
-            <td class="headerCovTableEntryMed">81.0&nbsp;%</td>
+            <td class="headerCovTableEntryMed">81.9&nbsp;%</td>
             <td class="headerCovTableEntry">116</td>
-            <td class="headerCovTableEntry">94</td>
+            <td class="headerCovTableEntry">95</td>
           </tr>
                   <tr><td><img src="../glass.png" width=3 height=3 alt=""></td></tr>
                 </table>
@@ -2138,26 +2138,26 @@
 <span id="L2076"><span class="lineNum">    2076</span> <span class="tlaUNC">           0 :         return process.memoryUsage().heapUsed;</span></span>
 <span id="L2077"><span class="lineNum">    2077</span> <span class="tlaUNC">           0 :       },</span></span>
 <span id="L2078"><span class="lineNum">    2078</span> <span class="tlaGNC tlaBgGNC">           8 :       getFileSize(path) {</span></span>
-<span id="L2079"><span class="lineNum">    2079</span> <span class="tlaGNC">        1469 :         try {</span></span>
-<span id="L2080"><span class="lineNum">    2080</span> <span class="tlaGNC">        1469 :           const stat = statSync(path);</span></span>
-<span id="L2081"><span class="lineNum">    2081</span> <span class="tlaGNC">        1469 :           if (stat?.isFile()) {</span></span>
-<span id="L2082"><span class="lineNum">    2082</span> <span class="tlaGNC">        1469 :             return stat.size;</span></span>
-<span id="L2083"><span class="lineNum">    2083</span> <span class="tlaGNC">        1469 :           }</span></span>
-<span id="L2084"><span class="lineNum">    2084</span> <span class="tlaGNC">        1469 :         } catch {</span></span>
+<span id="L2079"><span class="lineNum">    2079</span> <span class="tlaGNC">        1467 :         try {</span></span>
+<span id="L2080"><span class="lineNum">    2080</span> <span class="tlaGNC">        1467 :           const stat = statSync(path);</span></span>
+<span id="L2081"><span class="lineNum">    2081</span> <span class="tlaGNC">        1467 :           if (stat?.isFile()) {</span></span>
+<span id="L2082"><span class="lineNum">    2082</span> <span class="tlaGNC">        1467 :             return stat.size;</span></span>
+<span id="L2083"><span class="lineNum">    2083</span> <span class="tlaGNC">        1467 :           }</span></span>
+<span id="L2084"><span class="lineNum">    2084</span> <span class="tlaGNC">        1467 :         } catch {</span></span>
 <span id="L2085"><span class="lineNum">    2085</span> <span class="tlaUNC tlaBgUNC">           0 :           /*ignore*/</span></span>
 <span id="L2086"><span class="lineNum">    2086</span> <span class="tlaUNC">           0 :         }</span></span>
 <span id="L2087"><span class="lineNum">    2087</span> <span class="tlaUNC">           0 :         return 0;</span></span>
-<span id="L2088"><span class="lineNum">    2088</span> <span class="tlaGNC tlaBgGNC">        1469 :       },</span></span>
+<span id="L2088"><span class="lineNum">    2088</span> <span class="tlaGNC tlaBgGNC">        1467 :       },</span></span>
 <span id="L2089"><span class="lineNum">    2089</span> <span class="tlaGNC">           8 :       exit(exitCode?: number): void {</span></span>
 <span id="L2090"><span class="lineNum">    2090</span> <span class="tlaUNC tlaBgUNC">           0 :         disableCPUProfiler(() =&gt; process.exit(exitCode));</span></span>
 <span id="L2091"><span class="lineNum">    2091</span> <span class="tlaUNC">           0 :       },</span></span>
 <span id="L2092"><span class="lineNum">    2092</span> <span class="tlaGNC tlaBgGNC">           8 :       enableCPUProfiler,</span></span>
 <span id="L2093"><span class="lineNum">    2093</span> <span class="tlaGNC">           8 :       disableCPUProfiler,</span></span>
 <span id="L2094"><span class="lineNum">    2094</span> <span class="tlaGNC">           8 :       cpuProfilingEnabled: () =&gt;</span></span>
-<span id="L2095"><span class="lineNum">    2095</span> <span class="tlaUNC tlaBgUNC">           0 :         !!activeSession ||</span></span>
-<span id="L2096"><span class="lineNum">    2096</span> <span class="tlaUNC">           0 :         contains(process.execArgv, &quot;--cpu-prof&quot;) ||</span></span>
-<span id="L2097"><span class="lineNum">    2097</span> <span class="tlaUNC">           0 :         contains(process.execArgv, &quot;--prof&quot;),</span></span>
-<span id="L2098"><span class="lineNum">    2098</span> <span class="tlaGNC tlaBgGNC">           8 :       realpath,</span></span>
+<span id="L2095"><span class="lineNum">    2095</span> <span class="tlaGNC">           4 :         !!activeSession ||</span></span>
+<span id="L2096"><span class="lineNum">    2096</span> <span class="tlaGNC">           4 :         contains(process.execArgv, &quot;--cpu-prof&quot;) ||</span></span>
+<span id="L2097"><span class="lineNum">    2097</span> <span class="tlaGNC">           4 :         contains(process.execArgv, &quot;--prof&quot;),</span></span>
+<span id="L2098"><span class="lineNum">    2098</span> <span class="tlaGNC">           8 :       realpath,</span></span>
 <span id="L2099"><span class="lineNum">    2099</span> <span class="tlaGNC">           8 :       debugMode:</span></span>
 <span id="L2100"><span class="lineNum">    2100</span> <span class="tlaGNC">           8 :         !!process.env.NODE_INSPECTOR_IPC ||</span></span>
 <span id="L2101"><span class="lineNum">    2101</span> <span class="tlaGNC">           8 :         !!process.env.VSCODE_INSPECTOR_OPTIONS ||</span></span>
@@ -2206,9 +2206,9 @@
 <span id="L2144"><span class="lineNum">    2144</span> <span class="tlaGNC">           8 :      * See https://github.com/nodejs/node/pull/33716</span></span>
 <span id="L2145"><span class="lineNum">    2145</span> <span class="tlaGNC">           8 :      */</span></span>
 <span id="L2146"><span class="lineNum">    2146</span> <span class="tlaGNC">           8 :     function statSync(path: string): import(&quot;fs&quot;).Stats | undefined {</span></span>
-<span id="L2147"><span class="lineNum">    2147</span> <span class="tlaGNC">      149204 :       // throwIfNoEntry will be ignored by older versions of node</span></span>
-<span id="L2148"><span class="lineNum">    2148</span> <span class="tlaGNC">      149204 :       return (_fs as any).statSync(path, { throwIfNoEntry: false });</span></span>
-<span id="L2149"><span class="lineNum">    2149</span> <span class="tlaGNC">      149204 :     }</span></span>
+<span id="L2147"><span class="lineNum">    2147</span> <span class="tlaGNC">      149187 :       // throwIfNoEntry will be ignored by older versions of node</span></span>
+<span id="L2148"><span class="lineNum">    2148</span> <span class="tlaGNC">      149187 :       return (_fs as any).statSync(path, { throwIfNoEntry: false });</span></span>
+<span id="L2149"><span class="lineNum">    2149</span> <span class="tlaGNC">      149187 :     }</span></span>
 <span id="L2150"><span class="lineNum">    2150</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2151"><span class="lineNum">    2151</span> <span class="tlaGNC">           8 :     /**</span></span>
 <span id="L2152"><span class="lineNum">    2152</span> <span class="tlaGNC">           8 :      * Uses the builtin inspector APIs to capture a CPU profile</span></span>
@@ -2382,17 +2382,17 @@
 <span id="L2320"><span class="lineNum">    2320</span> <span class="tlaGNC">           2 :     }</span></span>
 <span id="L2321"><span class="lineNum">    2321</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2322"><span class="lineNum">    2322</span> <span class="tlaGNC">           8 :     function readFileWorker(</span></span>
-<span id="L2323"><span class="lineNum">    2323</span> <span class="tlaGNC">       72415 :       fileName: string,</span></span>
-<span id="L2324"><span class="lineNum">    2324</span> <span class="tlaGNC">       72415 :       _encoding?: string,</span></span>
-<span id="L2325"><span class="lineNum">    2325</span> <span class="tlaGNC">       72415 :     ): string | undefined {</span></span>
-<span id="L2326"><span class="lineNum">    2326</span> <span class="tlaGNC">       72415 :       let buffer: Buffer;</span></span>
-<span id="L2327"><span class="lineNum">    2327</span> <span class="tlaGNC">       72415 :       try {</span></span>
-<span id="L2328"><span class="lineNum">    2328</span> <span class="tlaGNC">       72415 :         buffer = _fs.readFileSync(fileName);</span></span>
-<span id="L2329"><span class="lineNum">    2329</span> <span class="tlaGNC">       72415 :       } catch (e) {</span></span>
+<span id="L2323"><span class="lineNum">    2323</span> <span class="tlaGNC">       72366 :       fileName: string,</span></span>
+<span id="L2324"><span class="lineNum">    2324</span> <span class="tlaGNC">       72366 :       _encoding?: string,</span></span>
+<span id="L2325"><span class="lineNum">    2325</span> <span class="tlaGNC">       72366 :     ): string | undefined {</span></span>
+<span id="L2326"><span class="lineNum">    2326</span> <span class="tlaGNC">       72366 :       let buffer: Buffer;</span></span>
+<span id="L2327"><span class="lineNum">    2327</span> <span class="tlaGNC">       72366 :       try {</span></span>
+<span id="L2328"><span class="lineNum">    2328</span> <span class="tlaGNC">       72366 :         buffer = _fs.readFileSync(fileName);</span></span>
+<span id="L2329"><span class="lineNum">    2329</span> <span class="tlaGNC">       72366 :       } catch (e) {</span></span>
 <span id="L2330"><span class="lineNum">    2330</span> <span class="tlaUNC tlaBgUNC">           0 :         return undefined;</span></span>
 <span id="L2331"><span class="lineNum">    2331</span> <span class="tlaUNC">           0 :       }</span></span>
-<span id="L2332"><span class="lineNum">    2332</span> <span class="tlaGNC tlaBgGNC">       72415 :       let len = buffer.length;</span></span>
-<span id="L2333"><span class="lineNum">    2333</span> <span class="tlaGNC">       72415 :       if (len &gt;= 2 &amp;&amp; buffer[0] === 0xfe &amp;&amp; buffer[1] === 0xff) {</span></span>
+<span id="L2332"><span class="lineNum">    2332</span> <span class="tlaGNC tlaBgGNC">       72366 :       let len = buffer.length;</span></span>
+<span id="L2333"><span class="lineNum">    2333</span> <span class="tlaGNC">       72366 :       if (len &gt;= 2 &amp;&amp; buffer[0] === 0xfe &amp;&amp; buffer[1] === 0xff) {</span></span>
 <span id="L2334"><span class="lineNum">    2334</span> <span class="tlaGNC">           1 :         // Big endian UTF-16 byte order mark detected. Since big endian is not supported by node.js,</span></span>
 <span id="L2335"><span class="lineNum">    2335</span> <span class="tlaGNC">           1 :         // flip all byte pairs and treat as little endian.</span></span>
 <span id="L2336"><span class="lineNum">    2336</span> <span class="tlaGNC">           1 :         len &amp;= ~1; // Round down to a multiple of 2</span></span>
@@ -2403,32 +2403,32 @@
 <span id="L2341"><span class="lineNum">    2341</span> <span class="tlaGNC">          12 :         }</span></span>
 <span id="L2342"><span class="lineNum">    2342</span> <span class="tlaGNC">           1 :         return buffer.toString(&quot;utf16le&quot;, 2);</span></span>
 <span id="L2343"><span class="lineNum">    2343</span> <span class="tlaGNC">           1 :       }</span></span>
-<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">       72415 :       if (len &gt;= 2 &amp;&amp; buffer[0] === 0xff &amp;&amp; buffer[1] === 0xfe) {</span></span>
+<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">       72366 :       if (len &gt;= 2 &amp;&amp; buffer[0] === 0xff &amp;&amp; buffer[1] === 0xfe) {</span></span>
 <span id="L2345"><span class="lineNum">    2345</span> <span class="tlaGNC">           6 :         // Little endian UTF-16 byte order mark detected</span></span>
 <span id="L2346"><span class="lineNum">    2346</span> <span class="tlaGNC">           6 :         return buffer.toString(&quot;utf16le&quot;, 2);</span></span>
 <span id="L2347"><span class="lineNum">    2347</span> <span class="tlaGNC">           6 :       }</span></span>
-<span id="L2348"><span class="lineNum">    2348</span> <span class="tlaGNC">       72408 :       if (</span></span>
-<span id="L2349"><span class="lineNum">    2349</span> <span class="tlaGNC">       72408 :         len &gt;= 3 &amp;&amp;</span></span>
-<span id="L2350"><span class="lineNum">    2350</span> <span class="tlaGNC">       72380 :         buffer[0] === 0xef &amp;&amp;</span></span>
+<span id="L2348"><span class="lineNum">    2348</span> <span class="tlaGNC">       72359 :       if (</span></span>
+<span id="L2349"><span class="lineNum">    2349</span> <span class="tlaGNC">       72359 :         len &gt;= 3 &amp;&amp;</span></span>
+<span id="L2350"><span class="lineNum">    2350</span> <span class="tlaGNC">       72331 :         buffer[0] === 0xef &amp;&amp;</span></span>
 <span id="L2351"><span class="lineNum">    2351</span> <span class="tlaGNC">        1010 :         buffer[1] === 0xbb &amp;&amp;</span></span>
 <span id="L2352"><span class="lineNum">    2352</span> <span class="tlaGNC">        1010 :         buffer[2] === 0xbf</span></span>
-<span id="L2353"><span class="lineNum">    2353</span> <span class="tlaGNC">       72415 :       ) {</span></span>
+<span id="L2353"><span class="lineNum">    2353</span> <span class="tlaGNC">       72366 :       ) {</span></span>
 <span id="L2354"><span class="lineNum">    2354</span> <span class="tlaGNC">        1010 :         // UTF-8 byte order mark detected</span></span>
 <span id="L2355"><span class="lineNum">    2355</span> <span class="tlaGNC">        1010 :         return buffer.toString(&quot;utf8&quot;, 3);</span></span>
 <span id="L2356"><span class="lineNum">    2356</span> <span class="tlaGNC">        1010 :       }</span></span>
-<span id="L2357"><span class="lineNum">    2357</span> <span class="tlaGNC">       71398 :       // Default is UTF-8 with no byte order mark</span></span>
-<span id="L2358"><span class="lineNum">    2358</span> <span class="tlaGNC">       71398 :       return buffer.toString(&quot;utf8&quot;);</span></span>
-<span id="L2359"><span class="lineNum">    2359</span> <span class="tlaGNC">       72415 :     }</span></span>
+<span id="L2357"><span class="lineNum">    2357</span> <span class="tlaGNC">       71349 :       // Default is UTF-8 with no byte order mark</span></span>
+<span id="L2358"><span class="lineNum">    2358</span> <span class="tlaGNC">       71349 :       return buffer.toString(&quot;utf8&quot;);</span></span>
+<span id="L2359"><span class="lineNum">    2359</span> <span class="tlaGNC">       72366 :     }</span></span>
 <span id="L2360"><span class="lineNum">    2360</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2361"><span class="lineNum">    2361</span> <span class="tlaGNC">           8 :     function readFile(</span></span>
-<span id="L2362"><span class="lineNum">    2362</span> <span class="tlaGNC">       72415 :       fileName: string,</span></span>
-<span id="L2363"><span class="lineNum">    2363</span> <span class="tlaGNC">       72415 :       _encoding?: string,</span></span>
-<span id="L2364"><span class="lineNum">    2364</span> <span class="tlaGNC">       72415 :     ): string | undefined {</span></span>
-<span id="L2365"><span class="lineNum">    2365</span> <span class="tlaGNC">       72415 :       perfLogger?.logStartReadFile(fileName);</span></span>
-<span id="L2366"><span class="lineNum">    2366</span> <span class="tlaGNC">       72415 :       const file = readFileWorker(fileName, _encoding);</span></span>
-<span id="L2367"><span class="lineNum">    2367</span> <span class="tlaGNC">       72415 :       perfLogger?.logStopReadFile();</span></span>
-<span id="L2368"><span class="lineNum">    2368</span> <span class="tlaGNC">       72415 :       return file;</span></span>
-<span id="L2369"><span class="lineNum">    2369</span> <span class="tlaGNC">       72415 :     }</span></span>
+<span id="L2362"><span class="lineNum">    2362</span> <span class="tlaGNC">       72366 :       fileName: string,</span></span>
+<span id="L2363"><span class="lineNum">    2363</span> <span class="tlaGNC">       72366 :       _encoding?: string,</span></span>
+<span id="L2364"><span class="lineNum">    2364</span> <span class="tlaGNC">       72366 :     ): string | undefined {</span></span>
+<span id="L2365"><span class="lineNum">    2365</span> <span class="tlaGNC">       72366 :       perfLogger?.logStartReadFile(fileName);</span></span>
+<span id="L2366"><span class="lineNum">    2366</span> <span class="tlaGNC">       72366 :       const file = readFileWorker(fileName, _encoding);</span></span>
+<span id="L2367"><span class="lineNum">    2367</span> <span class="tlaGNC">       72366 :       perfLogger?.logStopReadFile();</span></span>
+<span id="L2368"><span class="lineNum">    2368</span> <span class="tlaGNC">       72366 :       return file;</span></span>
+<span id="L2369"><span class="lineNum">    2369</span> <span class="tlaGNC">       72366 :     }</span></span>
 <span id="L2370"><span class="lineNum">    2370</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2371"><span class="lineNum">    2371</span> <span class="tlaGNC">           8 :     function writeFile(</span></span>
 <span id="L2372"><span class="lineNum">    2372</span> <span class="tlaGNC">          55 :       fileName: string,</span></span>
@@ -2454,23 +2454,23 @@
 <span id="L2392"><span class="lineNum">    2392</span> <span class="tlaGNC">          55 :     }</span></span>
 <span id="L2393"><span class="lineNum">    2393</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2394"><span class="lineNum">    2394</span> <span class="tlaGNC">           8 :     function getAccessibleFileSystemEntries(path: string): FileSystemEntries {</span></span>
-<span id="L2395"><span class="lineNum">    2395</span> <span class="tlaGNC">        1976 :       perfLogger?.logEvent(&quot;ReadDir: &quot; + (path || &quot;.&quot;));</span></span>
-<span id="L2396"><span class="lineNum">    2396</span> <span class="tlaGNC">        1976 :       try {</span></span>
-<span id="L2397"><span class="lineNum">    2397</span> <span class="tlaGNC">        1976 :         const entries = _fs.readdirSync(path || &quot;.&quot;, { withFileTypes: true });</span></span>
-<span id="L2398"><span class="lineNum">    2398</span> <span class="tlaGNC">        1976 :         const files: string[] = [];</span></span>
-<span id="L2399"><span class="lineNum">    2399</span> <span class="tlaGNC">        1976 :         const directories: string[] = [];</span></span>
-<span id="L2400"><span class="lineNum">    2400</span> <span class="tlaGNC">        1976 :         for (const dirent of entries) {</span></span>
-<span id="L2401"><span class="lineNum">    2401</span> <span class="tlaGNC">       42048 :           // withFileTypes is not supported before Node 10.10.</span></span>
-<span id="L2402"><span class="lineNum">    2402</span> <span class="tlaGNC">       42048 :           const entry = typeof dirent === &quot;string&quot; ? dirent : dirent.name;</span></span>
-<span id="L2403"><span class="lineNum">    2403</span> <span class="tlaGNC">       42048 : </span></span>
-<span id="L2404"><span class="lineNum">    2404</span> <span class="tlaGNC">       42048 :           // This is necessary because on some file system node fails to exclude</span></span>
-<span id="L2405"><span class="lineNum">    2405</span> <span class="tlaGNC">       42048 :           // &quot;.&quot; and &quot;..&quot;. See https://github.com/nodejs/node/issues/4002</span></span>
-<span id="L2406"><span class="lineNum">    2406</span> <span class="tlaGNC">       42048 :           if (entry === &quot;.&quot; || entry === &quot;..&quot;) {</span></span>
+<span id="L2395"><span class="lineNum">    2395</span> <span class="tlaGNC">        1975 :       perfLogger?.logEvent(&quot;ReadDir: &quot; + (path || &quot;.&quot;));</span></span>
+<span id="L2396"><span class="lineNum">    2396</span> <span class="tlaGNC">        1975 :       try {</span></span>
+<span id="L2397"><span class="lineNum">    2397</span> <span class="tlaGNC">        1975 :         const entries = _fs.readdirSync(path || &quot;.&quot;, { withFileTypes: true });</span></span>
+<span id="L2398"><span class="lineNum">    2398</span> <span class="tlaGNC">        1975 :         const files: string[] = [];</span></span>
+<span id="L2399"><span class="lineNum">    2399</span> <span class="tlaGNC">        1975 :         const directories: string[] = [];</span></span>
+<span id="L2400"><span class="lineNum">    2400</span> <span class="tlaGNC">        1975 :         for (const dirent of entries) {</span></span>
+<span id="L2401"><span class="lineNum">    2401</span> <span class="tlaGNC">       42046 :           // withFileTypes is not supported before Node 10.10.</span></span>
+<span id="L2402"><span class="lineNum">    2402</span> <span class="tlaGNC">       42046 :           const entry = typeof dirent === &quot;string&quot; ? dirent : dirent.name;</span></span>
+<span id="L2403"><span class="lineNum">    2403</span> <span class="tlaGNC">       42046 : </span></span>
+<span id="L2404"><span class="lineNum">    2404</span> <span class="tlaGNC">       42046 :           // This is necessary because on some file system node fails to exclude</span></span>
+<span id="L2405"><span class="lineNum">    2405</span> <span class="tlaGNC">       42046 :           // &quot;.&quot; and &quot;..&quot;. See https://github.com/nodejs/node/issues/4002</span></span>
+<span id="L2406"><span class="lineNum">    2406</span> <span class="tlaGNC">       42046 :           if (entry === &quot;.&quot; || entry === &quot;..&quot;) {</span></span>
 <span id="L2407"><span class="lineNum">    2407</span> <span class="tlaUNC tlaBgUNC">           0 :             continue;</span></span>
 <span id="L2408"><span class="lineNum">    2408</span> <span class="tlaUNC">           0 :           }</span></span>
-<span id="L2409"><span class="lineNum">    2409</span> <span class="tlaGNC tlaBgGNC">       42048 : </span></span>
-<span id="L2410"><span class="lineNum">    2410</span> <span class="tlaGNC">       42048 :           let stat: any;</span></span>
-<span id="L2411"><span class="lineNum">    2411</span> <span class="tlaGNC">       42048 :           if (typeof dirent === &quot;string&quot; || dirent.isSymbolicLink()) {</span></span>
+<span id="L2409"><span class="lineNum">    2409</span> <span class="tlaGNC tlaBgGNC">       42046 : </span></span>
+<span id="L2410"><span class="lineNum">    2410</span> <span class="tlaGNC">       42046 :           let stat: any;</span></span>
+<span id="L2411"><span class="lineNum">    2411</span> <span class="tlaGNC">       42046 :           if (typeof dirent === &quot;string&quot; || dirent.isSymbolicLink()) {</span></span>
 <span id="L2412"><span class="lineNum">    2412</span> <span class="tlaUNC tlaBgUNC">           0 :             const name = combinePaths(path, entry);</span></span>
 <span id="L2413"><span class="lineNum">    2413</span> <span class="tlaUNC">           0 : </span></span>
 <span id="L2414"><span class="lineNum">    2414</span> <span class="tlaUNC">           0 :             try {</span></span>
@@ -2481,23 +2481,23 @@
 <span id="L2419"><span class="lineNum">    2419</span> <span class="tlaUNC">           0 :             } catch (e) {</span></span>
 <span id="L2420"><span class="lineNum">    2420</span> <span class="tlaUNC">           0 :               continue;</span></span>
 <span id="L2421"><span class="lineNum">    2421</span> <span class="tlaUNC">           0 :             }</span></span>
-<span id="L2422"><span class="lineNum">    2422</span> <span class="tlaGNC tlaBgGNC">       42048 :           } else {</span></span>
-<span id="L2423"><span class="lineNum">    2423</span> <span class="tlaGNC">       42048 :             stat = dirent;</span></span>
-<span id="L2424"><span class="lineNum">    2424</span> <span class="tlaGNC">       42048 :           }</span></span>
-<span id="L2425"><span class="lineNum">    2425</span> <span class="tlaGNC">       42048 : </span></span>
-<span id="L2426"><span class="lineNum">    2426</span> <span class="tlaGNC">       42048 :           if (stat.isFile()) {</span></span>
-<span id="L2427"><span class="lineNum">    2427</span> <span class="tlaGNC">       20152 :             files.push(entry);</span></span>
-<span id="L2428"><span class="lineNum">    2428</span> <span class="tlaGNC">       42048 :           } else if (stat.isDirectory()) {</span></span>
+<span id="L2422"><span class="lineNum">    2422</span> <span class="tlaGNC tlaBgGNC">       42046 :           } else {</span></span>
+<span id="L2423"><span class="lineNum">    2423</span> <span class="tlaGNC">       42046 :             stat = dirent;</span></span>
+<span id="L2424"><span class="lineNum">    2424</span> <span class="tlaGNC">       42046 :           }</span></span>
+<span id="L2425"><span class="lineNum">    2425</span> <span class="tlaGNC">       42046 : </span></span>
+<span id="L2426"><span class="lineNum">    2426</span> <span class="tlaGNC">       42046 :           if (stat.isFile()) {</span></span>
+<span id="L2427"><span class="lineNum">    2427</span> <span class="tlaGNC">       20150 :             files.push(entry);</span></span>
+<span id="L2428"><span class="lineNum">    2428</span> <span class="tlaGNC">       42046 :           } else if (stat.isDirectory()) {</span></span>
 <span id="L2429"><span class="lineNum">    2429</span> <span class="tlaGNC">       21896 :             directories.push(entry);</span></span>
 <span id="L2430"><span class="lineNum">    2430</span> <span class="tlaGNC">       21896 :           }</span></span>
-<span id="L2431"><span class="lineNum">    2431</span> <span class="tlaGNC">       42048 :         }</span></span>
-<span id="L2432"><span class="lineNum">    2432</span> <span class="tlaGNC">        1976 :         files.sort();</span></span>
-<span id="L2433"><span class="lineNum">    2433</span> <span class="tlaGNC">        1976 :         directories.sort();</span></span>
-<span id="L2434"><span class="lineNum">    2434</span> <span class="tlaGNC">        1976 :         return { files, directories };</span></span>
-<span id="L2435"><span class="lineNum">    2435</span> <span class="tlaGNC">        1976 :       } catch (e) {</span></span>
+<span id="L2431"><span class="lineNum">    2431</span> <span class="tlaGNC">       42046 :         }</span></span>
+<span id="L2432"><span class="lineNum">    2432</span> <span class="tlaGNC">        1975 :         files.sort();</span></span>
+<span id="L2433"><span class="lineNum">    2433</span> <span class="tlaGNC">        1975 :         directories.sort();</span></span>
+<span id="L2434"><span class="lineNum">    2434</span> <span class="tlaGNC">        1975 :         return { files, directories };</span></span>
+<span id="L2435"><span class="lineNum">    2435</span> <span class="tlaGNC">        1975 :       } catch (e) {</span></span>
 <span id="L2436"><span class="lineNum">    2436</span> <span class="tlaUNC tlaBgUNC">           0 :         return emptyFileSystemEntries;</span></span>
 <span id="L2437"><span class="lineNum">    2437</span> <span class="tlaUNC">           0 :       }</span></span>
-<span id="L2438"><span class="lineNum">    2438</span> <span class="tlaGNC tlaBgGNC">        1976 :     }</span></span>
+<span id="L2438"><span class="lineNum">    2438</span> <span class="tlaGNC tlaBgGNC">        1975 :     }</span></span>
 <span id="L2439"><span class="lineNum">    2439</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2440"><span class="lineNum">    2440</span> <span class="tlaGNC">           8 :     function readDirectory(</span></span>
 <span id="L2441"><span class="lineNum">    2441</span> <span class="tlaUNC tlaBgUNC">           0 :       path: string,</span></span>
@@ -2520,41 +2520,41 @@
 <span id="L2458"><span class="lineNum">    2458</span> <span class="tlaUNC">           0 :     }</span></span>
 <span id="L2459"><span class="lineNum">    2459</span> <span class="tlaGNC tlaBgGNC">           8 : </span></span>
 <span id="L2460"><span class="lineNum">    2460</span> <span class="tlaGNC">           8 :     function fileSystemEntryExists(</span></span>
-<span id="L2461"><span class="lineNum">    2461</span> <span class="tlaGNC">      147721 :       path: string,</span></span>
-<span id="L2462"><span class="lineNum">    2462</span> <span class="tlaGNC">      147721 :       entryKind: FileSystemEntryKind,</span></span>
-<span id="L2463"><span class="lineNum">    2463</span> <span class="tlaGNC">      147721 :     ): boolean {</span></span>
-<span id="L2464"><span class="lineNum">    2464</span> <span class="tlaGNC">      147721 :       // Since the error thrown by fs.statSync isn't used, we can avoid collecting a stack trace to improve</span></span>
-<span id="L2465"><span class="lineNum">    2465</span> <span class="tlaGNC">      147721 :       // the CPU time performance.</span></span>
-<span id="L2466"><span class="lineNum">    2466</span> <span class="tlaGNC">      147721 :       const originalStackTraceLimit = Error.stackTraceLimit;</span></span>
-<span id="L2467"><span class="lineNum">    2467</span> <span class="tlaGNC">      147721 :       Error.stackTraceLimit = 0;</span></span>
-<span id="L2468"><span class="lineNum">    2468</span> <span class="tlaGNC">      147721 : </span></span>
-<span id="L2469"><span class="lineNum">    2469</span> <span class="tlaGNC">      147721 :       try {</span></span>
-<span id="L2470"><span class="lineNum">    2470</span> <span class="tlaGNC">      147721 :         const stat = statSync(path);</span></span>
-<span id="L2471"><span class="lineNum">    2471</span> <span class="tlaGNC">      147721 :         if (!stat) {</span></span>
+<span id="L2461"><span class="lineNum">    2461</span> <span class="tlaGNC">      147706 :       path: string,</span></span>
+<span id="L2462"><span class="lineNum">    2462</span> <span class="tlaGNC">      147706 :       entryKind: FileSystemEntryKind,</span></span>
+<span id="L2463"><span class="lineNum">    2463</span> <span class="tlaGNC">      147706 :     ): boolean {</span></span>
+<span id="L2464"><span class="lineNum">    2464</span> <span class="tlaGNC">      147706 :       // Since the error thrown by fs.statSync isn't used, we can avoid collecting a stack trace to improve</span></span>
+<span id="L2465"><span class="lineNum">    2465</span> <span class="tlaGNC">      147706 :       // the CPU time performance.</span></span>
+<span id="L2466"><span class="lineNum">    2466</span> <span class="tlaGNC">      147706 :       const originalStackTraceLimit = Error.stackTraceLimit;</span></span>
+<span id="L2467"><span class="lineNum">    2467</span> <span class="tlaGNC">      147706 :       Error.stackTraceLimit = 0;</span></span>
+<span id="L2468"><span class="lineNum">    2468</span> <span class="tlaGNC">      147706 : </span></span>
+<span id="L2469"><span class="lineNum">    2469</span> <span class="tlaGNC">      147706 :       try {</span></span>
+<span id="L2470"><span class="lineNum">    2470</span> <span class="tlaGNC">      147706 :         const stat = statSync(path);</span></span>
+<span id="L2471"><span class="lineNum">    2471</span> <span class="tlaGNC">      147706 :         if (!stat) {</span></span>
 <span id="L2472"><span class="lineNum">    2472</span> <span class="tlaGNC">       71222 :           return false;</span></span>
 <span id="L2473"><span class="lineNum">    2473</span> <span class="tlaGNC">       71222 :         }</span></span>
-<span id="L2474"><span class="lineNum">    2474</span> <span class="tlaGNC">       76499 :         switch (entryKind) {</span></span>
-<span id="L2475"><span class="lineNum">    2475</span> <span class="tlaGNC">      147720 :           case FileSystemEntryKind.File:</span></span>
-<span id="L2476"><span class="lineNum">    2476</span> <span class="tlaGNC">       53399 :             return stat.isFile();</span></span>
-<span id="L2477"><span class="lineNum">    2477</span> <span class="tlaGNC">      147721 :           case FileSystemEntryKind.Directory:</span></span>
-<span id="L2478"><span class="lineNum">    2478</span> <span class="tlaGNC">       23100 :             return stat.isDirectory();</span></span>
-<span id="L2479"><span class="lineNum">    2479</span> <span class="tlaGNC">      147721 :           default:</span></span>
+<span id="L2474"><span class="lineNum">    2474</span> <span class="tlaGNC">       76484 :         switch (entryKind) {</span></span>
+<span id="L2475"><span class="lineNum">    2475</span> <span class="tlaGNC">      147705 :           case FileSystemEntryKind.File:</span></span>
+<span id="L2476"><span class="lineNum">    2476</span> <span class="tlaGNC">       53397 :             return stat.isFile();</span></span>
+<span id="L2477"><span class="lineNum">    2477</span> <span class="tlaGNC">      147706 :           case FileSystemEntryKind.Directory:</span></span>
+<span id="L2478"><span class="lineNum">    2478</span> <span class="tlaGNC">       23087 :             return stat.isDirectory();</span></span>
+<span id="L2479"><span class="lineNum">    2479</span> <span class="tlaGNC">      147706 :           default:</span></span>
 <span id="L2480"><span class="lineNum">    2480</span> <span class="tlaUNC tlaBgUNC">           0 :             return false;</span></span>
-<span id="L2481"><span class="lineNum">    2481</span> <span class="tlaGNC tlaBgGNC">      147721 :         }</span></span>
-<span id="L2482"><span class="lineNum">    2482</span> <span class="tlaGNC">      147721 :       } catch (e) {</span></span>
+<span id="L2481"><span class="lineNum">    2481</span> <span class="tlaGNC tlaBgGNC">      147706 :         }</span></span>
+<span id="L2482"><span class="lineNum">    2482</span> <span class="tlaGNC">      147706 :       } catch (e) {</span></span>
 <span id="L2483"><span class="lineNum">    2483</span> <span class="tlaUNC tlaBgUNC">           0 :         return false;</span></span>
-<span id="L2484"><span class="lineNum">    2484</span> <span class="tlaGNC tlaBgGNC">      147721 :       } finally {</span></span>
-<span id="L2485"><span class="lineNum">    2485</span> <span class="tlaGNC">      147721 :         Error.stackTraceLimit = originalStackTraceLimit;</span></span>
-<span id="L2486"><span class="lineNum">    2486</span> <span class="tlaGNC">      147721 :       }</span></span>
-<span id="L2487"><span class="lineNum">    2487</span> <span class="tlaGNC">      147721 :     }</span></span>
+<span id="L2484"><span class="lineNum">    2484</span> <span class="tlaGNC tlaBgGNC">      147706 :       } finally {</span></span>
+<span id="L2485"><span class="lineNum">    2485</span> <span class="tlaGNC">      147706 :         Error.stackTraceLimit = originalStackTraceLimit;</span></span>
+<span id="L2486"><span class="lineNum">    2486</span> <span class="tlaGNC">      147706 :       }</span></span>
+<span id="L2487"><span class="lineNum">    2487</span> <span class="tlaGNC">      147706 :     }</span></span>
 <span id="L2488"><span class="lineNum">    2488</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2489"><span class="lineNum">    2489</span> <span class="tlaGNC">           8 :     function fileExists(path: string): boolean {</span></span>
-<span id="L2490"><span class="lineNum">    2490</span> <span class="tlaGNC">      122404 :       return fileSystemEntryExists(path, FileSystemEntryKind.File);</span></span>
-<span id="L2491"><span class="lineNum">    2491</span> <span class="tlaGNC">      122404 :     }</span></span>
+<span id="L2490"><span class="lineNum">    2490</span> <span class="tlaGNC">      122402 :       return fileSystemEntryExists(path, FileSystemEntryKind.File);</span></span>
+<span id="L2491"><span class="lineNum">    2491</span> <span class="tlaGNC">      122402 :     }</span></span>
 <span id="L2492"><span class="lineNum">    2492</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2493"><span class="lineNum">    2493</span> <span class="tlaGNC">           8 :     function directoryExists(path: string): boolean {</span></span>
-<span id="L2494"><span class="lineNum">    2494</span> <span class="tlaGNC">       25315 :       return fileSystemEntryExists(path, FileSystemEntryKind.Directory);</span></span>
-<span id="L2495"><span class="lineNum">    2495</span> <span class="tlaGNC">       25315 :     }</span></span>
+<span id="L2494"><span class="lineNum">    2494</span> <span class="tlaGNC">       25302 :       return fileSystemEntryExists(path, FileSystemEntryKind.Directory);</span></span>
+<span id="L2495"><span class="lineNum">    2495</span> <span class="tlaGNC">       25302 :     }</span></span>
 <span id="L2496"><span class="lineNum">    2496</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L2497"><span class="lineNum">    2497</span> <span class="tlaGNC">           8 :     function getDirectories(path: string): string[] {</span></span>
 <span id="L2498"><span class="lineNum">    2498</span> <span class="tlaUNC tlaBgUNC">           0 :       return getAccessibleFileSystemEntries(path).directories.slice();</span></span>

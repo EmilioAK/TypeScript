@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -94,7 +94,7 @@
 <span id="L32"><span class="lineNum">      32</span> <span class="tlaGNC">          16 : </span></span>
 <span id="L33"><span class="lineNum">      33</span> <span class="tlaGNC">          16 :         const codeFixes: CodeFixAction[] = [];</span></span>
 <span id="L34"><span class="lineNum">      34</span> <span class="tlaGNC">          16 :         const moduleKind = getEmitModuleKind(compilerOptions);</span></span>
-<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">          19 :         const moduleOutOfRange = moduleKind &gt;= ModuleKind.ES2015 &amp;&amp; moduleKind &lt; ModuleKind.ESNext;</span></span>
+<span id="L35"><span class="lineNum">      35</span> <span class="tlaGNC">          21 :         const moduleOutOfRange = moduleKind &gt;= ModuleKind.ES2015 &amp;&amp; moduleKind &lt; ModuleKind.ESNext;</span></span>
 <span id="L36"><span class="lineNum">      36</span> <span class="tlaGNC">          21 :         if (moduleOutOfRange) {</span></span>
 <span id="L37"><span class="lineNum">      37</span> <span class="tlaGNC">           8 :             const changes = textChanges.ChangeTracker.with(context, changes =&gt; {</span></span>
 <span id="L38"><span class="lineNum">      38</span> <span class="tlaGNC">           8 :                 setJsonCompilerOptionValue(changes, configFile, &quot;module&quot;, factory.createStringLiteral(&quot;esnext&quot;));</span></span>

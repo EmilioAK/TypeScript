@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -210,7 +210,7 @@
 <span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">          71 : </span></span>
 <span id="L149"><span class="lineNum">     149</span> <span class="tlaGNC">          71 :         // Find all references to the variable in the current file.</span></span>
 <span id="L150"><span class="lineNum">     150</span> <span class="tlaGNC">          71 :         const references = getReferenceNodes(parent, checker, file);</span></span>
-<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">          74 :         return references &amp;&amp; { references, declaration: parent, replacement: parent.initializer };</span></span>
+<span id="L151"><span class="lineNum">     151</span> <span class="tlaGNC">          73 :         return references &amp;&amp; { references, declaration: parent, replacement: parent.initializer };</span></span>
 <span id="L152"><span class="lineNum">     152</span> <span class="tlaGNC">          74 :     }</span></span>
 <span id="L153"><span class="lineNum">     153</span> <span class="tlaGNC">         340 : </span></span>
 <span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">         340 :     // Try finding the declaration and nodes to replace via the reference token.</span></span>
@@ -230,7 +230,7 @@
 <span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">           2 :         }</span></span>
 <span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">          14 : </span></span>
 <span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">          14 :         // Do not inline if the variable is exported.</span></span>
-<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">          20 :         if (isDeclarationExported(declaration)) {</span></span>
+<span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">          19 :         if (isDeclarationExported(declaration)) {</span></span>
 <span id="L172"><span class="lineNum">     172</span> <span class="tlaUNC tlaBgUNC">           0 :             return undefined;</span></span>
 <span id="L173"><span class="lineNum">     173</span> <span class="tlaUNC">           0 :         }</span></span>
 <span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC tlaBgGNC">          14 : </span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -182,15 +182,15 @@
 <span id="L120"><span class="lineNum">     120</span> <span class="tlaGNC">        1080 :     if (nextToken &amp;&amp; end &gt; nextToken.getStart()) return undefined;</span></span>
 <span id="L121"><span class="lineNum">     121</span> <span class="tlaGNC">          45 : </span></span>
 <span id="L122"><span class="lineNum">     122</span> <span class="tlaGNC">          45 :     const { importClause } = importDecl;</span></span>
-<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">        1080 :     if (!importClause) {</span></span>
+<span id="L123"><span class="lineNum">     123</span> <span class="tlaGNC">         917 :     if (!importClause) {</span></span>
 <span id="L124"><span class="lineNum">     124</span> <span class="tlaUNC tlaBgUNC">           0 :         return { error: getLocaleSpecificMessage(Diagnostics.Could_not_find_import_clause) };</span></span>
 <span id="L125"><span class="lineNum">     125</span> <span class="tlaUNC">           0 :     }</span></span>
 <span id="L126"><span class="lineNum">     126</span> <span class="tlaGNC tlaBgGNC">          45 : </span></span>
-<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">        1080 :     if (!importClause.namedBindings) {</span></span>
+<span id="L127"><span class="lineNum">     127</span> <span class="tlaGNC">         917 :     if (!importClause.namedBindings) {</span></span>
 <span id="L128"><span class="lineNum">     128</span> <span class="tlaGNC">           1 :         return { error: getLocaleSpecificMessage(Diagnostics.Could_not_find_namespace_import_or_named_imports) };</span></span>
 <span id="L129"><span class="lineNum">     129</span> <span class="tlaGNC">           1 :     }</span></span>
 <span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">          44 : </span></span>
-<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">         841 :     if (importClause.namedBindings.kind === SyntaxKind.NamespaceImport) {</span></span>
+<span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">         917 :     if (importClause.namedBindings.kind === SyntaxKind.NamespaceImport) {</span></span>
 <span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">          18 :         return { convertTo: ImportKind.Named, import: importClause.namedBindings };</span></span>
 <span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">          18 :     }</span></span>
 <span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">          26 :     const shouldUseDefault = getShouldUseDefault(context.program, importClause);</span></span>

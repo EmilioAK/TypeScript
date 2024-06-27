@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">88.9&nbsp;%</td>
@@ -66,11 +66,11 @@
 <span id="L4"><span class="lineNum">       4</span> <span class="tlaGNC">           8 : export const HarnessLSCouldNotResolveModule = &quot;HarnessLanguageService:: Could not resolve module&quot;;</span></span>
 <span id="L5"><span class="lineNum">       5</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L6"><span class="lineNum">       6</span> <span class="tlaGNC">           1 : export function replaceAll(source: string, searchValue: string, replaceValue: string): string {</span></span>
-<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">     1809342 :     let result: string | undefined = (source as string &amp; { replaceAll: typeof source.replace; }).replaceAll?.(searchValue, replaceValue);</span></span>
-<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">     1809342 : </span></span>
-<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">     1809342 :     if (result !== undefined) {</span></span>
-<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">     1809342 :         return result;</span></span>
-<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">     1809342 :     }</span></span>
+<span id="L7"><span class="lineNum">       7</span> <span class="tlaGNC">     1850682 :     let result: string | undefined = (source as string &amp; { replaceAll: typeof source.replace; }).replaceAll?.(searchValue, replaceValue);</span></span>
+<span id="L8"><span class="lineNum">       8</span> <span class="tlaGNC">     1850682 : </span></span>
+<span id="L9"><span class="lineNum">       9</span> <span class="tlaGNC">     1850682 :     if (result !== undefined) {</span></span>
+<span id="L10"><span class="lineNum">      10</span> <span class="tlaGNC">     1850682 :         return result;</span></span>
+<span id="L11"><span class="lineNum">      11</span> <span class="tlaGNC">     1850682 :     }</span></span>
 <span id="L12"><span class="lineNum">      12</span> <span class="tlaUNC tlaBgUNC">           0 : </span></span>
 <span id="L13"><span class="lineNum">      13</span> <span class="tlaUNC">           0 :     result = &quot;&quot;;</span></span>
 <span id="L14"><span class="lineNum">      14</span> <span class="tlaUNC">           0 :     const searchLength = searchValue.length;</span></span>
@@ -202,9 +202,9 @@
 <span id="L140"><span class="lineNum">     140</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L141"><span class="lineNum">     141</span> <span class="tlaGNC">           1 : export function sanitizeLibFileText(s: string): string {</span></span>
 <span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">       48182 :     Compiler.libFileNameSourceFileMap?.forEach((lib, fileName) =&gt; {</span></span>
-<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">      427427 :         s = replaceAll(s, JSON.stringify(lib.text), `${fileName}-Text`);</span></span>
-<span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">      427427 :         s = replaceAll(s, lib.text, `${fileName}-Text`);</span></span>
-<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">      427427 :     });</span></span>
+<span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">      448097 :         s = replaceAll(s, JSON.stringify(lib.text), `${fileName}-Text`);</span></span>
+<span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">      448097 :         s = replaceAll(s, lib.text, `${fileName}-Text`);</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">      448097 :     });</span></span>
 <span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">       48182 :     return s;</span></span>
 <span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">       48182 : }</span></span>
 <span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">           1 : </span></span>

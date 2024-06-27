@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -1564,7 +1564,7 @@
 <span id="L1502"><span class="lineNum">    1502</span> <span class="tlaGNC">          42 : function needsJsxNamespaceFix(jsxNamespace: string, symbolToken: Identifier, checker: TypeChecker) {</span></span>
 <span id="L1503"><span class="lineNum">    1503</span> <span class="tlaGNC">          42 :     if (isIntrinsicJsxName(symbolToken.text)) return true; // If we were triggered by a matching error code on an intrinsic, the error must have been about missing the JSX factory</span></span>
 <span id="L1504"><span class="lineNum">    1504</span> <span class="tlaGNC">          17 :     const namespaceSymbol = checker.resolveName(jsxNamespace, symbolToken, SymbolFlags.Value, /*excludeGlobals*/ true);</span></span>
-<span id="L1505"><span class="lineNum">    1505</span> <span class="tlaGNC">          27 :     return !namespaceSymbol || some(namespaceSymbol.declarations, isTypeOnlyImportOrExportDeclaration) &amp;&amp; !(namespaceSymbol.flags &amp; SymbolFlags.Value);</span></span>
+<span id="L1505"><span class="lineNum">    1505</span> <span class="tlaGNC">          42 :     return !namespaceSymbol || some(namespaceSymbol.declarations, isTypeOnlyImportOrExportDeclaration) &amp;&amp; !(namespaceSymbol.flags &amp; SymbolFlags.Value);</span></span>
 <span id="L1506"><span class="lineNum">    1506</span> <span class="tlaGNC">          42 : }</span></span>
 <span id="L1507"><span class="lineNum">    1507</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1508"><span class="lineNum">    1508</span> <span class="tlaGNC">           1 : // Returns a map from an exported symbol's ID to a list of every way it's (re-)exported.</span></span>
@@ -1630,7 +1630,7 @@
 <span id="L1568"><span class="lineNum">    1568</span> <span class="tlaGNC">          11 :     }</span></span>
 <span id="L1569"><span class="lineNum">    1569</span> <span class="tlaGNC">          34 :     // 2. 'import =' will not work in JavaScript, so the decision is between a default import,</span></span>
 <span id="L1570"><span class="lineNum">    1570</span> <span class="tlaGNC">          34 :     //    a namespace import, and const/require.</span></span>
-<span id="L1571"><span class="lineNum">    1571</span> <span class="tlaGNC">          43 :     if (isJS) {</span></span>
+<span id="L1571"><span class="lineNum">    1571</span> <span class="tlaGNC">          45 :     if (isJS) {</span></span>
 <span id="L1572"><span class="lineNum">    1572</span> <span class="tlaGNC">           9 :         return importingFile.externalModuleIndicator || forceImportKeyword</span></span>
 <span id="L1573"><span class="lineNum">    1573</span> <span class="tlaGNC">           2 :             ? allowSyntheticDefaults ? ImportKind.Default : ImportKind.Namespace</span></span>
 <span id="L1574"><span class="lineNum">    1574</span> <span class="tlaGNC">           9 :             : ImportKind.CommonJS;</span></span>
@@ -1867,7 +1867,7 @@
 <span id="L1805"><span class="lineNum">    1805</span> <span class="tlaGNC">          13 :         changes.insertNodeAt(sourceFile, clause.getStart(sourceFile), factory.createIdentifier(defaultImport.name), { suffix: &quot;, &quot; });</span></span>
 <span id="L1806"><span class="lineNum">    1806</span> <span class="tlaGNC">          13 :     }</span></span>
 <span id="L1807"><span class="lineNum">    1807</span> <span class="tlaGNC">         135 : </span></span>
-<span id="L1808"><span class="lineNum">    1808</span> <span class="tlaGNC">         135 :     if (namedImports.length) {</span></span>
+<span id="L1808"><span class="lineNum">    1808</span> <span class="tlaGNC">         136 :     if (namedImports.length) {</span></span>
 <span id="L1809"><span class="lineNum">    1809</span> <span class="tlaGNC">         123 :         const { specifierComparer, isSorted } = OrganizeImports.getNamedImportSpecifierComparerWithDetection(clause.parent, preferences, sourceFile);</span></span>
 <span id="L1810"><span class="lineNum">    1810</span> <span class="tlaGNC">         123 :         const newSpecifiers = stableSort(</span></span>
 <span id="L1811"><span class="lineNum">    1811</span> <span class="tlaGNC">         123 :             namedImports.map(namedImport =&gt;</span></span>

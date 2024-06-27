@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">94.7&nbsp;%</td>
@@ -1088,7 +1088,7 @@
 <span id="L1026"><span class="lineNum">    1026</span> <span class="tlaGNC">           5 :         let stringIndexReadonly = false;</span></span>
 <span id="L1027"><span class="lineNum">    1027</span> <span class="tlaGNC">           5 :         let numberIndexReadonly = false;</span></span>
 <span id="L1028"><span class="lineNum">    1028</span> <span class="tlaGNC">           5 :         const props = createMultiMap&lt;__String, Type&gt;();</span></span>
-<span id="L1029"><span class="lineNum">    1029</span> <span class="tlaGNC">         170 :         for (const anon of anons) {</span></span>
+<span id="L1029"><span class="lineNum">    1029</span> <span class="tlaGNC">         165 :         for (const anon of anons) {</span></span>
 <span id="L1030"><span class="lineNum">    1030</span> <span class="tlaGNC">          20 :             for (const p of checker.getPropertiesOfType(anon)) {</span></span>
 <span id="L1031"><span class="lineNum">    1031</span> <span class="tlaGNC">          25 :                 props.add(p.escapedName, p.valueDeclaration ? checker.getTypeOfSymbolAtLocation(p, p.valueDeclaration) : checker.getAnyType());</span></span>
 <span id="L1032"><span class="lineNum">    1032</span> <span class="tlaGNC">          25 :             }</span></span>
@@ -1112,8 +1112,8 @@
 <span id="L1050"><span class="lineNum">    1050</span> <span class="tlaGNC">          16 :             return [name, s];</span></span>
 <span id="L1051"><span class="lineNum">    1051</span> <span class="tlaGNC">           5 :         });</span></span>
 <span id="L1052"><span class="lineNum">    1052</span> <span class="tlaGNC">           5 :         const indexInfos = [];</span></span>
-<span id="L1053"><span class="lineNum">    1053</span> <span class="tlaGNC">         170 :         if (stringIndices.length) indexInfos.push(checker.createIndexInfo(checker.getStringType(), checker.getUnionType(stringIndices), stringIndexReadonly));</span></span>
-<span id="L1054"><span class="lineNum">    1054</span> <span class="tlaGNC">         170 :         if (numberIndices.length) indexInfos.push(checker.createIndexInfo(checker.getNumberType(), checker.getUnionType(numberIndices), numberIndexReadonly));</span></span>
+<span id="L1053"><span class="lineNum">    1053</span> <span class="tlaGNC">         165 :         if (stringIndices.length) indexInfos.push(checker.createIndexInfo(checker.getStringType(), checker.getUnionType(stringIndices), stringIndexReadonly));</span></span>
+<span id="L1054"><span class="lineNum">    1054</span> <span class="tlaGNC">         165 :         if (numberIndices.length) indexInfos.push(checker.createIndexInfo(checker.getNumberType(), checker.getUnionType(numberIndices), numberIndexReadonly));</span></span>
 <span id="L1055"><span class="lineNum">    1055</span> <span class="tlaGNC">           5 :         return checker.createAnonymousType(</span></span>
 <span id="L1056"><span class="lineNum">    1056</span> <span class="tlaGNC">           5 :             anons[0].symbol,</span></span>
 <span id="L1057"><span class="lineNum">    1057</span> <span class="tlaGNC">           5 :             members,</span></span>
@@ -1191,7 +1191,7 @@
 <span id="L1129"><span class="lineNum">    1129</span> <span class="tlaGNC">         462 :             if (!source) {</span></span>
 <span id="L1130"><span class="lineNum">    1130</span> <span class="tlaGNC">         366 :                 return true;</span></span>
 <span id="L1131"><span class="lineNum">    1131</span> <span class="tlaGNC">         366 :             }</span></span>
-<span id="L1132"><span class="lineNum">    1132</span> <span class="tlaGNC">         216 :             if (propUsage.calls) {</span></span>
+<span id="L1132"><span class="lineNum">    1132</span> <span class="tlaGNC">         252 :             if (propUsage.calls) {</span></span>
 <span id="L1133"><span class="lineNum">    1133</span> <span class="tlaGNC">          86 :                 const sigs = checker.getSignaturesOfType(source, SignatureKind.Call);</span></span>
 <span id="L1134"><span class="lineNum">    1134</span> <span class="tlaGNC">          86 :                 return !sigs.length || !checker.isTypeAssignableTo(source, getFunctionFromCalls(propUsage.calls));</span></span>
 <span id="L1135"><span class="lineNum">    1135</span> <span class="tlaGNC">          86 :             }</span></span>

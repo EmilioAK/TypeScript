@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.3&nbsp;%</td>
@@ -505,7 +505,7 @@
 <span id="L443"><span class="lineNum">     443</span> <span class="tlaGNC">           1 :         }</span></span>
 <span id="L444"><span class="lineNum">     444</span> <span class="tlaGNC">           3 : </span></span>
 <span id="L445"><span class="lineNum">     445</span> <span class="tlaGNC">           3 :         switch (node.kind) {</span></span>
-<span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">        3836 :             case SyntaxKind.ImportDeclaration:</span></span>
+<span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">        5446 :             case SyntaxKind.ImportDeclaration:</span></span>
 <span id="L447"><span class="lineNum">     447</span> <span class="tlaGNC">           1 :                 Debug.assertNode(parsed, isImportDeclaration);</span></span>
 <span id="L448"><span class="lineNum">     448</span> <span class="tlaGNC">           1 :                 if (node.importClause !== parsed.importClause) {</span></span>
 <span id="L449"><span class="lineNum">     449</span> <span class="tlaUNC tlaBgUNC">           0 :                     return true; // no longer safe to elide as the import clause has changed</span></span>
@@ -1680,7 +1680,7 @@
 <span id="L1618"><span class="lineNum">    1618</span> <span class="tlaGNC">       25654 :             /*type*/ undefined,</span></span>
 <span id="L1619"><span class="lineNum">    1619</span> <span class="tlaGNC">       25654 :             visitNode(node.initializer, visitor, isExpression),</span></span>
 <span id="L1620"><span class="lineNum">    1620</span> <span class="tlaGNC">       25654 :         );</span></span>
-<span id="L1621"><span class="lineNum">    1621</span> <span class="tlaGNC">       25792 :         if (updated !== node) {</span></span>
+<span id="L1621"><span class="lineNum">    1621</span> <span class="tlaGNC">       25798 :         if (updated !== node) {</span></span>
 <span id="L1622"><span class="lineNum">    1622</span> <span class="tlaGNC">       25634 :             // While we emit the source map for the node after skipping decorators and modifiers,</span></span>
 <span id="L1623"><span class="lineNum">    1623</span> <span class="tlaGNC">       25634 :             // we need to emit the comments for the original range.</span></span>
 <span id="L1624"><span class="lineNum">    1624</span> <span class="tlaGNC">       25634 :             setCommentRange(updated, node);</span></span>
@@ -1876,7 +1876,7 @@
 <span id="L1814"><span class="lineNum">    1814</span> <span class="tlaGNC">        1502 :         // a leading variable declaration, we should not emit leading comments for the</span></span>
 <span id="L1815"><span class="lineNum">    1815</span> <span class="tlaGNC">        1502 :         // enum body.</span></span>
 <span id="L1816"><span class="lineNum">    1816</span> <span class="tlaGNC">        1502 :         const varAdded = addVarForEnumOrModuleDeclaration(statements, node);</span></span>
-<span id="L1817"><span class="lineNum">    1817</span> <span class="tlaGNC">        1745 :         if (varAdded) {</span></span>
+<span id="L1817"><span class="lineNum">    1817</span> <span class="tlaGNC">        1727 :         if (varAdded) {</span></span>
 <span id="L1818"><span class="lineNum">    1818</span> <span class="tlaGNC">        1424 :             // We should still emit the comments if we are emitting a system module.</span></span>
 <span id="L1819"><span class="lineNum">    1819</span> <span class="tlaGNC">        1424 :             if (moduleKind !== ModuleKind.System || currentLexicalScope !== currentSourceFile) {</span></span>
 <span id="L1820"><span class="lineNum">    1820</span> <span class="tlaGNC">        1414 :                 emitFlags |= EmitFlags.NoLeadingComments;</span></span>
@@ -1933,7 +1933,7 @@
 <span id="L1871"><span class="lineNum">    1871</span> <span class="tlaGNC">        1502 :         );</span></span>
 <span id="L1872"><span class="lineNum">    1872</span> <span class="tlaGNC">        1502 : </span></span>
 <span id="L1873"><span class="lineNum">    1873</span> <span class="tlaGNC">        1502 :         setOriginalNode(enumStatement, node);</span></span>
-<span id="L1874"><span class="lineNum">    1874</span> <span class="tlaGNC">        1745 :         if (varAdded) {</span></span>
+<span id="L1874"><span class="lineNum">    1874</span> <span class="tlaGNC">        1727 :         if (varAdded) {</span></span>
 <span id="L1875"><span class="lineNum">    1875</span> <span class="tlaGNC">        1424 :             // If a variable was added, synthetic comments are emitted on it, not on the moduleStatement.</span></span>
 <span id="L1876"><span class="lineNum">    1876</span> <span class="tlaGNC">        1424 :             setSyntheticLeadingComments(enumStatement, undefined);</span></span>
 <span id="L1877"><span class="lineNum">    1877</span> <span class="tlaGNC">        1424 :             setSyntheticTrailingComments(enumStatement, undefined);</span></span>

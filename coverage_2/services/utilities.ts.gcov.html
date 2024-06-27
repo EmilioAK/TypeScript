@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">95.0&nbsp;%</td>
@@ -3597,7 +3597,7 @@
 <span id="L3535"><span class="lineNum">    3535</span> <span class="tlaGNC">           8 :         return false;</span></span>
 <span id="L3536"><span class="lineNum">    3536</span> <span class="tlaGNC">           8 :     }</span></span>
 <span id="L3537"><span class="lineNum">    3537</span> <span class="tlaGNC">          45 : </span></span>
-<span id="L3538"><span class="lineNum">    3538</span> <span class="tlaGNC">          52 :     if (syntaxRequiresTrailingCommaOrSemicolonOrASI(node.kind)) {</span></span>
+<span id="L3538"><span class="lineNum">    3538</span> <span class="tlaGNC">          51 :     if (syntaxRequiresTrailingCommaOrSemicolonOrASI(node.kind)) {</span></span>
 <span id="L3539"><span class="lineNum">    3539</span> <span class="tlaGNC">           2 :         if (lastToken &amp;&amp; lastToken.kind === SyntaxKind.CommaToken) {</span></span>
 <span id="L3540"><span class="lineNum">    3540</span> <span class="tlaGNC">           1 :             return false;</span></span>
 <span id="L3541"><span class="lineNum">    3541</span> <span class="tlaGNC">           1 :         }</span></span>
@@ -3619,7 +3619,7 @@
 <span id="L3557"><span class="lineNum">    3557</span> <span class="tlaUNC">           0 :     }</span></span>
 <span id="L3558"><span class="lineNum">    3558</span> <span class="tlaGNC tlaBgGNC">          41 : </span></span>
 <span id="L3559"><span class="lineNum">    3559</span> <span class="tlaGNC">          41 :     // See comment in parser's `parseDoStatement`</span></span>
-<span id="L3560"><span class="lineNum">    3560</span> <span class="tlaGNC">          52 :     if (node.kind === SyntaxKind.DoStatement) {</span></span>
+<span id="L3560"><span class="lineNum">    3560</span> <span class="tlaGNC">          51 :     if (node.kind === SyntaxKind.DoStatement) {</span></span>
 <span id="L3561"><span class="lineNum">    3561</span> <span class="tlaGNC">           1 :         return true;</span></span>
 <span id="L3562"><span class="lineNum">    3562</span> <span class="tlaGNC">           1 :     }</span></span>
 <span id="L3563"><span class="lineNum">    3563</span> <span class="tlaGNC">          40 : </span></span>
@@ -3795,7 +3795,7 @@
 <span id="L3733"><span class="lineNum">    3733</span> <span class="tlaGNC">         951 :                 continue;</span></span>
 <span id="L3734"><span class="lineNum">    3734</span> <span class="tlaGNC">         951 :             }</span></span>
 <span id="L3735"><span class="lineNum">    3735</span> <span class="tlaGNC">         205 :             const dependencyMap = new Map&lt;string, string&gt;();</span></span>
-<span id="L3736"><span class="lineNum">    3736</span> <span class="tlaGNC">         992 :             for (const packageName in dependencies) {</span></span>
+<span id="L3736"><span class="lineNum">    3736</span> <span class="tlaGNC">        1057 :             for (const packageName in dependencies) {</span></span>
 <span id="L3737"><span class="lineNum">    3737</span> <span class="tlaGNC">         230 :                 dependencyMap.set(packageName, dependencies[packageName]);</span></span>
 <span id="L3738"><span class="lineNum">    3738</span> <span class="tlaGNC">         230 :             }</span></span>
 <span id="L3739"><span class="lineNum">    3739</span> <span class="tlaGNC">         205 :             info[key] = dependencyMap;</span></span>
@@ -3873,7 +3873,7 @@
 <span id="L3811"><span class="lineNum">    3811</span> <span class="tlaGNC">         184 :             return true;</span></span>
 <span id="L3812"><span class="lineNum">    3812</span> <span class="tlaGNC">         184 :         }</span></span>
 <span id="L3813"><span class="lineNum">    3813</span> <span class="tlaGNC">           9 : </span></span>
-<span id="L3814"><span class="lineNum">    3814</span> <span class="tlaGNC">          19 :         if (!ambientModuleCache) {</span></span>
+<span id="L3814"><span class="lineNum">    3814</span> <span class="tlaGNC">           9 :         if (!ambientModuleCache) {</span></span>
 <span id="L3815"><span class="lineNum">    3815</span> <span class="tlaGNC">           8 :             ambientModuleCache = new Map();</span></span>
 <span id="L3816"><span class="lineNum">    3816</span> <span class="tlaGNC">           8 :         }</span></span>
 <span id="L3817"><span class="lineNum">    3817</span> <span class="tlaGNC">           1 :         else {</span></span>
@@ -3884,14 +3884,14 @@
 <span id="L3822"><span class="lineNum">    3822</span> <span class="tlaGNC tlaBgGNC">           1 :         }</span></span>
 <span id="L3823"><span class="lineNum">    3823</span> <span class="tlaGNC">           9 : </span></span>
 <span id="L3824"><span class="lineNum">    3824</span> <span class="tlaGNC">           9 :         const declaredModuleSpecifier = stripQuotes(moduleSymbol.getName());</span></span>
-<span id="L3825"><span class="lineNum">    3825</span> <span class="tlaGNC">          19 :         if (isAllowedCoreNodeModulesImport(declaredModuleSpecifier)) {</span></span>
+<span id="L3825"><span class="lineNum">    3825</span> <span class="tlaGNC">          33 :         if (isAllowedCoreNodeModulesImport(declaredModuleSpecifier)) {</span></span>
 <span id="L3826"><span class="lineNum">    3826</span> <span class="tlaGNC">           1 :             ambientModuleCache.set(moduleSymbol, true);</span></span>
 <span id="L3827"><span class="lineNum">    3827</span> <span class="tlaGNC">           1 :             return true;</span></span>
 <span id="L3828"><span class="lineNum">    3828</span> <span class="tlaGNC">           1 :         }</span></span>
 <span id="L3829"><span class="lineNum">    3829</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L3830"><span class="lineNum">    3830</span> <span class="tlaGNC">           8 :         const declaringSourceFile = moduleSymbol.valueDeclaration.getSourceFile();</span></span>
 <span id="L3831"><span class="lineNum">    3831</span> <span class="tlaGNC">           8 :         const declaringNodeModuleName = getNodeModulesPackageNameFromFileName(declaringSourceFile.fileName, moduleSpecifierResolutionHost);</span></span>
-<span id="L3832"><span class="lineNum">    3832</span> <span class="tlaGNC">          19 :         if (typeof declaringNodeModuleName === &quot;undefined&quot;) {</span></span>
+<span id="L3832"><span class="lineNum">    3832</span> <span class="tlaGNC">          33 :         if (typeof declaringNodeModuleName === &quot;undefined&quot;) {</span></span>
 <span id="L3833"><span class="lineNum">    3833</span> <span class="tlaGNC">           1 :             ambientModuleCache.set(moduleSymbol, true);</span></span>
 <span id="L3834"><span class="lineNum">    3834</span> <span class="tlaGNC">           1 :             return true;</span></span>
 <span id="L3835"><span class="lineNum">    3835</span> <span class="tlaGNC">           1 :         }</span></span>
@@ -4093,7 +4093,7 @@
 <span id="L4031"><span class="lineNum">    4031</span> <span class="tlaGNC">          67 :         if (fromDeclaration) return fromDeclaration;</span></span>
 <span id="L4032"><span class="lineNum">    4032</span> <span class="tlaGNC">          36 :         const fileNameCase = moduleSymbolToValidIdentifier(getSymbolParentOrFail(symbol), scriptTarget, /*forceCapitalize*/ false);</span></span>
 <span id="L4033"><span class="lineNum">    4033</span> <span class="tlaGNC">          36 :         const capitalized = moduleSymbolToValidIdentifier(getSymbolParentOrFail(symbol), scriptTarget, /*forceCapitalize*/ true);</span></span>
-<span id="L4034"><span class="lineNum">    4034</span> <span class="tlaGNC">          53 :         if (fileNameCase === capitalized) return fileNameCase;</span></span>
+<span id="L4034"><span class="lineNum">    4034</span> <span class="tlaGNC">          67 :         if (fileNameCase === capitalized) return fileNameCase;</span></span>
 <span id="L4035"><span class="lineNum">    4035</span> <span class="tlaGNC">          36 :         return [fileNameCase, capitalized];</span></span>
 <span id="L4036"><span class="lineNum">    4036</span> <span class="tlaGNC">          36 :     }</span></span>
 <span id="L4037"><span class="lineNum">    4037</span> <span class="tlaGNC">          86 :     return symbol.name;</span></span>
@@ -4377,7 +4377,7 @@
 <span id="L4315"><span class="lineNum">    4315</span> <span class="tlaGNC">         115 :     if (impliedNodeFormat === ModuleKind.ESNext) {</span></span>
 <span id="L4316"><span class="lineNum">    4316</span> <span class="tlaUNC tlaBgUNC">           0 :         return false;</span></span>
 <span id="L4317"><span class="lineNum">    4317</span> <span class="tlaUNC">           0 :     }</span></span>
-<span id="L4318"><span class="lineNum">    4318</span> <span class="tlaGNC tlaBgGNC">         115 :     if (impliedNodeFormat === ModuleKind.CommonJS) {</span></span>
+<span id="L4318"><span class="lineNum">    4318</span> <span class="tlaGNC tlaBgGNC">          73 :     if (impliedNodeFormat === ModuleKind.CommonJS) {</span></span>
 <span id="L4319"><span class="lineNum">    4319</span> <span class="tlaUNC tlaBgUNC">           0 :         // Since we're in a JS file, assume the user is writing the JS that will run</span></span>
 <span id="L4320"><span class="lineNum">    4320</span> <span class="tlaUNC">           0 :         // (i.e., assume `noEmit`), so a CJS-format file should just have require</span></span>
 <span id="L4321"><span class="lineNum">    4321</span> <span class="tlaUNC">           0 :         // syntax, rather than imports that will be downleveled to `require`.</span></span>
@@ -4393,7 +4393,7 @@
 <span id="L4331"><span class="lineNum">    4331</span> <span class="tlaGNC tlaBgGNC">           8 : </span></span>
 <span id="L4332"><span class="lineNum">    4332</span> <span class="tlaGNC">           8 :     // impliedNodeFormat is undefined and `verbatimModuleSyntax` is off (or in an invalid combo)</span></span>
 <span id="L4333"><span class="lineNum">    4333</span> <span class="tlaGNC">           8 :     // Use heuristics from existing code</span></span>
-<span id="L4334"><span class="lineNum">    4334</span> <span class="tlaGNC">          92 :     if (typeof file === &quot;object&quot;) {</span></span>
+<span id="L4334"><span class="lineNum">    4334</span> <span class="tlaGNC">          73 :     if (typeof file === &quot;object&quot;) {</span></span>
 <span id="L4335"><span class="lineNum">    4335</span> <span class="tlaUNC tlaBgUNC">           0 :         if (file.commonJsModuleIndicator) {</span></span>
 <span id="L4336"><span class="lineNum">    4336</span> <span class="tlaUNC">           0 :             return true;</span></span>
 <span id="L4337"><span class="lineNum">    4337</span> <span class="tlaUNC">           0 :         }</span></span>

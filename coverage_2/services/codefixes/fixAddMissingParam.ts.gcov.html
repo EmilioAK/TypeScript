@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -144,7 +144,7 @@
 <span id="L82"><span class="lineNum">      82</span> <span class="tlaGNC">          41 :             );</span></span>
 <span id="L83"><span class="lineNum">      83</span> <span class="tlaGNC">          41 :         }</span></span>
 <span id="L84"><span class="lineNum">      84</span> <span class="tlaGNC">          41 : </span></span>
-<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">          50 :         if (length(newOptionalParameters)) {</span></span>
+<span id="L85"><span class="lineNum">      85</span> <span class="tlaGNC">          53 :         if (length(newOptionalParameters)) {</span></span>
 <span id="L86"><span class="lineNum">      86</span> <span class="tlaGNC">          37 :             append(</span></span>
 <span id="L87"><span class="lineNum">      87</span> <span class="tlaGNC">          37 :                 actions,</span></span>
 <span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">          37 :                 createCodeFixAction(</span></span>
@@ -229,7 +229,7 @@
 <span id="L167"><span class="lineNum">     167</span> <span class="tlaGNC">           3 :     }</span></span>
 <span id="L168"><span class="lineNum">     168</span> <span class="tlaGNC">          49 : </span></span>
 <span id="L169"><span class="lineNum">     169</span> <span class="tlaGNC">          49 :     const declarations = [nonOverloadDeclaration, ...getOverloads(nonOverloadDeclaration, convertibleSignatureDeclarations)];</span></span>
-<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">          61 :     for (let i = 0, pos = 0, paramIndex = 0; i &lt; argumentsLength; i++) {</span></span>
+<span id="L170"><span class="lineNum">     170</span> <span class="tlaGNC">          57 :     for (let i = 0, pos = 0, paramIndex = 0; i &lt; argumentsLength; i++) {</span></span>
 <span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">         110 :         const arg = callExpression.arguments[i];</span></span>
 <span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">         110 :         const expr = isAccessExpression(arg) ? getNameOfAccessExpression(arg) : arg;</span></span>
 <span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">         110 :         const type = checker.getWidenedType(checker.getBaseTypeOfLiteralType(checker.getTypeAtLocation(arg)));</span></span>
@@ -274,7 +274,7 @@
 <span id="L212"><span class="lineNum">     212</span> <span class="tlaGNC">          48 :     }</span></span>
 <span id="L213"><span class="lineNum">     213</span> <span class="tlaGNC">           4 : </span></span>
 <span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC">           4 :     if (</span></span>
-<span id="L215"><span class="lineNum">     215</span> <span class="tlaGNC">          35 :         isVariableDeclaration(node.parent) &amp;&amp; isIdentifier(node.parent.name) ||</span></span>
+<span id="L215"><span class="lineNum">     215</span> <span class="tlaGNC">          28 :         isVariableDeclaration(node.parent) &amp;&amp; isIdentifier(node.parent.name) ||</span></span>
 <span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">           4 :         isPropertyDeclaration(node.parent) ||</span></span>
 <span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">           2 :         isParameter(node.parent)</span></span>
 <span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">          52 :     ) {</span></span>

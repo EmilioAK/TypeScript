@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -368,7 +368,7 @@
 <span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC">          51 :         if (!(token.kind === SyntaxKind.OpenBraceToken &amp;&amp; isObjectLiteralExpression(parent) &amp;&amp; isCallExpression(parent.parent))) return undefined;</span></span>
 <span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">          15 : </span></span>
 <span id="L308"><span class="lineNum">     308</span> <span class="tlaGNC">          15 :         const argIndex = findIndex(parent.parent.arguments, arg =&gt; arg === parent);</span></span>
-<span id="L309"><span class="lineNum">     309</span> <span class="tlaGNC">          51 :         if (argIndex &lt; 0) return undefined;</span></span>
+<span id="L309"><span class="lineNum">     309</span> <span class="tlaGNC">          43 :         if (argIndex &lt; 0) return undefined;</span></span>
 <span id="L310"><span class="lineNum">     310</span> <span class="tlaGNC">          15 : </span></span>
 <span id="L311"><span class="lineNum">     311</span> <span class="tlaGNC">          15 :         const signature = checker.getResolvedSignature(parent.parent);</span></span>
 <span id="L312"><span class="lineNum">     312</span> <span class="tlaGNC">          51 :         if (!(signature &amp;&amp; signature.declaration &amp;&amp; signature.parameters[argIndex])) return undefined;</span></span>
@@ -377,7 +377,7 @@
 <span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">          51 :         if (!(param &amp;&amp; isParameter(param) &amp;&amp; isIdentifier(param.name))) return undefined;</span></span>
 <span id="L316"><span class="lineNum">     316</span> <span class="tlaGNC">          15 : </span></span>
 <span id="L317"><span class="lineNum">     317</span> <span class="tlaGNC">          15 :         const properties = arrayFrom(checker.getUnmatchedProperties(checker.getTypeAtLocation(parent), checker.getParameterType(signature, argIndex), /*requireOptionalProperties*/ false, /*matchDiscriminantProperties*/ false));</span></span>
-<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">          41 :         if (!length(properties)) return undefined;</span></span>
+<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">          43 :         if (!length(properties)) return undefined;</span></span>
 <span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">          15 :         return { kind: InfoKind.ObjectLiteral, token: param.name, identifier: param.name.text, properties, parentDeclaration: parent };</span></span>
 <span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">          15 :     }</span></span>
 <span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">         764 : </span></span>
@@ -409,7 +409,7 @@
 <span id="L347"><span class="lineNum">     347</span> <span class="tlaGNC">          15 :         return { kind: InfoKind.JsxAttributes, token, attributes, parentDeclaration: token.parent };</span></span>
 <span id="L348"><span class="lineNum">     348</span> <span class="tlaGNC">          15 :     }</span></span>
 <span id="L349"><span class="lineNum">     349</span> <span class="tlaGNC">         673 : </span></span>
-<span id="L350"><span class="lineNum">     350</span> <span class="tlaGNC">         778 :     if (isIdentifier(token)) {</span></span>
+<span id="L350"><span class="lineNum">     350</span> <span class="tlaGNC">         756 :     if (isIdentifier(token)) {</span></span>
 <span id="L351"><span class="lineNum">     351</span> <span class="tlaGNC">         665 :         const type = checker.getContextualType(token)?.getNonNullableType();</span></span>
 <span id="L352"><span class="lineNum">     352</span> <span class="tlaGNC">         665 :         if (type &amp;&amp; getObjectFlags(type) &amp; ObjectFlags.Anonymous) {</span></span>
 <span id="L353"><span class="lineNum">     353</span> <span class="tlaGNC">          20 :             const signature = firstOrUndefined(checker.getSignaturesOfType(type, SignatureKind.Call));</span></span>
@@ -774,7 +774,7 @@
 <span id="L712"><span class="lineNum">     712</span> <span class="tlaGNC">           5 :         });</span></span>
 <span id="L713"><span class="lineNum">     713</span> <span class="tlaGNC">           5 :         return factory.createObjectLiteralExpression(props, /*multiLine*/ true);</span></span>
 <span id="L714"><span class="lineNum">     714</span> <span class="tlaGNC">           5 :     }</span></span>
-<span id="L715"><span class="lineNum">     715</span> <span class="tlaGNC">          61 :     if (getObjectFlags(type) &amp; ObjectFlags.Anonymous) {</span></span>
+<span id="L715"><span class="lineNum">     715</span> <span class="tlaGNC">          54 :     if (getObjectFlags(type) &amp; ObjectFlags.Anonymous) {</span></span>
 <span id="L716"><span class="lineNum">     716</span> <span class="tlaGNC">          39 :         const decl = find(type.symbol.declarations || emptyArray, or(isFunctionTypeNode, isMethodSignature, isMethodDeclaration));</span></span>
 <span id="L717"><span class="lineNum">     717</span> <span class="tlaGNC">          39 :         if (decl === undefined) return createUndefined();</span></span>
 <span id="L718"><span class="lineNum">     718</span> <span class="tlaGNC">          39 : </span></span>
@@ -813,7 +813,7 @@
 <span id="L751"><span class="lineNum">     751</span> <span class="tlaGNC">          54 :     if (!length(targetProps)) return emptyArray;</span></span>
 <span id="L752"><span class="lineNum">     752</span> <span class="tlaGNC">          16 : </span></span>
 <span id="L753"><span class="lineNum">     753</span> <span class="tlaGNC">          16 :     const seenNames = new Set&lt;__String&gt;();</span></span>
-<span id="L754"><span class="lineNum">     754</span> <span class="tlaGNC">          19 :     for (const sourceProp of source.attributes.properties) {</span></span>
+<span id="L754"><span class="lineNum">     754</span> <span class="tlaGNC">          29 :     for (const sourceProp of source.attributes.properties) {</span></span>
 <span id="L755"><span class="lineNum">     755</span> <span class="tlaGNC">          13 :         if (isJsxAttribute(sourceProp)) {</span></span>
 <span id="L756"><span class="lineNum">     756</span> <span class="tlaGNC">           7 :             seenNames.add(getEscapedTextOfJsxAttributeName(sourceProp.name));</span></span>
 <span id="L757"><span class="lineNum">     757</span> <span class="tlaGNC">           7 :         }</span></span>

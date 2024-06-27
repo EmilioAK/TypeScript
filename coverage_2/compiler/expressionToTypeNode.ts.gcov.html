@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -216,7 +216,7 @@
 <span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">         703 :         if (accessorType) {</span></span>
 <span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">          68 :             return serializeExistingTypeAnnotation(accessorType);</span></span>
 <span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">          68 :         }</span></span>
-<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">         665 :         if (accessorDeclarations.getAccessor) {</span></span>
+<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">         679 :         if (accessorDeclarations.getAccessor) {</span></span>
 <span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">         611 :             return createReturnFromSignature(accessorDeclarations.getAccessor, context);</span></span>
 <span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">         611 :         }</span></span>
 <span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">          24 :         return false;</span></span>
@@ -369,7 +369,7 @@
 <span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">         702 :             context.tracker.reportInferenceFallback(arrayLiteral);</span></span>
 <span id="L308"><span class="lineNum">     308</span> <span class="tlaGNC">         702 :             return false;</span></span>
 <span id="L309"><span class="lineNum">     309</span> <span class="tlaGNC">         702 :         }</span></span>
-<span id="L310"><span class="lineNum">     310</span> <span class="tlaGNC">         869 :         for (const element of arrayLiteral.elements) {</span></span>
+<span id="L310"><span class="lineNum">     310</span> <span class="tlaGNC">         808 :         for (const element of arrayLiteral.elements) {</span></span>
 <span id="L311"><span class="lineNum">     311</span> <span class="tlaGNC">         295 :             if (element.kind === SyntaxKind.SpreadElement) {</span></span>
 <span id="L312"><span class="lineNum">     312</span> <span class="tlaGNC">          41 :                 context.tracker.reportInferenceFallback(element);</span></span>
 <span id="L313"><span class="lineNum">     313</span> <span class="tlaGNC">          41 :                 return false;</span></span>
@@ -383,7 +383,7 @@
 <span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">         743 :         }</span></span>
 <span id="L322"><span class="lineNum">     322</span> <span class="tlaGNC">         126 : </span></span>
 <span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">         126 :         let canInferArray = true;</span></span>
-<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">         399 :         for (const element of arrayLiteral.elements) {</span></span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">         769 :         for (const element of arrayLiteral.elements) {</span></span>
 <span id="L325"><span class="lineNum">     325</span> <span class="tlaGNC">         221 :             Debug.assert(element.kind !== SyntaxKind.SpreadElement);</span></span>
 <span id="L326"><span class="lineNum">     326</span> <span class="tlaGNC">         221 :             if (element.kind !== SyntaxKind.OmittedExpression) {</span></span>
 <span id="L327"><span class="lineNum">     327</span> <span class="tlaGNC">         221 :                 canInferArray = (typeFromExpression(element, context, isConstContext) ?? inferExpressionType(element, context)) &amp;&amp; canInferArray;</span></span>
@@ -508,7 +508,7 @@
 <span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">         202 :         ) {</span></span>
 <span id="L447"><span class="lineNum">     447</span> <span class="tlaGNC">          89 :             return true;</span></span>
 <span id="L448"><span class="lineNum">     448</span> <span class="tlaGNC">          89 :         }</span></span>
-<span id="L449"><span class="lineNum">     449</span> <span class="tlaGNC">         202 :         if (node.kind === SyntaxKind.ParenthesizedType) {</span></span>
+<span id="L449"><span class="lineNum">     449</span> <span class="tlaGNC">         182 :         if (node.kind === SyntaxKind.ParenthesizedType) {</span></span>
 <span id="L450"><span class="lineNum">     450</span> <span class="tlaGNC">           1 :             return canAddUndefined((node as ParenthesizedTypeNode).type);</span></span>
 <span id="L451"><span class="lineNum">     451</span> <span class="tlaGNC">           1 :         }</span></span>
 <span id="L452"><span class="lineNum">     452</span> <span class="tlaGNC">         202 :         if (node.kind === SyntaxKind.UnionType || node.kind === SyntaxKind.IntersectionType) {</span></span>

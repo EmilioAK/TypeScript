@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">97.1&nbsp;%</td>
@@ -258,7 +258,7 @@
 <span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">         127 : function getCallHierarchyDeclarationReferenceNode(node: Exclude&lt;CallHierarchyDeclaration, ClassStaticBlockDeclaration&gt;) {</span></span>
 <span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">         127 :     if (isSourceFile(node)) return node;</span></span>
 <span id="L198"><span class="lineNum">     198</span> <span class="tlaGNC">         126 :     if (isNamedDeclaration(node)) return node.name;</span></span>
-<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">         125 :     if (isAssignedExpression(node)) return node.parent.name;</span></span>
+<span id="L199"><span class="lineNum">     199</span> <span class="tlaGNC">          50 :     if (isAssignedExpression(node)) return node.parent.name;</span></span>
 <span id="L200"><span class="lineNum">     200</span> <span class="tlaGNC">         127 :     return Debug.checkDefined(node.modifiers &amp;&amp; find(node.modifiers, isDefaultModifier));</span></span>
 <span id="L201"><span class="lineNum">     201</span> <span class="tlaGNC">         127 : }</span></span>
 <span id="L202"><span class="lineNum">     202</span> <span class="tlaGNC">           1 : </span></span>
@@ -354,7 +354,7 @@
 <span id="L292"><span class="lineNum">     292</span> <span class="tlaGNC">         169 :     if (node.body) {</span></span>
 <span id="L293"><span class="lineNum">     293</span> <span class="tlaGNC">         146 :         return node;</span></span>
 <span id="L294"><span class="lineNum">     294</span> <span class="tlaGNC">         146 :     }</span></span>
-<span id="L295"><span class="lineNum">     295</span> <span class="tlaGNC">         123 :     if (isConstructorDeclaration(node)) {</span></span>
+<span id="L295"><span class="lineNum">     295</span> <span class="tlaGNC">          90 :     if (isConstructorDeclaration(node)) {</span></span>
 <span id="L296"><span class="lineNum">     296</span> <span class="tlaUNC tlaBgUNC">           0 :         return getFirstConstructorWithBody(node.parent);</span></span>
 <span id="L297"><span class="lineNum">     297</span> <span class="tlaUNC">           0 :     }</span></span>
 <span id="L298"><span class="lineNum">     298</span> <span class="tlaGNC tlaBgGNC">         169 :     if (isFunctionDeclaration(node) || isMethodDeclaration(node)) {</span></span>
@@ -398,7 +398,7 @@
 <span id="L336"><span class="lineNum">     336</span> <span class="tlaGNC">          23 :             findAllInitialDeclarations(typeChecker, node) ??</span></span>
 <span id="L337"><span class="lineNum">     337</span> <span class="tlaUNC tlaBgUNC">           0 :             node;</span></span>
 <span id="L338"><span class="lineNum">     338</span> <span class="tlaGNC tlaBgGNC">         133 :     }</span></span>
-<span id="L339"><span class="lineNum">     339</span> <span class="tlaGNC">          95 :     return findAllInitialDeclarations(typeChecker, node) ?? node;</span></span>
+<span id="L339"><span class="lineNum">     339</span> <span class="tlaGNC">         116 :     return findAllInitialDeclarations(typeChecker, node) ?? node;</span></span>
 <span id="L340"><span class="lineNum">     340</span> <span class="tlaGNC">         154 : }</span></span>
 <span id="L341"><span class="lineNum">     341</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L342"><span class="lineNum">     342</span> <span class="tlaGNC">           1 : /**</span></span>
@@ -435,7 +435,7 @@
 <span id="L373"><span class="lineNum">     373</span> <span class="tlaGNC">         130 :             if (isValidCallHierarchyDeclaration(location.parent)) {</span></span>
 <span id="L374"><span class="lineNum">     374</span> <span class="tlaGNC">         113 :                 return findImplementationOrAllInitialDeclarations(typeChecker, location.parent);</span></span>
 <span id="L375"><span class="lineNum">     375</span> <span class="tlaGNC">         113 :             }</span></span>
-<span id="L376"><span class="lineNum">     376</span> <span class="tlaGNC">         100 :             if (isPossibleCallHierarchyDeclaration(location.parent)) {</span></span>
+<span id="L376"><span class="lineNum">     376</span> <span class="tlaGNC">         110 :             if (isPossibleCallHierarchyDeclaration(location.parent)) {</span></span>
 <span id="L377"><span class="lineNum">     377</span> <span class="tlaUNC tlaBgUNC">           0 :                 const ancestor = findAncestor(location.parent, isValidCallHierarchyDeclaration);</span></span>
 <span id="L378"><span class="lineNum">     378</span> <span class="tlaUNC">           0 :                 return ancestor &amp;&amp; findImplementationOrAllInitialDeclarations(typeChecker, ancestor);</span></span>
 <span id="L379"><span class="lineNum">     379</span> <span class="tlaUNC">           0 :             }</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -363,7 +363,7 @@
 <span id="L301"><span class="lineNum">     301</span> <span class="tlaGNC">          36 :         if (!moduleSymbol) return;</span></span>
 <span id="L302"><span class="lineNum">     302</span> <span class="tlaGNC">          35 :         Debug.assert(!!(moduleSymbol.flags &amp; SymbolFlags.Module));</span></span>
 <span id="L303"><span class="lineNum">     303</span> <span class="tlaGNC">          35 :         const directImports = getDirectImports(moduleSymbol);</span></span>
-<span id="L304"><span class="lineNum">     304</span> <span class="tlaGNC">          96 :         if (directImports) {</span></span>
+<span id="L304"><span class="lineNum">     304</span> <span class="tlaGNC">         101 :         if (directImports) {</span></span>
 <span id="L305"><span class="lineNum">     305</span> <span class="tlaGNC">          18 :             for (const directImport of directImports) {</span></span>
 <span id="L306"><span class="lineNum">     306</span> <span class="tlaGNC">          30 :                 if (!isImportTypeNode(directImport)) {</span></span>
 <span id="L307"><span class="lineNum">     307</span> <span class="tlaGNC">          18 :                     addIndirectUser(getSourceFileLikeForImportDeclaration(directImport), /*addTransitiveDependencies*/ true);</span></span>
@@ -854,7 +854,7 @@
 <span id="L792"><span class="lineNum">     792</span> <span class="tlaGNC">           1 :     }</span></span>
 <span id="L793"><span class="lineNum">     793</span> <span class="tlaGNC">         160 : </span></span>
 <span id="L794"><span class="lineNum">     794</span> <span class="tlaGNC">         160 :     const { parent } = node;</span></span>
-<span id="L795"><span class="lineNum">     795</span> <span class="tlaGNC">         160 :     if (parent.kind === SyntaxKind.SourceFile) {</span></span>
+<span id="L795"><span class="lineNum">     795</span> <span class="tlaGNC">         161 :     if (parent.kind === SyntaxKind.SourceFile) {</span></span>
 <span id="L796"><span class="lineNum">     796</span> <span class="tlaGNC">         148 :         return parent as SourceFile;</span></span>
 <span id="L797"><span class="lineNum">     797</span> <span class="tlaGNC">         148 :     }</span></span>
 <span id="L798"><span class="lineNum">     798</span> <span class="tlaGNC">          12 :     Debug.assert(parent.kind === SyntaxKind.ModuleBlock);</span></span>

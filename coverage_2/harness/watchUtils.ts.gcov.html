@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -150,7 +150,7 @@
 <span id="L88"><span class="lineNum">      88</span> <span class="tlaGNC">       22537 :             (pathToReal ??= new Map()).set(path, real);</span></span>
 <span id="L89"><span class="lineNum">      89</span> <span class="tlaGNC">       22537 :             if (real === path) return;</span></span>
 <span id="L90"><span class="lineNum">      90</span> <span class="tlaGNC">         337 :             const canonicalReal = getCanonicalFileName(real);</span></span>
-<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">       18267 :             if (getCanonicalFileName(path) !== canonicalReal) {</span></span>
+<span id="L91"><span class="lineNum">      91</span> <span class="tlaGNC">       21256 :             if (getCanonicalFileName(path) !== canonicalReal) {</span></span>
 <span id="L92"><span class="lineNum">      92</span> <span class="tlaGNC">         168 :                 (realToLinked ??= createMultiMap()).add(canonicalReal, path);</span></span>
 <span id="L93"><span class="lineNum">      93</span> <span class="tlaGNC">         168 :             }</span></span>
 <span id="L94"><span class="lineNum">      94</span> <span class="tlaGNC">       22537 :         }</span></span>
@@ -168,7 +168,7 @@
 <span id="L106"><span class="lineNum">     106</span> <span class="tlaGNC">        3459 :             pathToReal!.delete(path);</span></span>
 <span id="L107"><span class="lineNum">     107</span> <span class="tlaGNC">        3459 :             if (real === path) return;</span></span>
 <span id="L108"><span class="lineNum">     108</span> <span class="tlaGNC">          71 :             const canonicalReal = getCanonicalFileName(real);</span></span>
-<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">        1946 :             if (getCanonicalFileName(path) !== canonicalReal) {</span></span>
+<span id="L109"><span class="lineNum">     109</span> <span class="tlaGNC">        2379 :             if (getCanonicalFileName(path) !== canonicalReal) {</span></span>
 <span id="L110"><span class="lineNum">     110</span> <span class="tlaGNC">          40 :                 realToLinked!.remove(canonicalReal, path);</span></span>
 <span id="L111"><span class="lineNum">     111</span> <span class="tlaGNC">          40 :             }</span></span>
 <span id="L112"><span class="lineNum">     112</span> <span class="tlaGNC">        3459 :         }</span></span>

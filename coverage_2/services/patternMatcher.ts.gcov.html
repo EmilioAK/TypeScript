@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -242,7 +242,7 @@
 <span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">         157 :         return createPatternMatch(chunk.text.length === candidate.length ? PatternMatchKind.exact : PatternMatchKind.prefix, /*isCaseSensitive:*/ startsWith(candidate, chunk.text));</span></span>
 <span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">         157 :     }</span></span>
 <span id="L182"><span class="lineNum">     182</span> <span class="tlaGNC">       37442 : </span></span>
-<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">       37579 :     if (chunk.isLowerCase) {</span></span>
+<span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">       37592 :     if (chunk.isLowerCase) {</span></span>
 <span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">       18742 :         if (index === -1) return undefined;</span></span>
 <span id="L185"><span class="lineNum">     185</span> <span class="tlaGNC">          30 :         // b) If the part is entirely lowercase, then check if it is contained anywhere in the</span></span>
 <span id="L186"><span class="lineNum">     186</span> <span class="tlaGNC">          30 :         //    candidate in a case insensitive manner.  If so, return that there was a substring</span></span>
@@ -252,7 +252,7 @@
 <span id="L190"><span class="lineNum">     190</span> <span class="tlaGNC">          30 :         //    word part. That way we don't match something like 'Class' when the user types 'a'.</span></span>
 <span id="L191"><span class="lineNum">     191</span> <span class="tlaGNC">          30 :         //    But we would match 'FooAttribute' (since 'Attribute' starts with 'a').</span></span>
 <span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">          30 :         const wordSpans = getWordSpans(candidate, stringToWordSpans);</span></span>
-<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">       14444 :         for (const span of wordSpans) {</span></span>
+<span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">       12818 :         for (const span of wordSpans) {</span></span>
 <span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">          57 :             if (partStartsWith(candidate, span, chunk.text, /*ignoreCase*/ true)) {</span></span>
 <span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">          12 :                 return createPatternMatch(PatternMatchKind.substring, /*isCaseSensitive:*/ partStartsWith(candidate, span, chunk.text, /*ignoreCase*/ false));</span></span>
 <span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">          12 :             }</span></span>
@@ -337,7 +337,7 @@
 <span id="L275"><span class="lineNum">     275</span> <span class="tlaGNC">       18706 : </span></span>
 <span id="L276"><span class="lineNum">     276</span> <span class="tlaGNC">       18706 :     const subWordTextChunks = segment.subWordTextChunks;</span></span>
 <span id="L277"><span class="lineNum">     277</span> <span class="tlaGNC">       18706 :     let bestMatch: PatternMatch | undefined;</span></span>
-<span id="L278"><span class="lineNum">     278</span> <span class="tlaGNC">       18835 :     for (const subWordTextChunk of subWordTextChunks) {</span></span>
+<span id="L278"><span class="lineNum">     278</span> <span class="tlaGNC">       18851 :     for (const subWordTextChunk of subWordTextChunks) {</span></span>
 <span id="L279"><span class="lineNum">     279</span> <span class="tlaGNC">       19567 :         bestMatch = betterMatch(bestMatch, matchTextChunk(candidate, subWordTextChunk, stringToWordSpans));</span></span>
 <span id="L280"><span class="lineNum">     280</span> <span class="tlaGNC">       19567 :     }</span></span>
 <span id="L281"><span class="lineNum">     281</span> <span class="tlaGNC">       18706 :     return bestMatch;</span></span>
@@ -390,7 +390,7 @@
 <span id="L328"><span class="lineNum">     328</span> <span class="tlaGNC">       77431 :         // will be Simple/UI/Element, and the pattern parts will be Si/U/I.  We'll match 'Si'</span></span>
 <span id="L329"><span class="lineNum">     329</span> <span class="tlaGNC">       77431 :         // against 'Simple' first.  Then we'll match 'U' against 'UI'. However, we want to</span></span>
 <span id="L330"><span class="lineNum">     330</span> <span class="tlaGNC">       77431 :         // still keep matching pattern parts against that candidate part.</span></span>
-<span id="L331"><span class="lineNum">     331</span> <span class="tlaGNC">      114779 :         for (; currentChunkSpan &lt; chunkCharacterSpans.length; currentChunkSpan++) {</span></span>
+<span id="L331"><span class="lineNum">     331</span> <span class="tlaGNC">      111459 :         for (; currentChunkSpan &lt; chunkCharacterSpans.length; currentChunkSpan++) {</span></span>
 <span id="L332"><span class="lineNum">     332</span> <span class="tlaGNC">       77861 :             const chunkCharacterSpan = chunkCharacterSpans[currentChunkSpan];</span></span>
 <span id="L333"><span class="lineNum">     333</span> <span class="tlaGNC">       77861 : </span></span>
 <span id="L334"><span class="lineNum">     334</span> <span class="tlaGNC">       77861 :             if (gotOneMatchThisCandidate) {</span></span>

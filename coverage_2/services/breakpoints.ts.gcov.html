@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -544,7 +544,7 @@
 <span id="L482"><span class="lineNum">     482</span> <span class="tlaGNC">       15707 :             // Breakpoint is possible in variableDeclaration only if there is initialization</span></span>
 <span id="L483"><span class="lineNum">     483</span> <span class="tlaGNC">       15707 :             // or its declaration from 'for of'</span></span>
 <span id="L484"><span class="lineNum">     484</span> <span class="tlaGNC">       15707 :             if (</span></span>
-<span id="L485"><span class="lineNum">     485</span> <span class="tlaGNC">       16935 :                 (hasOnlyExpressionInitializer(variableDeclaration) &amp;&amp; variableDeclaration.initializer) ||</span></span>
+<span id="L485"><span class="lineNum">     485</span> <span class="tlaGNC">       16937 :                 (hasOnlyExpressionInitializer(variableDeclaration) &amp;&amp; variableDeclaration.initializer) ||</span></span>
 <span id="L486"><span class="lineNum">     486</span> <span class="tlaGNC">        7096 :                 hasSyntacticModifier(variableDeclaration, ModifierFlags.Export) ||</span></span>
 <span id="L487"><span class="lineNum">     487</span> <span class="tlaGNC">        7096 :                 parent.parent.kind === SyntaxKind.ForOfStatement</span></span>
 <span id="L488"><span class="lineNum">     488</span> <span class="tlaGNC">       16937 :             ) {</span></span>
@@ -664,10 +664,10 @@
 <span id="L602"><span class="lineNum">     602</span> <span class="tlaGNC">        1127 :                 return spanInInitializerOfForLike(forStatement);</span></span>
 <span id="L603"><span class="lineNum">     603</span> <span class="tlaGNC">        1127 :             }</span></span>
 <span id="L604"><span class="lineNum">     604</span> <span class="tlaGNC">          26 : </span></span>
-<span id="L605"><span class="lineNum">     605</span> <span class="tlaGNC">         262 :             if (forStatement.condition) {</span></span>
+<span id="L605"><span class="lineNum">     605</span> <span class="tlaGNC">         175 :             if (forStatement.condition) {</span></span>
 <span id="L606"><span class="lineNum">     606</span> <span class="tlaGNC">           6 :                 return textSpan(forStatement.condition);</span></span>
 <span id="L607"><span class="lineNum">     607</span> <span class="tlaGNC">           6 :             }</span></span>
-<span id="L608"><span class="lineNum">     608</span> <span class="tlaGNC">         262 :             if (forStatement.incrementor) {</span></span>
+<span id="L608"><span class="lineNum">     608</span> <span class="tlaGNC">         175 :             if (forStatement.incrementor) {</span></span>
 <span id="L609"><span class="lineNum">     609</span> <span class="tlaUNC tlaBgUNC">           0 :                 return textSpan(forStatement.incrementor);</span></span>
 <span id="L610"><span class="lineNum">     610</span> <span class="tlaUNC">           0 :             }</span></span>
 <span id="L611"><span class="lineNum">     611</span> <span class="tlaGNC tlaBgGNC">        1153 :         }</span></span>

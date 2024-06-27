@@ -22,7 +22,7 @@ Typescript already included an existing coverage checker called `c8`. It then us
 
 ### Your own coverage tool
 
-We finished our assignment before the project description was rewritten and got permission from Phillip to keep our code that tests different functions. Typescript does not allow us to print inside the files we are testing. The workaround we went with is to create our own custom branch coverage code that we added to the files, as intended, and then we create tests that execute successfully if the branches are reached as expected. This has the same effect and provides the same information as printing inside the branch coverage code would. 
+We finished our assignment before the project description was rewritten and got permission from Phillip to keep our code that tests different functions. Typescript does not allow us to print inside the files we are testing. The workaround we went with is to create our own custom branch coverage code that we added to the files, as intended, and then we create tests that execute successfully if the branches are reached as expected. This has the same effect and provides the same information as printing inside the branch coverage code would.
 
 <The following is supposed to be repeated for each group member>
 
@@ -79,17 +79,26 @@ Commit url: https://github.com/EmilioAK/TypeScript/commit/b73270f4a8b7918952105a
 
 #### Max Raulea
 
-GetDuration()
-&
-ClearMeasures()
+
 commmit url: https://github.com/microsoft/TypeScript/commit/60cc3cb5b24eb248859e20843ba2b33e93196406
 <Provide the same kind of information provided for Test 1>
 
 The coverage improved since at first the function was not tested, my test added a test for that fucntion which means it now is tested at thus covered in the tests. Before my tests of performance.ts it had a coverage of 68.2% and after my tests this was raised to 70%.
 ![image](max_coverage_before.png)
-
 and after adding the new tests
 ![image](max_coverage_after.png)
+
+### test 1 GetDuration()
+before the functions were red in the coverage tool first
+![image](before_duration.png)
+and after the tests they became blue
+![image](get_duration_after.png)
+
+### test 2 ClearMeasures()
+![image](before_measure.png)
+![image](clearmarks_after.png)
+
+
 
 #### Emilio Alvarez
 
@@ -151,6 +160,8 @@ Coverage numbers after my tests
 ![image](max_coverage_before.png)
 
 <Provide a screenshot of the new coverage results by running the existing tool using all test modifications made by the group>
+
+![image](full_coverage_real.png)
 
 ## Statement of individual contributions
 

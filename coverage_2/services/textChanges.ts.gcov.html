@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">94.5&nbsp;%</td>
@@ -1223,7 +1223,7 @@
 <span id="L1161"><span class="lineNum">    1161</span> <span class="tlaGNC">         225 :             if (node !== last(list)) return;</span></span>
 <span id="L1162"><span class="lineNum">    1162</span> <span class="tlaGNC">         100 : </span></span>
 <span id="L1163"><span class="lineNum">    1163</span> <span class="tlaGNC">         100 :             const lastNonDeletedIndex = findLastIndex(list, n =&gt; !deletedNodesInLists.has(n), list.length - 2);</span></span>
-<span id="L1164"><span class="lineNum">    1164</span> <span class="tlaGNC">         179 :             if (lastNonDeletedIndex !== -1) {</span></span>
+<span id="L1164"><span class="lineNum">    1164</span> <span class="tlaGNC">         138 :             if (lastNonDeletedIndex !== -1) {</span></span>
 <span id="L1165"><span class="lineNum">    1165</span> <span class="tlaGNC">          94 :                 this.deleteRange(sourceFile, { pos: list[lastNonDeletedIndex].end, end: startPositionToDeleteNodeInList(sourceFile, list[lastNonDeletedIndex + 1]) });</span></span>
 <span id="L1166"><span class="lineNum">    1166</span> <span class="tlaGNC">          94 :             }</span></span>
 <span id="L1167"><span class="lineNum">    1167</span> <span class="tlaGNC">        7291 :         });</span></span>

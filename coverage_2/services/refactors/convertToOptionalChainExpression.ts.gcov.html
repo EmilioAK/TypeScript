@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -234,7 +234,7 @@
 <span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">         163 :     if (!finalExpression) return { error: getLocaleSpecificMessage(Diagnostics.Could_not_find_convertible_access_expression) };</span></span>
 <span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">          65 : </span></span>
 <span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC">          65 :     const occurrences = getOccurrencesInExpression(finalExpression.expression, expression.left);</span></span>
-<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">         107 :     return occurrences ? { finalExpression, occurrences, expression } :</span></span>
+<span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">         111 :     return occurrences ? { finalExpression, occurrences, expression } :</span></span>
 <span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">           3 :         { error: getLocaleSpecificMessage(Diagnostics.Could_not_find_matching_access_expressions) };</span></span>
 <span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">         163 : }</span></span>
 <span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">           1 : </span></span>
@@ -295,10 +295,10 @@
 <span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">         861 :     if (isIdentifier(node) || isStringOrNumericLiteralLike(node)) {</span></span>
 <span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">         453 :         return node.getText();</span></span>
 <span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">         453 :     }</span></span>
-<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">         671 :     if (isPropertyAccessExpression(node)) {</span></span>
+<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">         631 :     if (isPropertyAccessExpression(node)) {</span></span>
 <span id="L237"><span class="lineNum">     237</span> <span class="tlaGNC">         389 :         return getTextOfChainNode(node.name);</span></span>
 <span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">         389 :     }</span></span>
-<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         452 :     if (isElementAccessExpression(node)) {</span></span>
+<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         322 :     if (isElementAccessExpression(node)) {</span></span>
 <span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">          10 :         return getTextOfChainNode(node.argumentExpression);</span></span>
 <span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">          10 :     }</span></span>
 <span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">           9 :     return undefined;</span></span>

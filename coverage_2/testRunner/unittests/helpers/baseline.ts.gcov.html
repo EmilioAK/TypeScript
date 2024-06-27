@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -176,7 +176,7 @@
 <span id="L114"><span class="lineNum">     114</span> <span class="tlaGNC">        1757 :         baseline.push(&quot;&quot;);</span></span>
 <span id="L115"><span class="lineNum">     115</span> <span class="tlaGNC">        1757 :         if (!baselineDependencies) return;</span></span>
 <span id="L116"><span class="lineNum">     116</span> <span class="tlaGNC">          49 :         baseline.push(&quot;Dependencies for::&quot;);</span></span>
-<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">         351 :         for (const file of builderProgram.getSourceFiles()) {</span></span>
+<span id="L117"><span class="lineNum">     117</span> <span class="tlaGNC">         124 :         for (const file of builderProgram.getSourceFiles()) {</span></span>
 <span id="L118"><span class="lineNum">     118</span> <span class="tlaGNC">         235 :             baseline.push(`${file.fileName}:`);</span></span>
 <span id="L119"><span class="lineNum">     119</span> <span class="tlaGNC">         235 :             for (const depenedency of builderProgram.getAllDependencies(file)) {</span></span>
 <span id="L120"><span class="lineNum">     120</span> <span class="tlaGNC">         605 :                 baseline.push(`  ${depenedency}`);</span></span>
@@ -396,7 +396,7 @@
 <span id="L334"><span class="lineNum">     334</span> <span class="tlaGNC">        1980 :     ): ts.MapLike&lt;string[]&gt; | undefined {</span></span>
 <span id="L335"><span class="lineNum">     335</span> <span class="tlaGNC">        1980 :         if (!referenceMap) return undefined;</span></span>
 <span id="L336"><span class="lineNum">     336</span> <span class="tlaGNC">        1206 :         const result: ts.MapLike&lt;string[]&gt; = {};</span></span>
-<span id="L337"><span class="lineNum">     337</span> <span class="tlaGNC">        1945 :         for (const [fileNamesKey, fileNamesListKey] of referenceMap) {</span></span>
+<span id="L337"><span class="lineNum">     337</span> <span class="tlaGNC">        1980 :         for (const [fileNamesKey, fileNamesListKey] of referenceMap) {</span></span>
 <span id="L338"><span class="lineNum">     338</span> <span class="tlaGNC">        2190 :             result[toFileName(fileNamesKey)] = toFileNames(fileNamesListKey);</span></span>
 <span id="L339"><span class="lineNum">     339</span> <span class="tlaGNC">        2190 :         }</span></span>
 <span id="L340"><span class="lineNum">     340</span> <span class="tlaGNC">        1206 :         return result;</span></span>

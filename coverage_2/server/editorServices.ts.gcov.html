@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.3&nbsp;%</td>
@@ -1484,12 +1484,12 @@
 <span id="L1422"><span class="lineNum">    1422</span> <span class="tlaGNC">        2322 :             }</span></span>
 <span id="L1423"><span class="lineNum">    1423</span> <span class="tlaGNC">          11 :             const raw: TypesMapFile = JSON.parse(fileContent);</span></span>
 <span id="L1424"><span class="lineNum">    1424</span> <span class="tlaGNC">          11 :             // Parse the regexps</span></span>
-<span id="L1425"><span class="lineNum">    1425</span> <span class="tlaGNC">         640 :             for (const k of Object.keys(raw.typesMap)) {</span></span>
+<span id="L1425"><span class="lineNum">    1425</span> <span class="tlaGNC">         595 :             for (const k of Object.keys(raw.typesMap)) {</span></span>
 <span id="L1426"><span class="lineNum">    1426</span> <span class="tlaGNC">          22 :                 raw.typesMap[k].match = new RegExp(raw.typesMap[k].match as {} as string, &quot;i&quot;);</span></span>
 <span id="L1427"><span class="lineNum">    1427</span> <span class="tlaGNC">          22 :             }</span></span>
 <span id="L1428"><span class="lineNum">    1428</span> <span class="tlaGNC">          11 :             // raw is now fixed and ready</span></span>
 <span id="L1429"><span class="lineNum">    1429</span> <span class="tlaGNC">          11 :             this.safelist = raw.typesMap;</span></span>
-<span id="L1430"><span class="lineNum">    1430</span> <span class="tlaGNC">         640 :             for (const key in raw.simpleMap) {</span></span>
+<span id="L1430"><span class="lineNum">    1430</span> <span class="tlaGNC">         595 :             for (const key in raw.simpleMap) {</span></span>
 <span id="L1431"><span class="lineNum">    1431</span> <span class="tlaGNC">          66 :                 if (hasProperty(raw.simpleMap, key)) {</span></span>
 <span id="L1432"><span class="lineNum">    1432</span> <span class="tlaGNC">          66 :                     this.legacySafelist.set(key, raw.simpleMap[key].toLowerCase());</span></span>
 <span id="L1433"><span class="lineNum">    1433</span> <span class="tlaGNC">          66 :                 }</span></span>
@@ -1700,7 +1700,7 @@
 <span id="L1638"><span class="lineNum">    1638</span> <span class="tlaGNC tlaBgGNC">        7185 :         if (isInferredProjectName(projectName)) {</span></span>
 <span id="L1639"><span class="lineNum">    1639</span> <span class="tlaGNC">         706 :             return findProjectByName(projectName, this.inferredProjects);</span></span>
 <span id="L1640"><span class="lineNum">    1640</span> <span class="tlaGNC">         706 :         }</span></span>
-<span id="L1641"><span class="lineNum">    1641</span> <span class="tlaGNC">        7063 :         return this.findExternalProjectByProjectName(projectName) || this.findConfiguredProjectByProjectName(toNormalizedPath(projectName));</span></span>
+<span id="L1641"><span class="lineNum">    1641</span> <span class="tlaGNC">        6953 :         return this.findExternalProjectByProjectName(projectName) || this.findConfiguredProjectByProjectName(toNormalizedPath(projectName));</span></span>
 <span id="L1642"><span class="lineNum">    1642</span> <span class="tlaGNC">        7185 :     }</span></span>
 <span id="L1643"><span class="lineNum">    1643</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1644"><span class="lineNum">    1644</span> <span class="tlaGNC">           1 :     /** @internal */</span></span>
@@ -1907,7 +1907,7 @@
 <span id="L1845"><span class="lineNum">    1845</span> <span class="tlaGNC">         749 :                 ) return;</span></span>
 <span id="L1846"><span class="lineNum">    1846</span> <span class="tlaGNC">         378 : </span></span>
 <span id="L1847"><span class="lineNum">    1847</span> <span class="tlaGNC">         378 :                 // Reload is pending, do the reload</span></span>
-<span id="L1848"><span class="lineNum">    1848</span> <span class="tlaGNC">         550 :                 if (config.updateLevel !== ProgramUpdateLevel.Full) config.updateLevel = ProgramUpdateLevel.RootNamesAndUpdate;</span></span>
+<span id="L1848"><span class="lineNum">    1848</span> <span class="tlaGNC">         469 :                 if (config.updateLevel !== ProgramUpdateLevel.Full) config.updateLevel = ProgramUpdateLevel.RootNamesAndUpdate;</span></span>
 <span id="L1849"><span class="lineNum">    1849</span> <span class="tlaGNC">         378 :                 config.projects.forEach((watchWildcardDirectories, projectCanonicalPath) =&gt; {</span></span>
 <span id="L1850"><span class="lineNum">    1850</span> <span class="tlaGNC">         380 :                     if (!watchWildcardDirectories) return;</span></span>
 <span id="L1851"><span class="lineNum">    1851</span> <span class="tlaGNC">         380 :                     const project = this.getConfiguredProjectByCanonicalConfigFilePath(projectCanonicalPath);</span></span>
@@ -2906,7 +2906,7 @@
 <span id="L2844"><span class="lineNum">    2844</span> <span class="tlaGNC">        2557 :             if (config!.watchedDirectories &amp;&amp; !config!.watchedDirectoriesStale) return;</span></span>
 <span id="L2845"><span class="lineNum">    2845</span> <span class="tlaGNC">        1985 :             config!.watchedDirectoriesStale = false;</span></span>
 <span id="L2846"><span class="lineNum">    2846</span> <span class="tlaGNC">        1985 :             updateWatchingWildcardDirectories(</span></span>
-<span id="L2847"><span class="lineNum">    2847</span> <span class="tlaGNC">        2557 :                 config!.watchedDirectories ||= new Map(),</span></span>
+<span id="L2847"><span class="lineNum">    2847</span> <span class="tlaGNC">        2553 :                 config!.watchedDirectories ||= new Map(),</span></span>
 <span id="L2848"><span class="lineNum">    2848</span> <span class="tlaGNC">        2557 :                 config!.parsedCommandLine!.wildcardDirectories,</span></span>
 <span id="L2849"><span class="lineNum">    2849</span> <span class="tlaGNC">        2557 :                 // Create new directory watcher</span></span>
 <span id="L2850"><span class="lineNum">    2850</span> <span class="tlaGNC">        2557 :                 (directory, flags) =&gt; this.watchWildcardDirectory(directory, flags, configFileName, config!),</span></span>
@@ -3124,7 +3124,7 @@
 <span id="L3062"><span class="lineNum">    3062</span> <span class="tlaGNC">        1615 :             return undefined;</span></span>
 <span id="L3063"><span class="lineNum">    3063</span> <span class="tlaGNC">        1615 :         }</span></span>
 <span id="L3064"><span class="lineNum">    3064</span> <span class="tlaGNC">          54 : </span></span>
-<span id="L3065"><span class="lineNum">    3065</span> <span class="tlaGNC">         806 :         if (projectRootPath) {</span></span>
+<span id="L3065"><span class="lineNum">    3065</span> <span class="tlaGNC">         876 :         if (projectRootPath) {</span></span>
 <span id="L3066"><span class="lineNum">    3066</span> <span class="tlaGNC">          44 :             const canonicalProjectRootPath = this.toCanonicalFileName(projectRootPath);</span></span>
 <span id="L3067"><span class="lineNum">    3067</span> <span class="tlaGNC">          44 :             // if we have an explicit project root path, find (or create) the matching inferred project.</span></span>
 <span id="L3068"><span class="lineNum">    3068</span> <span class="tlaGNC">          44 :             for (const project of this.inferredProjects) {</span></span>
@@ -3138,7 +3138,7 @@
 <span id="L3076"><span class="lineNum">    3076</span> <span class="tlaGNC">          10 :         // we don't have an explicit root path, so we should try to find an inferred project</span></span>
 <span id="L3077"><span class="lineNum">    3077</span> <span class="tlaGNC">          10 :         // that more closely contains the file.</span></span>
 <span id="L3078"><span class="lineNum">    3078</span> <span class="tlaGNC">          10 :         let bestMatch: InferredProject | undefined;</span></span>
-<span id="L3079"><span class="lineNum">    3079</span> <span class="tlaGNC">         797 :         for (const project of this.inferredProjects) {</span></span>
+<span id="L3079"><span class="lineNum">    3079</span> <span class="tlaGNC">         863 :         for (const project of this.inferredProjects) {</span></span>
 <span id="L3080"><span class="lineNum">    3080</span> <span class="tlaGNC">          20 :             // ignore single inferred projects (handled elsewhere)</span></span>
 <span id="L3081"><span class="lineNum">    3081</span> <span class="tlaGNC">          20 :             if (!project.projectRootPath) continue;</span></span>
 <span id="L3082"><span class="lineNum">    3082</span> <span class="tlaGNC">          20 :             // ignore inferred projects that don't contain the root's path</span></span>
@@ -3243,7 +3243,7 @@
 <span id="L3181"><span class="lineNum">    3181</span> <span class="tlaGNC">          76 :         const info = this.getScriptInfoForNormalizedPath(path);</span></span>
 <span id="L3182"><span class="lineNum">    3182</span> <span class="tlaGNC">          76 :         if (info) return info;</span></span>
 <span id="L3183"><span class="lineNum">    3183</span> <span class="tlaGNC">           6 :         const configProject = this.configuredProjects.get(this.toPath(uncheckedFileName));</span></span>
-<span id="L3184"><span class="lineNum">    3184</span> <span class="tlaGNC">          15 :         return configProject &amp;&amp; configProject.getCompilerOptions().configFile;</span></span>
+<span id="L3184"><span class="lineNum">    3184</span> <span class="tlaGNC">          20 :         return configProject &amp;&amp; configProject.getCompilerOptions().configFile;</span></span>
 <span id="L3185"><span class="lineNum">    3185</span> <span class="tlaGNC">          76 :     }</span></span>
 <span id="L3186"><span class="lineNum">    3186</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L3187"><span class="lineNum">    3187</span> <span class="tlaGNC">           1 :     /** @internal */</span></span>
@@ -3465,7 +3465,7 @@
 <span id="L3403"><span class="lineNum">    3403</span> <span class="tlaGNC">          20 :         // This is non rooted path with different current directory than project service current directory</span></span>
 <span id="L3404"><span class="lineNum">    3404</span> <span class="tlaGNC">          20 :         // Only paths recognized are open relative file paths</span></span>
 <span id="L3405"><span class="lineNum">    3405</span> <span class="tlaGNC">          20 :         const info = this.openFilesWithNonRootedDiskPath.get(this.toCanonicalFileName(fileName));</span></span>
-<span id="L3406"><span class="lineNum">    3406</span> <span class="tlaGNC">       26650 :         if (info) {</span></span>
+<span id="L3406"><span class="lineNum">    3406</span> <span class="tlaGNC">       27010 :         if (info) {</span></span>
 <span id="L3407"><span class="lineNum">    3407</span> <span class="tlaGNC">           4 :             return info;</span></span>
 <span id="L3408"><span class="lineNum">    3408</span> <span class="tlaGNC">           4 :         }</span></span>
 <span id="L3409"><span class="lineNum">    3409</span> <span class="tlaGNC">          16 : </span></span>
@@ -3708,10 +3708,10 @@
 <span id="L3646"><span class="lineNum">    3646</span> <span class="tlaGNC">        3308 :         }</span></span>
 <span id="L3647"><span class="lineNum">    3647</span> <span class="tlaGNC">        5076 : </span></span>
 <span id="L3648"><span class="lineNum">    3648</span> <span class="tlaGNC">        5076 :         // Key doesnt matter since its only for text and lines</span></span>
-<span id="L3649"><span class="lineNum">    3649</span> <span class="tlaGNC">        9693 :         if (info.cacheSourceFile) return info.cacheSourceFile.sourceFile;</span></span>
+<span id="L3649"><span class="lineNum">    3649</span> <span class="tlaGNC">        9677 :         if (info.cacheSourceFile) return info.cacheSourceFile.sourceFile;</span></span>
 <span id="L3650"><span class="lineNum">    3650</span> <span class="tlaGNC">        2582 : </span></span>
 <span id="L3651"><span class="lineNum">    3651</span> <span class="tlaGNC">        2582 :         // Create sourceFileLike</span></span>
-<span id="L3652"><span class="lineNum">    3652</span> <span class="tlaGNC">        9520 :         if (!info.sourceFileLike) {</span></span>
+<span id="L3652"><span class="lineNum">    3652</span> <span class="tlaGNC">        9536 :         if (!info.sourceFileLike) {</span></span>
 <span id="L3653"><span class="lineNum">    3653</span> <span class="tlaGNC">         272 :             info.sourceFileLike = {</span></span>
 <span id="L3654"><span class="lineNum">    3654</span> <span class="tlaGNC">         272 :                 get text() {</span></span>
 <span id="L3655"><span class="lineNum">    3655</span> <span class="tlaUNC tlaBgUNC">           0 :                     Debug.fail(&quot;shouldnt need text&quot;);</span></span>
@@ -4014,10 +4014,10 @@
 <span id="L3952"><span class="lineNum">    3952</span> <span class="tlaGNC">         622 : </span></span>
 <span id="L3953"><span class="lineNum">    3953</span> <span class="tlaGNC">         622 :         const originalFileInfo: OriginalFileInfo = { fileName: toNormalizedPath(fileName), path: this.toPath(fileName) };</span></span>
 <span id="L3954"><span class="lineNum">    3954</span> <span class="tlaGNC">         622 :         const configFileName = this.getConfigFileNameForFile(originalFileInfo, /*findFromCacheOnly*/ false);</span></span>
-<span id="L3955"><span class="lineNum">    3955</span> <span class="tlaGNC">        2671 :         if (!configFileName) return undefined;</span></span>
+<span id="L3955"><span class="lineNum">    3955</span> <span class="tlaGNC">        2654 :         if (!configFileName) return undefined;</span></span>
 <span id="L3956"><span class="lineNum">    3956</span> <span class="tlaGNC">         622 : </span></span>
 <span id="L3957"><span class="lineNum">    3957</span> <span class="tlaGNC">         622 :         let configuredProject: ConfiguredProject | undefined = this.findConfiguredProjectByProjectName(configFileName);</span></span>
-<span id="L3958"><span class="lineNum">    3958</span> <span class="tlaGNC">        2671 :         if (!configuredProject) {</span></span>
+<span id="L3958"><span class="lineNum">    3958</span> <span class="tlaGNC">        2654 :         if (!configuredProject) {</span></span>
 <span id="L3959"><span class="lineNum">    3959</span> <span class="tlaGNC">          35 :             if (project.getCompilerOptions().disableReferencedProjectLoad) {</span></span>
 <span id="L3960"><span class="lineNum">    3960</span> <span class="tlaGNC">           6 :                 // If location was a project reference redirect, then `location` and `originalLocation` are the same.</span></span>
 <span id="L3961"><span class="lineNum">    3961</span> <span class="tlaGNC">           6 :                 if (isSourceOfProjectReferenceRedirect) {</span></span>
@@ -4263,7 +4263,7 @@
 <span id="L4201"><span class="lineNum">    4201</span> <span class="tlaGNC">       26984 :             const projectWithInfo = project.containsScriptInfo(info);</span></span>
 <span id="L4202"><span class="lineNum">    4202</span> <span class="tlaGNC">       26984 :             if (projectWithInfo &amp;&amp; !project.isSourceOfProjectReferenceRedirect(info.path)) return defaultProject = project;</span></span>
 <span id="L4203"><span class="lineNum">    4203</span> <span class="tlaGNC">        2588 :             // If this project uses the script info, if default project is not found, use this project as possible default</span></span>
-<span id="L4204"><span class="lineNum">    4204</span> <span class="tlaGNC">        4146 :             possiblyDefault ??= projectWithInfo ? project : undefined;</span></span>
+<span id="L4204"><span class="lineNum">    4204</span> <span class="tlaGNC">        4816 :             possiblyDefault ??= projectWithInfo ? project : undefined;</span></span>
 <span id="L4205"><span class="lineNum">    4205</span> <span class="tlaGNC">       26984 :         }</span></span>
 <span id="L4206"><span class="lineNum">    4206</span> <span class="tlaGNC">       31637 : </span></span>
 <span id="L4207"><span class="lineNum">    4207</span> <span class="tlaGNC">       31637 :         function tryFindDefaultConfiguredProjectFromReferences(project: ConfiguredProject) {</span></span>
@@ -4361,7 +4361,7 @@
 <span id="L4299"><span class="lineNum">    4299</span> <span class="tlaGNC">        3029 :         const children = project.getCurrentProgram()?.getResolvedProjectReferences();</span></span>
 <span id="L4300"><span class="lineNum">    4300</span> <span class="tlaGNC">        3029 :         if (!children) return;</span></span>
 <span id="L4301"><span class="lineNum">    4301</span> <span class="tlaGNC">         552 : </span></span>
-<span id="L4302"><span class="lineNum">    4302</span> <span class="tlaGNC">         742 :         for (const child of children) {</span></span>
+<span id="L4302"><span class="lineNum">    4302</span> <span class="tlaGNC">        3029 :         for (const child of children) {</span></span>
 <span id="L4303"><span class="lineNum">    4303</span> <span class="tlaGNC">         642 :             if (!child) continue;</span></span>
 <span id="L4304"><span class="lineNum">    4304</span> <span class="tlaGNC">         642 :             const referencedProject = forEachResolvedProjectReference(child.references, ref =&gt; forProjects.has(ref.sourceFile.path) ? ref : undefined);</span></span>
 <span id="L4305"><span class="lineNum">    4305</span> <span class="tlaGNC">         642 :             if (!referencedProject) continue;</span></span>
@@ -4520,7 +4520,7 @@
 <span id="L4458"><span class="lineNum">    4458</span> <span class="tlaGNC">         510 :                 // Otherwise if there is any source info that is alive, this alive too</span></span>
 <span id="L4459"><span class="lineNum">    4459</span> <span class="tlaGNC">         510 :                 if (!info.sourceMapFilePath) return;</span></span>
 <span id="L4460"><span class="lineNum">    4460</span> <span class="tlaGNC">          81 :                 let sourceInfos: Set&lt;Path&gt; | undefined;</span></span>
-<span id="L4461"><span class="lineNum">    4461</span> <span class="tlaGNC">         292 :                 if (isString(info.sourceMapFilePath)) {</span></span>
+<span id="L4461"><span class="lineNum">    4461</span> <span class="tlaGNC">         291 :                 if (isString(info.sourceMapFilePath)) {</span></span>
 <span id="L4462"><span class="lineNum">    4462</span> <span class="tlaGNC">          61 :                     const sourceMapInfo = this.filenameToScriptInfo.get(info.sourceMapFilePath);</span></span>
 <span id="L4463"><span class="lineNum">    4463</span> <span class="tlaGNC">          61 :                     sourceInfos = sourceMapInfo?.sourceInfos;</span></span>
 <span id="L4464"><span class="lineNum">    4464</span> <span class="tlaGNC">          61 :                 }</span></span>
@@ -4533,7 +4533,7 @@
 <span id="L4471"><span class="lineNum">    4471</span> <span class="tlaGNC">          73 :                         const info = this.getScriptInfoForPath(path);</span></span>
 <span id="L4472"><span class="lineNum">    4472</span> <span class="tlaGNC">          73 :                         return !!info &amp;&amp; (info.isScriptOpen() || !info.isOrphan());</span></span>
 <span id="L4473"><span class="lineNum">    4473</span> <span class="tlaGNC">          73 :                     })</span></span>
-<span id="L4474"><span class="lineNum">    4474</span> <span class="tlaGNC">         442 :                 ) {</span></span>
+<span id="L4474"><span class="lineNum">    4474</span> <span class="tlaGNC">         376 :                 ) {</span></span>
 <span id="L4475"><span class="lineNum">    4475</span> <span class="tlaGNC">          49 :                     return;</span></span>
 <span id="L4476"><span class="lineNum">    4476</span> <span class="tlaGNC">          49 :                 }</span></span>
 <span id="L4477"><span class="lineNum">    4477</span> <span class="tlaGNC">         510 :             }</span></span>
@@ -4751,7 +4751,7 @@
 <span id="L4689"><span class="lineNum">    4689</span> <span class="tlaGNC">          43 :             return undefined;</span></span>
 <span id="L4690"><span class="lineNum">    4690</span> <span class="tlaGNC">          43 :         }</span></span>
 <span id="L4691"><span class="lineNum">    4691</span> <span class="tlaGNC">          36 : </span></span>
-<span id="L4692"><span class="lineNum">    4692</span> <span class="tlaGNC">          79 :         const typeAcqInclude = typeAcquisition.include || (typeAcquisition.include = []);</span></span>
+<span id="L4692"><span class="lineNum">    4692</span> <span class="tlaGNC">          72 :         const typeAcqInclude = typeAcquisition.include || (typeAcquisition.include = []);</span></span>
 <span id="L4693"><span class="lineNum">    4693</span> <span class="tlaGNC">          79 :         const excludeRules: string[] = [];</span></span>
 <span id="L4694"><span class="lineNum">    4694</span> <span class="tlaGNC">          79 : </span></span>
 <span id="L4695"><span class="lineNum">    4695</span> <span class="tlaGNC">          79 :         const normalizedNames = rootFiles.map(f =&gt; normalizeSlashes(f.fileName)) as NormalizedPath[];</span></span>
@@ -4810,7 +4810,7 @@
 <span id="L4748"><span class="lineNum">    4748</span> <span class="tlaGNC">          36 :         const excludeRegexes = excludeRules.map(e =&gt; new RegExp(e, &quot;i&quot;));</span></span>
 <span id="L4749"><span class="lineNum">    4749</span> <span class="tlaGNC">          36 :         let filesToKeep: protocol.ExternalFile[] | undefined;</span></span>
 <span id="L4750"><span class="lineNum">    4750</span> <span class="tlaGNC">          36 :         let excludedFiles: NormalizedPath[] | undefined;</span></span>
-<span id="L4751"><span class="lineNum">    4751</span> <span class="tlaGNC">          75 :         for (let i = 0; i &lt; rootFiles.length; i++) {</span></span>
+<span id="L4751"><span class="lineNum">    4751</span> <span class="tlaGNC">          71 :         for (let i = 0; i &lt; rootFiles.length; i++) {</span></span>
 <span id="L4752"><span class="lineNum">    4752</span> <span class="tlaGNC">          68 :             if (excludeRegexes.some(re =&gt; re.test(normalizedNames[i]))) {</span></span>
 <span id="L4753"><span class="lineNum">    4753</span> <span class="tlaGNC">           6 :                 addExcludedFile(i);</span></span>
 <span id="L4754"><span class="lineNum">    4754</span> <span class="tlaGNC">           6 :             }</span></span>
@@ -4844,7 +4844,7 @@
 <span id="L4782"><span class="lineNum">    4782</span> <span class="tlaGNC">          62 :             }</span></span>
 <span id="L4783"><span class="lineNum">    4783</span> <span class="tlaGNC">          68 :         }</span></span>
 <span id="L4784"><span class="lineNum">    4784</span> <span class="tlaGNC">          68 : </span></span>
-<span id="L4785"><span class="lineNum">    4785</span> <span class="tlaGNC">          77 :         return excludedFiles ? {</span></span>
+<span id="L4785"><span class="lineNum">    4785</span> <span class="tlaGNC">          72 :         return excludedFiles ? {</span></span>
 <span id="L4786"><span class="lineNum">    4786</span> <span class="tlaGNC">          14 :             rootFiles: filesToKeep!,</span></span>
 <span id="L4787"><span class="lineNum">    4787</span> <span class="tlaGNC">          14 :             excludedFiles,</span></span>
 <span id="L4788"><span class="lineNum">    4788</span> <span class="tlaGNC">          79 :         } : undefined;</span></span>
@@ -4967,7 +4967,7 @@
 <span id="L4905"><span class="lineNum">    4905</span> <span class="tlaGNC">           9 :         }</span></span>
 <span id="L4906"><span class="lineNum">    4906</span> <span class="tlaGNC">          38 : </span></span>
 <span id="L4907"><span class="lineNum">    4907</span> <span class="tlaGNC">          38 :         // If the host supports dynamic import, begin enabling the plugin asynchronously.</span></span>
-<span id="L4908"><span class="lineNum">    4908</span> <span class="tlaGNC">          47 :         if (this.host.importPlugin) {</span></span>
+<span id="L4908"><span class="lineNum">    4908</span> <span class="tlaGNC">          38 :         if (this.host.importPlugin) {</span></span>
 <span id="L4909"><span class="lineNum">    4909</span> <span class="tlaGNC">           9 :             const importPromise = Project.importServicePluginAsync(</span></span>
 <span id="L4910"><span class="lineNum">    4910</span> <span class="tlaGNC">           9 :                 pluginConfigEntry,</span></span>
 <span id="L4911"><span class="lineNum">    4911</span> <span class="tlaGNC">           9 :                 searchPaths,</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">94.7&nbsp;%</td>
@@ -614,7 +614,7 @@
 <span id="L552"><span class="lineNum">     552</span> <span class="tlaGNC">          37 :         }</span></span>
 <span id="L553"><span class="lineNum">     553</span> <span class="tlaGNC">        1945 : </span></span>
 <span id="L554"><span class="lineNum">     554</span> <span class="tlaGNC">        1945 :         let result: SourceFile[] | undefined;</span></span>
-<span id="L555"><span class="lineNum">     555</span> <span class="tlaGNC">        1982 :         if (firstSourceFile) addSourceFile(firstSourceFile);</span></span>
+<span id="L555"><span class="lineNum">     555</span> <span class="tlaGNC">        1980 :         if (firstSourceFile) addSourceFile(firstSourceFile);</span></span>
 <span id="L556"><span class="lineNum">     556</span> <span class="tlaGNC">        1982 :         for (const sourceFile of programOfThisState.getSourceFiles()) {</span></span>
 <span id="L557"><span class="lineNum">     557</span> <span class="tlaGNC">        6849 :             if (sourceFile !== firstSourceFile) {</span></span>
 <span id="L558"><span class="lineNum">     558</span> <span class="tlaGNC">        4941 :                 addSourceFile(sourceFile);</span></span>
@@ -670,7 +670,7 @@
 <span id="L608"><span class="lineNum">     608</span> <span class="tlaGNC">         612 :         // Start with the paths this file was referenced by</span></span>
 <span id="L609"><span class="lineNum">     609</span> <span class="tlaGNC">         612 :         seenFileNamesMap.set(sourceFileWithUpdatedShape.resolvedPath, sourceFileWithUpdatedShape);</span></span>
 <span id="L610"><span class="lineNum">     610</span> <span class="tlaGNC">         612 :         const queue = getReferencedByPaths(state, sourceFileWithUpdatedShape.resolvedPath);</span></span>
-<span id="L611"><span class="lineNum">     611</span> <span class="tlaGNC">        2525 :         while (queue.length &gt; 0) {</span></span>
+<span id="L611"><span class="lineNum">     611</span> <span class="tlaGNC">        2596 :         while (queue.length &gt; 0) {</span></span>
 <span id="L612"><span class="lineNum">     612</span> <span class="tlaGNC">         532 :             const currentPath = queue.pop()!;</span></span>
 <span id="L613"><span class="lineNum">     613</span> <span class="tlaGNC">         532 :             if (!seenFileNamesMap.has(currentPath)) {</span></span>
 <span id="L614"><span class="lineNum">     614</span> <span class="tlaGNC">         519 :                 const currentSourceFile = programOfThisState.getSourceFileByPath(currentPath)!;</span></span>

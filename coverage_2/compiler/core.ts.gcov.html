@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">95.1&nbsp;%</td>
@@ -2403,8 +2403,8 @@
 <span id="L2341"><span class="lineNum">    2341</span> <span class="tlaGNC">      602822 :     const big = max + 0.01;</span></span>
 <span id="L2342"><span class="lineNum">    2342</span> <span class="tlaGNC">      602822 : </span></span>
 <span id="L2343"><span class="lineNum">    2343</span> <span class="tlaGNC">      602822 :     for (let i = 0; i &lt;= s2.length; i++) {</span></span>
-<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">     6357322 :         previous[i] = i;</span></span>
-<span id="L2345"><span class="lineNum">    2345</span> <span class="tlaGNC">     6357322 :     }</span></span>
+<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">     6357352 :         previous[i] = i;</span></span>
+<span id="L2345"><span class="lineNum">    2345</span> <span class="tlaGNC">     6357352 :     }</span></span>
 <span id="L2346"><span class="lineNum">    2346</span> <span class="tlaGNC">      602822 : </span></span>
 <span id="L2347"><span class="lineNum">    2347</span> <span class="tlaGNC">      602822 :     for (let i = 1; i &lt;= s1.length; i++) {</span></span>
 <span id="L2348"><span class="lineNum">    2348</span> <span class="tlaGNC">     2738813 :         const c1 = s1.charCodeAt(i - 1);</span></span>
@@ -2428,8 +2428,8 @@
 <span id="L2366"><span class="lineNum">    2366</span> <span class="tlaGNC">    20756361 :             colMin = Math.min(colMin, dist);</span></span>
 <span id="L2367"><span class="lineNum">    2367</span> <span class="tlaGNC">    20756361 :         }</span></span>
 <span id="L2368"><span class="lineNum">    2368</span> <span class="tlaGNC">     2738813 :         for (let j = maxJ + 1; j &lt;= s2.length; j++) {</span></span>
-<span id="L2369"><span class="lineNum">    2369</span> <span class="tlaGNC">    11246401 :             current[j] = big;</span></span>
-<span id="L2370"><span class="lineNum">    2370</span> <span class="tlaGNC">    11246401 :         }</span></span>
+<span id="L2369"><span class="lineNum">    2369</span> <span class="tlaGNC">    11246635 :             current[j] = big;</span></span>
+<span id="L2370"><span class="lineNum">    2370</span> <span class="tlaGNC">    11246635 :         }</span></span>
 <span id="L2371"><span class="lineNum">    2371</span> <span class="tlaGNC">     2738813 :         if (colMin &gt; max) {</span></span>
 <span id="L2372"><span class="lineNum">    2372</span> <span class="tlaGNC">      599910 :             // Give up -- everything in this column is &gt; max and it can't get better in future columns.</span></span>
 <span id="L2373"><span class="lineNum">    2373</span> <span class="tlaGNC">      599910 :             return undefined;</span></span>
@@ -2446,13 +2446,13 @@
 <span id="L2384"><span class="lineNum">    2384</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2385"><span class="lineNum">    2385</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2386"><span class="lineNum">    2386</span> <span class="tlaGNC">           1 : export function endsWith(str: string, suffix: string, ignoreCase?: boolean): boolean {</span></span>
-<span id="L2387"><span class="lineNum">    2387</span> <span class="tlaGNC">    32131425 :     const expectedPos = str.length - suffix.length;</span></span>
-<span id="L2388"><span class="lineNum">    2388</span> <span class="tlaGNC">    32131425 :     return expectedPos &gt;= 0 &amp;&amp; (</span></span>
-<span id="L2389"><span class="lineNum">    2389</span> <span class="tlaGNC">    32122455 :         ignoreCase</span></span>
+<span id="L2387"><span class="lineNum">    2387</span> <span class="tlaGNC">    32131551 :     const expectedPos = str.length - suffix.length;</span></span>
+<span id="L2388"><span class="lineNum">    2388</span> <span class="tlaGNC">    32131551 :     return expectedPos &gt;= 0 &amp;&amp; (</span></span>
+<span id="L2389"><span class="lineNum">    2389</span> <span class="tlaGNC">    32122581 :         ignoreCase</span></span>
 <span id="L2390"><span class="lineNum">    2390</span> <span class="tlaGNC">          32 :             ? equateStringsCaseInsensitive(str.slice(expectedPos), suffix)</span></span>
-<span id="L2391"><span class="lineNum">    2391</span> <span class="tlaGNC">    32122423 :             : str.indexOf(suffix, expectedPos) === expectedPos</span></span>
-<span id="L2392"><span class="lineNum">    2392</span> <span class="tlaGNC">    32131425 :     );</span></span>
-<span id="L2393"><span class="lineNum">    2393</span> <span class="tlaGNC">    32131425 : }</span></span>
+<span id="L2391"><span class="lineNum">    2391</span> <span class="tlaGNC">    32122549 :             : str.indexOf(suffix, expectedPos) === expectedPos</span></span>
+<span id="L2392"><span class="lineNum">    2392</span> <span class="tlaGNC">    32131551 :     );</span></span>
+<span id="L2393"><span class="lineNum">    2393</span> <span class="tlaGNC">    32131551 : }</span></span>
 <span id="L2394"><span class="lineNum">    2394</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2395"><span class="lineNum">    2395</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2396"><span class="lineNum">    2396</span> <span class="tlaGNC">           1 : export function removeSuffix(str: string, suffix: string): string {</span></span>
@@ -2629,10 +2629,10 @@
 <span id="L2567"><span class="lineNum">    2567</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2568"><span class="lineNum">    2568</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2569"><span class="lineNum">    2569</span> <span class="tlaGNC">           1 : export function startsWith(str: string, prefix: string, ignoreCase?: boolean): boolean {</span></span>
-<span id="L2570"><span class="lineNum">    2570</span> <span class="tlaGNC">    31651641 :     return ignoreCase</span></span>
+<span id="L2570"><span class="lineNum">    2570</span> <span class="tlaGNC">    31651564 :     return ignoreCase</span></span>
 <span id="L2571"><span class="lineNum">    2571</span> <span class="tlaGNC">       19645 :         ? equateStringsCaseInsensitive(str.slice(0, prefix.length), prefix)</span></span>
-<span id="L2572"><span class="lineNum">    2572</span> <span class="tlaGNC">    31631996 :         : str.lastIndexOf(prefix, 0) === 0;</span></span>
-<span id="L2573"><span class="lineNum">    2573</span> <span class="tlaGNC">    31651641 : }</span></span>
+<span id="L2572"><span class="lineNum">    2572</span> <span class="tlaGNC">    31631919 :         : str.lastIndexOf(prefix, 0) === 0;</span></span>
+<span id="L2573"><span class="lineNum">    2573</span> <span class="tlaGNC">    31651564 : }</span></span>
 <span id="L2574"><span class="lineNum">    2574</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2575"><span class="lineNum">    2575</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2576"><span class="lineNum">    2576</span> <span class="tlaGNC">           1 : export function removePrefix(str: string, prefix: string): string {</span></span>
@@ -2653,8 +2653,8 @@
 <span id="L2591"><span class="lineNum">    2591</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2592"><span class="lineNum">    2592</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2593"><span class="lineNum">    2593</span> <span class="tlaGNC">           1 : export function and&lt;T&gt;(f: (arg: T) =&gt; boolean, g: (arg: T) =&gt; boolean) {</span></span>
-<span id="L2594"><span class="lineNum">    2594</span> <span class="tlaGNC">       89943 :     return (arg: T) =&gt; f(arg) &amp;&amp; g(arg);</span></span>
-<span id="L2595"><span class="lineNum">    2595</span> <span class="tlaGNC">       89943 : }</span></span>
+<span id="L2594"><span class="lineNum">    2594</span> <span class="tlaGNC">       89935 :     return (arg: T) =&gt; f(arg) &amp;&amp; g(arg);</span></span>
+<span id="L2595"><span class="lineNum">    2595</span> <span class="tlaGNC">       89935 : }</span></span>
 <span id="L2596"><span class="lineNum">    2596</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2597"><span class="lineNum">    2597</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2598"><span class="lineNum">    2598</span> <span class="tlaGNC">           1 : export function or&lt;P, R1 extends P, R2 extends P&gt;(f1: (p1: P) =&gt; p1 is R1, f2: (p2: P) =&gt; p2 is R2): (p: P) =&gt; p is R1 | R2;</span></span>
@@ -2665,21 +2665,21 @@
 <span id="L2603"><span class="lineNum">    2603</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2604"><span class="lineNum">    2604</span> <span class="tlaGNC">           1 : export function or&lt;T extends unknown[], U&gt;(...fs: ((...args: T) =&gt; U)[]): (...args: T) =&gt; U {</span></span>
 <span id="L2605"><span class="lineNum">    2605</span> <span class="tlaGNC">     1211090 :     return (...args) =&gt; {</span></span>
-<span id="L2606"><span class="lineNum">    2606</span> <span class="tlaGNC">     1935392 :         let lastResult: U;</span></span>
-<span id="L2607"><span class="lineNum">    2607</span> <span class="tlaGNC">     1935392 :         for (const f of fs) {</span></span>
-<span id="L2608"><span class="lineNum">    2608</span> <span class="tlaGNC">     5655602 :             lastResult = f(...args);</span></span>
-<span id="L2609"><span class="lineNum">    2609</span> <span class="tlaGNC">     5655602 :             if (lastResult) {</span></span>
-<span id="L2610"><span class="lineNum">    2610</span> <span class="tlaGNC">       39648 :                 return lastResult;</span></span>
-<span id="L2611"><span class="lineNum">    2611</span> <span class="tlaGNC">       39648 :             }</span></span>
-<span id="L2612"><span class="lineNum">    2612</span> <span class="tlaGNC">     5655602 :         }</span></span>
-<span id="L2613"><span class="lineNum">    2613</span> <span class="tlaGNC">     1895744 :         return lastResult!;</span></span>
-<span id="L2614"><span class="lineNum">    2614</span> <span class="tlaGNC">     1935392 :     };</span></span>
+<span id="L2606"><span class="lineNum">    2606</span> <span class="tlaGNC">     1935416 :         let lastResult: U;</span></span>
+<span id="L2607"><span class="lineNum">    2607</span> <span class="tlaGNC">     1935416 :         for (const f of fs) {</span></span>
+<span id="L2608"><span class="lineNum">    2608</span> <span class="tlaGNC">     5655650 :             lastResult = f(...args);</span></span>
+<span id="L2609"><span class="lineNum">    2609</span> <span class="tlaGNC">     5655650 :             if (lastResult) {</span></span>
+<span id="L2610"><span class="lineNum">    2610</span> <span class="tlaGNC">       39646 :                 return lastResult;</span></span>
+<span id="L2611"><span class="lineNum">    2611</span> <span class="tlaGNC">       39646 :             }</span></span>
+<span id="L2612"><span class="lineNum">    2612</span> <span class="tlaGNC">     5655650 :         }</span></span>
+<span id="L2613"><span class="lineNum">    2613</span> <span class="tlaGNC">     1895770 :         return lastResult!;</span></span>
+<span id="L2614"><span class="lineNum">    2614</span> <span class="tlaGNC">     1935416 :     };</span></span>
 <span id="L2615"><span class="lineNum">    2615</span> <span class="tlaGNC">     1211090 : }</span></span>
 <span id="L2616"><span class="lineNum">    2616</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2617"><span class="lineNum">    2617</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2618"><span class="lineNum">    2618</span> <span class="tlaGNC">           1 : export function not&lt;T extends unknown[]&gt;(fn: (...args: T) =&gt; boolean): (...args: T) =&gt; boolean {</span></span>
-<span id="L2619"><span class="lineNum">    2619</span> <span class="tlaGNC">       95538 :     return (...args) =&gt; !fn(...args);</span></span>
-<span id="L2620"><span class="lineNum">    2620</span> <span class="tlaGNC">       95538 : }</span></span>
+<span id="L2619"><span class="lineNum">    2619</span> <span class="tlaGNC">       95530 :     return (...args) =&gt; !fn(...args);</span></span>
+<span id="L2620"><span class="lineNum">    2620</span> <span class="tlaGNC">       95530 : }</span></span>
 <span id="L2621"><span class="lineNum">    2621</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L2622"><span class="lineNum">    2622</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L2623"><span class="lineNum">    2623</span> <span class="tlaGNC">           1 : export function assertType&lt;T&gt;(_: T): void {}</span></span>

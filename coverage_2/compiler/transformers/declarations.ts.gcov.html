@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.6&nbsp;%</td>
@@ -613,7 +613,7 @@
 <span id="L551"><span class="lineNum">     551</span> <span class="tlaUNC">           0 :                 }</span></span>
 <span id="L552"><span class="lineNum">     552</span> <span class="tlaGNC tlaBgGNC">          68 : </span></span>
 <span id="L553"><span class="lineNum">     553</span> <span class="tlaGNC">          68 :                 let declFileName: string;</span></span>
-<span id="L554"><span class="lineNum">     554</span> <span class="tlaGNC">         624 :                 if (file.isDeclarationFile) { // Neither decl files or js should have their refs changed</span></span>
+<span id="L554"><span class="lineNum">     554</span> <span class="tlaGNC">         622 :                 if (file.isDeclarationFile) { // Neither decl files or js should have their refs changed</span></span>
 <span id="L555"><span class="lineNum">     555</span> <span class="tlaGNC">          44 :                     declFileName = file.fileName;</span></span>
 <span id="L556"><span class="lineNum">     556</span> <span class="tlaGNC">          44 :                 }</span></span>
 <span id="L557"><span class="lineNum">     557</span> <span class="tlaGNC">          24 :                 else {</span></span>
@@ -1335,7 +1335,7 @@
 <span id="L1273"><span class="lineNum">    1273</span> <span class="tlaGNC">      336407 :             if (returnValue === input) {</span></span>
 <span id="L1274"><span class="lineNum">    1274</span> <span class="tlaGNC">      284479 :                 return returnValue;</span></span>
 <span id="L1275"><span class="lineNum">    1275</span> <span class="tlaGNC">      284479 :             }</span></span>
-<span id="L1276"><span class="lineNum">    1276</span> <span class="tlaGNC">      203624 :             return returnValue &amp;&amp; setOriginalNode(preserveJsDoc(returnValue, input), input);</span></span>
+<span id="L1276"><span class="lineNum">    1276</span> <span class="tlaGNC">      234755 :             return returnValue &amp;&amp; setOriginalNode(preserveJsDoc(returnValue, input), input);</span></span>
 <span id="L1277"><span class="lineNum">    1277</span> <span class="tlaGNC">      336407 :         }</span></span>
 <span id="L1278"><span class="lineNum">    1278</span> <span class="tlaGNC">      337342 :     }</span></span>
 <span id="L1279"><span class="lineNum">    1279</span> <span class="tlaGNC">       20333 : </span></span>
@@ -1654,7 +1654,7 @@
 <span id="L1592"><span class="lineNum">    1592</span> <span class="tlaGNC">        1156 :                     parameterProperties = compact(flatMap(ctor.parameters, param =&gt; {</span></span>
 <span id="L1593"><span class="lineNum">    1593</span> <span class="tlaGNC">        1281 :                         if (!hasSyntacticModifier(param, ModifierFlags.ParameterPropertyModifier) || shouldStripInternal(param)) return;</span></span>
 <span id="L1594"><span class="lineNum">    1594</span> <span class="tlaGNC">         746 :                         getSymbolAccessibilityDiagnostic = createGetSymbolAccessibilityDiagnosticForNode(param);</span></span>
-<span id="L1595"><span class="lineNum">    1595</span> <span class="tlaGNC">         902 :                         if (param.name.kind === SyntaxKind.Identifier) {</span></span>
+<span id="L1595"><span class="lineNum">    1595</span> <span class="tlaGNC">         770 :                         if (param.name.kind === SyntaxKind.Identifier) {</span></span>
 <span id="L1596"><span class="lineNum">    1596</span> <span class="tlaGNC">         728 :                             return preserveJsDoc(</span></span>
 <span id="L1597"><span class="lineNum">    1597</span> <span class="tlaGNC">         728 :                                 factory.createPropertyDeclaration(</span></span>
 <span id="L1598"><span class="lineNum">    1598</span> <span class="tlaGNC">         728 :                                     ensureModifiers(param),</span></span>

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">97.9&nbsp;%</td>
@@ -5389,12 +5389,12 @@
 <span id="L5327"><span class="lineNum">    5327</span> <span class="tlaGNC">          71 : </span></span>
 <span id="L5328"><span class="lineNum">    5328</span> <span class="tlaGNC">          71 :     const index = keywordFilter + KeywordCompletionFilters.Last + 1;</span></span>
 <span id="L5329"><span class="lineNum">    5329</span> <span class="tlaGNC">          71 :     return _keywordCompletions[index] ||</span></span>
-<span id="L5330"><span class="lineNum">    5330</span> <span class="tlaGNC">          20 :         (_keywordCompletions[index] = getTypescriptKeywordCompletions(keywordFilter)</span></span>
-<span id="L5331"><span class="lineNum">    5331</span> <span class="tlaGNC">          20 :             .filter(entry =&gt; !isTypeScriptOnlyKeyword(stringToToken(entry.name)!)));</span></span>
+<span id="L5330"><span class="lineNum">    5330</span> <span class="tlaGNC">          21 :         (_keywordCompletions[index] = getTypescriptKeywordCompletions(keywordFilter)</span></span>
+<span id="L5331"><span class="lineNum">    5331</span> <span class="tlaGNC">          21 :             .filter(entry =&gt; !isTypeScriptOnlyKeyword(stringToToken(entry.name)!)));</span></span>
 <span id="L5332"><span class="lineNum">    5332</span> <span class="tlaGNC">        1229 : }</span></span>
 <span id="L5333"><span class="lineNum">    5333</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L5334"><span class="lineNum">    5334</span> <span class="tlaGNC">        1178 : function getTypescriptKeywordCompletions(keywordFilter: KeywordCompletionFilters): readonly CompletionEntry[] {</span></span>
-<span id="L5335"><span class="lineNum">    5335</span> <span class="tlaGNC">        1178 :     return _keywordCompletions[keywordFilter] || (_keywordCompletions[keywordFilter] = allKeywordsCompletions().filter(entry =&gt; {</span></span>
+<span id="L5334"><span class="lineNum">    5334</span> <span class="tlaGNC">        1179 : function getTypescriptKeywordCompletions(keywordFilter: KeywordCompletionFilters): readonly CompletionEntry[] {</span></span>
+<span id="L5335"><span class="lineNum">    5335</span> <span class="tlaGNC">        1179 :     return _keywordCompletions[keywordFilter] || (_keywordCompletions[keywordFilter] = allKeywordsCompletions().filter(entry =&gt; {</span></span>
 <span id="L5336"><span class="lineNum">    5336</span> <span class="tlaGNC">        3735 :         const kind = stringToToken(entry.name)!;</span></span>
 <span id="L5337"><span class="lineNum">    5337</span> <span class="tlaGNC">        3735 :         switch (keywordFilter) {</span></span>
 <span id="L5338"><span class="lineNum">    5338</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.None:</span></span>
@@ -5412,9 +5412,9 @@
 <span id="L5350"><span class="lineNum">    5350</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.ClassElementKeywords:</span></span>
 <span id="L5351"><span class="lineNum">    5351</span> <span class="tlaGNC">         581 :                 return isClassMemberCompletionKeyword(kind);</span></span>
 <span id="L5352"><span class="lineNum">    5352</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.InterfaceElementKeywords:</span></span>
-<span id="L5353"><span class="lineNum">    5353</span> <span class="tlaGNC">         249 :                 return isInterfaceOrTypeLiteralCompletionKeyword(kind);</span></span>
+<span id="L5353"><span class="lineNum">    5353</span> <span class="tlaGNC">         332 :                 return isInterfaceOrTypeLiteralCompletionKeyword(kind);</span></span>
 <span id="L5354"><span class="lineNum">    5354</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.ConstructorParameterKeywords:</span></span>
-<span id="L5355"><span class="lineNum">    5355</span> <span class="tlaGNC">         332 :                 return isParameterPropertyModifier(kind);</span></span>
+<span id="L5355"><span class="lineNum">    5355</span> <span class="tlaGNC">         249 :                 return isParameterPropertyModifier(kind);</span></span>
 <span id="L5356"><span class="lineNum">    5356</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.TypeAssertionKeywords:</span></span>
 <span id="L5357"><span class="lineNum">    5357</span> <span class="tlaGNC">         249 :                 return isTypeKeyword(kind) || kind === SyntaxKind.ConstKeyword;</span></span>
 <span id="L5358"><span class="lineNum">    5358</span> <span class="tlaGNC">        3735 :             case KeywordCompletionFilters.TypeKeywords:</span></span>
@@ -5425,46 +5425,46 @@
 <span id="L5363"><span class="lineNum">    5363</span> <span class="tlaUNC tlaBgUNC">           0 :                 return Debug.assertNever(keywordFilter);</span></span>
 <span id="L5364"><span class="lineNum">    5364</span> <span class="tlaGNC tlaBgGNC">        3735 :         }</span></span>
 <span id="L5365"><span class="lineNum">    5365</span> <span class="tlaGNC">          45 :     }));</span></span>
-<span id="L5366"><span class="lineNum">    5366</span> <span class="tlaGNC">        1178 : }</span></span>
+<span id="L5366"><span class="lineNum">    5366</span> <span class="tlaGNC">        1179 : }</span></span>
 <span id="L5367"><span class="lineNum">    5367</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L5368"><span class="lineNum">    5368</span> <span class="tlaGNC">         784 : function isTypeScriptOnlyKeyword(kind: SyntaxKind) {</span></span>
-<span id="L5369"><span class="lineNum">    5369</span> <span class="tlaGNC">         784 :     switch (kind) {</span></span>
-<span id="L5370"><span class="lineNum">    5370</span> <span class="tlaGNC">         784 :         case SyntaxKind.AbstractKeyword:</span></span>
-<span id="L5371"><span class="lineNum">    5371</span> <span class="tlaGNC">         784 :         case SyntaxKind.AnyKeyword:</span></span>
-<span id="L5372"><span class="lineNum">    5372</span> <span class="tlaGNC">         784 :         case SyntaxKind.BigIntKeyword:</span></span>
-<span id="L5373"><span class="lineNum">    5373</span> <span class="tlaGNC">         784 :         case SyntaxKind.BooleanKeyword:</span></span>
-<span id="L5374"><span class="lineNum">    5374</span> <span class="tlaGNC">         784 :         case SyntaxKind.DeclareKeyword:</span></span>
-<span id="L5375"><span class="lineNum">    5375</span> <span class="tlaGNC">         784 :         case SyntaxKind.EnumKeyword:</span></span>
-<span id="L5376"><span class="lineNum">    5376</span> <span class="tlaGNC">         784 :         case SyntaxKind.GlobalKeyword:</span></span>
-<span id="L5377"><span class="lineNum">    5377</span> <span class="tlaGNC">         784 :         case SyntaxKind.ImplementsKeyword:</span></span>
-<span id="L5378"><span class="lineNum">    5378</span> <span class="tlaGNC">         784 :         case SyntaxKind.InferKeyword:</span></span>
-<span id="L5379"><span class="lineNum">    5379</span> <span class="tlaGNC">         784 :         case SyntaxKind.InterfaceKeyword:</span></span>
-<span id="L5380"><span class="lineNum">    5380</span> <span class="tlaGNC">         784 :         case SyntaxKind.IsKeyword:</span></span>
-<span id="L5381"><span class="lineNum">    5381</span> <span class="tlaGNC">         784 :         case SyntaxKind.KeyOfKeyword:</span></span>
-<span id="L5382"><span class="lineNum">    5382</span> <span class="tlaGNC">         784 :         case SyntaxKind.ModuleKeyword:</span></span>
-<span id="L5383"><span class="lineNum">    5383</span> <span class="tlaGNC">         784 :         case SyntaxKind.NamespaceKeyword:</span></span>
-<span id="L5384"><span class="lineNum">    5384</span> <span class="tlaGNC">         784 :         case SyntaxKind.NeverKeyword:</span></span>
-<span id="L5385"><span class="lineNum">    5385</span> <span class="tlaGNC">         784 :         case SyntaxKind.NumberKeyword:</span></span>
-<span id="L5386"><span class="lineNum">    5386</span> <span class="tlaGNC">         784 :         case SyntaxKind.ObjectKeyword:</span></span>
-<span id="L5387"><span class="lineNum">    5387</span> <span class="tlaGNC">         784 :         case SyntaxKind.OverrideKeyword:</span></span>
-<span id="L5388"><span class="lineNum">    5388</span> <span class="tlaGNC">         784 :         case SyntaxKind.PrivateKeyword:</span></span>
-<span id="L5389"><span class="lineNum">    5389</span> <span class="tlaGNC">         784 :         case SyntaxKind.ProtectedKeyword:</span></span>
-<span id="L5390"><span class="lineNum">    5390</span> <span class="tlaGNC">         784 :         case SyntaxKind.PublicKeyword:</span></span>
-<span id="L5391"><span class="lineNum">    5391</span> <span class="tlaGNC">         784 :         case SyntaxKind.ReadonlyKeyword:</span></span>
-<span id="L5392"><span class="lineNum">    5392</span> <span class="tlaGNC">         784 :         case SyntaxKind.StringKeyword:</span></span>
-<span id="L5393"><span class="lineNum">    5393</span> <span class="tlaGNC">         784 :         case SyntaxKind.SymbolKeyword:</span></span>
-<span id="L5394"><span class="lineNum">    5394</span> <span class="tlaGNC">         784 :         case SyntaxKind.TypeKeyword:</span></span>
-<span id="L5395"><span class="lineNum">    5395</span> <span class="tlaGNC">         784 :         case SyntaxKind.UniqueKeyword:</span></span>
-<span id="L5396"><span class="lineNum">    5396</span> <span class="tlaGNC">         784 :         case SyntaxKind.UnknownKeyword:</span></span>
-<span id="L5397"><span class="lineNum">    5397</span> <span class="tlaGNC">         200 :             return true;</span></span>
-<span id="L5398"><span class="lineNum">    5398</span> <span class="tlaGNC">         784 :         default:</span></span>
-<span id="L5399"><span class="lineNum">    5399</span> <span class="tlaGNC">         584 :             return false;</span></span>
-<span id="L5400"><span class="lineNum">    5400</span> <span class="tlaGNC">         784 :     }</span></span>
-<span id="L5401"><span class="lineNum">    5401</span> <span class="tlaGNC">         784 : }</span></span>
+<span id="L5368"><span class="lineNum">    5368</span> <span class="tlaGNC">         739 : function isTypeScriptOnlyKeyword(kind: SyntaxKind) {</span></span>
+<span id="L5369"><span class="lineNum">    5369</span> <span class="tlaGNC">         739 :     switch (kind) {</span></span>
+<span id="L5370"><span class="lineNum">    5370</span> <span class="tlaGNC">         739 :         case SyntaxKind.AbstractKeyword:</span></span>
+<span id="L5371"><span class="lineNum">    5371</span> <span class="tlaGNC">         739 :         case SyntaxKind.AnyKeyword:</span></span>
+<span id="L5372"><span class="lineNum">    5372</span> <span class="tlaGNC">         739 :         case SyntaxKind.BigIntKeyword:</span></span>
+<span id="L5373"><span class="lineNum">    5373</span> <span class="tlaGNC">         739 :         case SyntaxKind.BooleanKeyword:</span></span>
+<span id="L5374"><span class="lineNum">    5374</span> <span class="tlaGNC">         739 :         case SyntaxKind.DeclareKeyword:</span></span>
+<span id="L5375"><span class="lineNum">    5375</span> <span class="tlaGNC">         739 :         case SyntaxKind.EnumKeyword:</span></span>
+<span id="L5376"><span class="lineNum">    5376</span> <span class="tlaGNC">         739 :         case SyntaxKind.GlobalKeyword:</span></span>
+<span id="L5377"><span class="lineNum">    5377</span> <span class="tlaGNC">         739 :         case SyntaxKind.ImplementsKeyword:</span></span>
+<span id="L5378"><span class="lineNum">    5378</span> <span class="tlaGNC">         739 :         case SyntaxKind.InferKeyword:</span></span>
+<span id="L5379"><span class="lineNum">    5379</span> <span class="tlaGNC">         739 :         case SyntaxKind.InterfaceKeyword:</span></span>
+<span id="L5380"><span class="lineNum">    5380</span> <span class="tlaGNC">         739 :         case SyntaxKind.IsKeyword:</span></span>
+<span id="L5381"><span class="lineNum">    5381</span> <span class="tlaGNC">         739 :         case SyntaxKind.KeyOfKeyword:</span></span>
+<span id="L5382"><span class="lineNum">    5382</span> <span class="tlaGNC">         739 :         case SyntaxKind.ModuleKeyword:</span></span>
+<span id="L5383"><span class="lineNum">    5383</span> <span class="tlaGNC">         739 :         case SyntaxKind.NamespaceKeyword:</span></span>
+<span id="L5384"><span class="lineNum">    5384</span> <span class="tlaGNC">         739 :         case SyntaxKind.NeverKeyword:</span></span>
+<span id="L5385"><span class="lineNum">    5385</span> <span class="tlaGNC">         739 :         case SyntaxKind.NumberKeyword:</span></span>
+<span id="L5386"><span class="lineNum">    5386</span> <span class="tlaGNC">         739 :         case SyntaxKind.ObjectKeyword:</span></span>
+<span id="L5387"><span class="lineNum">    5387</span> <span class="tlaGNC">         739 :         case SyntaxKind.OverrideKeyword:</span></span>
+<span id="L5388"><span class="lineNum">    5388</span> <span class="tlaGNC">         739 :         case SyntaxKind.PrivateKeyword:</span></span>
+<span id="L5389"><span class="lineNum">    5389</span> <span class="tlaGNC">         739 :         case SyntaxKind.ProtectedKeyword:</span></span>
+<span id="L5390"><span class="lineNum">    5390</span> <span class="tlaGNC">         739 :         case SyntaxKind.PublicKeyword:</span></span>
+<span id="L5391"><span class="lineNum">    5391</span> <span class="tlaGNC">         739 :         case SyntaxKind.ReadonlyKeyword:</span></span>
+<span id="L5392"><span class="lineNum">    5392</span> <span class="tlaGNC">         739 :         case SyntaxKind.StringKeyword:</span></span>
+<span id="L5393"><span class="lineNum">    5393</span> <span class="tlaGNC">         739 :         case SyntaxKind.SymbolKeyword:</span></span>
+<span id="L5394"><span class="lineNum">    5394</span> <span class="tlaGNC">         739 :         case SyntaxKind.TypeKeyword:</span></span>
+<span id="L5395"><span class="lineNum">    5395</span> <span class="tlaGNC">         739 :         case SyntaxKind.UniqueKeyword:</span></span>
+<span id="L5396"><span class="lineNum">    5396</span> <span class="tlaGNC">         739 :         case SyntaxKind.UnknownKeyword:</span></span>
+<span id="L5397"><span class="lineNum">    5397</span> <span class="tlaGNC">         198 :             return true;</span></span>
+<span id="L5398"><span class="lineNum">    5398</span> <span class="tlaGNC">         739 :         default:</span></span>
+<span id="L5399"><span class="lineNum">    5399</span> <span class="tlaGNC">         541 :             return false;</span></span>
+<span id="L5400"><span class="lineNum">    5400</span> <span class="tlaGNC">         739 :     }</span></span>
+<span id="L5401"><span class="lineNum">    5401</span> <span class="tlaGNC">         739 : }</span></span>
 <span id="L5402"><span class="lineNum">    5402</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L5403"><span class="lineNum">    5403</span> <span class="tlaGNC">         256 : function isInterfaceOrTypeLiteralCompletionKeyword(kind: SyntaxKind): boolean {</span></span>
-<span id="L5404"><span class="lineNum">    5404</span> <span class="tlaGNC">         256 :     return kind === SyntaxKind.ReadonlyKeyword;</span></span>
-<span id="L5405"><span class="lineNum">    5405</span> <span class="tlaGNC">         256 : }</span></span>
+<span id="L5403"><span class="lineNum">    5403</span> <span class="tlaGNC">         339 : function isInterfaceOrTypeLiteralCompletionKeyword(kind: SyntaxKind): boolean {</span></span>
+<span id="L5404"><span class="lineNum">    5404</span> <span class="tlaGNC">         339 :     return kind === SyntaxKind.ReadonlyKeyword;</span></span>
+<span id="L5405"><span class="lineNum">    5405</span> <span class="tlaGNC">         339 : }</span></span>
 <span id="L5406"><span class="lineNum">    5406</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L5407"><span class="lineNum">    5407</span> <span class="tlaGNC">       11396 : function isClassMemberCompletionKeyword(kind: SyntaxKind) {</span></span>
 <span id="L5408"><span class="lineNum">    5408</span> <span class="tlaGNC">       11396 :     switch (kind) {</span></span>
@@ -5689,10 +5689,10 @@
 <span id="L5627"><span class="lineNum">    5627</span> <span class="tlaGNC">          11 :     }</span></span>
 <span id="L5628"><span class="lineNum">    5628</span> <span class="tlaGNC">          30 : </span></span>
 <span id="L5629"><span class="lineNum">    5629</span> <span class="tlaGNC">          30 :     const t = getConstraintOfTypeArgumentProperty(node.parent, checker);</span></span>
-<span id="L5630"><span class="lineNum">    5630</span> <span class="tlaGNC">          39 :     if (!t) return undefined;</span></span>
+<span id="L5630"><span class="lineNum">    5630</span> <span class="tlaGNC">          38 :     if (!t) return undefined;</span></span>
 <span id="L5631"><span class="lineNum">    5631</span> <span class="tlaGNC">          13 : </span></span>
 <span id="L5632"><span class="lineNum">    5632</span> <span class="tlaGNC">          13 :     switch (node.kind) {</span></span>
-<span id="L5633"><span class="lineNum">    5633</span> <span class="tlaGNC">          25 :         case SyntaxKind.PropertySignature:</span></span>
+<span id="L5633"><span class="lineNum">    5633</span> <span class="tlaGNC">          21 :         case SyntaxKind.PropertySignature:</span></span>
 <span id="L5634"><span class="lineNum">    5634</span> <span class="tlaGNC">           6 :             return checker.getTypeOfPropertyOfContextualType(t, (node as PropertySignature).symbol.escapedName);</span></span>
 <span id="L5635"><span class="lineNum">    5635</span> <span class="tlaGNC">          46 :         case SyntaxKind.IntersectionType:</span></span>
 <span id="L5636"><span class="lineNum">    5636</span> <span class="tlaGNC">          46 :         case SyntaxKind.TypeLiteral:</span></span>
@@ -5769,7 +5769,7 @@
 <span id="L5707"><span class="lineNum">    5707</span> <span class="tlaGNC">           2 :         // Object literal is assignment pattern: ({ | } = x)</span></span>
 <span id="L5708"><span class="lineNum">    5708</span> <span class="tlaGNC">           2 :         return typeChecker.getTypeAtLocation(parent);</span></span>
 <span id="L5709"><span class="lineNum">    5709</span> <span class="tlaGNC">           2 :     }</span></span>
-<span id="L5710"><span class="lineNum">    5710</span> <span class="tlaGNC">         129 :     if (isExpression(parent)) {</span></span>
+<span id="L5710"><span class="lineNum">    5710</span> <span class="tlaGNC">         238 :     if (isExpression(parent)) {</span></span>
 <span id="L5711"><span class="lineNum">    5711</span> <span class="tlaGNC">           9 :         // f(() =&gt; (({ | })));</span></span>
 <span id="L5712"><span class="lineNum">    5712</span> <span class="tlaGNC">           9 :         return typeChecker.getContextualType(parent);</span></span>
 <span id="L5713"><span class="lineNum">    5713</span> <span class="tlaGNC">           9 :     }</span></span>
@@ -5915,7 +5915,7 @@
 <span id="L5853"><span class="lineNum">    5853</span> <span class="tlaGNC">         168 :     if (!isModuleSpecifierMissingOrEmpty(namedBindings.parent.parent.moduleSpecifier) || namedBindings.parent.name) {</span></span>
 <span id="L5854"><span class="lineNum">    5854</span> <span class="tlaGNC">         154 :         return false;</span></span>
 <span id="L5855"><span class="lineNum">    5855</span> <span class="tlaGNC">         154 :     }</span></span>
-<span id="L5856"><span class="lineNum">    5856</span> <span class="tlaGNC">         145 :     if (isNamedImports(namedBindings)) {</span></span>
+<span id="L5856"><span class="lineNum">    5856</span> <span class="tlaGNC">          26 :     if (isNamedImports(namedBindings)) {</span></span>
 <span id="L5857"><span class="lineNum">    5857</span> <span class="tlaGNC">          10 :         // We can only complete on named imports if there are no other named imports already,</span></span>
 <span id="L5858"><span class="lineNum">    5858</span> <span class="tlaGNC">          10 :         // but parser recovery sometimes puts later statements in the named imports list, so</span></span>
 <span id="L5859"><span class="lineNum">    5859</span> <span class="tlaGNC">          10 :         // we try to only consider the probably-valid ones.</span></span>

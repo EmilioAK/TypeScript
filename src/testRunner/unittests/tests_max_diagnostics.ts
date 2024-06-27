@@ -23,5 +23,3 @@ describe("Duration of non existend mark", () => {
     expect(performance.getDuration(markName)).to.equal(0);
   });
 });
-
-

@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -843,34 +843,34 @@
 <span id="L781"><span class="lineNum">     781</span> <span class="tlaGNC">           8 : // check path for these segments: '', '.'. '..'</span></span>
 <span id="L782"><span class="lineNum">     782</span> <span class="tlaGNC">           8 : const relativePathSegmentRegExp = /(?:\/\/)|(?:^|\/)\.\.?(?:$|\/)/;</span></span>
 <span id="L783"><span class="lineNum">     783</span> <span class="tlaGNC">           1 : </span></span>
-<span id="L784"><span class="lineNum">     784</span> <span class="tlaGNC">    60975085 : function comparePathsWorker(a: string, b: string, componentComparer: (a: string, b: string) =&gt; Comparison) {</span></span>
-<span id="L785"><span class="lineNum">     785</span> <span class="tlaGNC">    60975085 :     if (a === b) return Comparison.EqualTo;</span></span>
-<span id="L786"><span class="lineNum">     786</span> <span class="tlaGNC">    43839424 :     if (a === undefined) return Comparison.LessThan;</span></span>
-<span id="L787"><span class="lineNum">     787</span> <span class="tlaGNC">    43839424 :     if (b === undefined) return Comparison.GreaterThan;</span></span>
-<span id="L788"><span class="lineNum">     788</span> <span class="tlaGNC">    43839424 : </span></span>
-<span id="L789"><span class="lineNum">     789</span> <span class="tlaGNC">    43839424 :     // NOTE: Performance optimization - shortcut if the root segments differ as there would be no</span></span>
-<span id="L790"><span class="lineNum">     790</span> <span class="tlaGNC">    43839424 :     //       need to perform path reduction.</span></span>
-<span id="L791"><span class="lineNum">     791</span> <span class="tlaGNC">    43839424 :     const aRoot = a.substring(0, getRootLength(a));</span></span>
-<span id="L792"><span class="lineNum">     792</span> <span class="tlaGNC">    43839424 :     const bRoot = b.substring(0, getRootLength(b));</span></span>
-<span id="L793"><span class="lineNum">     793</span> <span class="tlaGNC">    43839424 :     const result = compareStringsCaseInsensitive(aRoot, bRoot);</span></span>
-<span id="L794"><span class="lineNum">     794</span> <span class="tlaGNC">    60975085 :     if (result !== Comparison.EqualTo) {</span></span>
+<span id="L784"><span class="lineNum">     784</span> <span class="tlaGNC">    60974919 : function comparePathsWorker(a: string, b: string, componentComparer: (a: string, b: string) =&gt; Comparison) {</span></span>
+<span id="L785"><span class="lineNum">     785</span> <span class="tlaGNC">    60974919 :     if (a === b) return Comparison.EqualTo;</span></span>
+<span id="L786"><span class="lineNum">     786</span> <span class="tlaGNC">    43839324 :     if (a === undefined) return Comparison.LessThan;</span></span>
+<span id="L787"><span class="lineNum">     787</span> <span class="tlaGNC">    43839324 :     if (b === undefined) return Comparison.GreaterThan;</span></span>
+<span id="L788"><span class="lineNum">     788</span> <span class="tlaGNC">    43839324 : </span></span>
+<span id="L789"><span class="lineNum">     789</span> <span class="tlaGNC">    43839324 :     // NOTE: Performance optimization - shortcut if the root segments differ as there would be no</span></span>
+<span id="L790"><span class="lineNum">     790</span> <span class="tlaGNC">    43839324 :     //       need to perform path reduction.</span></span>
+<span id="L791"><span class="lineNum">     791</span> <span class="tlaGNC">    43839324 :     const aRoot = a.substring(0, getRootLength(a));</span></span>
+<span id="L792"><span class="lineNum">     792</span> <span class="tlaGNC">    43839324 :     const bRoot = b.substring(0, getRootLength(b));</span></span>
+<span id="L793"><span class="lineNum">     793</span> <span class="tlaGNC">    43839324 :     const result = compareStringsCaseInsensitive(aRoot, bRoot);</span></span>
+<span id="L794"><span class="lineNum">     794</span> <span class="tlaGNC">    60974919 :     if (result !== Comparison.EqualTo) {</span></span>
 <span id="L795"><span class="lineNum">     795</span> <span class="tlaGNC">       57397 :         return result;</span></span>
 <span id="L796"><span class="lineNum">     796</span> <span class="tlaGNC">       57397 :     }</span></span>
-<span id="L797"><span class="lineNum">     797</span> <span class="tlaGNC">    43782027 : </span></span>
-<span id="L798"><span class="lineNum">     798</span> <span class="tlaGNC">    43782027 :     // NOTE: Performance optimization - shortcut if there are no relative path segments in</span></span>
-<span id="L799"><span class="lineNum">     799</span> <span class="tlaGNC">    43782027 :     //       the non-root portion of the path</span></span>
-<span id="L800"><span class="lineNum">     800</span> <span class="tlaGNC">    43782027 :     const aRest = a.substring(aRoot.length);</span></span>
-<span id="L801"><span class="lineNum">     801</span> <span class="tlaGNC">    43782027 :     const bRest = b.substring(bRoot.length);</span></span>
-<span id="L802"><span class="lineNum">     802</span> <span class="tlaGNC">    60975085 :     if (!relativePathSegmentRegExp.test(aRest) &amp;&amp; !relativePathSegmentRegExp.test(bRest)) {</span></span>
-<span id="L803"><span class="lineNum">     803</span> <span class="tlaGNC">    43781539 :         return componentComparer(aRest, bRest);</span></span>
-<span id="L804"><span class="lineNum">     804</span> <span class="tlaGNC">    43781539 :     }</span></span>
+<span id="L797"><span class="lineNum">     797</span> <span class="tlaGNC">    43781927 : </span></span>
+<span id="L798"><span class="lineNum">     798</span> <span class="tlaGNC">    43781927 :     // NOTE: Performance optimization - shortcut if there are no relative path segments in</span></span>
+<span id="L799"><span class="lineNum">     799</span> <span class="tlaGNC">    43781927 :     //       the non-root portion of the path</span></span>
+<span id="L800"><span class="lineNum">     800</span> <span class="tlaGNC">    43781927 :     const aRest = a.substring(aRoot.length);</span></span>
+<span id="L801"><span class="lineNum">     801</span> <span class="tlaGNC">    43781927 :     const bRest = b.substring(bRoot.length);</span></span>
+<span id="L802"><span class="lineNum">     802</span> <span class="tlaGNC">    60974919 :     if (!relativePathSegmentRegExp.test(aRest) &amp;&amp; !relativePathSegmentRegExp.test(bRest)) {</span></span>
+<span id="L803"><span class="lineNum">     803</span> <span class="tlaGNC">    43781439 :         return componentComparer(aRest, bRest);</span></span>
+<span id="L804"><span class="lineNum">     804</span> <span class="tlaGNC">    43781439 :     }</span></span>
 <span id="L805"><span class="lineNum">     805</span> <span class="tlaGNC">         488 : </span></span>
 <span id="L806"><span class="lineNum">     806</span> <span class="tlaGNC">         488 :     // The path contains a relative path segment. Normalize the paths and perform a slower component</span></span>
 <span id="L807"><span class="lineNum">     807</span> <span class="tlaGNC">         488 :     // by component comparison.</span></span>
 <span id="L808"><span class="lineNum">     808</span> <span class="tlaGNC">         488 :     const aComponents = reducePathComponents(getPathComponents(a));</span></span>
 <span id="L809"><span class="lineNum">     809</span> <span class="tlaGNC">         488 :     const bComponents = reducePathComponents(getPathComponents(b));</span></span>
 <span id="L810"><span class="lineNum">     810</span> <span class="tlaGNC">         488 :     const sharedLength = Math.min(aComponents.length, bComponents.length);</span></span>
-<span id="L811"><span class="lineNum">     811</span> <span class="tlaGNC">    50386020 :     for (let i = 1; i &lt; sharedLength; i++) {</span></span>
+<span id="L811"><span class="lineNum">     811</span> <span class="tlaGNC">    51173285 :     for (let i = 1; i &lt; sharedLength; i++) {</span></span>
 <span id="L812"><span class="lineNum">     812</span> <span class="tlaGNC">         796 :         const result = componentComparer(aComponents[i], bComponents[i]);</span></span>
 <span id="L813"><span class="lineNum">     813</span> <span class="tlaGNC">         796 :         if (result !== Comparison.EqualTo) {</span></span>
 <span id="L814"><span class="lineNum">     814</span> <span class="tlaGNC">         447 :             return result;</span></span>
@@ -885,8 +885,8 @@
 <span id="L823"><span class="lineNum">     823</span> <span class="tlaGNC">           1 :  * @internal</span></span>
 <span id="L824"><span class="lineNum">     824</span> <span class="tlaGNC">           1 :  */</span></span>
 <span id="L825"><span class="lineNum">     825</span> <span class="tlaGNC">           1 : export function comparePathsCaseSensitive(a: string, b: string) {</span></span>
-<span id="L826"><span class="lineNum">     826</span> <span class="tlaGNC">    56158967 :     return comparePathsWorker(a, b, compareStringsCaseSensitive);</span></span>
-<span id="L827"><span class="lineNum">     827</span> <span class="tlaGNC">    56158967 : }</span></span>
+<span id="L826"><span class="lineNum">     826</span> <span class="tlaGNC">    56158880 :     return comparePathsWorker(a, b, compareStringsCaseSensitive);</span></span>
+<span id="L827"><span class="lineNum">     827</span> <span class="tlaGNC">    56158880 : }</span></span>
 <span id="L828"><span class="lineNum">     828</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L829"><span class="lineNum">     829</span> <span class="tlaGNC">           1 : /**</span></span>
 <span id="L830"><span class="lineNum">     830</span> <span class="tlaGNC">           1 :  * Performs a case-insensitive comparison of two paths.</span></span>
@@ -894,8 +894,8 @@
 <span id="L832"><span class="lineNum">     832</span> <span class="tlaGNC">           1 :  * @internal</span></span>
 <span id="L833"><span class="lineNum">     833</span> <span class="tlaGNC">           1 :  */</span></span>
 <span id="L834"><span class="lineNum">     834</span> <span class="tlaGNC">           1 : export function comparePathsCaseInsensitive(a: string, b: string) {</span></span>
-<span id="L835"><span class="lineNum">     835</span> <span class="tlaGNC">     4748308 :     return comparePathsWorker(a, b, compareStringsCaseInsensitive);</span></span>
-<span id="L836"><span class="lineNum">     836</span> <span class="tlaGNC">     4748308 : }</span></span>
+<span id="L835"><span class="lineNum">     835</span> <span class="tlaGNC">     4748229 :     return comparePathsWorker(a, b, compareStringsCaseInsensitive);</span></span>
+<span id="L836"><span class="lineNum">     836</span> <span class="tlaGNC">     4748229 : }</span></span>
 <span id="L837"><span class="lineNum">     837</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L838"><span class="lineNum">     838</span> <span class="tlaGNC">           1 : /**</span></span>
 <span id="L839"><span class="lineNum">     839</span> <span class="tlaGNC">           1 :  * Compare two paths using the provided case sensitivity.</span></span>

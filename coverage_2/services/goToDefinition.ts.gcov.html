@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -473,7 +473,7 @@
 <span id="L411"><span class="lineNum">     411</span> <span class="tlaGNC">          25 :         return false;</span></span>
 <span id="L412"><span class="lineNum">     412</span> <span class="tlaGNC">          25 :     }</span></span>
 <span id="L413"><span class="lineNum">     413</span> <span class="tlaGNC">           6 :     const referenceName = type.aliasSymbol.name;</span></span>
-<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">          30 :     if (!typesWithUnwrappedTypeArguments.has(referenceName)) {</span></span>
+<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">           7 :     if (!typesWithUnwrappedTypeArguments.has(referenceName)) {</span></span>
 <span id="L415"><span class="lineNum">     415</span> <span class="tlaGNC">           4 :         return false;</span></span>
 <span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">           4 :     }</span></span>
 <span id="L417"><span class="lineNum">     417</span> <span class="tlaGNC">           2 :     const globalType = typeChecker.resolveName(referenceName, /*location*/ undefined, SymbolFlags.Type, /*excludeGlobals*/ false);</span></span>
@@ -515,11 +515,11 @@
 <span id="L453"><span class="lineNum">     453</span> <span class="tlaGNC">           1 :         return definitionFromType(typeChecker.getTypeAtLocation(node.parent), typeChecker, node.parent, /*failedAliasResolution*/ false);</span></span>
 <span id="L454"><span class="lineNum">     454</span> <span class="tlaGNC">           1 :     }</span></span>
 <span id="L455"><span class="lineNum">     455</span> <span class="tlaGNC">          41 :     const { symbol, failedAliasResolution } = getSymbol(node, typeChecker, /*stopAtAlias*/ false);</span></span>
-<span id="L456"><span class="lineNum">     456</span> <span class="tlaGNC">          41 :     if (!symbol) return undefined;</span></span>
+<span id="L456"><span class="lineNum">     456</span> <span class="tlaGNC">          42 :     if (!symbol) return undefined;</span></span>
 <span id="L457"><span class="lineNum">     457</span> <span class="tlaGNC">          41 : </span></span>
 <span id="L458"><span class="lineNum">     458</span> <span class="tlaGNC">          41 :     const typeAtLocation = typeChecker.getTypeOfSymbolAtLocation(symbol, node);</span></span>
 <span id="L459"><span class="lineNum">     459</span> <span class="tlaGNC">          41 :     const returnType = tryGetReturnTypeOfFunction(symbol, typeAtLocation, typeChecker);</span></span>
-<span id="L460"><span class="lineNum">     460</span> <span class="tlaGNC">          41 :     const fromReturnType = returnType &amp;&amp; definitionFromType(returnType, typeChecker, node, failedAliasResolution);</span></span>
+<span id="L460"><span class="lineNum">     460</span> <span class="tlaGNC">          42 :     const fromReturnType = returnType &amp;&amp; definitionFromType(returnType, typeChecker, node, failedAliasResolution);</span></span>
 <span id="L461"><span class="lineNum">     461</span> <span class="tlaGNC">          42 : </span></span>
 <span id="L462"><span class="lineNum">     462</span> <span class="tlaGNC">          42 :     // If a function returns 'void' or some other type with no definition, just return the function definition.</span></span>
 <span id="L463"><span class="lineNum">     463</span> <span class="tlaGNC">          42 :     const [resolvedType, typeDefinitions] = fromReturnType &amp;&amp; fromReturnType.length !== 0 ?</span></span>

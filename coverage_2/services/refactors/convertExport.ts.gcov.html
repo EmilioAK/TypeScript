@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -191,7 +191,7 @@
 <span id="L129"><span class="lineNum">     129</span> <span class="tlaGNC">         216 : </span></span>
 <span id="L130"><span class="lineNum">     130</span> <span class="tlaGNC">         216 :     const checker = program.getTypeChecker();</span></span>
 <span id="L131"><span class="lineNum">     131</span> <span class="tlaGNC">         216 :     const exportingModuleSymbol = getExportingModuleSymbol(exportNode.parent, checker);</span></span>
-<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">        1080 :     const flags = getSyntacticModifierFlags(exportNode) || ((isExportAssignment(exportNode) &amp;&amp; !exportNode.isExportEquals) ? ModifierFlags.ExportDefault : ModifierFlags.None);</span></span>
+<span id="L132"><span class="lineNum">     132</span> <span class="tlaGNC">        1014 :     const flags = getSyntacticModifierFlags(exportNode) || ((isExportAssignment(exportNode) &amp;&amp; !exportNode.isExportEquals) ? ModifierFlags.ExportDefault : ModifierFlags.None);</span></span>
 <span id="L133"><span class="lineNum">     133</span> <span class="tlaGNC">        1080 : </span></span>
 <span id="L134"><span class="lineNum">     134</span> <span class="tlaGNC">        1080 :     const wasDefault = !!(flags &amp; ModifierFlags.Default);</span></span>
 <span id="L135"><span class="lineNum">     135</span> <span class="tlaGNC">        1080 :     // If source file already has a default export, don't offer refactor.</span></span>
@@ -204,7 +204,7 @@
 <span id="L142"><span class="lineNum">     142</span> <span class="tlaGNC">           5 :             : { error: getLocaleSpecificMessage(Diagnostics.Can_only_convert_named_export) };</span></span>
 <span id="L143"><span class="lineNum">     143</span> <span class="tlaGNC">          66 : </span></span>
 <span id="L144"><span class="lineNum">     144</span> <span class="tlaGNC">          66 :     switch (exportNode.kind) {</span></span>
-<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">         923 :         case SyntaxKind.FunctionDeclaration:</span></span>
+<span id="L145"><span class="lineNum">     145</span> <span class="tlaGNC">        1000 :         case SyntaxKind.FunctionDeclaration:</span></span>
 <span id="L146"><span class="lineNum">     146</span> <span class="tlaGNC">        1080 :         case SyntaxKind.ClassDeclaration:</span></span>
 <span id="L147"><span class="lineNum">     147</span> <span class="tlaGNC">        1080 :         case SyntaxKind.InterfaceDeclaration:</span></span>
 <span id="L148"><span class="lineNum">     148</span> <span class="tlaGNC">        1080 :         case SyntaxKind.EnumDeclaration:</span></span>
@@ -290,7 +290,7 @@
 <span id="L228"><span class="lineNum">     228</span> <span class="tlaGNC">          17 :     FindAllReferences.Core.eachExportReference(program.getSourceFiles(), checker, cancellationToken, exportSymbol, exportingModuleSymbol, exportName.text, wasDefault, ref =&gt; {</span></span>
 <span id="L229"><span class="lineNum">     229</span> <span class="tlaGNC">          28 :         if (exportName === ref) return;</span></span>
 <span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC">          26 :         const importingSourceFile = ref.getSourceFile();</span></span>
-<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">          28 :         if (wasDefault) {</span></span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">          27 :         if (wasDefault) {</span></span>
 <span id="L232"><span class="lineNum">     232</span> <span class="tlaGNC">          18 :             changeDefaultToNamedImport(importingSourceFile, ref, changes, exportName.text);</span></span>
 <span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">          18 :         }</span></span>
 <span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">           8 :         else {</span></span>

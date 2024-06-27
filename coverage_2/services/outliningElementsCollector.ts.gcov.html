@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -240,7 +240,7 @@
 <span id="L178"><span class="lineNum">     178</span> <span class="tlaGNC">          89 :     let lastSingleLineCommentEnd = -1;</span></span>
 <span id="L179"><span class="lineNum">     179</span> <span class="tlaGNC">          89 :     let singleLineCommentCount = 0;</span></span>
 <span id="L180"><span class="lineNum">     180</span> <span class="tlaGNC">          89 :     const sourceText = sourceFile.getFullText();</span></span>
-<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">         556 :     for (const { kind, pos, end } of comments) {</span></span>
+<span id="L181"><span class="lineNum">     181</span> <span class="tlaGNC">         681 :     for (const { kind, pos, end } of comments) {</span></span>
 <span id="L182"><span class="lineNum">     182</span> <span class="tlaGNC">         167 :         cancellationToken.throwIfCancellationRequested();</span></span>
 <span id="L183"><span class="lineNum">     183</span> <span class="tlaGNC">         167 :         switch (kind) {</span></span>
 <span id="L184"><span class="lineNum">     184</span> <span class="tlaGNC">         167 :             case SyntaxKind.SingleLineCommentTrivia:</span></span>
@@ -254,7 +254,7 @@
 <span id="L192"><span class="lineNum">     192</span> <span class="tlaGNC">          79 : </span></span>
 <span id="L193"><span class="lineNum">     193</span> <span class="tlaGNC">          79 :                 // For single line comments, combine consecutive ones (2 or more) into</span></span>
 <span id="L194"><span class="lineNum">     194</span> <span class="tlaGNC">          79 :                 // a single span from the start of the first till the end of the last</span></span>
-<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">          93 :                 if (singleLineCommentCount === 0) {</span></span>
+<span id="L195"><span class="lineNum">     195</span> <span class="tlaGNC">          86 :                 if (singleLineCommentCount === 0) {</span></span>
 <span id="L196"><span class="lineNum">     196</span> <span class="tlaGNC">          47 :                     firstSingleLineCommentStart = pos;</span></span>
 <span id="L197"><span class="lineNum">     197</span> <span class="tlaGNC">          47 :                 }</span></span>
 <span id="L198"><span class="lineNum">     198</span> <span class="tlaGNC">          79 :                 lastSingleLineCommentEnd = end;</span></span>
@@ -298,7 +298,7 @@
 <span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">          53 :             // If the latter, we want to collapse the block, but consider its hint span</span></span>
 <span id="L237"><span class="lineNum">     237</span> <span class="tlaGNC">          53 :             // to be the entire span of the parent.</span></span>
 <span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">          53 :             switch (n.parent.kind) {</span></span>
-<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         137 :                 case SyntaxKind.DoStatement:</span></span>
+<span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">         125 :                 case SyntaxKind.DoStatement:</span></span>
 <span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">         137 :                 case SyntaxKind.ForInStatement:</span></span>
 <span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">         137 :                 case SyntaxKind.ForOfStatement:</span></span>
 <span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">         137 :                 case SyntaxKind.ForStatement:</span></span>
@@ -323,7 +323,7 @@
 <span id="L261"><span class="lineNum">     261</span> <span class="tlaGNC">           8 :                     // the span of the block, independent of any parent span.</span></span>
 <span id="L262"><span class="lineNum">     262</span> <span class="tlaGNC">           8 :                     return createOutliningSpan(createTextSpanFromNode(n, sourceFile), OutliningSpanKind.Code);</span></span>
 <span id="L263"><span class="lineNum">     263</span> <span class="tlaGNC">         137 :             }</span></span>
-<span id="L264"><span class="lineNum">     264</span> <span class="tlaGNC">        1341 :         case SyntaxKind.ModuleBlock:</span></span>
+<span id="L264"><span class="lineNum">     264</span> <span class="tlaGNC">        1085 :         case SyntaxKind.ModuleBlock:</span></span>
 <span id="L265"><span class="lineNum">     265</span> <span class="tlaGNC">          10 :             return spanForNode(n.parent);</span></span>
 <span id="L266"><span class="lineNum">     266</span> <span class="tlaGNC">        2427 :         case SyntaxKind.ClassDeclaration:</span></span>
 <span id="L267"><span class="lineNum">     267</span> <span class="tlaGNC">        2427 :         case SyntaxKind.ClassExpression:</span></span>

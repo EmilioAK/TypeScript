@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">100.0&nbsp;%</td>
@@ -233,7 +233,7 @@
 <span id="L171"><span class="lineNum">     171</span> <span class="tlaGNC">          37 :         const startPositionOfLine = getStartPositionOfLine(previousLine, sourceFile);</span></span>
 <span id="L172"><span class="lineNum">     172</span> <span class="tlaGNC">          37 :         const { column, character } = findFirstNonWhitespaceCharacterAndColumn(startPositionOfLine, position, sourceFile, options);</span></span>
 <span id="L173"><span class="lineNum">     173</span> <span class="tlaGNC">          37 : </span></span>
-<span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC">          74 :         if (column === 0) {</span></span>
+<span id="L174"><span class="lineNum">     174</span> <span class="tlaGNC">          73 :         if (column === 0) {</span></span>
 <span id="L175"><span class="lineNum">     175</span> <span class="tlaGNC">           2 :             return column;</span></span>
 <span id="L176"><span class="lineNum">     176</span> <span class="tlaGNC">           2 :         }</span></span>
 <span id="L177"><span class="lineNum">     177</span> <span class="tlaGNC">          35 : </span></span>
@@ -532,7 +532,7 @@
 <span id="L470"><span class="lineNum">     470</span> <span class="tlaGNC">          27 :             const previousNode = parent.arguments[currentIndex - 1];</span></span>
 <span id="L471"><span class="lineNum">     471</span> <span class="tlaGNC">          27 :             const lineOfPreviousNode = getLineAndCharacterOfPosition(sourceFile, previousNode.getEnd()).line;</span></span>
 <span id="L472"><span class="lineNum">     472</span> <span class="tlaGNC">          27 : </span></span>
-<span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">          41 :             if (childStartLine === lineOfPreviousNode) {</span></span>
+<span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">          40 :             if (childStartLine === lineOfPreviousNode) {</span></span>
 <span id="L474"><span class="lineNum">     474</span> <span class="tlaGNC">           3 :                 return true;</span></span>
 <span id="L475"><span class="lineNum">     475</span> <span class="tlaGNC">           3 :             }</span></span>
 <span id="L476"><span class="lineNum">     476</span> <span class="tlaGNC">          43 :         }</span></span>

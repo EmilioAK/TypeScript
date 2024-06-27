@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.1&nbsp;%</td>
@@ -1921,7 +1921,7 @@
 <span id="L1859"><span class="lineNum">    1859</span> <span class="tlaGNC">          38 :         const documentHighlights = project.getLanguageService().getDocumentHighlights(file, position, args.filesToSearch);</span></span>
 <span id="L1860"><span class="lineNum">    1860</span> <span class="tlaGNC">          38 : </span></span>
 <span id="L1861"><span class="lineNum">    1861</span> <span class="tlaGNC">          38 :         if (!documentHighlights) return emptyArray;</span></span>
-<span id="L1862"><span class="lineNum">    1862</span> <span class="tlaGNC">          38 :         if (!simplifiedResult) return documentHighlights;</span></span>
+<span id="L1862"><span class="lineNum">    1862</span> <span class="tlaGNC">          37 :         if (!simplifiedResult) return documentHighlights;</span></span>
 <span id="L1863"><span class="lineNum">    1863</span> <span class="tlaGNC">          24 : </span></span>
 <span id="L1864"><span class="lineNum">    1864</span> <span class="tlaGNC">          24 :         return documentHighlights.map&lt;protocol.DocumentHighlightsItem&gt;(({ fileName, highlightSpans }) =&gt; {</span></span>
 <span id="L1865"><span class="lineNum">    1865</span> <span class="tlaGNC">          27 :             const scriptInfo = project.getScriptInfo(fileName)!;</span></span>
@@ -2084,7 +2084,7 @@
 <span id="L2022"><span class="lineNum">    2022</span> <span class="tlaGNC">         853 :             preferences,</span></span>
 <span id="L2023"><span class="lineNum">    2023</span> <span class="tlaGNC">         853 :             this.host.useCaseSensitiveFileNames,</span></span>
 <span id="L2024"><span class="lineNum">    2024</span> <span class="tlaGNC">         853 :         );</span></span>
-<span id="L2025"><span class="lineNum">    2025</span> <span class="tlaGNC">         866 :         if (!simplifiedResult) return locations;</span></span>
+<span id="L2025"><span class="lineNum">    2025</span> <span class="tlaGNC">         854 :         if (!simplifiedResult) return locations;</span></span>
 <span id="L2026"><span class="lineNum">    2026</span> <span class="tlaGNC">         852 :         return { info: renameInfo, locs: this.toSpanGroups(locations) };</span></span>
 <span id="L2027"><span class="lineNum">    2027</span> <span class="tlaGNC">         866 :     }</span></span>
 <span id="L2028"><span class="lineNum">    2028</span> <span class="tlaGNC">           8 : </span></span>
@@ -2275,7 +2275,7 @@
 <span id="L2213"><span class="lineNum">    2213</span> <span class="tlaUNC">           0 :         }</span></span>
 <span id="L2214"><span class="lineNum">    2214</span> <span class="tlaGNC tlaBgGNC">          24 : </span></span>
 <span id="L2215"><span class="lineNum">    2215</span> <span class="tlaGNC">          24 :         const useDisplayParts = !!this.getPreferences(file).displayPartsForJSDoc;</span></span>
-<span id="L2216"><span class="lineNum">    2216</span> <span class="tlaGNC">          24 :         if (simplifiedResult) {</span></span>
+<span id="L2216"><span class="lineNum">    2216</span> <span class="tlaGNC">          36 :         if (simplifiedResult) {</span></span>
 <span id="L2217"><span class="lineNum">    2217</span> <span class="tlaGNC">          20 :             const displayString = displayPartsToString(quickInfo.displayParts);</span></span>
 <span id="L2218"><span class="lineNum">    2218</span> <span class="tlaGNC">          20 :             return {</span></span>
 <span id="L2219"><span class="lineNum">    2219</span> <span class="tlaGNC">          20 :                 kind: quickInfo.kind,</span></span>
@@ -2403,7 +2403,7 @@
 <span id="L2341"><span class="lineNum">    2341</span> <span class="tlaGNC">         169 : </span></span>
 <span id="L2342"><span class="lineNum">    2342</span> <span class="tlaGNC">         188 :         if (kind === protocol.CommandTypes.CompletionsFull) return completions;</span></span>
 <span id="L2343"><span class="lineNum">    2343</span> <span class="tlaGNC">         169 : </span></span>
-<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">         188 :         const prefix = args.prefix || &quot;&quot;;</span></span>
+<span id="L2344"><span class="lineNum">    2344</span> <span class="tlaGNC">         170 :         const prefix = args.prefix || &quot;&quot;;</span></span>
 <span id="L2345"><span class="lineNum">    2345</span> <span class="tlaGNC">         188 :         const entries = mapDefined&lt;CompletionEntry, protocol.CompletionEntry&gt;(completions.entries, entry =&gt; {</span></span>
 <span id="L2346"><span class="lineNum">    2346</span> <span class="tlaGNC">       15204 :             if (completions.isMemberCompletion || startsWith(entry.name.toLowerCase(), prefix.toLowerCase())) {</span></span>
 <span id="L2347"><span class="lineNum">    2347</span> <span class="tlaGNC">       14199 :                 const {</span></span>
@@ -2518,7 +2518,7 @@
 <span id="L2456"><span class="lineNum">    2456</span> <span class="tlaGNC">          85 :         if (!project) {</span></span>
 <span id="L2457"><span class="lineNum">    2457</span> <span class="tlaUNC tlaBgUNC">           0 :             Errors.ThrowNoProject();</span></span>
 <span id="L2458"><span class="lineNum">    2458</span> <span class="tlaUNC">           0 :         }</span></span>
-<span id="L2459"><span class="lineNum">    2459</span> <span class="tlaGNC tlaBgGNC">          85 :         if (!project.languageServiceEnabled) {</span></span>
+<span id="L2459"><span class="lineNum">    2459</span> <span class="tlaGNC tlaBgGNC">          79 :         if (!project.languageServiceEnabled) {</span></span>
 <span id="L2460"><span class="lineNum">    2460</span> <span class="tlaUNC tlaBgUNC">           0 :             return args.richResponse ? { emitSkipped: true, diagnostics: [] } : false;</span></span>
 <span id="L2461"><span class="lineNum">    2461</span> <span class="tlaUNC">           0 :         }</span></span>
 <span id="L2462"><span class="lineNum">    2462</span> <span class="tlaGNC tlaBgGNC">          79 :         const scriptInfo = project.getScriptInfo(file)!;</span></span>

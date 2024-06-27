@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">98.7&nbsp;%</td>
@@ -1225,7 +1225,7 @@
 <span id="L1163"><span class="lineNum">    1163</span> <span class="tlaGNC">        7257 :         if (failedLookupLocations?.length || alternateResult) resolutionsWithFailedLookups.add(resolution);</span></span>
 <span id="L1164"><span class="lineNum">    1164</span> <span class="tlaGNC">        5079 : </span></span>
 <span id="L1165"><span class="lineNum">    1165</span> <span class="tlaGNC">        5079 :         let setAtRoot = false;</span></span>
-<span id="L1166"><span class="lineNum">    1166</span> <span class="tlaGNC">        7199 :         if (failedLookupLocations) {</span></span>
+<span id="L1166"><span class="lineNum">    1166</span> <span class="tlaGNC">        7257 :         if (failedLookupLocations) {</span></span>
 <span id="L1167"><span class="lineNum">    1167</span> <span class="tlaGNC">        4946 :             for (const failedLookupLocation of failedLookupLocations) {</span></span>
 <span id="L1168"><span class="lineNum">    1168</span> <span class="tlaGNC">      129981 :                 setAtRoot = watchFailedLookupLocation(failedLookupLocation, setAtRoot);</span></span>
 <span id="L1169"><span class="lineNum">    1169</span> <span class="tlaGNC">      129981 :             }</span></span>
@@ -1244,7 +1244,7 @@
 <span id="L1182"><span class="lineNum">    1182</span> <span class="tlaGNC">        5099 :         if (!affectingLocations?.length) return;</span></span>
 <span id="L1183"><span class="lineNum">    1183</span> <span class="tlaGNC">        5099 :         if (addToResolutionsWithOnlyAffectingLocations) resolutionsWithOnlyAffectingLocations.add(resolution);</span></span>
 <span id="L1184"><span class="lineNum">    1184</span> <span class="tlaGNC">         768 :         // Watch package json</span></span>
-<span id="L1185"><span class="lineNum">    1185</span> <span class="tlaGNC">        4460 :         for (const affectingLocation of affectingLocations) {</span></span>
+<span id="L1185"><span class="lineNum">    1185</span> <span class="tlaGNC">        5099 :         for (const affectingLocation of affectingLocations) {</span></span>
 <span id="L1186"><span class="lineNum">    1186</span> <span class="tlaGNC">        1261 :             createFileWatcherOfAffectingLocation(affectingLocation, /*forResolution*/ true);</span></span>
 <span id="L1187"><span class="lineNum">    1187</span> <span class="tlaGNC">        1261 :         }</span></span>
 <span id="L1188"><span class="lineNum">    1188</span> <span class="tlaGNC">        5099 :     }</span></span>
@@ -1555,7 +1555,7 @@
 <span id="L1493"><span class="lineNum">    1493</span> <span class="tlaGNC">         668 :         resolutions.forEach(resolution =&gt; {</span></span>
 <span id="L1494"><span class="lineNum">    1494</span> <span class="tlaGNC">         614 :             if (resolution.isInvalidated || !canInvalidate(resolution)) return;</span></span>
 <span id="L1495"><span class="lineNum">    1495</span> <span class="tlaGNC">         240 :             resolution.isInvalidated = invalidated = true;</span></span>
-<span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">         243 :             for (const containingFilePath of Debug.checkDefined(resolution.files)) {</span></span>
+<span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">         268 :             for (const containingFilePath of Debug.checkDefined(resolution.files)) {</span></span>
 <span id="L1497"><span class="lineNum">    1497</span> <span class="tlaGNC">         242 :                 (filesWithInvalidatedResolutions ??= new Set()).add(containingFilePath);</span></span>
 <span id="L1498"><span class="lineNum">    1498</span> <span class="tlaGNC">         242 :                 // When its a file with inferred types resolution, invalidate type reference directive resolution</span></span>
 <span id="L1499"><span class="lineNum">    1499</span> <span class="tlaGNC">         242 :                 hasChangedAutomaticTypeDirectiveNames = hasChangedAutomaticTypeDirectiveNames || endsWith(containingFilePath, inferredTypesContainingFile);</span></span>
@@ -1603,7 +1603,7 @@
 <span id="L1541"><span class="lineNum">    1541</span> <span class="tlaGNC">         779 :             // Return early if it does not have any of the watching extension or not the custom failed lookup path</span></span>
 <span id="L1542"><span class="lineNum">    1542</span> <span class="tlaGNC">         779 :             const dirOfFileOrDirectory = getDirectoryPath(fileOrDirectoryPath);</span></span>
 <span id="L1543"><span class="lineNum">    1543</span> <span class="tlaGNC">         779 :             if (</span></span>
-<span id="L1544"><span class="lineNum">    1544</span> <span class="tlaGNC">         923 :                 isNodeModulesAtTypesDirectory(fileOrDirectoryPath) || isNodeModulesDirectory(fileOrDirectoryPath) ||</span></span>
+<span id="L1544"><span class="lineNum">    1544</span> <span class="tlaGNC">         955 :                 isNodeModulesAtTypesDirectory(fileOrDirectoryPath) || isNodeModulesDirectory(fileOrDirectoryPath) ||</span></span>
 <span id="L1545"><span class="lineNum">    1545</span> <span class="tlaGNC">         963 :                 isNodeModulesAtTypesDirectory(dirOfFileOrDirectory) || isNodeModulesDirectory(dirOfFileOrDirectory)</span></span>
 <span id="L1546"><span class="lineNum">    1546</span> <span class="tlaGNC">         963 :             ) {</span></span>
 <span id="L1547"><span class="lineNum">    1547</span> <span class="tlaGNC">          81 :                 // Invalidate any resolution from this directory</span></span>

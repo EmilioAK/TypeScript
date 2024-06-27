@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">81.9&nbsp;%</td>
@@ -276,22 +276,22 @@
 <span id="L214"><span class="lineNum">     214</span> <span class="tlaGNC tlaBgGNC">           8 :     }</span></span>
 <span id="L215"><span class="lineNum">     215</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L216"><span class="lineNum">     216</span> <span class="tlaGNC">           8 :     export function createSourceFileAndAssertInvariants(</span></span>
-<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">         444 :         fileName: string,</span></span>
-<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">         444 :         sourceText: string,</span></span>
-<span id="L219"><span class="lineNum">     219</span> <span class="tlaGNC">         444 :         languageVersionOrOptions: ts.ScriptTarget | ts.CreateSourceFileOptions,</span></span>
-<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">         444 :     ) {</span></span>
-<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">         444 :         // We'll only assert invariants outside of light mode.</span></span>
-<span id="L222"><span class="lineNum">     222</span> <span class="tlaGNC">         444 :         const shouldAssertInvariants = !lightMode;</span></span>
-<span id="L223"><span class="lineNum">     223</span> <span class="tlaGNC">         444 : </span></span>
-<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">         444 :         // Only set the parent nodes if we're asserting invariants.  We don't need them otherwise.</span></span>
-<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">         444 :         const result = ts.createSourceFile(fileName, sourceText, languageVersionOrOptions, /*setParentNodes:*/ shouldAssertInvariants);</span></span>
-<span id="L226"><span class="lineNum">     226</span> <span class="tlaGNC">         444 : </span></span>
-<span id="L227"><span class="lineNum">     227</span> <span class="tlaGNC">         444 :         if (shouldAssertInvariants) {</span></span>
+<span id="L217"><span class="lineNum">     217</span> <span class="tlaGNC">         398 :         fileName: string,</span></span>
+<span id="L218"><span class="lineNum">     218</span> <span class="tlaGNC">         398 :         sourceText: string,</span></span>
+<span id="L219"><span class="lineNum">     219</span> <span class="tlaGNC">         398 :         languageVersionOrOptions: ts.ScriptTarget | ts.CreateSourceFileOptions,</span></span>
+<span id="L220"><span class="lineNum">     220</span> <span class="tlaGNC">         398 :     ) {</span></span>
+<span id="L221"><span class="lineNum">     221</span> <span class="tlaGNC">         398 :         // We'll only assert invariants outside of light mode.</span></span>
+<span id="L222"><span class="lineNum">     222</span> <span class="tlaGNC">         398 :         const shouldAssertInvariants = !lightMode;</span></span>
+<span id="L223"><span class="lineNum">     223</span> <span class="tlaGNC">         398 : </span></span>
+<span id="L224"><span class="lineNum">     224</span> <span class="tlaGNC">         398 :         // Only set the parent nodes if we're asserting invariants.  We don't need them otherwise.</span></span>
+<span id="L225"><span class="lineNum">     225</span> <span class="tlaGNC">         398 :         const result = ts.createSourceFile(fileName, sourceText, languageVersionOrOptions, /*setParentNodes:*/ shouldAssertInvariants);</span></span>
+<span id="L226"><span class="lineNum">     226</span> <span class="tlaGNC">         398 : </span></span>
+<span id="L227"><span class="lineNum">     227</span> <span class="tlaGNC">         398 :         if (shouldAssertInvariants) {</span></span>
 <span id="L228"><span class="lineNum">     228</span> <span class="tlaUNC tlaBgUNC">           0 :             Utils.assertInvariants(result, /*parent:*/ undefined);</span></span>
 <span id="L229"><span class="lineNum">     229</span> <span class="tlaUNC">           0 :         }</span></span>
-<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC tlaBgGNC">         444 : </span></span>
-<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">         444 :         return result;</span></span>
-<span id="L232"><span class="lineNum">     232</span> <span class="tlaGNC">         444 :     }</span></span>
+<span id="L230"><span class="lineNum">     230</span> <span class="tlaGNC tlaBgGNC">         398 : </span></span>
+<span id="L231"><span class="lineNum">     231</span> <span class="tlaGNC">         398 :         return result;</span></span>
+<span id="L232"><span class="lineNum">     232</span> <span class="tlaGNC">         398 :     }</span></span>
 <span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">           8 :     export const defaultLibFileName = &quot;lib.d.ts&quot;;</span></span>
 <span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">           8 :     export const es2015DefaultLibFileName = &quot;lib.es2015.d.ts&quot;;</span></span>
@@ -312,8 +312,8 @@
 <span id="L250"><span class="lineNum">     250</span> <span class="tlaGNC">       19804 : </span></span>
 <span id="L251"><span class="lineNum">     251</span> <span class="tlaGNC">       19804 :         let sourceFile = libFileNameSourceFileMap.get(fileName);</span></span>
 <span id="L252"><span class="lineNum">     252</span> <span class="tlaGNC">       19804 :         if (!sourceFile) {</span></span>
-<span id="L253"><span class="lineNum">     253</span> <span class="tlaGNC">         437 :             libFileNameSourceFileMap.set(fileName, sourceFile = createSourceFileAndAssertInvariants(fileName, IO.readFile(libFolder + fileName)!, ts.ScriptTarget.Latest));</span></span>
-<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">         437 :         }</span></span>
+<span id="L253"><span class="lineNum">     253</span> <span class="tlaGNC">         391 :             libFileNameSourceFileMap.set(fileName, sourceFile = createSourceFileAndAssertInvariants(fileName, IO.readFile(libFolder + fileName)!, ts.ScriptTarget.Latest));</span></span>
+<span id="L254"><span class="lineNum">     254</span> <span class="tlaGNC">         391 :         }</span></span>
 <span id="L255"><span class="lineNum">     255</span> <span class="tlaGNC">       19804 :         return sourceFile;</span></span>
 <span id="L256"><span class="lineNum">     256</span> <span class="tlaGNC">       19804 :     }</span></span>
 <span id="L257"><span class="lineNum">     257</span> <span class="tlaGNC">           8 : </span></span>
@@ -1320,7 +1320,7 @@
 <span id="L1258"><span class="lineNum">    1258</span> <span class="tlaGNC">      386472 :         linkRegex.lastIndex = 0;</span></span>
 <span id="L1259"><span class="lineNum">    1259</span> <span class="tlaGNC">      386472 :         if (!linkMetaData) return undefined;</span></span>
 <span id="L1260"><span class="lineNum">    1260</span> <span class="tlaGNC">          65 : </span></span>
-<span id="L1261"><span class="lineNum">    1261</span> <span class="tlaGNC">      303477 :         if (!symlinks) symlinks = {};</span></span>
+<span id="L1261"><span class="lineNum">    1261</span> <span class="tlaGNC">      321638 :         if (!symlinks) symlinks = {};</span></span>
 <span id="L1262"><span class="lineNum">    1262</span> <span class="tlaGNC">          65 :         symlinks[ts.getNormalizedAbsolutePath(linkMetaData[2].trim(), absoluteRootDir)] = new vfs.Symlink(ts.getNormalizedAbsolutePath(linkMetaData[1].trim(), absoluteRootDir));</span></span>
 <span id="L1263"><span class="lineNum">    1263</span> <span class="tlaGNC">          65 :         return symlinks;</span></span>
 <span id="L1264"><span class="lineNum">    1264</span> <span class="tlaGNC">      386472 :     }</span></span>

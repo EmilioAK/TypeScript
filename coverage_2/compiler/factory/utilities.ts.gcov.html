@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">91.7&nbsp;%</td>
@@ -1499,14 +1499,14 @@
 <span id="L1437"><span class="lineNum">    1437</span> <span class="tlaGNC">           8 :  */</span></span>
 <span id="L1438"><span class="lineNum">    1438</span> <span class="tlaGNC">           8 : class BinaryExpressionStateMachine&lt;TOuterState, TState, TResult&gt; {</span></span>
 <span id="L1439"><span class="lineNum">    1439</span> <span class="tlaGNC">           8 :     constructor(</span></span>
-<span id="L1440"><span class="lineNum">    1440</span> <span class="tlaGNC">      138465 :         readonly onEnter: (node: BinaryExpression, prev: TState | undefined, outerState: TOuterState) =&gt; TState,</span></span>
-<span id="L1441"><span class="lineNum">    1441</span> <span class="tlaGNC">      138465 :         readonly onLeft: ((left: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
-<span id="L1442"><span class="lineNum">    1442</span> <span class="tlaGNC">      138465 :         readonly onOperator: ((operatorToken: BinaryOperatorToken, userState: TState, node: BinaryExpression) =&gt; void) | undefined,</span></span>
-<span id="L1443"><span class="lineNum">    1443</span> <span class="tlaGNC">      138465 :         readonly onRight: ((right: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
-<span id="L1444"><span class="lineNum">    1444</span> <span class="tlaGNC">      138465 :         readonly onExit: (node: BinaryExpression, userState: TState) =&gt; TResult,</span></span>
-<span id="L1445"><span class="lineNum">    1445</span> <span class="tlaGNC">      138465 :         readonly foldState: ((userState: TState, result: TResult, side: &quot;left&quot; | &quot;right&quot;) =&gt; TState) | undefined,</span></span>
-<span id="L1446"><span class="lineNum">    1446</span> <span class="tlaGNC">      138465 :     ) {</span></span>
-<span id="L1447"><span class="lineNum">    1447</span> <span class="tlaGNC">      138465 :     }</span></span>
+<span id="L1440"><span class="lineNum">    1440</span> <span class="tlaGNC">      138464 :         readonly onEnter: (node: BinaryExpression, prev: TState | undefined, outerState: TOuterState) =&gt; TState,</span></span>
+<span id="L1441"><span class="lineNum">    1441</span> <span class="tlaGNC">      138464 :         readonly onLeft: ((left: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
+<span id="L1442"><span class="lineNum">    1442</span> <span class="tlaGNC">      138464 :         readonly onOperator: ((operatorToken: BinaryOperatorToken, userState: TState, node: BinaryExpression) =&gt; void) | undefined,</span></span>
+<span id="L1443"><span class="lineNum">    1443</span> <span class="tlaGNC">      138464 :         readonly onRight: ((right: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
+<span id="L1444"><span class="lineNum">    1444</span> <span class="tlaGNC">      138464 :         readonly onExit: (node: BinaryExpression, userState: TState) =&gt; TResult,</span></span>
+<span id="L1445"><span class="lineNum">    1445</span> <span class="tlaGNC">      138464 :         readonly foldState: ((userState: TState, result: TResult, side: &quot;left&quot; | &quot;right&quot;) =&gt; TState) | undefined,</span></span>
+<span id="L1446"><span class="lineNum">    1446</span> <span class="tlaGNC">      138464 :     ) {</span></span>
+<span id="L1447"><span class="lineNum">    1447</span> <span class="tlaGNC">      138464 :     }</span></span>
 <span id="L1448"><span class="lineNum">    1448</span> <span class="tlaGNC">           8 : }</span></span>
 <span id="L1449"><span class="lineNum">    1449</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1450"><span class="lineNum">    1450</span> <span class="tlaGNC">           1 : /**</span></span>
@@ -1549,17 +1549,17 @@
 <span id="L1487"><span class="lineNum">    1487</span> <span class="tlaGNC">           1 : ): (node: BinaryExpression, outerState: TOuterState) =&gt; TResult;</span></span>
 <span id="L1488"><span class="lineNum">    1488</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L1489"><span class="lineNum">    1489</span> <span class="tlaGNC">           1 : export function createBinaryExpressionTrampoline&lt;TOuterState, TState, TResult&gt;(</span></span>
-<span id="L1490"><span class="lineNum">    1490</span> <span class="tlaGNC">      138465 :     onEnter: (node: BinaryExpression, prev: TState | undefined, outerState: TOuterState) =&gt; TState,</span></span>
-<span id="L1491"><span class="lineNum">    1491</span> <span class="tlaGNC">      138465 :     onLeft: ((left: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
-<span id="L1492"><span class="lineNum">    1492</span> <span class="tlaGNC">      138465 :     onOperator: ((operatorToken: BinaryOperatorToken, userState: TState, node: BinaryExpression) =&gt; void) | undefined,</span></span>
-<span id="L1493"><span class="lineNum">    1493</span> <span class="tlaGNC">      138465 :     onRight: ((right: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
-<span id="L1494"><span class="lineNum">    1494</span> <span class="tlaGNC">      138465 :     onExit: (node: BinaryExpression, userState: TState) =&gt; TResult,</span></span>
-<span id="L1495"><span class="lineNum">    1495</span> <span class="tlaGNC">      138465 :     foldState: ((userState: TState, result: TResult, side: &quot;left&quot; | &quot;right&quot;) =&gt; TState) | undefined,</span></span>
-<span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">      138465 : ) {</span></span>
-<span id="L1497"><span class="lineNum">    1497</span> <span class="tlaGNC">      138465 :     const machine = new BinaryExpressionStateMachine(onEnter, onLeft, onOperator, onRight, onExit, foldState);</span></span>
-<span id="L1498"><span class="lineNum">    1498</span> <span class="tlaGNC">      138465 :     return trampoline;</span></span>
-<span id="L1499"><span class="lineNum">    1499</span> <span class="tlaGNC">      138465 : </span></span>
-<span id="L1500"><span class="lineNum">    1500</span> <span class="tlaGNC">      138465 :     function trampoline(node: BinaryExpression, outerState: TOuterState) {</span></span>
+<span id="L1490"><span class="lineNum">    1490</span> <span class="tlaGNC">      138464 :     onEnter: (node: BinaryExpression, prev: TState | undefined, outerState: TOuterState) =&gt; TState,</span></span>
+<span id="L1491"><span class="lineNum">    1491</span> <span class="tlaGNC">      138464 :     onLeft: ((left: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
+<span id="L1492"><span class="lineNum">    1492</span> <span class="tlaGNC">      138464 :     onOperator: ((operatorToken: BinaryOperatorToken, userState: TState, node: BinaryExpression) =&gt; void) | undefined,</span></span>
+<span id="L1493"><span class="lineNum">    1493</span> <span class="tlaGNC">      138464 :     onRight: ((right: Expression, userState: TState, node: BinaryExpression) =&gt; BinaryExpression | void) | undefined,</span></span>
+<span id="L1494"><span class="lineNum">    1494</span> <span class="tlaGNC">      138464 :     onExit: (node: BinaryExpression, userState: TState) =&gt; TResult,</span></span>
+<span id="L1495"><span class="lineNum">    1495</span> <span class="tlaGNC">      138464 :     foldState: ((userState: TState, result: TResult, side: &quot;left&quot; | &quot;right&quot;) =&gt; TState) | undefined,</span></span>
+<span id="L1496"><span class="lineNum">    1496</span> <span class="tlaGNC">      138464 : ) {</span></span>
+<span id="L1497"><span class="lineNum">    1497</span> <span class="tlaGNC">      138464 :     const machine = new BinaryExpressionStateMachine(onEnter, onLeft, onOperator, onRight, onExit, foldState);</span></span>
+<span id="L1498"><span class="lineNum">    1498</span> <span class="tlaGNC">      138464 :     return trampoline;</span></span>
+<span id="L1499"><span class="lineNum">    1499</span> <span class="tlaGNC">      138464 : </span></span>
+<span id="L1500"><span class="lineNum">    1500</span> <span class="tlaGNC">      138464 :     function trampoline(node: BinaryExpression, outerState: TOuterState) {</span></span>
 <span id="L1501"><span class="lineNum">    1501</span> <span class="tlaGNC">      499655 :         const resultHolder: { value: TResult; } = { value: undefined! };</span></span>
 <span id="L1502"><span class="lineNum">    1502</span> <span class="tlaGNC">      499655 :         const stateStack: BinaryExpressionState[] = [BinaryExpressionState.enter];</span></span>
 <span id="L1503"><span class="lineNum">    1503</span> <span class="tlaGNC">      499655 :         const nodeStack: BinaryExpression[] = [node];</span></span>
@@ -1571,7 +1571,7 @@
 <span id="L1509"><span class="lineNum">    1509</span> <span class="tlaGNC">      499655 :         Debug.assertEqual(stackIndex, 0);</span></span>
 <span id="L1510"><span class="lineNum">    1510</span> <span class="tlaGNC">      499655 :         return resultHolder.value;</span></span>
 <span id="L1511"><span class="lineNum">    1511</span> <span class="tlaGNC">      499655 :     }</span></span>
-<span id="L1512"><span class="lineNum">    1512</span> <span class="tlaGNC">      138465 : }</span></span>
+<span id="L1512"><span class="lineNum">    1512</span> <span class="tlaGNC">      138464 : }</span></span>
 <span id="L1513"><span class="lineNum">    1513</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1514"><span class="lineNum">    1514</span> <span class="tlaGNC">         946 : function isExportOrDefaultKeywordKind(kind: SyntaxKind): kind is SyntaxKind.ExportKeyword | SyntaxKind.DefaultKeyword {</span></span>
 <span id="L1515"><span class="lineNum">    1515</span> <span class="tlaGNC">         946 :     return kind === SyntaxKind.ExportKeyword || kind === SyntaxKind.DefaultKeyword;</span></span>
@@ -1840,7 +1840,7 @@
 <span id="L1778"><span class="lineNum">    1778</span> <span class="tlaGNC">         147 :                 if (target.transformFlags &amp; TransformFlags.ContainsObjectRestOrSpread) {</span></span>
 <span id="L1779"><span class="lineNum">    1779</span> <span class="tlaGNC">          16 :                     return true;</span></span>
 <span id="L1780"><span class="lineNum">    1780</span> <span class="tlaGNC">          16 :                 }</span></span>
-<span id="L1781"><span class="lineNum">    1781</span> <span class="tlaGNC">         137 :                 if (target.transformFlags &amp; TransformFlags.ContainsES2018) {</span></span>
+<span id="L1781"><span class="lineNum">    1781</span> <span class="tlaGNC">         131 :                 if (target.transformFlags &amp; TransformFlags.ContainsES2018) {</span></span>
 <span id="L1782"><span class="lineNum">    1782</span> <span class="tlaUNC tlaBgUNC">           0 :                     if (containsObjectRestOrSpread(target)) return true;</span></span>
 <span id="L1783"><span class="lineNum">    1783</span> <span class="tlaUNC">           0 :                 }</span></span>
 <span id="L1784"><span class="lineNum">    1784</span> <span class="tlaGNC tlaBgGNC">         147 :             }</span></span>

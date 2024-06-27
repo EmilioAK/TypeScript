@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">66.7&nbsp;%</td>
@@ -329,8 +329,8 @@
 <span id="L267"><span class="lineNum">     267</span> <span class="tlaGNC">       27924 :     }</span></span>
 <span id="L268"><span class="lineNum">     268</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L269"><span class="lineNum">     269</span> <span class="tlaGNC">           8 :     public get vfs() {</span></span>
-<span id="L270"><span class="lineNum">     270</span> <span class="tlaGNC">     1345368 :         return this.sys.vfs;</span></span>
-<span id="L271"><span class="lineNum">     271</span> <span class="tlaGNC">     1345368 :     }</span></span>
+<span id="L270"><span class="lineNum">     270</span> <span class="tlaGNC">     1345359 :         return this.sys.vfs;</span></span>
+<span id="L271"><span class="lineNum">     271</span> <span class="tlaGNC">     1345359 :     }</span></span>
 <span id="L272"><span class="lineNum">     272</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L273"><span class="lineNum">     273</span> <span class="tlaGNC">           8 :     public get parseConfigHost() {</span></span>
 <span id="L274"><span class="lineNum">     274</span> <span class="tlaGNC">           3 :         return this._parseConfigHost || (this._parseConfigHost = new ParseConfigHost(this.sys));</span></span>
@@ -349,8 +349,8 @@
 <span id="L287"><span class="lineNum">     287</span> <span class="tlaUNC">           0 :     }</span></span>
 <span id="L288"><span class="lineNum">     288</span> <span class="tlaGNC tlaBgGNC">           8 : </span></span>
 <span id="L289"><span class="lineNum">     289</span> <span class="tlaGNC">           8 :     public getCanonicalFileName(fileName: string): string {</span></span>
-<span id="L290"><span class="lineNum">     290</span> <span class="tlaGNC">    14344717 :         return this.sys.useCaseSensitiveFileNames ? fileName : fileName.toLowerCase();</span></span>
-<span id="L291"><span class="lineNum">     291</span> <span class="tlaGNC">    14344717 :     }</span></span>
+<span id="L290"><span class="lineNum">     290</span> <span class="tlaGNC">    14344703 :         return this.sys.useCaseSensitiveFileNames ? fileName : fileName.toLowerCase();</span></span>
+<span id="L291"><span class="lineNum">     291</span> <span class="tlaGNC">    14344703 :     }</span></span>
 <span id="L292"><span class="lineNum">     292</span> <span class="tlaGNC">           8 : </span></span>
 <span id="L293"><span class="lineNum">     293</span> <span class="tlaGNC">           8 :     public deleteFile(fileName: string) {</span></span>
 <span id="L294"><span class="lineNum">     294</span> <span class="tlaUNC tlaBgUNC">           0 :         this.sys.deleteFile(fileName);</span></span>
@@ -433,52 +433,52 @@
 <span id="L371"><span class="lineNum">     371</span> <span class="tlaGNC">      473414 :         // and so any options bag will be keyed as &quot;[object Object]&quot;, and we'll incorrectly share</span></span>
 <span id="L372"><span class="lineNum">     372</span> <span class="tlaGNC">      473414 :         // SourceFiles parsed with different options. But fixing this doesn't expose any bugs and</span></span>
 <span id="L373"><span class="lineNum">     373</span> <span class="tlaGNC">      473414 :         // doubles the memory usage of a test run, so I'm leaving it for now.</span></span>
-<span id="L374"><span class="lineNum">     374</span> <span class="tlaGNC">      523910 :         const cacheKey = this.vfs.shadowRoot &amp;&amp; `SourceFile[languageVersionOrOptions=${languageVersionOrOptions},setParentNodes=${this._setParentNodes}]`;</span></span>
+<span id="L374"><span class="lineNum">     374</span> <span class="tlaGNC">      541340 :         const cacheKey = this.vfs.shadowRoot &amp;&amp; `SourceFile[languageVersionOrOptions=${languageVersionOrOptions},setParentNodes=${this._setParentNodes}]`;</span></span>
 <span id="L375"><span class="lineNum">     375</span> <span class="tlaGNC">      941490 :         if (cacheKey) {</span></span>
 <span id="L376"><span class="lineNum">     376</span> <span class="tlaGNC">      473412 :             const meta = this.vfs.filemeta(canonicalFileName);</span></span>
 <span id="L377"><span class="lineNum">     377</span> <span class="tlaGNC">      473412 :             const sourceFileFromMetadata = meta.get(cacheKey) as ts.SourceFile | undefined;</span></span>
 <span id="L378"><span class="lineNum">     378</span> <span class="tlaGNC">      473412 :             if (sourceFileFromMetadata &amp;&amp; sourceFileFromMetadata.getFullText() === content) {</span></span>
-<span id="L379"><span class="lineNum">     379</span> <span class="tlaGNC">      435630 :                 this._sourceFiles.set(canonicalFileName, sourceFileFromMetadata);</span></span>
-<span id="L380"><span class="lineNum">     380</span> <span class="tlaGNC">      435630 :                 return sourceFileFromMetadata;</span></span>
-<span id="L381"><span class="lineNum">     381</span> <span class="tlaGNC">      435630 :             }</span></span>
+<span id="L379"><span class="lineNum">     379</span> <span class="tlaGNC">      435633 :                 this._sourceFiles.set(canonicalFileName, sourceFileFromMetadata);</span></span>
+<span id="L380"><span class="lineNum">     380</span> <span class="tlaGNC">      435633 :                 return sourceFileFromMetadata;</span></span>
+<span id="L381"><span class="lineNum">     381</span> <span class="tlaGNC">      435633 :             }</span></span>
 <span id="L382"><span class="lineNum">     382</span> <span class="tlaGNC">      473412 :         }</span></span>
-<span id="L383"><span class="lineNum">     383</span> <span class="tlaGNC">       37784 : </span></span>
+<span id="L383"><span class="lineNum">     383</span> <span class="tlaGNC">       37781 : </span></span>
 <span id="L384"><span class="lineNum">     384</span> <span class="tlaGNC">      941490 :         const parsed = ts.createSourceFile(fileName, content, languageVersionOrOptions, this._setParentNodes || this.shouldAssertInvariants);</span></span>
 <span id="L385"><span class="lineNum">     385</span> <span class="tlaGNC">      941490 :         if (this.shouldAssertInvariants) {</span></span>
 <span id="L386"><span class="lineNum">     386</span> <span class="tlaUNC tlaBgUNC">           0 :             Utils.assertInvariants(parsed, /*parent*/ undefined);</span></span>
 <span id="L387"><span class="lineNum">     387</span> <span class="tlaUNC">           0 :         }</span></span>
-<span id="L388"><span class="lineNum">     388</span> <span class="tlaGNC tlaBgGNC">       37784 : </span></span>
-<span id="L389"><span class="lineNum">     389</span> <span class="tlaGNC">       37784 :         this._sourceFiles.set(canonicalFileName, parsed);</span></span>
-<span id="L390"><span class="lineNum">     390</span> <span class="tlaGNC">       37784 : </span></span>
-<span id="L391"><span class="lineNum">     391</span> <span class="tlaGNC">      135149 :         if (cacheKey) {</span></span>
-<span id="L392"><span class="lineNum">     392</span> <span class="tlaGNC">       37782 :             // store the cached source file on the unshadowed file with the same version.</span></span>
-<span id="L393"><span class="lineNum">     393</span> <span class="tlaGNC">       37782 :             const stats = this.vfs.statSync(canonicalFileName);</span></span>
-<span id="L394"><span class="lineNum">     394</span> <span class="tlaGNC">       37782 : </span></span>
-<span id="L395"><span class="lineNum">     395</span> <span class="tlaGNC">       37782 :             let fs = this.vfs;</span></span>
-<span id="L396"><span class="lineNum">     396</span> <span class="tlaGNC">       37782 :             while (fs.shadowRoot) {</span></span>
-<span id="L397"><span class="lineNum">     397</span> <span class="tlaGNC">       39106 :                 try {</span></span>
-<span id="L398"><span class="lineNum">     398</span> <span class="tlaGNC">       39106 :                     const shadowRootStats = fs.shadowRoot.existsSync(canonicalFileName) ? fs.shadowRoot.statSync(canonicalFileName) : undefined!; // TODO: GH#18217</span></span>
-<span id="L399"><span class="lineNum">     399</span> <span class="tlaGNC">       39106 :                     if (</span></span>
-<span id="L400"><span class="lineNum">     400</span> <span class="tlaGNC">       39106 :                         shadowRootStats.dev !== stats.dev ||</span></span>
-<span id="L401"><span class="lineNum">     401</span> <span class="tlaGNC">        1965 :                         shadowRootStats.ino !== stats.ino ||</span></span>
-<span id="L402"><span class="lineNum">     402</span> <span class="tlaGNC">        1965 :                         shadowRootStats.mtimeMs !== stats.mtimeMs</span></span>
-<span id="L403"><span class="lineNum">     403</span> <span class="tlaGNC">       39106 :                     ) {</span></span>
+<span id="L388"><span class="lineNum">     388</span> <span class="tlaGNC tlaBgGNC">       37781 : </span></span>
+<span id="L389"><span class="lineNum">     389</span> <span class="tlaGNC">       37781 :         this._sourceFiles.set(canonicalFileName, parsed);</span></span>
+<span id="L390"><span class="lineNum">     390</span> <span class="tlaGNC">       37781 : </span></span>
+<span id="L391"><span class="lineNum">     391</span> <span class="tlaGNC">      168514 :         if (cacheKey) {</span></span>
+<span id="L392"><span class="lineNum">     392</span> <span class="tlaGNC">       37779 :             // store the cached source file on the unshadowed file with the same version.</span></span>
+<span id="L393"><span class="lineNum">     393</span> <span class="tlaGNC">       37779 :             const stats = this.vfs.statSync(canonicalFileName);</span></span>
+<span id="L394"><span class="lineNum">     394</span> <span class="tlaGNC">       37779 : </span></span>
+<span id="L395"><span class="lineNum">     395</span> <span class="tlaGNC">       37779 :             let fs = this.vfs;</span></span>
+<span id="L396"><span class="lineNum">     396</span> <span class="tlaGNC">       37779 :             while (fs.shadowRoot) {</span></span>
+<span id="L397"><span class="lineNum">     397</span> <span class="tlaGNC">       39100 :                 try {</span></span>
+<span id="L398"><span class="lineNum">     398</span> <span class="tlaGNC">       39100 :                     const shadowRootStats = fs.shadowRoot.existsSync(canonicalFileName) ? fs.shadowRoot.statSync(canonicalFileName) : undefined!; // TODO: GH#18217</span></span>
+<span id="L399"><span class="lineNum">     399</span> <span class="tlaGNC">       39100 :                     if (</span></span>
+<span id="L400"><span class="lineNum">     400</span> <span class="tlaGNC">       39100 :                         shadowRootStats.dev !== stats.dev ||</span></span>
+<span id="L401"><span class="lineNum">     401</span> <span class="tlaGNC">        1959 :                         shadowRootStats.ino !== stats.ino ||</span></span>
+<span id="L402"><span class="lineNum">     402</span> <span class="tlaGNC">        1959 :                         shadowRootStats.mtimeMs !== stats.mtimeMs</span></span>
+<span id="L403"><span class="lineNum">     403</span> <span class="tlaGNC">       39100 :                     ) {</span></span>
 <span id="L404"><span class="lineNum">     404</span> <span class="tlaUNC tlaBgUNC">           0 :                         break;</span></span>
 <span id="L405"><span class="lineNum">     405</span> <span class="tlaUNC">           0 :                     }</span></span>
-<span id="L406"><span class="lineNum">     406</span> <span class="tlaGNC tlaBgGNC">        1965 : </span></span>
-<span id="L407"><span class="lineNum">     407</span> <span class="tlaGNC">        1965 :                     fs = fs.shadowRoot;</span></span>
-<span id="L408"><span class="lineNum">     408</span> <span class="tlaGNC">        1965 :                 }</span></span>
+<span id="L406"><span class="lineNum">     406</span> <span class="tlaGNC tlaBgGNC">        1959 : </span></span>
+<span id="L407"><span class="lineNum">     407</span> <span class="tlaGNC">        1959 :                     fs = fs.shadowRoot;</span></span>
+<span id="L408"><span class="lineNum">     408</span> <span class="tlaGNC">        1959 :                 }</span></span>
 <span id="L409"><span class="lineNum">     409</span> <span class="tlaGNC">       37141 :                 catch {</span></span>
 <span id="L410"><span class="lineNum">     410</span> <span class="tlaGNC">       37141 :                     break;</span></span>
 <span id="L411"><span class="lineNum">     411</span> <span class="tlaGNC">       37141 :                 }</span></span>
-<span id="L412"><span class="lineNum">     412</span> <span class="tlaGNC">       39106 :             }</span></span>
-<span id="L413"><span class="lineNum">     413</span> <span class="tlaGNC">       37782 : </span></span>
-<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">       37782 :             if (fs !== this.vfs) {</span></span>
-<span id="L415"><span class="lineNum">     415</span> <span class="tlaGNC">        1324 :                 fs.filemeta(canonicalFileName).set(cacheKey, parsed);</span></span>
-<span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">        1324 :             }</span></span>
-<span id="L417"><span class="lineNum">     417</span> <span class="tlaGNC">       37782 :         }</span></span>
-<span id="L418"><span class="lineNum">     418</span> <span class="tlaGNC">       37784 : </span></span>
-<span id="L419"><span class="lineNum">     419</span> <span class="tlaGNC">       37784 :         return parsed;</span></span>
+<span id="L412"><span class="lineNum">     412</span> <span class="tlaGNC">       39100 :             }</span></span>
+<span id="L413"><span class="lineNum">     413</span> <span class="tlaGNC">       37779 : </span></span>
+<span id="L414"><span class="lineNum">     414</span> <span class="tlaGNC">       37779 :             if (fs !== this.vfs) {</span></span>
+<span id="L415"><span class="lineNum">     415</span> <span class="tlaGNC">        1321 :                 fs.filemeta(canonicalFileName).set(cacheKey, parsed);</span></span>
+<span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">        1321 :             }</span></span>
+<span id="L417"><span class="lineNum">     417</span> <span class="tlaGNC">       37779 :         }</span></span>
+<span id="L418"><span class="lineNum">     418</span> <span class="tlaGNC">       37781 : </span></span>
+<span id="L419"><span class="lineNum">     419</span> <span class="tlaGNC">       37781 :         return parsed;</span></span>
 <span id="L420"><span class="lineNum">     420</span> <span class="tlaGNC">      941490 :     }</span></span>
 <span id="L421"><span class="lineNum">     421</span> <span class="tlaGNC">           8 : }</span></span>
 <span id="L422"><span class="lineNum">     422</span> <span class="tlaGNC">           8 : </span></span>

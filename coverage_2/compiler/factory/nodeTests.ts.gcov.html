@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryHi">93.4&nbsp;%</td>
@@ -295,16 +295,16 @@
 <span id="L233"><span class="lineNum">     233</span> <span class="tlaGNC">           1 : // Literals</span></span>
 <span id="L234"><span class="lineNum">     234</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L235"><span class="lineNum">     235</span> <span class="tlaGNC">           1 : export function isNumericLiteral(node: Node): node is NumericLiteral {</span></span>
-<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">    15309756 :     return node.kind === SyntaxKind.NumericLiteral;</span></span>
-<span id="L237"><span class="lineNum">     237</span> <span class="tlaGNC">    15309756 : }</span></span>
+<span id="L236"><span class="lineNum">     236</span> <span class="tlaGNC">    15309746 :     return node.kind === SyntaxKind.NumericLiteral;</span></span>
+<span id="L237"><span class="lineNum">     237</span> <span class="tlaGNC">    15309746 : }</span></span>
 <span id="L238"><span class="lineNum">     238</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L239"><span class="lineNum">     239</span> <span class="tlaGNC">           1 : export function isBigIntLiteral(node: Node): node is BigIntLiteral {</span></span>
 <span id="L240"><span class="lineNum">     240</span> <span class="tlaGNC">      224835 :     return node.kind === SyntaxKind.BigIntLiteral;</span></span>
 <span id="L241"><span class="lineNum">     241</span> <span class="tlaGNC">      224835 : }</span></span>
 <span id="L242"><span class="lineNum">     242</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L243"><span class="lineNum">     243</span> <span class="tlaGNC">           1 : export function isStringLiteral(node: Node): node is StringLiteral {</span></span>
-<span id="L244"><span class="lineNum">     244</span> <span class="tlaGNC">     5589417 :     return node.kind === SyntaxKind.StringLiteral;</span></span>
-<span id="L245"><span class="lineNum">     245</span> <span class="tlaGNC">     5589417 : }</span></span>
+<span id="L244"><span class="lineNum">     244</span> <span class="tlaGNC">     5589414 :     return node.kind === SyntaxKind.StringLiteral;</span></span>
+<span id="L245"><span class="lineNum">     245</span> <span class="tlaGNC">     5589414 : }</span></span>
 <span id="L246"><span class="lineNum">     246</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L247"><span class="lineNum">     247</span> <span class="tlaGNC">           1 : export function isJsxText(node: Node): node is JsxText {</span></span>
 <span id="L248"><span class="lineNum">     248</span> <span class="tlaGNC">     1245757 :     return node.kind === SyntaxKind.JsxText;</span></span>
@@ -356,12 +356,12 @@
 <span id="L294"><span class="lineNum">     294</span> <span class="tlaGNC">          11 : }</span></span>
 <span id="L295"><span class="lineNum">     295</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L296"><span class="lineNum">     296</span> <span class="tlaGNC">           1 : export function isExclamationToken(node: Node): node is ExclamationToken {</span></span>
-<span id="L297"><span class="lineNum">     297</span> <span class="tlaGNC">        1389 :     return node.kind === SyntaxKind.ExclamationToken;</span></span>
-<span id="L298"><span class="lineNum">     298</span> <span class="tlaGNC">        1389 : }</span></span>
+<span id="L297"><span class="lineNum">     297</span> <span class="tlaGNC">        1378 :     return node.kind === SyntaxKind.ExclamationToken;</span></span>
+<span id="L298"><span class="lineNum">     298</span> <span class="tlaGNC">        1378 : }</span></span>
 <span id="L299"><span class="lineNum">     299</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L300"><span class="lineNum">     300</span> <span class="tlaGNC">           1 : export function isQuestionToken(node: Node): node is QuestionToken {</span></span>
-<span id="L301"><span class="lineNum">     301</span> <span class="tlaGNC">       47590 :     return node.kind === SyntaxKind.QuestionToken;</span></span>
-<span id="L302"><span class="lineNum">     302</span> <span class="tlaGNC">       47590 : }</span></span>
+<span id="L301"><span class="lineNum">     301</span> <span class="tlaGNC">       47579 :     return node.kind === SyntaxKind.QuestionToken;</span></span>
+<span id="L302"><span class="lineNum">     302</span> <span class="tlaGNC">       47579 : }</span></span>
 <span id="L303"><span class="lineNum">     303</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L304"><span class="lineNum">     304</span> <span class="tlaGNC">           1 : export function isColonToken(node: Node): node is ColonToken {</span></span>
 <span id="L305"><span class="lineNum">     305</span> <span class="tlaGNC">          39 :     return node.kind === SyntaxKind.ColonToken;</span></span>
@@ -378,19 +378,19 @@
 <span id="L316"><span class="lineNum">     316</span> <span class="tlaGNC">           1 : // Identifiers</span></span>
 <span id="L317"><span class="lineNum">     317</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">           1 : export function isIdentifier(node: Node): node is Identifier {</span></span>
-<span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">    56547512 :     return node.kind === SyntaxKind.Identifier;</span></span>
-<span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">    56547512 : }</span></span>
+<span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">    56533747 :     return node.kind === SyntaxKind.Identifier;</span></span>
+<span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">    56533747 : }</span></span>
 <span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L322"><span class="lineNum">     322</span> <span class="tlaGNC">           1 : export function isPrivateIdentifier(node: Node): node is PrivateIdentifier {</span></span>
-<span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">    42621034 :     return node.kind === SyntaxKind.PrivateIdentifier;</span></span>
-<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">    42621034 : }</span></span>
+<span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">    42606346 :     return node.kind === SyntaxKind.PrivateIdentifier;</span></span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">    42606346 : }</span></span>
 <span id="L325"><span class="lineNum">     325</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L326"><span class="lineNum">     326</span> <span class="tlaGNC">           1 : // Reserved Words</span></span>
 <span id="L327"><span class="lineNum">     327</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L328"><span class="lineNum">     328</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L329"><span class="lineNum">     329</span> <span class="tlaGNC">           1 : export function isExportModifier(node: Node): node is ExportKeyword {</span></span>
-<span id="L330"><span class="lineNum">     330</span> <span class="tlaGNC">       13149 :     return node.kind === SyntaxKind.ExportKeyword;</span></span>
-<span id="L331"><span class="lineNum">     331</span> <span class="tlaGNC">       13149 : }</span></span>
+<span id="L330"><span class="lineNum">     330</span> <span class="tlaGNC">       13147 :     return node.kind === SyntaxKind.ExportKeyword;</span></span>
+<span id="L331"><span class="lineNum">     331</span> <span class="tlaGNC">       13147 : }</span></span>
 <span id="L332"><span class="lineNum">     332</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L333"><span class="lineNum">     333</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L334"><span class="lineNum">     334</span> <span class="tlaGNC">           1 : export function isDefaultModifier(node: Node): node is DefaultKeyword {</span></span>
@@ -399,8 +399,8 @@
 <span id="L337"><span class="lineNum">     337</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L338"><span class="lineNum">     338</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L339"><span class="lineNum">     339</span> <span class="tlaGNC">           1 : export function isAsyncModifier(node: Node): node is AsyncKeyword {</span></span>
-<span id="L340"><span class="lineNum">     340</span> <span class="tlaGNC">       12483 :     return node.kind === SyntaxKind.AsyncKeyword;</span></span>
-<span id="L341"><span class="lineNum">     341</span> <span class="tlaGNC">       12483 : }</span></span>
+<span id="L340"><span class="lineNum">     340</span> <span class="tlaGNC">       12469 :     return node.kind === SyntaxKind.AsyncKeyword;</span></span>
+<span id="L341"><span class="lineNum">     341</span> <span class="tlaGNC">       12469 : }</span></span>
 <span id="L342"><span class="lineNum">     342</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L343"><span class="lineNum">     343</span> <span class="tlaGNC">           1 : export function isAssertsKeyword(node: Node): node is AssertsKeyword {</span></span>
 <span id="L344"><span class="lineNum">     344</span> <span class="tlaGNC">         118 :     return node.kind === SyntaxKind.AssertsKeyword;</span></span>
@@ -437,8 +437,8 @@
 <span id="L375"><span class="lineNum">     375</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L376"><span class="lineNum">     376</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L377"><span class="lineNum">     377</span> <span class="tlaGNC">           1 : export function isSuperKeyword(node: Node): node is SuperExpression {</span></span>
-<span id="L378"><span class="lineNum">     378</span> <span class="tlaGNC">      453961 :     return node.kind === SyntaxKind.SuperKeyword;</span></span>
-<span id="L379"><span class="lineNum">     379</span> <span class="tlaGNC">      453961 : }</span></span>
+<span id="L378"><span class="lineNum">     378</span> <span class="tlaGNC">      453933 :     return node.kind === SyntaxKind.SuperKeyword;</span></span>
+<span id="L379"><span class="lineNum">     379</span> <span class="tlaGNC">      453933 : }</span></span>
 <span id="L380"><span class="lineNum">     380</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L381"><span class="lineNum">     381</span> <span class="tlaGNC">           1 : /** @internal */</span></span>
 <span id="L382"><span class="lineNum">     382</span> <span class="tlaGNC">           1 : export function isImportKeyword(node: Node): node is ImportExpression {</span></span>
@@ -457,19 +457,19 @@
 <span id="L395"><span class="lineNum">     395</span> <span class="tlaGNC">     1110660 : }</span></span>
 <span id="L396"><span class="lineNum">     396</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L397"><span class="lineNum">     397</span> <span class="tlaGNC">           1 : export function isComputedPropertyName(node: Node): node is ComputedPropertyName {</span></span>
-<span id="L398"><span class="lineNum">     398</span> <span class="tlaGNC">     9030463 :     return node.kind === SyntaxKind.ComputedPropertyName;</span></span>
-<span id="L399"><span class="lineNum">     399</span> <span class="tlaGNC">     9030463 : }</span></span>
+<span id="L398"><span class="lineNum">     398</span> <span class="tlaGNC">     9030124 :     return node.kind === SyntaxKind.ComputedPropertyName;</span></span>
+<span id="L399"><span class="lineNum">     399</span> <span class="tlaGNC">     9030124 : }</span></span>
 <span id="L400"><span class="lineNum">     400</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L401"><span class="lineNum">     401</span> <span class="tlaGNC">           1 : // Signature elements</span></span>
 <span id="L402"><span class="lineNum">     402</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L403"><span class="lineNum">     403</span> <span class="tlaGNC">           1 : export function isTypeParameterDeclaration(node: Node): node is TypeParameterDeclaration {</span></span>
-<span id="L404"><span class="lineNum">     404</span> <span class="tlaGNC">     2209793 :     return node.kind === SyntaxKind.TypeParameter;</span></span>
-<span id="L405"><span class="lineNum">     405</span> <span class="tlaGNC">     2209793 : }</span></span>
+<span id="L404"><span class="lineNum">     404</span> <span class="tlaGNC">     2209757 :     return node.kind === SyntaxKind.TypeParameter;</span></span>
+<span id="L405"><span class="lineNum">     405</span> <span class="tlaGNC">     2209757 : }</span></span>
 <span id="L406"><span class="lineNum">     406</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L407"><span class="lineNum">     407</span> <span class="tlaGNC">           1 : // TODO(rbuckton): Rename to 'isParameterDeclaration'</span></span>
 <span id="L408"><span class="lineNum">     408</span> <span class="tlaGNC">           1 : export function isParameter(node: Node): node is ParameterDeclaration {</span></span>
-<span id="L409"><span class="lineNum">     409</span> <span class="tlaGNC">    20774578 :     return node.kind === SyntaxKind.Parameter;</span></span>
-<span id="L410"><span class="lineNum">     410</span> <span class="tlaGNC">    20774578 : }</span></span>
+<span id="L409"><span class="lineNum">     409</span> <span class="tlaGNC">    20771144 :     return node.kind === SyntaxKind.Parameter;</span></span>
+<span id="L410"><span class="lineNum">     410</span> <span class="tlaGNC">    20771144 : }</span></span>
 <span id="L411"><span class="lineNum">     411</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L412"><span class="lineNum">     412</span> <span class="tlaGNC">           1 : export function isDecorator(node: Node): node is Decorator {</span></span>
 <span id="L413"><span class="lineNum">     413</span> <span class="tlaGNC">      801261 :     return node.kind === SyntaxKind.Decorator;</span></span>
@@ -478,24 +478,24 @@
 <span id="L416"><span class="lineNum">     416</span> <span class="tlaGNC">           1 : // TypeMember</span></span>
 <span id="L417"><span class="lineNum">     417</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L418"><span class="lineNum">     418</span> <span class="tlaGNC">           1 : export function isPropertySignature(node: Node): node is PropertySignature {</span></span>
-<span id="L419"><span class="lineNum">     419</span> <span class="tlaGNC">     5433894 :     return node.kind === SyntaxKind.PropertySignature;</span></span>
-<span id="L420"><span class="lineNum">     420</span> <span class="tlaGNC">     5433894 : }</span></span>
+<span id="L419"><span class="lineNum">     419</span> <span class="tlaGNC">     5433882 :     return node.kind === SyntaxKind.PropertySignature;</span></span>
+<span id="L420"><span class="lineNum">     420</span> <span class="tlaGNC">     5433882 : }</span></span>
 <span id="L421"><span class="lineNum">     421</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L422"><span class="lineNum">     422</span> <span class="tlaGNC">           1 : export function isPropertyDeclaration(node: Node): node is PropertyDeclaration {</span></span>
-<span id="L423"><span class="lineNum">     423</span> <span class="tlaGNC">    46368648 :     return node.kind === SyntaxKind.PropertyDeclaration;</span></span>
-<span id="L424"><span class="lineNum">     424</span> <span class="tlaGNC">    46368648 : }</span></span>
+<span id="L423"><span class="lineNum">     423</span> <span class="tlaGNC">    46364601 :     return node.kind === SyntaxKind.PropertyDeclaration;</span></span>
+<span id="L424"><span class="lineNum">     424</span> <span class="tlaGNC">    46364601 : }</span></span>
 <span id="L425"><span class="lineNum">     425</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L426"><span class="lineNum">     426</span> <span class="tlaGNC">           1 : export function isMethodSignature(node: Node): node is MethodSignature {</span></span>
-<span id="L427"><span class="lineNum">     427</span> <span class="tlaGNC">     5024367 :     return node.kind === SyntaxKind.MethodSignature;</span></span>
-<span id="L428"><span class="lineNum">     428</span> <span class="tlaGNC">     5024367 : }</span></span>
+<span id="L427"><span class="lineNum">     427</span> <span class="tlaGNC">     5024361 :     return node.kind === SyntaxKind.MethodSignature;</span></span>
+<span id="L428"><span class="lineNum">     428</span> <span class="tlaGNC">     5024361 : }</span></span>
 <span id="L429"><span class="lineNum">     429</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L430"><span class="lineNum">     430</span> <span class="tlaGNC">           1 : export function isMethodDeclaration(node: Node): node is MethodDeclaration {</span></span>
-<span id="L431"><span class="lineNum">     431</span> <span class="tlaGNC">     4658016 :     return node.kind === SyntaxKind.MethodDeclaration;</span></span>
-<span id="L432"><span class="lineNum">     432</span> <span class="tlaGNC">     4658016 : }</span></span>
+<span id="L431"><span class="lineNum">     431</span> <span class="tlaGNC">     4658010 :     return node.kind === SyntaxKind.MethodDeclaration;</span></span>
+<span id="L432"><span class="lineNum">     432</span> <span class="tlaGNC">     4658010 : }</span></span>
 <span id="L433"><span class="lineNum">     433</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L434"><span class="lineNum">     434</span> <span class="tlaGNC">           1 : export function isClassStaticBlockDeclaration(node: Node): node is ClassStaticBlockDeclaration {</span></span>
-<span id="L435"><span class="lineNum">     435</span> <span class="tlaGNC">     1263729 :     return node.kind === SyntaxKind.ClassStaticBlockDeclaration;</span></span>
-<span id="L436"><span class="lineNum">     436</span> <span class="tlaGNC">     1263729 : }</span></span>
+<span id="L435"><span class="lineNum">     435</span> <span class="tlaGNC">     1263222 :     return node.kind === SyntaxKind.ClassStaticBlockDeclaration;</span></span>
+<span id="L436"><span class="lineNum">     436</span> <span class="tlaGNC">     1263222 : }</span></span>
 <span id="L437"><span class="lineNum">     437</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L438"><span class="lineNum">     438</span> <span class="tlaGNC">           1 : export function isConstructorDeclaration(node: Node): node is ConstructorDeclaration {</span></span>
 <span id="L439"><span class="lineNum">     439</span> <span class="tlaGNC">     1449475 :     return node.kind === SyntaxKind.Constructor;</span></span>
@@ -506,8 +506,8 @@
 <span id="L444"><span class="lineNum">     444</span> <span class="tlaGNC">      205949 : }</span></span>
 <span id="L445"><span class="lineNum">     445</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L446"><span class="lineNum">     446</span> <span class="tlaGNC">           1 : export function isSetAccessorDeclaration(node: Node): node is SetAccessorDeclaration {</span></span>
-<span id="L447"><span class="lineNum">     447</span> <span class="tlaGNC">      110532 :     return node.kind === SyntaxKind.SetAccessor;</span></span>
-<span id="L448"><span class="lineNum">     448</span> <span class="tlaGNC">      110532 : }</span></span>
+<span id="L447"><span class="lineNum">     447</span> <span class="tlaGNC">      110527 :     return node.kind === SyntaxKind.SetAccessor;</span></span>
+<span id="L448"><span class="lineNum">     448</span> <span class="tlaGNC">      110527 : }</span></span>
 <span id="L449"><span class="lineNum">     449</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L450"><span class="lineNum">     450</span> <span class="tlaGNC">           1 : export function isCallSignatureDeclaration(node: Node): node is CallSignatureDeclaration {</span></span>
 <span id="L451"><span class="lineNum">     451</span> <span class="tlaGNC">      458221 :     return node.kind === SyntaxKind.CallSignature;</span></span>
@@ -528,8 +528,8 @@
 <span id="L466"><span class="lineNum">     466</span> <span class="tlaGNC">      494362 : }</span></span>
 <span id="L467"><span class="lineNum">     467</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L468"><span class="lineNum">     468</span> <span class="tlaGNC">           1 : export function isTypeReferenceNode(node: Node): node is TypeReferenceNode {</span></span>
-<span id="L469"><span class="lineNum">     469</span> <span class="tlaGNC">     4084170 :     return node.kind === SyntaxKind.TypeReference;</span></span>
-<span id="L470"><span class="lineNum">     470</span> <span class="tlaGNC">     4084170 : }</span></span>
+<span id="L469"><span class="lineNum">     469</span> <span class="tlaGNC">     4084163 :     return node.kind === SyntaxKind.TypeReference;</span></span>
+<span id="L470"><span class="lineNum">     470</span> <span class="tlaGNC">     4084163 : }</span></span>
 <span id="L471"><span class="lineNum">     471</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L472"><span class="lineNum">     472</span> <span class="tlaGNC">           1 : export function isFunctionTypeNode(node: Node): node is FunctionTypeNode {</span></span>
 <span id="L473"><span class="lineNum">     473</span> <span class="tlaGNC">      131403 :     return node.kind === SyntaxKind.FunctionType;</span></span>
@@ -540,8 +540,8 @@
 <span id="L478"><span class="lineNum">     478</span> <span class="tlaGNC">      511071 : }</span></span>
 <span id="L479"><span class="lineNum">     479</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L480"><span class="lineNum">     480</span> <span class="tlaGNC">           1 : export function isTypeQueryNode(node: Node): node is TypeQueryNode {</span></span>
-<span id="L481"><span class="lineNum">     481</span> <span class="tlaGNC">    24176709 :     return node.kind === SyntaxKind.TypeQuery;</span></span>
-<span id="L482"><span class="lineNum">     482</span> <span class="tlaGNC">    24176709 : }</span></span>
+<span id="L481"><span class="lineNum">     481</span> <span class="tlaGNC">    24176657 :     return node.kind === SyntaxKind.TypeQuery;</span></span>
+<span id="L482"><span class="lineNum">     482</span> <span class="tlaGNC">    24176657 : }</span></span>
 <span id="L483"><span class="lineNum">     483</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L484"><span class="lineNum">     484</span> <span class="tlaGNC">           1 : export function isTypeLiteralNode(node: Node): node is TypeLiteralNode {</span></span>
 <span id="L485"><span class="lineNum">     485</span> <span class="tlaGNC">     1324549 :     return node.kind === SyntaxKind.TypeLiteral;</span></span>
@@ -576,24 +576,24 @@
 <span id="L514"><span class="lineNum">     514</span> <span class="tlaGNC">      122903 : }</span></span>
 <span id="L515"><span class="lineNum">     515</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L516"><span class="lineNum">     516</span> <span class="tlaGNC">           1 : export function isConditionalTypeNode(node: Node): node is ConditionalTypeNode {</span></span>
-<span id="L517"><span class="lineNum">     517</span> <span class="tlaGNC">      530403 :     return node.kind === SyntaxKind.ConditionalType;</span></span>
-<span id="L518"><span class="lineNum">     518</span> <span class="tlaGNC">      530403 : }</span></span>
+<span id="L517"><span class="lineNum">     517</span> <span class="tlaGNC">      530349 :     return node.kind === SyntaxKind.ConditionalType;</span></span>
+<span id="L518"><span class="lineNum">     518</span> <span class="tlaGNC">      530349 : }</span></span>
 <span id="L519"><span class="lineNum">     519</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L520"><span class="lineNum">     520</span> <span class="tlaGNC">           1 : export function isInferTypeNode(node: Node): node is InferTypeNode {</span></span>
 <span id="L521"><span class="lineNum">     521</span> <span class="tlaGNC">      123097 :     return node.kind === SyntaxKind.InferType;</span></span>
 <span id="L522"><span class="lineNum">     522</span> <span class="tlaGNC">      123097 : }</span></span>
 <span id="L523"><span class="lineNum">     523</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L524"><span class="lineNum">     524</span> <span class="tlaGNC">           1 : export function isParenthesizedTypeNode(node: Node): node is ParenthesizedTypeNode {</span></span>
-<span id="L525"><span class="lineNum">     525</span> <span class="tlaGNC">     2046470 :     return node.kind === SyntaxKind.ParenthesizedType;</span></span>
-<span id="L526"><span class="lineNum">     526</span> <span class="tlaGNC">     2046470 : }</span></span>
+<span id="L525"><span class="lineNum">     525</span> <span class="tlaGNC">     2046464 :     return node.kind === SyntaxKind.ParenthesizedType;</span></span>
+<span id="L526"><span class="lineNum">     526</span> <span class="tlaGNC">     2046464 : }</span></span>
 <span id="L527"><span class="lineNum">     527</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L528"><span class="lineNum">     528</span> <span class="tlaGNC">           1 : export function isThisTypeNode(node: Node): node is ThisTypeNode {</span></span>
 <span id="L529"><span class="lineNum">     529</span> <span class="tlaGNC">      549780 :     return node.kind === SyntaxKind.ThisType;</span></span>
 <span id="L530"><span class="lineNum">     530</span> <span class="tlaGNC">      549780 : }</span></span>
 <span id="L531"><span class="lineNum">     531</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L532"><span class="lineNum">     532</span> <span class="tlaGNC">           1 : export function isTypeOperatorNode(node: Node): node is TypeOperatorNode {</span></span>
-<span id="L533"><span class="lineNum">     533</span> <span class="tlaGNC">     1793608 :     return node.kind === SyntaxKind.TypeOperator;</span></span>
-<span id="L534"><span class="lineNum">     534</span> <span class="tlaGNC">     1793608 : }</span></span>
+<span id="L533"><span class="lineNum">     533</span> <span class="tlaGNC">     1793602 :     return node.kind === SyntaxKind.TypeOperator;</span></span>
+<span id="L534"><span class="lineNum">     534</span> <span class="tlaGNC">     1793602 : }</span></span>
 <span id="L535"><span class="lineNum">     535</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L536"><span class="lineNum">     536</span> <span class="tlaGNC">           1 : export function isIndexedAccessTypeNode(node: Node): node is IndexedAccessTypeNode {</span></span>
 <span id="L537"><span class="lineNum">     537</span> <span class="tlaGNC">      646304 :     return node.kind === SyntaxKind.IndexedAccessType;</span></span>
@@ -608,8 +608,8 @@
 <span id="L546"><span class="lineNum">     546</span> <span class="tlaGNC">       98201 : }</span></span>
 <span id="L547"><span class="lineNum">     547</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L548"><span class="lineNum">     548</span> <span class="tlaGNC">           1 : export function isImportTypeNode(node: Node): node is ImportTypeNode {</span></span>
-<span id="L549"><span class="lineNum">     549</span> <span class="tlaGNC">      471337 :     return node.kind === SyntaxKind.ImportType;</span></span>
-<span id="L550"><span class="lineNum">     550</span> <span class="tlaGNC">      471337 : }</span></span>
+<span id="L549"><span class="lineNum">     549</span> <span class="tlaGNC">      471343 :     return node.kind === SyntaxKind.ImportType;</span></span>
+<span id="L550"><span class="lineNum">     550</span> <span class="tlaGNC">      471343 : }</span></span>
 <span id="L551"><span class="lineNum">     551</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L552"><span class="lineNum">     552</span> <span class="tlaGNC">           1 : export function isTemplateLiteralTypeSpan(node: Node): node is TemplateLiteralTypeSpan {</span></span>
 <span id="L553"><span class="lineNum">     553</span> <span class="tlaGNC">        4357 :     return node.kind === SyntaxKind.TemplateLiteralTypeSpan;</span></span>
@@ -630,8 +630,8 @@
 <span id="L568"><span class="lineNum">     568</span> <span class="tlaGNC">       48602 : }</span></span>
 <span id="L569"><span class="lineNum">     569</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L570"><span class="lineNum">     570</span> <span class="tlaGNC">           1 : export function isBindingElement(node: Node): node is BindingElement {</span></span>
-<span id="L571"><span class="lineNum">     571</span> <span class="tlaGNC">    44752884 :     return node.kind === SyntaxKind.BindingElement;</span></span>
-<span id="L572"><span class="lineNum">     572</span> <span class="tlaGNC">    44752884 : }</span></span>
+<span id="L571"><span class="lineNum">     571</span> <span class="tlaGNC">    44750645 :     return node.kind === SyntaxKind.BindingElement;</span></span>
+<span id="L572"><span class="lineNum">     572</span> <span class="tlaGNC">    44750645 : }</span></span>
 <span id="L573"><span class="lineNum">     573</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L574"><span class="lineNum">     574</span> <span class="tlaGNC">           1 : // Expression</span></span>
 <span id="L575"><span class="lineNum">     575</span> <span class="tlaGNC">           1 : </span></span>
@@ -644,16 +644,16 @@
 <span id="L582"><span class="lineNum">     582</span> <span class="tlaGNC">      358176 : }</span></span>
 <span id="L583"><span class="lineNum">     583</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L584"><span class="lineNum">     584</span> <span class="tlaGNC">           1 : export function isPropertyAccessExpression(node: Node): node is PropertyAccessExpression {</span></span>
-<span id="L585"><span class="lineNum">     585</span> <span class="tlaGNC">    11016819 :     return node.kind === SyntaxKind.PropertyAccessExpression;</span></span>
-<span id="L586"><span class="lineNum">     586</span> <span class="tlaGNC">    11016819 : }</span></span>
+<span id="L585"><span class="lineNum">     585</span> <span class="tlaGNC">    11016813 :     return node.kind === SyntaxKind.PropertyAccessExpression;</span></span>
+<span id="L586"><span class="lineNum">     586</span> <span class="tlaGNC">    11016813 : }</span></span>
 <span id="L587"><span class="lineNum">     587</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L588"><span class="lineNum">     588</span> <span class="tlaGNC">           1 : export function isElementAccessExpression(node: Node): node is ElementAccessExpression {</span></span>
-<span id="L589"><span class="lineNum">     589</span> <span class="tlaGNC">    15776910 :     return node.kind === SyntaxKind.ElementAccessExpression;</span></span>
-<span id="L590"><span class="lineNum">     590</span> <span class="tlaGNC">    15776910 : }</span></span>
+<span id="L589"><span class="lineNum">     589</span> <span class="tlaGNC">    15776900 :     return node.kind === SyntaxKind.ElementAccessExpression;</span></span>
+<span id="L590"><span class="lineNum">     590</span> <span class="tlaGNC">    15776900 : }</span></span>
 <span id="L591"><span class="lineNum">     591</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L592"><span class="lineNum">     592</span> <span class="tlaGNC">           1 : export function isCallExpression(node: Node): node is CallExpression {</span></span>
-<span id="L593"><span class="lineNum">     593</span> <span class="tlaGNC">    12026640 :     return node.kind === SyntaxKind.CallExpression;</span></span>
-<span id="L594"><span class="lineNum">     594</span> <span class="tlaGNC">    12026640 : }</span></span>
+<span id="L593"><span class="lineNum">     593</span> <span class="tlaGNC">    12026563 :     return node.kind === SyntaxKind.CallExpression;</span></span>
+<span id="L594"><span class="lineNum">     594</span> <span class="tlaGNC">    12026563 : }</span></span>
 <span id="L595"><span class="lineNum">     595</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L596"><span class="lineNum">     596</span> <span class="tlaGNC">           1 : export function isNewExpression(node: Node): node is NewExpression {</span></span>
 <span id="L597"><span class="lineNum">     597</span> <span class="tlaGNC">       12080 :     return node.kind === SyntaxKind.NewExpression;</span></span>
@@ -672,12 +672,12 @@
 <span id="L610"><span class="lineNum">     610</span> <span class="tlaGNC">     1818744 : }</span></span>
 <span id="L611"><span class="lineNum">     611</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L612"><span class="lineNum">     612</span> <span class="tlaGNC">           1 : export function isFunctionExpression(node: Node): node is FunctionExpression {</span></span>
-<span id="L613"><span class="lineNum">     613</span> <span class="tlaGNC">     2780822 :     return node.kind === SyntaxKind.FunctionExpression;</span></span>
-<span id="L614"><span class="lineNum">     614</span> <span class="tlaGNC">     2780822 : }</span></span>
+<span id="L613"><span class="lineNum">     613</span> <span class="tlaGNC">     2780610 :     return node.kind === SyntaxKind.FunctionExpression;</span></span>
+<span id="L614"><span class="lineNum">     614</span> <span class="tlaGNC">     2780610 : }</span></span>
 <span id="L615"><span class="lineNum">     615</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L616"><span class="lineNum">     616</span> <span class="tlaGNC">           1 : export function isArrowFunction(node: Node): node is ArrowFunction {</span></span>
-<span id="L617"><span class="lineNum">     617</span> <span class="tlaGNC">     3881947 :     return node.kind === SyntaxKind.ArrowFunction;</span></span>
-<span id="L618"><span class="lineNum">     618</span> <span class="tlaGNC">     3881947 : }</span></span>
+<span id="L617"><span class="lineNum">     617</span> <span class="tlaGNC">     3881735 :     return node.kind === SyntaxKind.ArrowFunction;</span></span>
+<span id="L618"><span class="lineNum">     618</span> <span class="tlaGNC">     3881735 : }</span></span>
 <span id="L619"><span class="lineNum">     619</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L620"><span class="lineNum">     620</span> <span class="tlaGNC">           1 : export function isDeleteExpression(node: Node): node is DeleteExpression {</span></span>
 <span id="L621"><span class="lineNum">     621</span> <span class="tlaGNC">           3 :     return node.kind === SyntaxKind.DeleteExpression;</span></span>
@@ -696,16 +696,16 @@
 <span id="L634"><span class="lineNum">     634</span> <span class="tlaGNC">      826794 : }</span></span>
 <span id="L635"><span class="lineNum">     635</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L636"><span class="lineNum">     636</span> <span class="tlaGNC">           1 : export function isPrefixUnaryExpression(node: Node): node is PrefixUnaryExpression {</span></span>
-<span id="L637"><span class="lineNum">     637</span> <span class="tlaGNC">       34805 :     return node.kind === SyntaxKind.PrefixUnaryExpression;</span></span>
-<span id="L638"><span class="lineNum">     638</span> <span class="tlaGNC">       34805 : }</span></span>
+<span id="L637"><span class="lineNum">     637</span> <span class="tlaGNC">       34801 :     return node.kind === SyntaxKind.PrefixUnaryExpression;</span></span>
+<span id="L638"><span class="lineNum">     638</span> <span class="tlaGNC">       34801 : }</span></span>
 <span id="L639"><span class="lineNum">     639</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L640"><span class="lineNum">     640</span> <span class="tlaGNC">           1 : export function isPostfixUnaryExpression(node: Node): node is PostfixUnaryExpression {</span></span>
 <span id="L641"><span class="lineNum">     641</span> <span class="tlaGNC">         257 :     return node.kind === SyntaxKind.PostfixUnaryExpression;</span></span>
 <span id="L642"><span class="lineNum">     642</span> <span class="tlaGNC">         257 : }</span></span>
 <span id="L643"><span class="lineNum">     643</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L644"><span class="lineNum">     644</span> <span class="tlaGNC">           1 : export function isBinaryExpression(node: Node): node is BinaryExpression {</span></span>
-<span id="L645"><span class="lineNum">     645</span> <span class="tlaGNC">    17916611 :     return node.kind === SyntaxKind.BinaryExpression;</span></span>
-<span id="L646"><span class="lineNum">     646</span> <span class="tlaGNC">    17916611 : }</span></span>
+<span id="L645"><span class="lineNum">     645</span> <span class="tlaGNC">    17898472 :     return node.kind === SyntaxKind.BinaryExpression;</span></span>
+<span id="L646"><span class="lineNum">     646</span> <span class="tlaGNC">    17898472 : }</span></span>
 <span id="L647"><span class="lineNum">     647</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L648"><span class="lineNum">     648</span> <span class="tlaGNC">           1 : export function isConditionalExpression(node: Node): node is ConditionalExpression {</span></span>
 <span id="L649"><span class="lineNum">     649</span> <span class="tlaGNC">        9771 :     return node.kind === SyntaxKind.ConditionalExpression;</span></span>
@@ -724,16 +724,16 @@
 <span id="L662"><span class="lineNum">     662</span> <span class="tlaGNC">      414409 : }</span></span>
 <span id="L663"><span class="lineNum">     663</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L664"><span class="lineNum">     664</span> <span class="tlaGNC">           1 : export function isClassExpression(node: Node): node is ClassExpression {</span></span>
-<span id="L665"><span class="lineNum">     665</span> <span class="tlaGNC">     4136530 :     return node.kind === SyntaxKind.ClassExpression;</span></span>
-<span id="L666"><span class="lineNum">     666</span> <span class="tlaGNC">     4136530 : }</span></span>
+<span id="L665"><span class="lineNum">     665</span> <span class="tlaGNC">     4136318 :     return node.kind === SyntaxKind.ClassExpression;</span></span>
+<span id="L666"><span class="lineNum">     666</span> <span class="tlaGNC">     4136318 : }</span></span>
 <span id="L667"><span class="lineNum">     667</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L668"><span class="lineNum">     668</span> <span class="tlaGNC">           1 : export function isOmittedExpression(node: Node): node is OmittedExpression {</span></span>
-<span id="L669"><span class="lineNum">     669</span> <span class="tlaGNC">      354204 :     return node.kind === SyntaxKind.OmittedExpression;</span></span>
-<span id="L670"><span class="lineNum">     670</span> <span class="tlaGNC">      354204 : }</span></span>
+<span id="L669"><span class="lineNum">     669</span> <span class="tlaGNC">      354194 :     return node.kind === SyntaxKind.OmittedExpression;</span></span>
+<span id="L670"><span class="lineNum">     670</span> <span class="tlaGNC">      354194 : }</span></span>
 <span id="L671"><span class="lineNum">     671</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L672"><span class="lineNum">     672</span> <span class="tlaGNC">           1 : export function isExpressionWithTypeArguments(node: Node): node is ExpressionWithTypeArguments {</span></span>
-<span id="L673"><span class="lineNum">     673</span> <span class="tlaGNC">     2172281 :     return node.kind === SyntaxKind.ExpressionWithTypeArguments;</span></span>
-<span id="L674"><span class="lineNum">     674</span> <span class="tlaGNC">     2172281 : }</span></span>
+<span id="L673"><span class="lineNum">     673</span> <span class="tlaGNC">     2172253 :     return node.kind === SyntaxKind.ExpressionWithTypeArguments;</span></span>
+<span id="L674"><span class="lineNum">     674</span> <span class="tlaGNC">     2172253 : }</span></span>
 <span id="L675"><span class="lineNum">     675</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L676"><span class="lineNum">     676</span> <span class="tlaGNC">           1 : export function isAsExpression(node: Node): node is AsExpression {</span></span>
 <span id="L677"><span class="lineNum">     677</span> <span class="tlaGNC">         277 :     return node.kind === SyntaxKind.AsExpression;</span></span>
@@ -744,8 +744,8 @@
 <span id="L682"><span class="lineNum">     682</span> <span class="tlaGNC">       65583 : }</span></span>
 <span id="L683"><span class="lineNum">     683</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L684"><span class="lineNum">     684</span> <span class="tlaGNC">           1 : export function isNonNullExpression(node: Node): node is NonNullExpression {</span></span>
-<span id="L685"><span class="lineNum">     685</span> <span class="tlaGNC">      379041 :     return node.kind === SyntaxKind.NonNullExpression;</span></span>
-<span id="L686"><span class="lineNum">     686</span> <span class="tlaGNC">      379041 : }</span></span>
+<span id="L685"><span class="lineNum">     685</span> <span class="tlaGNC">      379013 :     return node.kind === SyntaxKind.NonNullExpression;</span></span>
+<span id="L686"><span class="lineNum">     686</span> <span class="tlaGNC">      379013 : }</span></span>
 <span id="L687"><span class="lineNum">     687</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L688"><span class="lineNum">     688</span> <span class="tlaGNC">           1 : export function isMetaProperty(node: Node): node is MetaProperty {</span></span>
 <span id="L689"><span class="lineNum">     689</span> <span class="tlaGNC">      524350 :     return node.kind === SyntaxKind.MetaProperty;</span></span>
@@ -780,16 +780,16 @@
 <span id="L718"><span class="lineNum">     718</span> <span class="tlaGNC">      588124 : }</span></span>
 <span id="L719"><span class="lineNum">     719</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L720"><span class="lineNum">     720</span> <span class="tlaGNC">           1 : export function isVariableStatement(node: Node): node is VariableStatement {</span></span>
-<span id="L721"><span class="lineNum">     721</span> <span class="tlaGNC">      928267 :     return node.kind === SyntaxKind.VariableStatement;</span></span>
-<span id="L722"><span class="lineNum">     722</span> <span class="tlaGNC">      928267 : }</span></span>
+<span id="L721"><span class="lineNum">     721</span> <span class="tlaGNC">      915912 :     return node.kind === SyntaxKind.VariableStatement;</span></span>
+<span id="L722"><span class="lineNum">     722</span> <span class="tlaGNC">      915912 : }</span></span>
 <span id="L723"><span class="lineNum">     723</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L724"><span class="lineNum">     724</span> <span class="tlaGNC">           1 : export function isEmptyStatement(node: Node): node is EmptyStatement {</span></span>
 <span id="L725"><span class="lineNum">     725</span> <span class="tlaGNC">        1344 :     return node.kind === SyntaxKind.EmptyStatement;</span></span>
 <span id="L726"><span class="lineNum">     726</span> <span class="tlaGNC">        1344 : }</span></span>
 <span id="L727"><span class="lineNum">     727</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L728"><span class="lineNum">     728</span> <span class="tlaGNC">           1 : export function isExpressionStatement(node: Node): node is ExpressionStatement {</span></span>
-<span id="L729"><span class="lineNum">     729</span> <span class="tlaGNC">      121871 :     return node.kind === SyntaxKind.ExpressionStatement;</span></span>
-<span id="L730"><span class="lineNum">     730</span> <span class="tlaGNC">      121871 : }</span></span>
+<span id="L729"><span class="lineNum">     729</span> <span class="tlaGNC">      118479 :     return node.kind === SyntaxKind.ExpressionStatement;</span></span>
+<span id="L730"><span class="lineNum">     730</span> <span class="tlaGNC">      118479 : }</span></span>
 <span id="L731"><span class="lineNum">     731</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L732"><span class="lineNum">     732</span> <span class="tlaGNC">           1 : export function isIfStatement(node: Node): node is IfStatement {</span></span>
 <span id="L733"><span class="lineNum">     733</span> <span class="tlaGNC">       14580 :     return node.kind === SyntaxKind.IfStatement;</span></span>
@@ -852,40 +852,40 @@
 <span id="L790"><span class="lineNum">     790</span> <span class="tlaUNC">           0 : }</span></span>
 <span id="L791"><span class="lineNum">     791</span> <span class="tlaGNC tlaBgGNC">           1 : </span></span>
 <span id="L792"><span class="lineNum">     792</span> <span class="tlaGNC">           1 : export function isVariableDeclaration(node: Node): node is VariableDeclaration {</span></span>
-<span id="L793"><span class="lineNum">     793</span> <span class="tlaGNC">    41898583 :     return node.kind === SyntaxKind.VariableDeclaration;</span></span>
-<span id="L794"><span class="lineNum">     794</span> <span class="tlaGNC">    41898583 : }</span></span>
+<span id="L793"><span class="lineNum">     793</span> <span class="tlaGNC">    41898565 :     return node.kind === SyntaxKind.VariableDeclaration;</span></span>
+<span id="L794"><span class="lineNum">     794</span> <span class="tlaGNC">    41898565 : }</span></span>
 <span id="L795"><span class="lineNum">     795</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L796"><span class="lineNum">     796</span> <span class="tlaGNC">           1 : export function isVariableDeclarationList(node: Node): node is VariableDeclarationList {</span></span>
 <span id="L797"><span class="lineNum">     797</span> <span class="tlaGNC">      112885 :     return node.kind === SyntaxKind.VariableDeclarationList;</span></span>
 <span id="L798"><span class="lineNum">     798</span> <span class="tlaGNC">      112885 : }</span></span>
 <span id="L799"><span class="lineNum">     799</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L800"><span class="lineNum">     800</span> <span class="tlaGNC">           1 : export function isFunctionDeclaration(node: Node): node is FunctionDeclaration {</span></span>
-<span id="L801"><span class="lineNum">     801</span> <span class="tlaGNC">     8469788 :     return node.kind === SyntaxKind.FunctionDeclaration;</span></span>
-<span id="L802"><span class="lineNum">     802</span> <span class="tlaGNC">     8469788 : }</span></span>
+<span id="L801"><span class="lineNum">     801</span> <span class="tlaGNC">     8469776 :     return node.kind === SyntaxKind.FunctionDeclaration;</span></span>
+<span id="L802"><span class="lineNum">     802</span> <span class="tlaGNC">     8469776 : }</span></span>
 <span id="L803"><span class="lineNum">     803</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L804"><span class="lineNum">     804</span> <span class="tlaGNC">           1 : export function isClassDeclaration(node: Node): node is ClassDeclaration {</span></span>
-<span id="L805"><span class="lineNum">     805</span> <span class="tlaGNC">     3846838 :     return node.kind === SyntaxKind.ClassDeclaration;</span></span>
-<span id="L806"><span class="lineNum">     806</span> <span class="tlaGNC">     3846838 : }</span></span>
+<span id="L805"><span class="lineNum">     805</span> <span class="tlaGNC">     3846832 :     return node.kind === SyntaxKind.ClassDeclaration;</span></span>
+<span id="L806"><span class="lineNum">     806</span> <span class="tlaGNC">     3846832 : }</span></span>
 <span id="L807"><span class="lineNum">     807</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L808"><span class="lineNum">     808</span> <span class="tlaGNC">           1 : export function isInterfaceDeclaration(node: Node): node is InterfaceDeclaration {</span></span>
-<span id="L809"><span class="lineNum">     809</span> <span class="tlaGNC">     2158369 :     return node.kind === SyntaxKind.InterfaceDeclaration;</span></span>
-<span id="L810"><span class="lineNum">     810</span> <span class="tlaGNC">     2158369 : }</span></span>
+<span id="L809"><span class="lineNum">     809</span> <span class="tlaGNC">     2158361 :     return node.kind === SyntaxKind.InterfaceDeclaration;</span></span>
+<span id="L810"><span class="lineNum">     810</span> <span class="tlaGNC">     2158361 : }</span></span>
 <span id="L811"><span class="lineNum">     811</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L812"><span class="lineNum">     812</span> <span class="tlaGNC">           1 : export function isTypeAliasDeclaration(node: Node): node is TypeAliasDeclaration {</span></span>
-<span id="L813"><span class="lineNum">     813</span> <span class="tlaGNC">     8681410 :     return node.kind === SyntaxKind.TypeAliasDeclaration;</span></span>
-<span id="L814"><span class="lineNum">     814</span> <span class="tlaGNC">     8681410 : }</span></span>
+<span id="L813"><span class="lineNum">     813</span> <span class="tlaGNC">     8681398 :     return node.kind === SyntaxKind.TypeAliasDeclaration;</span></span>
+<span id="L814"><span class="lineNum">     814</span> <span class="tlaGNC">     8681398 : }</span></span>
 <span id="L815"><span class="lineNum">     815</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L816"><span class="lineNum">     816</span> <span class="tlaGNC">           1 : export function isEnumDeclaration(node: Node): node is EnumDeclaration {</span></span>
-<span id="L817"><span class="lineNum">     817</span> <span class="tlaGNC">     2182488 :     return node.kind === SyntaxKind.EnumDeclaration;</span></span>
-<span id="L818"><span class="lineNum">     818</span> <span class="tlaGNC">     2182488 : }</span></span>
+<span id="L817"><span class="lineNum">     817</span> <span class="tlaGNC">     2182480 :     return node.kind === SyntaxKind.EnumDeclaration;</span></span>
+<span id="L818"><span class="lineNum">     818</span> <span class="tlaGNC">     2182480 : }</span></span>
 <span id="L819"><span class="lineNum">     819</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L820"><span class="lineNum">     820</span> <span class="tlaGNC">           1 : export function isModuleDeclaration(node: Node): node is ModuleDeclaration {</span></span>
-<span id="L821"><span class="lineNum">     821</span> <span class="tlaGNC">    22424797 :     return node.kind === SyntaxKind.ModuleDeclaration;</span></span>
-<span id="L822"><span class="lineNum">     822</span> <span class="tlaGNC">    22424797 : }</span></span>
+<span id="L821"><span class="lineNum">     821</span> <span class="tlaGNC">    22397007 :     return node.kind === SyntaxKind.ModuleDeclaration;</span></span>
+<span id="L822"><span class="lineNum">     822</span> <span class="tlaGNC">    22397007 : }</span></span>
 <span id="L823"><span class="lineNum">     823</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L824"><span class="lineNum">     824</span> <span class="tlaGNC">           1 : export function isModuleBlock(node: Node): node is ModuleBlock {</span></span>
-<span id="L825"><span class="lineNum">     825</span> <span class="tlaGNC">      275341 :     return node.kind === SyntaxKind.ModuleBlock;</span></span>
-<span id="L826"><span class="lineNum">     826</span> <span class="tlaGNC">      275341 : }</span></span>
+<span id="L825"><span class="lineNum">     825</span> <span class="tlaGNC">      275316 :     return node.kind === SyntaxKind.ModuleBlock;</span></span>
+<span id="L826"><span class="lineNum">     826</span> <span class="tlaGNC">      275316 : }</span></span>
 <span id="L827"><span class="lineNum">     827</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L828"><span class="lineNum">     828</span> <span class="tlaGNC">           1 : export function isCaseBlock(node: Node): node is CaseBlock {</span></span>
 <span id="L829"><span class="lineNum">     829</span> <span class="tlaGNC">        1704 :     return node.kind === SyntaxKind.CaseBlock;</span></span>
@@ -896,12 +896,12 @@
 <span id="L834"><span class="lineNum">     834</span> <span class="tlaGNC">      132658 : }</span></span>
 <span id="L835"><span class="lineNum">     835</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L836"><span class="lineNum">     836</span> <span class="tlaGNC">           1 : export function isImportEqualsDeclaration(node: Node): node is ImportEqualsDeclaration {</span></span>
-<span id="L837"><span class="lineNum">     837</span> <span class="tlaGNC">     4935645 :     return node.kind === SyntaxKind.ImportEqualsDeclaration;</span></span>
-<span id="L838"><span class="lineNum">     838</span> <span class="tlaGNC">     4935645 : }</span></span>
+<span id="L837"><span class="lineNum">     837</span> <span class="tlaGNC">     4933096 :     return node.kind === SyntaxKind.ImportEqualsDeclaration;</span></span>
+<span id="L838"><span class="lineNum">     838</span> <span class="tlaGNC">     4933096 : }</span></span>
 <span id="L839"><span class="lineNum">     839</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L840"><span class="lineNum">     840</span> <span class="tlaGNC">           1 : export function isImportDeclaration(node: Node): node is ImportDeclaration {</span></span>
-<span id="L841"><span class="lineNum">     841</span> <span class="tlaGNC">     3348566 :     return node.kind === SyntaxKind.ImportDeclaration;</span></span>
-<span id="L842"><span class="lineNum">     842</span> <span class="tlaGNC">     3348566 : }</span></span>
+<span id="L841"><span class="lineNum">     841</span> <span class="tlaGNC">     3346017 :     return node.kind === SyntaxKind.ImportDeclaration;</span></span>
+<span id="L842"><span class="lineNum">     842</span> <span class="tlaGNC">     3346017 : }</span></span>
 <span id="L843"><span class="lineNum">     843</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L844"><span class="lineNum">     844</span> <span class="tlaGNC">           1 : export function isImportClause(node: Node): node is ImportClause {</span></span>
 <span id="L845"><span class="lineNum">     845</span> <span class="tlaGNC">       69762 :     return node.kind === SyntaxKind.ImportClause;</span></span>
@@ -946,20 +946,20 @@
 <span id="L884"><span class="lineNum">     884</span> <span class="tlaGNC">      602069 : }</span></span>
 <span id="L885"><span class="lineNum">     885</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L886"><span class="lineNum">     886</span> <span class="tlaGNC">           1 : export function isExportAssignment(node: Node): node is ExportAssignment {</span></span>
-<span id="L887"><span class="lineNum">     887</span> <span class="tlaGNC">     4760506 :     return node.kind === SyntaxKind.ExportAssignment;</span></span>
-<span id="L888"><span class="lineNum">     888</span> <span class="tlaGNC">     4760506 : }</span></span>
+<span id="L887"><span class="lineNum">     887</span> <span class="tlaGNC">     4755722 :     return node.kind === SyntaxKind.ExportAssignment;</span></span>
+<span id="L888"><span class="lineNum">     888</span> <span class="tlaGNC">     4755722 : }</span></span>
 <span id="L889"><span class="lineNum">     889</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L890"><span class="lineNum">     890</span> <span class="tlaGNC">           1 : export function isExportDeclaration(node: Node): node is ExportDeclaration {</span></span>
-<span id="L891"><span class="lineNum">     891</span> <span class="tlaGNC">     5204061 :     return node.kind === SyntaxKind.ExportDeclaration;</span></span>
-<span id="L892"><span class="lineNum">     892</span> <span class="tlaGNC">     5204061 : }</span></span>
+<span id="L891"><span class="lineNum">     891</span> <span class="tlaGNC">     5199084 :     return node.kind === SyntaxKind.ExportDeclaration;</span></span>
+<span id="L892"><span class="lineNum">     892</span> <span class="tlaGNC">     5199084 : }</span></span>
 <span id="L893"><span class="lineNum">     893</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L894"><span class="lineNum">     894</span> <span class="tlaGNC">           1 : export function isNamedExports(node: Node): node is NamedExports {</span></span>
 <span id="L895"><span class="lineNum">     895</span> <span class="tlaGNC">       15568 :     return node.kind === SyntaxKind.NamedExports;</span></span>
 <span id="L896"><span class="lineNum">     896</span> <span class="tlaGNC">       15568 : }</span></span>
 <span id="L897"><span class="lineNum">     897</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L898"><span class="lineNum">     898</span> <span class="tlaGNC">           1 : export function isExportSpecifier(node: Node): node is ExportSpecifier {</span></span>
-<span id="L899"><span class="lineNum">     899</span> <span class="tlaGNC">    19576623 :     return node.kind === SyntaxKind.ExportSpecifier;</span></span>
-<span id="L900"><span class="lineNum">     900</span> <span class="tlaGNC">    19576623 : }</span></span>
+<span id="L899"><span class="lineNum">     899</span> <span class="tlaGNC">    19561896 :     return node.kind === SyntaxKind.ExportSpecifier;</span></span>
+<span id="L900"><span class="lineNum">     900</span> <span class="tlaGNC">    19561896 : }</span></span>
 <span id="L901"><span class="lineNum">     901</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L902"><span class="lineNum">     902</span> <span class="tlaGNC">           1 : export function isModuleExportName(node: Node): node is ModuleExportName {</span></span>
 <span id="L903"><span class="lineNum">     903</span> <span class="tlaGNC">         237 :     return node.kind === SyntaxKind.Identifier || node.kind === SyntaxKind.StringLiteral;</span></span>
@@ -981,8 +981,8 @@
 <span id="L919"><span class="lineNum">     919</span> <span class="tlaGNC">           1 : // Module References</span></span>
 <span id="L920"><span class="lineNum">     920</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L921"><span class="lineNum">     921</span> <span class="tlaGNC">           1 : export function isExternalModuleReference(node: Node): node is ExternalModuleReference {</span></span>
-<span id="L922"><span class="lineNum">     922</span> <span class="tlaGNC">       39868 :     return node.kind === SyntaxKind.ExternalModuleReference;</span></span>
-<span id="L923"><span class="lineNum">     923</span> <span class="tlaGNC">       39868 : }</span></span>
+<span id="L922"><span class="lineNum">     922</span> <span class="tlaGNC">       39849 :     return node.kind === SyntaxKind.ExternalModuleReference;</span></span>
+<span id="L923"><span class="lineNum">     923</span> <span class="tlaGNC">       39849 : }</span></span>
 <span id="L924"><span class="lineNum">     924</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L925"><span class="lineNum">     925</span> <span class="tlaGNC">           1 : // JSX</span></span>
 <span id="L926"><span class="lineNum">     926</span> <span class="tlaGNC">           1 : </span></span>
@@ -1015,8 +1015,8 @@
 <span id="L953"><span class="lineNum">     953</span> <span class="tlaGNC">          14 : }</span></span>
 <span id="L954"><span class="lineNum">     954</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L955"><span class="lineNum">     955</span> <span class="tlaGNC">           1 : export function isJsxAttribute(node: Node): node is JsxAttribute {</span></span>
-<span id="L956"><span class="lineNum">     956</span> <span class="tlaGNC">     3096695 :     return node.kind === SyntaxKind.JsxAttribute;</span></span>
-<span id="L957"><span class="lineNum">     957</span> <span class="tlaGNC">     3096695 : }</span></span>
+<span id="L956"><span class="lineNum">     956</span> <span class="tlaGNC">     3096689 :     return node.kind === SyntaxKind.JsxAttribute;</span></span>
+<span id="L957"><span class="lineNum">     957</span> <span class="tlaGNC">     3096689 : }</span></span>
 <span id="L958"><span class="lineNum">     958</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L959"><span class="lineNum">     959</span> <span class="tlaGNC">           1 : export function isJsxAttributes(node: Node): node is JsxAttributes {</span></span>
 <span id="L960"><span class="lineNum">     960</span> <span class="tlaGNC">      109468 :     return node.kind === SyntaxKind.JsxAttributes;</span></span>
@@ -1031,8 +1031,8 @@
 <span id="L969"><span class="lineNum">     969</span> <span class="tlaGNC">        2413 : }</span></span>
 <span id="L970"><span class="lineNum">     970</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L971"><span class="lineNum">     971</span> <span class="tlaGNC">           1 : export function isJsxNamespacedName(node: Node): node is JsxNamespacedName {</span></span>
-<span id="L972"><span class="lineNum">     972</span> <span class="tlaGNC">    16419407 :     return node.kind === SyntaxKind.JsxNamespacedName;</span></span>
-<span id="L973"><span class="lineNum">     973</span> <span class="tlaGNC">    16419407 : }</span></span>
+<span id="L972"><span class="lineNum">     972</span> <span class="tlaGNC">    16404667 :     return node.kind === SyntaxKind.JsxNamespacedName;</span></span>
+<span id="L973"><span class="lineNum">     973</span> <span class="tlaGNC">    16404667 : }</span></span>
 <span id="L974"><span class="lineNum">     974</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L975"><span class="lineNum">     975</span> <span class="tlaGNC">           1 : // Clauses</span></span>
 <span id="L976"><span class="lineNum">     976</span> <span class="tlaGNC">           1 : </span></span>
@@ -1055,12 +1055,12 @@
 <span id="L993"><span class="lineNum">     993</span> <span class="tlaGNC">           1 : // Property assignments</span></span>
 <span id="L994"><span class="lineNum">     994</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L995"><span class="lineNum">     995</span> <span class="tlaGNC">           1 : export function isPropertyAssignment(node: Node): node is PropertyAssignment {</span></span>
-<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">     3659646 :     return node.kind === SyntaxKind.PropertyAssignment;</span></span>
-<span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">     3659646 : }</span></span>
+<span id="L996"><span class="lineNum">     996</span> <span class="tlaGNC">     3659640 :     return node.kind === SyntaxKind.PropertyAssignment;</span></span>
+<span id="L997"><span class="lineNum">     997</span> <span class="tlaGNC">     3659640 : }</span></span>
 <span id="L998"><span class="lineNum">     998</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L999"><span class="lineNum">     999</span> <span class="tlaGNC">           1 : export function isShorthandPropertyAssignment(node: Node): node is ShorthandPropertyAssignment {</span></span>
-<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">     4593847 :     return node.kind === SyntaxKind.ShorthandPropertyAssignment;</span></span>
-<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">     4593847 : }</span></span>
+<span id="L1000"><span class="lineNum">    1000</span> <span class="tlaGNC">     4593841 :     return node.kind === SyntaxKind.ShorthandPropertyAssignment;</span></span>
+<span id="L1001"><span class="lineNum">    1001</span> <span class="tlaGNC">     4593841 : }</span></span>
 <span id="L1002"><span class="lineNum">    1002</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1003"><span class="lineNum">    1003</span> <span class="tlaGNC">           1 : export function isSpreadAssignment(node: Node): node is SpreadAssignment {</span></span>
 <span id="L1004"><span class="lineNum">    1004</span> <span class="tlaGNC">      604208 :     return node.kind === SyntaxKind.SpreadAssignment;</span></span>
@@ -1074,8 +1074,8 @@
 <span id="L1012"><span class="lineNum">    1012</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1013"><span class="lineNum">    1013</span> <span class="tlaGNC">           1 : // Top-level nodes</span></span>
 <span id="L1014"><span class="lineNum">    1014</span> <span class="tlaGNC">           1 : export function isSourceFile(node: Node): node is SourceFile {</span></span>
-<span id="L1015"><span class="lineNum">    1015</span> <span class="tlaGNC">    31499032 :     return node.kind === SyntaxKind.SourceFile;</span></span>
-<span id="L1016"><span class="lineNum">    1016</span> <span class="tlaGNC">    31499032 : }</span></span>
+<span id="L1015"><span class="lineNum">    1015</span> <span class="tlaGNC">    31498985 :     return node.kind === SyntaxKind.SourceFile;</span></span>
+<span id="L1016"><span class="lineNum">    1016</span> <span class="tlaGNC">    31498985 : }</span></span>
 <span id="L1017"><span class="lineNum">    1017</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1018"><span class="lineNum">    1018</span> <span class="tlaGNC">           1 : export function isBundle(node: Node): node is Bundle {</span></span>
 <span id="L1019"><span class="lineNum">    1019</span> <span class="tlaGNC">           1 :     return node.kind === SyntaxKind.Bundle;</span></span>
@@ -1086,8 +1086,8 @@
 <span id="L1024"><span class="lineNum">    1024</span> <span class="tlaGNC">           1 : // JSDoc Elements</span></span>
 <span id="L1025"><span class="lineNum">    1025</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1026"><span class="lineNum">    1026</span> <span class="tlaGNC">           1 : export function isJSDocTypeExpression(node: Node): node is JSDocTypeExpression {</span></span>
-<span id="L1027"><span class="lineNum">    1027</span> <span class="tlaGNC">    76509935 :     return node.kind === SyntaxKind.JSDocTypeExpression;</span></span>
-<span id="L1028"><span class="lineNum">    1028</span> <span class="tlaGNC">    76509935 : }</span></span>
+<span id="L1027"><span class="lineNum">    1027</span> <span class="tlaGNC">    76509929 :     return node.kind === SyntaxKind.JSDocTypeExpression;</span></span>
+<span id="L1028"><span class="lineNum">    1028</span> <span class="tlaGNC">    76509929 : }</span></span>
 <span id="L1029"><span class="lineNum">    1029</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1030"><span class="lineNum">    1030</span> <span class="tlaGNC">           1 : export function isJSDocNameReference(node: Node): node is JSDocNameReference {</span></span>
 <span id="L1031"><span class="lineNum">    1031</span> <span class="tlaGNC">     4034080 :     return node.kind === SyntaxKind.JSDocNameReference;</span></span>
@@ -1118,8 +1118,8 @@
 <span id="L1056"><span class="lineNum">    1056</span> <span class="tlaGNC">      381269 : }</span></span>
 <span id="L1057"><span class="lineNum">    1057</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1058"><span class="lineNum">    1058</span> <span class="tlaGNC">           1 : export function isJSDocNullableType(node: Node): node is JSDocNullableType {</span></span>
-<span id="L1059"><span class="lineNum">    1059</span> <span class="tlaGNC">      652636 :     return node.kind === SyntaxKind.JSDocNullableType;</span></span>
-<span id="L1060"><span class="lineNum">    1060</span> <span class="tlaGNC">      652636 : }</span></span>
+<span id="L1059"><span class="lineNum">    1059</span> <span class="tlaGNC">      652596 :     return node.kind === SyntaxKind.JSDocNullableType;</span></span>
+<span id="L1060"><span class="lineNum">    1060</span> <span class="tlaGNC">      652596 : }</span></span>
 <span id="L1061"><span class="lineNum">    1061</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1062"><span class="lineNum">    1062</span> <span class="tlaGNC">           1 : export function isJSDocNonNullableType(node: Node): node is JSDocNonNullableType {</span></span>
 <span id="L1063"><span class="lineNum">    1063</span> <span class="tlaGNC">      381357 :     return node.kind === SyntaxKind.JSDocNonNullableType;</span></span>
@@ -1142,8 +1142,8 @@
 <span id="L1080"><span class="lineNum">    1080</span> <span class="tlaUNC">           0 : }</span></span>
 <span id="L1081"><span class="lineNum">    1081</span> <span class="tlaGNC tlaBgGNC">           1 : </span></span>
 <span id="L1082"><span class="lineNum">    1082</span> <span class="tlaGNC">           1 : export function isJSDoc(node: Node): node is JSDoc {</span></span>
-<span id="L1083"><span class="lineNum">    1083</span> <span class="tlaGNC">     1425697 :     return node.kind === SyntaxKind.JSDoc;</span></span>
-<span id="L1084"><span class="lineNum">    1084</span> <span class="tlaGNC">     1425697 : }</span></span>
+<span id="L1083"><span class="lineNum">    1083</span> <span class="tlaGNC">     1422540 :     return node.kind === SyntaxKind.JSDoc;</span></span>
+<span id="L1084"><span class="lineNum">    1084</span> <span class="tlaGNC">     1422540 : }</span></span>
 <span id="L1085"><span class="lineNum">    1085</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1086"><span class="lineNum">    1086</span> <span class="tlaGNC">           1 : export function isJSDocTypeLiteral(node: Node): node is JSDocTypeLiteral {</span></span>
 <span id="L1087"><span class="lineNum">    1087</span> <span class="tlaGNC">      937521 :     return node.kind === SyntaxKind.JSDocTypeLiteral;</span></span>
@@ -1208,24 +1208,24 @@
 <span id="L1146"><span class="lineNum">    1146</span> <span class="tlaGNC">        2175 : }</span></span>
 <span id="L1147"><span class="lineNum">    1147</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1148"><span class="lineNum">    1148</span> <span class="tlaGNC">           1 : export function isJSDocParameterTag(node: Node): node is JSDocParameterTag {</span></span>
-<span id="L1149"><span class="lineNum">    1149</span> <span class="tlaGNC">    27325844 :     return node.kind === SyntaxKind.JSDocParameterTag;</span></span>
-<span id="L1150"><span class="lineNum">    1150</span> <span class="tlaGNC">    27325844 : }</span></span>
+<span id="L1149"><span class="lineNum">    1149</span> <span class="tlaGNC">    27325792 :     return node.kind === SyntaxKind.JSDocParameterTag;</span></span>
+<span id="L1150"><span class="lineNum">    1150</span> <span class="tlaGNC">    27325792 : }</span></span>
 <span id="L1151"><span class="lineNum">    1151</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1152"><span class="lineNum">    1152</span> <span class="tlaGNC">           1 : export function isJSDocReturnTag(node: Node): node is JSDocReturnTag {</span></span>
-<span id="L1153"><span class="lineNum">    1153</span> <span class="tlaGNC">    24139949 :     return node.kind === SyntaxKind.JSDocReturnTag;</span></span>
-<span id="L1154"><span class="lineNum">    1154</span> <span class="tlaGNC">    24139949 : }</span></span>
+<span id="L1153"><span class="lineNum">    1153</span> <span class="tlaGNC">    24139795 :     return node.kind === SyntaxKind.JSDocReturnTag;</span></span>
+<span id="L1154"><span class="lineNum">    1154</span> <span class="tlaGNC">    24139795 : }</span></span>
 <span id="L1155"><span class="lineNum">    1155</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1156"><span class="lineNum">    1156</span> <span class="tlaGNC">           1 : export function isJSDocThisTag(node: Node): node is JSDocThisTag {</span></span>
 <span id="L1157"><span class="lineNum">    1157</span> <span class="tlaGNC">       10812 :     return node.kind === SyntaxKind.JSDocThisTag;</span></span>
 <span id="L1158"><span class="lineNum">    1158</span> <span class="tlaGNC">       10812 : }</span></span>
 <span id="L1159"><span class="lineNum">    1159</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1160"><span class="lineNum">    1160</span> <span class="tlaGNC">           1 : export function isJSDocTypeTag(node: Node): node is JSDocTypeTag {</span></span>
-<span id="L1161"><span class="lineNum">    1161</span> <span class="tlaGNC">       90564 :     return node.kind === SyntaxKind.JSDocTypeTag;</span></span>
-<span id="L1162"><span class="lineNum">    1162</span> <span class="tlaGNC">       90564 : }</span></span>
+<span id="L1161"><span class="lineNum">    1161</span> <span class="tlaGNC">       89997 :     return node.kind === SyntaxKind.JSDocTypeTag;</span></span>
+<span id="L1162"><span class="lineNum">    1162</span> <span class="tlaGNC">       89997 : }</span></span>
 <span id="L1163"><span class="lineNum">    1163</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1164"><span class="lineNum">    1164</span> <span class="tlaGNC">           1 : export function isJSDocTemplateTag(node: Node): node is JSDocTemplateTag {</span></span>
-<span id="L1165"><span class="lineNum">    1165</span> <span class="tlaGNC">    25923815 :     return node.kind === SyntaxKind.JSDocTemplateTag;</span></span>
-<span id="L1166"><span class="lineNum">    1166</span> <span class="tlaGNC">    25923815 : }</span></span>
+<span id="L1165"><span class="lineNum">    1165</span> <span class="tlaGNC">    25923308 :     return node.kind === SyntaxKind.JSDocTemplateTag;</span></span>
+<span id="L1166"><span class="lineNum">    1166</span> <span class="tlaGNC">    25923308 : }</span></span>
 <span id="L1167"><span class="lineNum">    1167</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1168"><span class="lineNum">    1168</span> <span class="tlaGNC">           1 : export function isJSDocTypedefTag(node: Node): node is JSDocTypedefTag {</span></span>
 <span id="L1169"><span class="lineNum">    1169</span> <span class="tlaGNC">        9929 :     return node.kind === SyntaxKind.JSDocTypedefTag;</span></span>
@@ -1236,16 +1236,16 @@
 <span id="L1174"><span class="lineNum">    1174</span> <span class="tlaUNC">           0 : }</span></span>
 <span id="L1175"><span class="lineNum">    1175</span> <span class="tlaGNC tlaBgGNC">           1 : </span></span>
 <span id="L1176"><span class="lineNum">    1176</span> <span class="tlaGNC">           1 : export function isJSDocPropertyTag(node: Node): node is JSDocPropertyTag {</span></span>
-<span id="L1177"><span class="lineNum">    1177</span> <span class="tlaGNC">     2276382 :     return node.kind === SyntaxKind.JSDocPropertyTag;</span></span>
-<span id="L1178"><span class="lineNum">    1178</span> <span class="tlaGNC">     2276382 : }</span></span>
+<span id="L1177"><span class="lineNum">    1177</span> <span class="tlaGNC">     2276376 :     return node.kind === SyntaxKind.JSDocPropertyTag;</span></span>
+<span id="L1178"><span class="lineNum">    1178</span> <span class="tlaGNC">     2276376 : }</span></span>
 <span id="L1179"><span class="lineNum">    1179</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1180"><span class="lineNum">    1180</span> <span class="tlaGNC">           1 : export function isJSDocImplementsTag(node: Node): node is JSDocImplementsTag {</span></span>
 <span id="L1181"><span class="lineNum">    1181</span> <span class="tlaGNC">       30168 :     return node.kind === SyntaxKind.JSDocImplementsTag;</span></span>
 <span id="L1182"><span class="lineNum">    1182</span> <span class="tlaGNC">       30168 : }</span></span>
 <span id="L1183"><span class="lineNum">    1183</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1184"><span class="lineNum">    1184</span> <span class="tlaGNC">           1 : export function isJSDocSatisfiesTag(node: Node): node is JSDocSatisfiesTag {</span></span>
-<span id="L1185"><span class="lineNum">    1185</span> <span class="tlaGNC">       33642 :     return node.kind === SyntaxKind.JSDocSatisfiesTag;</span></span>
-<span id="L1186"><span class="lineNum">    1186</span> <span class="tlaGNC">       33642 : }</span></span>
+<span id="L1185"><span class="lineNum">    1185</span> <span class="tlaGNC">       33075 :     return node.kind === SyntaxKind.JSDocSatisfiesTag;</span></span>
+<span id="L1186"><span class="lineNum">    1186</span> <span class="tlaGNC">       33075 : }</span></span>
 <span id="L1187"><span class="lineNum">    1187</span> <span class="tlaGNC">           1 : </span></span>
 <span id="L1188"><span class="lineNum">    1188</span> <span class="tlaGNC">           1 : export function isJSDocThrowsTag(node: Node): node is JSDocThrowsTag {</span></span>
 <span id="L1189"><span class="lineNum">    1189</span> <span class="tlaUNC tlaBgUNC">           0 :     return node.kind === SyntaxKind.JSDocThrowsTag;</span></span>

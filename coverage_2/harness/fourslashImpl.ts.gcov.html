@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">89.8&nbsp;%</td>
@@ -216,7 +216,7 @@
 <span id="L154"><span class="lineNum">     154</span> <span class="tlaGNC">       61802 :             return false;</span></span>
 <span id="L155"><span class="lineNum">     155</span> <span class="tlaGNC">       61802 :         }</span></span>
 <span id="L156"><span class="lineNum">     156</span> <span class="tlaGNC">           5 : </span></span>
-<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">       17462 :         if (this.numberOfCallsBeforeCancellation &gt; 0) {</span></span>
+<span id="L157"><span class="lineNum">     157</span> <span class="tlaGNC">       25951 :         if (this.numberOfCallsBeforeCancellation &gt; 0) {</span></span>
 <span id="L158"><span class="lineNum">     158</span> <span class="tlaGNC">           2 :             this.numberOfCallsBeforeCancellation--;</span></span>
 <span id="L159"><span class="lineNum">     159</span> <span class="tlaGNC">           2 :             return false;</span></span>
 <span id="L160"><span class="lineNum">     160</span> <span class="tlaGNC">           2 :         }</span></span>
@@ -3578,7 +3578,7 @@
 <span id="L3516"><span class="lineNum">    3516</span> <span class="tlaGNC">         227 :         const actualTextArray: string[] = [];</span></span>
 <span id="L3517"><span class="lineNum">    3517</span> <span class="tlaGNC">         227 :         const scriptInfo = this.languageServiceAdapterHost.getScriptInfo(fileName)!;</span></span>
 <span id="L3518"><span class="lineNum">    3518</span> <span class="tlaGNC">         227 :         const originalContent = scriptInfo.content;</span></span>
-<span id="L3519"><span class="lineNum">    3519</span> <span class="tlaGNC">         234 :         for (const codeFix of codeFixes) {</span></span>
+<span id="L3519"><span class="lineNum">    3519</span> <span class="tlaGNC">         237 :         for (const codeFix of codeFixes) {</span></span>
 <span id="L3520"><span class="lineNum">    3520</span> <span class="tlaGNC">         260 :             ts.Debug.assert(codeFix.changes.length === 1);</span></span>
 <span id="L3521"><span class="lineNum">    3521</span> <span class="tlaGNC">         260 :             const change = ts.first(codeFix.changes);</span></span>
 <span id="L3522"><span class="lineNum">    3522</span> <span class="tlaGNC">         260 :             ts.Debug.assert(change.fileName === fileName);</span></span>

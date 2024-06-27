@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryLo">71.8&nbsp;%</td>
@@ -377,13 +377,13 @@
 <span id="L315"><span class="lineNum">     315</span> <span class="tlaGNC">      477506 :                 count++;</span></span>
 <span id="L316"><span class="lineNum">     316</span> <span class="tlaGNC">      477506 :                 symbolString += &quot;, &quot;;</span></span>
 <span id="L317"><span class="lineNum">     317</span> <span class="tlaGNC">      479401 :                 if ((declaration as any).__symbolTestOutputCache) {</span></span>
-<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">      277622 :                     symbolString += (declaration as any).__symbolTestOutputCache;</span></span>
-<span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">      277622 :                     continue;</span></span>
-<span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">      277622 :                 }</span></span>
-<span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">      199884 :                 const declSourceFile = declaration.getSourceFile();</span></span>
-<span id="L322"><span class="lineNum">     322</span> <span class="tlaGNC">      199884 :                 const declLineAndCharacter = declSourceFile.getLineAndCharacterOfPosition(declaration.pos);</span></span>
-<span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">      199884 :                 const fileName = ts.getBaseFileName(declSourceFile.fileName);</span></span>
-<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">      199884 :                 const isLibFile = /lib(.*)\.d\.ts/i.test(fileName);</span></span>
+<span id="L318"><span class="lineNum">     318</span> <span class="tlaGNC">      277663 :                     symbolString += (declaration as any).__symbolTestOutputCache;</span></span>
+<span id="L319"><span class="lineNum">     319</span> <span class="tlaGNC">      277663 :                     continue;</span></span>
+<span id="L320"><span class="lineNum">     320</span> <span class="tlaGNC">      277663 :                 }</span></span>
+<span id="L321"><span class="lineNum">     321</span> <span class="tlaGNC">      199843 :                 const declSourceFile = declaration.getSourceFile();</span></span>
+<span id="L322"><span class="lineNum">     322</span> <span class="tlaGNC">      199843 :                 const declLineAndCharacter = declSourceFile.getLineAndCharacterOfPosition(declaration.pos);</span></span>
+<span id="L323"><span class="lineNum">     323</span> <span class="tlaGNC">      199843 :                 const fileName = ts.getBaseFileName(declSourceFile.fileName);</span></span>
+<span id="L324"><span class="lineNum">     324</span> <span class="tlaGNC">      199843 :                 const isLibFile = /lib(.*)\.d\.ts/i.test(fileName);</span></span>
 <span id="L325"><span class="lineNum">     325</span> <span class="tlaGNC">      479401 :                 const declText = `Decl(${fileName}, ${isLibFile ? &quot;--&quot; : declLineAndCharacter.line}, ${isLibFile ? &quot;--&quot; : declLineAndCharacter.character})`;</span></span>
 <span id="L326"><span class="lineNum">     326</span> <span class="tlaGNC">      479401 :                 symbolString += declText;</span></span>
 <span id="L327"><span class="lineNum">     327</span> <span class="tlaGNC">      479401 :                 (declaration as any).__symbolTestOutputCache = declText;</span></span>

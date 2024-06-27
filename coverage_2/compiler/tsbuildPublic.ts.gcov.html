@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Test Date:</td>
-            <td class="headerValue">2024-06-25 13:41:23</td>
+            <td class="headerValue">2024-06-27 21:34:48</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntryMed">84.3&nbsp;%</td>
@@ -1383,7 +1383,7 @@
 <span id="L1321"><span class="lineNum">    1321</span> <span class="tlaGNC">          11 :         }</span></span>
 <span id="L1322"><span class="lineNum">    1322</span> <span class="tlaGNC">        2582 : </span></span>
 <span id="L1323"><span class="lineNum">    1323</span> <span class="tlaGNC">        2582 :         const status = getUpToDateStatus(state, config, projectPath);</span></span>
-<span id="L1324"><span class="lineNum">    1324</span> <span class="tlaGNC">        2928 :         if (!options.force) {</span></span>
+<span id="L1324"><span class="lineNum">    1324</span> <span class="tlaGNC">        2977 :         if (!options.force) {</span></span>
 <span id="L1325"><span class="lineNum">    1325</span> <span class="tlaGNC">        2567 :             if (status.type === UpToDateStatusType.UpToDate) {</span></span>
 <span id="L1326"><span class="lineNum">    1326</span> <span class="tlaGNC">         170 :                 verboseReportProjectStatus(state, project, status);</span></span>
 <span id="L1327"><span class="lineNum">    1327</span> <span class="tlaGNC">         170 :                 reportAndStoreErrors(state, projectPath, getConfigFileParsingDiagnostics(config));</span></span>
@@ -1584,7 +1584,7 @@
 <span id="L1522"><span class="lineNum">    1522</span> <span class="tlaGNC">         619 :     // Output timestamps are stored only in watch mode</span></span>
 <span id="L1523"><span class="lineNum">    1523</span> <span class="tlaGNC">         619 :     if (!state.watch) return undefined;</span></span>
 <span id="L1524"><span class="lineNum">    1524</span> <span class="tlaGNC">         128 :     let result = state.outputTimeStamps.get(resolvedConfigFilePath);</span></span>
-<span id="L1525"><span class="lineNum">    1525</span> <span class="tlaGNC">         461 :     if (!result) state.outputTimeStamps.set(resolvedConfigFilePath, result = new Map());</span></span>
+<span id="L1525"><span class="lineNum">    1525</span> <span class="tlaGNC">         613 :     if (!result) state.outputTimeStamps.set(resolvedConfigFilePath, result = new Map());</span></span>
 <span id="L1526"><span class="lineNum">    1526</span> <span class="tlaGNC">         128 :     return result;</span></span>
 <span id="L1527"><span class="lineNum">    1527</span> <span class="tlaGNC">         128 : }</span></span>
 <span id="L1528"><span class="lineNum">    1528</span> <span class="tlaGNC">           1 : </span></span>
@@ -1690,7 +1690,7 @@
 <span id="L1628"><span class="lineNum">    1628</span> <span class="tlaGNC">           8 :                 };</span></span>
 <span id="L1629"><span class="lineNum">    1629</span> <span class="tlaGNC">           8 :             }</span></span>
 <span id="L1630"><span class="lineNum">    1630</span> <span class="tlaGNC">         937 : </span></span>
-<span id="L1631"><span class="lineNum">    1631</span> <span class="tlaGNC">         960 :             if (!force) (referenceStatuses ||= []).push({ ref, refStatus, resolvedRefPath, resolvedConfig });</span></span>
+<span id="L1631"><span class="lineNum">    1631</span> <span class="tlaGNC">         947 :             if (!force) (referenceStatuses ||= []).push({ ref, refStatus, resolvedRefPath, resolvedConfig });</span></span>
 <span id="L1632"><span class="lineNum">    1632</span> <span class="tlaGNC">         975 :         }</span></span>
 <span id="L1633"><span class="lineNum">    1633</span> <span class="tlaGNC">         839 :     }</span></span>
 <span id="L1634"><span class="lineNum">    1634</span> <span class="tlaGNC">        2354 :     if (force) return { type: UpToDateStatusType.ForceBuild };</span></span>
@@ -1735,7 +1735,7 @@
 <span id="L1673"><span class="lineNum">    1673</span> <span class="tlaGNC">           6 :             };</span></span>
 <span id="L1674"><span class="lineNum">    1674</span> <span class="tlaGNC">           6 :         }</span></span>
 <span id="L1675"><span class="lineNum">    1675</span> <span class="tlaGNC">         531 : </span></span>
-<span id="L1676"><span class="lineNum">    1676</span> <span class="tlaGNC">         747 :         if (isIncrementalBuildInfo(buildInfo)) {</span></span>
+<span id="L1676"><span class="lineNum">    1676</span> <span class="tlaGNC">         863 :         if (isIncrementalBuildInfo(buildInfo)) {</span></span>
 <span id="L1677"><span class="lineNum">    1677</span> <span class="tlaGNC">         528 :             // If there are pending changes that are not emitted, project is out of date</span></span>
 <span id="L1678"><span class="lineNum">    1678</span> <span class="tlaGNC">         528 :             // When there are syntax errors, changeFileSet will have list of files changed (irrespective of noEmit)</span></span>
 <span id="L1679"><span class="lineNum">    1679</span> <span class="tlaGNC">         528 :             // But in case of semantic error we need special treatment.</span></span>
@@ -1809,7 +1809,7 @@
 <span id="L1747"><span class="lineNum">    1747</span> <span class="tlaGNC">         136 :             }</span></span>
 <span id="L1748"><span class="lineNum">    1748</span> <span class="tlaGNC">         144 :         }</span></span>
 <span id="L1749"><span class="lineNum">    1749</span> <span class="tlaGNC">        1530 : </span></span>
-<span id="L1750"><span class="lineNum">    1750</span> <span class="tlaGNC">        1660 :         if (inputTime &gt; newestInputFileTime) {</span></span>
+<span id="L1750"><span class="lineNum">    1750</span> <span class="tlaGNC">        1666 :         if (inputTime &gt; newestInputFileTime) {</span></span>
 <span id="L1751"><span class="lineNum">    1751</span> <span class="tlaGNC">        1161 :             newestInputFileName = inputFile;</span></span>
 <span id="L1752"><span class="lineNum">    1752</span> <span class="tlaGNC">        1161 :             newestInputFileTime = inputTime;</span></span>
 <span id="L1753"><span class="lineNum">    1753</span> <span class="tlaGNC">        1161 :         }</span></span>
@@ -1856,7 +1856,7 @@
 <span id="L1794"><span class="lineNum">    1794</span> <span class="tlaGNC">         315 :             }</span></span>
 <span id="L1795"><span class="lineNum">    1795</span> <span class="tlaGNC">         150 : </span></span>
 <span id="L1796"><span class="lineNum">    1796</span> <span class="tlaGNC">         150 :             // If an output is older than the newest input, we can stop checking</span></span>
-<span id="L1797"><span class="lineNum">    1797</span> <span class="tlaGNC">         430 :             if (outputTime &lt; newestInputFileTime) {</span></span>
+<span id="L1797"><span class="lineNum">    1797</span> <span class="tlaGNC">         462 :             if (outputTime &lt; newestInputFileTime) {</span></span>
 <span id="L1798"><span class="lineNum">    1798</span> <span class="tlaGNC">          43 :                 return {</span></span>
 <span id="L1799"><span class="lineNum">    1799</span> <span class="tlaGNC">          43 :                     type: UpToDateStatusType.OutOfDateWithSelf,</span></span>
 <span id="L1800"><span class="lineNum">    1800</span> <span class="tlaGNC">          43 :                     outOfDateOutputFileName: output,</span></span>
@@ -1866,7 +1866,7 @@
 <span id="L1804"><span class="lineNum">    1804</span> <span class="tlaGNC">         107 : </span></span>
 <span id="L1805"><span class="lineNum">    1805</span> <span class="tlaGNC">         107 :             // No need to get newestDeclarationFileContentChangedTime since thats needed only for composite projects</span></span>
 <span id="L1806"><span class="lineNum">    1806</span> <span class="tlaGNC">         107 :             // And composite projects are the only ones that can be referenced</span></span>
-<span id="L1807"><span class="lineNum">    1807</span> <span class="tlaGNC">         395 :             if (outputTime &lt; oldestOutputFileTime) {</span></span>
+<span id="L1807"><span class="lineNum">    1807</span> <span class="tlaGNC">         418 :             if (outputTime &lt; oldestOutputFileTime) {</span></span>
 <span id="L1808"><span class="lineNum">    1808</span> <span class="tlaGNC">          58 :                 oldestOutputFileTime = outputTime;</span></span>
 <span id="L1809"><span class="lineNum">    1809</span> <span class="tlaGNC">          58 :                 oldestOutputFileName = output;</span></span>
 <span id="L1810"><span class="lineNum">    1810</span> <span class="tlaGNC">          58 :             }</span></span>
@@ -1994,7 +1994,7 @@
 <span id="L1932"><span class="lineNum">    1932</span> <span class="tlaGNC">          23 :         for (const file of outputs) {</span></span>
 <span id="L1933"><span class="lineNum">    1933</span> <span class="tlaGNC">          53 :             const path = toPath(state, file);</span></span>
 <span id="L1934"><span class="lineNum">    1934</span> <span class="tlaGNC">          53 :             if (skipOutputs?.has(path)) continue;</span></span>
-<span id="L1935"><span class="lineNum">    1935</span> <span class="tlaGNC">          53 :             if (reportVerbose) {</span></span>
+<span id="L1935"><span class="lineNum">    1935</span> <span class="tlaGNC">          52 :             if (reportVerbose) {</span></span>
 <span id="L1936"><span class="lineNum">    1936</span> <span class="tlaGNC">          20 :                 reportVerbose = false;</span></span>
 <span id="L1937"><span class="lineNum">    1937</span> <span class="tlaGNC">          20 :                 reportStatus(state, verboseMessage, proj.options.configFilePath!);</span></span>
 <span id="L1938"><span class="lineNum">    1938</span> <span class="tlaGNC">          20 :             }</span></span>
@@ -2056,7 +2056,7 @@
 <span id="L1994"><span class="lineNum">    1994</span> <span class="tlaGNC">         184 : </span></span>
 <span id="L1995"><span class="lineNum">    1995</span> <span class="tlaGNC">         184 :         const nextProjectConfig = parseConfigFile(state, nextProject, nextProjectPath);</span></span>
 <span id="L1996"><span class="lineNum">    1996</span> <span class="tlaGNC">        2162 :         if (!nextProjectConfig || !nextProjectConfig.projectReferences) continue;</span></span>
-<span id="L1997"><span class="lineNum">    1997</span> <span class="tlaGNC">         427 :         for (const ref of nextProjectConfig.projectReferences) {</span></span>
+<span id="L1997"><span class="lineNum">    1997</span> <span class="tlaGNC">         751 :         for (const ref of nextProjectConfig.projectReferences) {</span></span>
 <span id="L1998"><span class="lineNum">    1998</span> <span class="tlaGNC">         184 :             const resolvedRefPath = resolveProjectName(state, ref.path);</span></span>
 <span id="L1999"><span class="lineNum">    1999</span> <span class="tlaGNC">         184 :             if (toResolvedConfigFilePath(state, resolvedRefPath) !== projectPath) continue;</span></span>
 <span id="L2000"><span class="lineNum">    2000</span> <span class="tlaGNC">         179 :             // If declaration output is changed, build the project</span></span>
@@ -2371,7 +2371,7 @@
 <span id="L2309"><span class="lineNum">    2309</span> <span class="tlaGNC">        1273 :     if (!state.watchAllProjectsPending) return;</span></span>
 <span id="L2310"><span class="lineNum">    2310</span> <span class="tlaGNC">          55 :     performance.mark(&quot;SolutionBuilder::beforeWatcherCreation&quot;);</span></span>
 <span id="L2311"><span class="lineNum">    2311</span> <span class="tlaGNC">          55 :     state.watchAllProjectsPending = false;</span></span>
-<span id="L2312"><span class="lineNum">    2312</span> <span class="tlaGNC">         985 :     for (const resolved of getBuildOrderFromAnyBuildOrder(buildOrder)) {</span></span>
+<span id="L2312"><span class="lineNum">    2312</span> <span class="tlaGNC">        1184 :     for (const resolved of getBuildOrderFromAnyBuildOrder(buildOrder)) {</span></span>
 <span id="L2313"><span class="lineNum">    2313</span> <span class="tlaGNC">         149 :         const resolvedPath = toResolvedConfigFilePath(state, resolved);</span></span>
 <span id="L2314"><span class="lineNum">    2314</span> <span class="tlaGNC">         149 :         const cfg = parseConfigFile(state, resolved, resolvedPath);</span></span>
 <span id="L2315"><span class="lineNum">    2315</span> <span class="tlaGNC">         149 :         // Watch this file</span></span>
